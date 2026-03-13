@@ -1,0 +1,1048 @@
+{
+  "school": "Herbert Wertheim School of Public Health and Human Longevity Science",
+  "university": "UC San Diego",
+  "source_url": "https://hwsph.ucsd.edu/people/faculty/faculty-directory.html",
+  "date_retrieved": "2026-03-11",
+  "faculty": [
+    {
+      "first_name": "Wael",
+      "last_name": "Al-Delaimy",
+      "degrees": ["MD", "PhD"],
+      "title": "Professor",
+      "email": "waldelaimy@health.ucsd.edu",
+      "research_interests": "Global mental health, Environmental health and climate change; Community Engagement, refugee and native health; Science and Research Ethics"
+    },
+    {
+      "first_name": "Tala",
+      "last_name": "Al-Rousan",
+      "degrees": ["MD", "MPH"],
+      "title": "Assistant Professor",
+      "email": "talrousan@health.ucsd.edu",
+      "research_interests": "Refugee health; Chronic disease management; Displacement and health"
+    },
+    {
+      "first_name": "Cheryl",
+      "last_name": "Anderson",
+      "degrees": ["PhD", "MPH"],
+      "title": "Professor and Dean",
+      "email": "c1anderson@health.ucsd.edu",
+      "research_interests": "Prevention; Nutrition and lifestyle interventions; Chronic disease epidemiology"
+    },
+    {
+      "first_name": "Happy",
+      "last_name": "Araneta",
+      "degrees": ["PhD", "MPH"],
+      "title": "Professor, Secondary Appointed; School of Medicine, Associate Dean of Diversity and Community Partnerships",
+      "email": "haraneta@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Gretchen",
+      "last_name": "Bandoli",
+      "degrees": ["PhD"],
+      "title": "Associate Professor, Secondary Appointed",
+      "email": "gbandoli@health.ucsd.edu",
+      "research_interests": "Perinatal epidemiology and pharmacoepidemiology; Pregnancy mental health; Pregnancy substance use"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Banegas",
+      "degrees": ["PhD", "MPH"],
+      "title": "Associate Professor, Secondary Appointed",
+      "email": "mbanegas@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Angela",
+      "last_name": "Bazzi",
+      "degrees": ["PhD", "MPH"],
+      "title": "Professor",
+      "email": "abazzi@health.ucsd.edu",
+      "research_interests": "HIV prevention; Substance use; Qualitative and mixed methods research"
+    },
+    {
+      "first_name": "Ellen",
+      "last_name": "Beck",
+      "degrees": ["MD"],
+      "title": "Professor, Secondary Appointed",
+      "email": "ebeck@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Nancy",
+      "last_name": "Binkin",
+      "degrees": ["MD", "MPH"],
+      "title": "Professor",
+      "email": "nbinkin@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Cinnamon",
+      "last_name": "Bloss",
+      "degrees": ["PhD"],
+      "title": "Professor and Associate Dean for Academic Affairs",
+      "email": "cbloss@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Kerri",
+      "last_name": "Boutelle",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "kboutelle@health.ucsd.edu",
+      "research_interests": "Weight loss; Binge eating; Cognition"
+    },
+    {
+      "first_name": "Ryan",
+      "last_name": "Bradley",
+      "degrees": ["ND", "MPH"],
+      "title": "Associate Professor",
+      "email": "rybradley@ucsd.edu",
+      "research_interests": "Complementary and integrative health; Nutrition; Dietary supplements"
+    },
+    {
+      "first_name": "Kimberly",
+      "last_name": "Brouwer",
+      "degrees": ["PhD"],
+      "title": "Professor and Associate Dean for Education and Student Affairs",
+      "email": "kbrouwer@health.ucsd.edu",
+      "research_interests": "Substance use in economically and socially marginalized populations; Prevention and control of infectious diseases; Access to care"
+    },
+    {
+      "first_name": "Michelle",
+      "last_name": "Bulterys",
+      "degrees": ["PhD", "MPH"],
+      "title": "Assistant Professor",
+      "email": "mibulterys@health.ucsd.edu",
+      "research_interests": "Global Health; Epidemiology; Mixed methods; Implementation science, HIV; Relationship dynamics, Father engagement and child neurodevelopment; Mental health; Human-centered design"
+    },
+    {
+      "first_name": "Chadwick",
+      "last_name": "Campbell",
+      "degrees": ["PhD", "MPH"],
+      "title": "Assistant Professor",
+      "email": "ckc003@health.ucsd.edu",
+      "research_interests": "HIV prevention; Sociology of health and illness; Intersectionality; Stigma; Social and structural factors in the HIV epidemic; Qualitative methods"
+    },
+    {
+      "first_name": "John M.",
+      "last_name": "Carethers",
+      "degrees": ["MD"],
+      "title": "Distinguished Professor, Secondary Appointed; Vice Chancellor for Health Sciences",
+      "email": null,
+      "research_interests": null
+    },
+    {
+      "first_name": "Julie",
+      "last_name": "Celebi",
+      "degrees": ["MD"],
+      "title": "Associate Professor, Secondary Appointed",
+      "email": "jcelebi@health.ucsd.edu",
+      "research_interests": "Clinician well-being; Health equity; LGBTQ+ healthcare"
+    },
+    {
+      "first_name": "Christina",
+      "last_name": "Chambers",
+      "degrees": ["PhD", "MPH"],
+      "title": "Distinguished Professor, Secondary Appointed",
+      "email": "chchambers@health.ucsd.edu",
+      "research_interests": "Environmental causes of adverse pregnancy outcomes, birth defects, and childhood disabilities, with a special focus on human teratogens"
+    },
+    {
+      "first_name": "Hyunkeun Ryan",
+      "last_name": "Cho",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "hkc005@health.ucsd.edu",
+      "research_interests": "Longitudinal/Functional Data Analysis; Causal Inference; Machine Learning; Clinical Trials; Neurodegenerative Diseases; Mental Health Disorders; Aging and Longevity Research"
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Criqui",
+      "degrees": ["MD", "MPH"],
+      "title": "Distinguished Professor, Secondary Appointed",
+      "email": "mcriqui@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Lori",
+      "last_name": "Daniels",
+      "degrees": ["MD", "MAS", "FACC", "FAHA"],
+      "title": "Professor, Secondary Appointed",
+      "email": "lbdaniels@health.ucsd.edu",
+      "research_interests": "Cardiovascular disease; Novel biomarkers; Critical care cardiology"
+    },
+    {
+      "first_name": "Victor",
+      "last_name": "De Gruttola",
+      "degrees": ["ScD"],
+      "title": "Professor",
+      "email": "vdegruttola@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Steven",
+      "last_name": "Edland",
+      "degrees": ["PhD", "MS"],
+      "title": "Professor",
+      "email": "sedland@health.ucsd.edu",
+      "research_interests": "Alzheimer's disease (AD) etiology and risk factors; Genetic epidemiology of AD and related disorders; AD clinical trial design and methods"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Eikey",
+      "degrees": ["PhD"],
+      "title": "Assistant Professor",
+      "email": "eeikey@health.ucsd.edu",
+      "research_interests": "Design, use, and impact of technologies on health; Digital mental health; Qualitative and mixed methods"
+    },
+    {
+      "first_name": "Rebecca",
+      "last_name": "Fielding-Miller",
+      "degrees": ["PhD", "MSPH"],
+      "title": "Associate Professor",
+      "email": "rfieldingmiller@health.ucsd.edu",
+      "research_interests": "Community-engaged research; Social and structural determinants of infectious disease; Global health"
+    },
+    {
+      "first_name": "Richard",
+      "last_name": "Garfein",
+      "degrees": ["PhD", "MPH"],
+      "title": "Professor",
+      "email": "rgarfein@health.ucsd.edu",
+      "research_interests": "mHealth and medication adherence; Infectious disease consequences of substance use; Diagnostic test development studies"
+    },
+    {
+      "first_name": "Todd",
+      "last_name": "Gilmer",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "tgilmer@health.ucsd.edu",
+      "research_interests": "Health economics/Health finance; Risk adjustment; Mental health"
+    },
+    {
+      "first_name": "Carlos",
+      "last_name": "Gould",
+      "degrees": ["PhD"],
+      "title": "Assistant Professor",
+      "email": "cagould@health.ucsd.edu",
+      "research_interests": "Environmental health; Climate and health; Air pollution; Clean energy; Environmental epidemiology; Exposure science; Wildfires"
+    },
+    {
+      "first_name": "Erik",
+      "last_name": "Groessl",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "egroessl@health.ucsd.edu",
+      "research_interests": "Integrative health; Mind body interventions; Cost-effectiveness analysis"
+    },
+    {
+      "first_name": "Mara",
+      "last_name": "Harrell",
+      "degrees": ["PhD", "MS"],
+      "title": "Professor",
+      "email": "mharrell@ucsd.edu",
+      "research_interests": "Public health ethics; Critical thinking; Writing"
+    },
+    {
+      "first_name": "Sheri",
+      "last_name": "Hartman",
+      "degrees": ["PhD"],
+      "title": "Professor and Assistant Dean for Research Affairs",
+      "email": "sjhartman@health.ucsd.edu",
+      "research_interests": "Cancer survivorship; Health behavior change interventions; Patient reported outcomes, cognition, and quality of life"
+    },
+    {
+      "first_name": "Alexandra",
+      "last_name": "Heaney",
+      "degrees": ["PhD"],
+      "title": "Assistant Professor",
+      "email": "aheaney@health.ucsd.edu",
+      "research_interests": "Climate-sensitive diseases; Health impacts of climate change; Environmental epidemiology; Disease forecasting"
+    },
+    {
+      "first_name": "Eric",
+      "last_name": "Hekler",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "ehekler@health.ucsd.edu",
+      "research_interests": "Behavioral health research methods; Community-driven design/collective action; Helping people help themselves/self-experimentation/N-of-1"
+    },
+    {
+      "first_name": "Chito",
+      "last_name": "Hernandez",
+      "degrees": ["PhD"],
+      "title": "Professor, Non-Salaried",
+      "email": "chh103@ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Linda",
+      "last_name": "Hill",
+      "degrees": ["MD", "MPH"],
+      "title": "Distinguished Professor and Associate Dean for Community Partnerships",
+      "email": "llhill@health.ucsd.edu",
+      "research_interests": "Injury prevention; Transportation safety; Displaced populations"
+    },
+    {
+      "first_name": "Suzi",
+      "last_name": "Hong",
+      "degrees": ["PhD"],
+      "title": "Professor and Associate Dean for Faculty Affairs and Mentoring",
+      "email": "s1hong@health.ucsd.edu",
+      "research_interests": "Immune and inflammation biomarker research; Chronic stress and mental health outcomes; Cardiometabolic health and interventions"
+    },
+    {
+      "first_name": "Samantha",
+      "last_name": "Hurst",
+      "degrees": ["PhD", "MA"],
+      "title": "Professor",
+      "email": "shurst@health.ucsd.edu",
+      "research_interests": "Culture and Community Health, Health Equity and Social Justice, Qualitative and Mixed Methods, Public Health Advocacy, Cancer Disparities and Cancer Prevention Research"
+    },
+    {
+      "first_name": "Joachim",
+      "last_name": "Ix",
+      "degrees": ["MD", "MAS"],
+      "title": "Professor, Secondary Appointed",
+      "email": "joeix@health.ucsd.edu",
+      "research_interests": "Electrolytes, Hemodialysis, Nephrology"
+    },
+    {
+      "first_name": "Sonia",
+      "last_name": "Jain",
+      "degrees": ["PhD", "MSc"],
+      "title": "Professor and Associate Dean for Research",
+      "email": "sojain@health.ucsd.edu",
+      "research_interests": "Biostatistics; Clinical trial design; Bayesian methods"
+    },
+    {
+      "first_name": "Michelle",
+      "last_name": "Johnson",
+      "degrees": ["MD"],
+      "title": "Professor, Secondary Appointed",
+      "email": "mlj001@health.ucsd.edu",
+      "research_interests": "Health equity"
+    },
+    {
+      "first_name": "Robert H.",
+      "last_name": "Kaplan",
+      "degrees": ["PhD", "MPA"],
+      "title": "Professor",
+      "email": "rokaplan@health.ucsd.edu",
+      "research_interests": "Health policy; Leadership studies; Negotiation issues"
+    },
+    {
+      "first_name": "Georgia",
+      "last_name": "Kayser",
+      "degrees": ["PhD", "MALD", "BS"],
+      "title": "Assistant Professor",
+      "email": "gkayser@health.ucsd.edu",
+      "research_interests": "Environmental determinants of health; Children's environmental health; Health disparities and inequities"
+    },
+    {
+      "first_name": "Pooyan",
+      "last_name": "Kazemian",
+      "degrees": ["PhD", "MS"],
+      "title": "Assistant Professor",
+      "email": "pkazemian@ucsd.edu",
+      "research_interests": "Artificial intelligence; Machine learning; Optimization modeling; Simulation; Causal inference; Chronic and infectious disease modeling; Medical image analytics; Natural language processing; Medical decision-making; Health policy"
+    },
+    {
+      "first_name": "Donna",
+      "last_name": "Kritz-Silverstein",
+      "degrees": ["PhD", "MA"],
+      "title": "Professor and Assistant Dean for Education Program Affairs",
+      "email": "dsilverstein@health.ucsd.edu",
+      "research_interests": "Women's health; Chronic disease epidemiology; Dental public health and dental education"
+    },
+    {
+      "first_name": "Richard",
+      "last_name": "Kronick",
+      "degrees": ["PhD", "MA"],
+      "title": "Professor",
+      "email": "rkronick@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Andrea",
+      "last_name": "LaCroix",
+      "degrees": ["PhD", "MPH"],
+      "title": "Distinguished Professor",
+      "email": "alacroix@health.ucsd.edu",
+      "research_interests": "Healthy aging/longevity; Women's health; Physical activity"
+    },
+    {
+      "first_name": "Ariel",
+      "last_name": "Lang",
+      "degrees": ["MD", "MPH"],
+      "title": "Professor, Secondary Appointed",
+      "email": "ajlang@health.ucsd.edu",
+      "research_interests": "Anxiety and trauma; Psychotherapy and complementary/alternative interventions; Clinical trials"
+    },
+    {
+      "first_name": "Brittany",
+      "last_name": "Larsen",
+      "degrees": ["PhD"],
+      "title": "Associate Professor",
+      "email": "blarsen@health.ucsd.edu",
+      "research_interests": "Physical activity; Diabetes prevention and management; Body composition"
+    },
+    {
+      "first_name": "Eric",
+      "last_name": "Leas",
+      "degrees": ["PhD", "MPH"],
+      "title": "Assistant Professor",
+      "email": "ecleas@health.ucsd.edu",
+      "research_interests": "Cannabis; Tobacco; Data science"
+    },
+    {
+      "first_name": "Henry",
+      "last_name": "Lee",
+      "degrees": ["MD"],
+      "title": "Professor, Secondary Appointed",
+      "email": "henrylee@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Sydney",
+      "last_name": "Leibel",
+      "degrees": ["MD", "MPH"],
+      "title": "Associate Professor, Secondary Appointed",
+      "email": "sleibel@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Lin",
+      "last_name": "Liu",
+      "degrees": ["PhD"],
+      "title": "Associate Professor",
+      "email": "l2liu@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Kanya",
+      "last_name": "Long",
+      "degrees": ["PhD", "MHS"],
+      "title": "Assistant Professor",
+      "email": "kclong@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Becky",
+      "last_name": "Marquez",
+      "degrees": ["PhD", "MPH"],
+      "title": "Associate Professor",
+      "email": "bemarquez@health.ucsd.edu",
+      "research_interests": "Obesity; Nutrition and physical activity; Latinx health"
+    },
+    {
+      "first_name": "Maria Elena",
+      "last_name": "Martinez",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "e8martinez@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Sara",
+      "last_name": "McMenamin",
+      "degrees": ["PhD", "MPH"],
+      "title": "Associate Professor",
+      "email": "smcmenamin@health.ucsd.edu",
+      "research_interests": "Health insurance; Tobacco dependence treatment; Public policy"
+    },
+    {
+      "first_name": "Audra",
+      "last_name": "Meadows",
+      "degrees": ["MD", "PhD"],
+      "title": "Adjunct Professor, Secondary Appointed",
+      "email": "a2meadows@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Winta",
+      "last_name": "Mehtsun",
+      "degrees": ["MD", "MPH"],
+      "title": "Assistant Professor, Secondary Appointed",
+      "email": "wmehtsun@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Karen",
+      "last_name": "Messer",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "kmesser@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Lindsay",
+      "last_name": "Miller",
+      "degrees": ["PhD", "MPH"],
+      "title": "Assistant Professor",
+      "email": "lmmiller@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Paul",
+      "last_name": "Mills",
+      "degrees": ["PhD"],
+      "title": "Professor, Recall to Active Service (RTAD)",
+      "email": "pmills@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Ryan",
+      "last_name": "Moran",
+      "degrees": ["MD", "MPH"],
+      "title": "Professor, Secondary Appointed",
+      "email": "rjmoran@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Loki",
+      "last_name": "Natarajan",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "lnatarajan@health.ucsd.edu",
+      "research_interests": "Modeling health behaviors: sleep, physical activity, diet, sedentary behavior; Analysis of data derived from wearable sensors, such as accelerometers; 'Omics markers and chronic disease"
+    },
+    {
+      "first_name": "Camille",
+      "last_name": "Nebeker",
+      "degrees": ["EdD", "MS"],
+      "title": "Professor",
+      "email": "nebeker@health.ucsd.edu",
+      "research_interests": "Digital health research ethics; Research ethics education; Community capacity building"
+    },
+    {
+      "first_name": "Annie",
+      "last_name": "Nguyen",
+      "degrees": ["PhD", "MPH"],
+      "title": "Associate Professor",
+      "email": "aln031@health.ucsd.edu",
+      "research_interests": "Older adults; HIV; Resilient aging; Mental health; Quality of life; Community engagement"
+    },
+    {
+      "first_name": "France",
+      "last_name": "Nguyen-Grozavu",
+      "degrees": ["PhD", "MPH"],
+      "title": "Lecturer",
+      "email": "fnguyengrozavu@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Steve",
+      "last_name": "Nguyen",
+      "degrees": ["PhD"],
+      "title": "Assistant Professor",
+      "email": "stn013@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Gregory",
+      "last_name": "Norman",
+      "degrees": ["PhD", "MA"],
+      "title": "Professor",
+      "email": "gnorman@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Victoria D.",
+      "last_name": "Ojeda",
+      "degrees": ["PhD", "MPH"],
+      "title": "Professor",
+      "email": "vojeda@health.ucsd.edu",
+      "research_interests": "Community-engaged research; Racial/ethnic disparities in access to physical and mental health services; Service design for justice involved individuals"
+    },
+    {
+      "first_name": "Lawrence",
+      "last_name": "Palinkas",
+      "degrees": ["PhD"],
+      "title": "Professor and Assistant Dean for Community Partnerships",
+      "email": "lapalinkas@health.ucsd.edu",
+      "research_interests": "Mental health services research, Implementation science, Prevention, Climate change and health equity, Community-engaged research, Qualitative and mixed methods"
+    },
+    {
+      "first_name": "Kevin",
+      "last_name": "Patrick",
+      "degrees": ["MD", "MS"],
+      "title": "Professor",
+      "email": "kpatrick@health.ucsd.edu",
+      "research_interests": "Innovation in health and healthcare; Mobile technologies"
+    },
+    {
+      "first_name": "Corinne",
+      "last_name": "Peek-Asa",
+      "degrees": ["PhD", "MPH"],
+      "title": "Distinguished Professor and Vice Chancellor for Research",
+      "email": "cpeekasa@ucsd.edu",
+      "research_interests": "Development, Implementation, Dissemination, and Translation of injury and violence prevention programs and policies; International capacity building to reduce the burden of traumatic injury and violence"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Pierce",
+      "degrees": ["PhD"],
+      "title": "Distinguished Professor",
+      "email": "jppierce@health.ucsd.edu",
+      "research_interests": "Tobacco use, e-cigarettes; Initiation; Tobacco control"
+    },
+    {
+      "first_name": "Heather",
+      "last_name": "Pines",
+      "degrees": ["PhD", "MPH"],
+      "title": "Associate Professor, Non-Salaried",
+      "email": "hpines@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Pratt",
+      "degrees": ["MD", "MSPE", "MPH"],
+      "title": "Professor",
+      "email": "mipratt@health.ucsd.edu",
+      "research_interests": "Physical activity surveillance and measurement; Physical activity policy; Global health research capacity building"
+    },
+    {
+      "first_name": "Borsika",
+      "last_name": "Rabin",
+      "degrees": ["PhD", "PharmD", "MPH"],
+      "title": "Professor",
+      "email": "barabin@health.ucsd.edu",
+      "research_interests": "Dissemination and implementation science; Adapting evidence-based interventions, theories, models, frameworks for dissemination and implementation science; Pragmatic measures; Underserved communities; Cancer prevention and control; COVID-19"
+    },
+    {
+      "first_name": "Ramya",
+      "last_name": "Rajagopalan",
+      "degrees": ["PhD"],
+      "title": "Assistant Professor",
+      "email": "rmrajagopalan@ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Brinda",
+      "last_name": "Rana",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "bkrana@health.ucsd.edu",
+      "research_interests": "Transcriptomic, metabolomic, epigenomic, genome and proteomic adaptations to the environment/behavior; Research design and the health sciences; NASA Twins Study; NCI/NIH funded Transdisciplinary Research on Energetics and Cancer"
+    },
+    {
+      "first_name": "Divya",
+      "last_name": "Reddy",
+      "degrees": ["MD", "MPH"],
+      "title": "Associate Professor, Secondary Appointed",
+      "email": "direddy@health.ucsd.edu",
+      "research_interests": "Perinatal mental health; Maternal morbidity and mortality; STIs; Family planning; Clinical quality improvement"
+    },
+    {
+      "first_name": "Vivian",
+      "last_name": "Reznik",
+      "degrees": ["MD", "MPH"],
+      "title": "Professor, Secondary Appointed",
+      "email": "vreznik@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Andrew",
+      "last_name": "Ries",
+      "degrees": ["MD", "MPH"],
+      "title": "Professor",
+      "email": "aries@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Margaret",
+      "last_name": "Ryan",
+      "degrees": ["MD", "MPH"],
+      "title": "Professor",
+      "email": "m1ryan@health.ucsd.edu",
+      "research_interests": "Vaccine-preventable infections; Military medicine; Risk communication"
+    },
+    {
+      "first_name": "Rany",
+      "last_name": "Salem",
+      "degrees": ["PhD", "MPH"],
+      "title": "Associate Professor",
+      "email": "rsalem@health.ucsd.edu",
+      "research_interests": "Genetic epidemiology; Diabetes and diabetic complication; Complex traits, multivariate and longitudinal phenotypes"
+    },
+    {
+      "first_name": "James",
+      "last_name": "Sallis",
+      "degrees": ["PhD"],
+      "title": "Distinguished Professor",
+      "email": "jsallis@health.ucsd.edu",
+      "research_interests": "Physical activity; Built environment; Behavior change"
+    },
+    {
+      "first_name": "Deepa",
+      "last_name": "Sannidhi",
+      "degrees": ["MD"],
+      "title": "Associate Professor, Secondary Appointed",
+      "email": "dsannidhi@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Armin",
+      "last_name": "Schwartzman",
+      "degrees": ["PhD"],
+      "title": "Professor, Secondary Appointed",
+      "email": "a7schwartzman@health.ucsd.edu",
+      "research_interests": "Image analysis; High-dimensional data analysis; Time series"
+    },
+    {
+      "first_name": "Aladdin H.",
+      "last_name": "Shadyab",
+      "degrees": ["PhD", "MPH"],
+      "title": "Associate Professor",
+      "email": "ahshadya@health.ucsd.edu",
+      "research_interests": "Longevity; Geroscience; Women's health"
+    },
+    {
+      "first_name": "Holly Baker",
+      "last_name": "Shakya",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "hshakya@health.ucsd.edu",
+      "research_interests": "Social network analysis; Population sciences; Maternal/child/reproductive health"
+    },
+    {
+      "first_name": "Yuyan",
+      "last_name": "Shi",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "yus001@health.ucsd.edu",
+      "research_interests": "Health economics; Behavioral economics; Drug policy"
+    },
+    {
+      "first_name": "Murray",
+      "last_name": "Stein",
+      "degrees": ["MD", "MPH"],
+      "title": "Distinguished Professor, Secondary Appointed",
+      "email": "mstein@health.ucsd.edu",
+      "research_interests": "Anxiety; Traumatic stress; Genetics"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Stone",
+      "degrees": ["PhD"],
+      "title": "Assistant Professor",
+      "email": "m3stone@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "David",
+      "last_name": "Strong",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "dstrong@health.ucsd.edu",
+      "research_interests": "Tobacco control and regulatory science; Obesity and weight loss interventions; Tobacco related health disparities"
+    },
+    {
+      "first_name": "Jose Ricardo",
+      "last_name": "Suarez",
+      "degrees": ["MD", "PhD", "MPH"],
+      "title": "Associate Professor",
+      "email": "jrsuarez@health.ucsd.edu",
+      "research_interests": "Environmental chemical exposures; Life course research (children-adults); Mitigation of adverse health environments"
+    },
+    {
+      "first_name": "Gene",
+      "last_name": "Tan",
+      "degrees": ["PhD"],
+      "title": "Lecturer",
+      "email": "gstan@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Ronald",
+      "last_name": "Thomas",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "rgthomas@health.ucsd.edu",
+      "research_interests": "Clinical trials design and analysis; Longitudinal data analysis; Alzheimer's Disease"
+    },
+    {
+      "first_name": "Wesley",
+      "last_name": "Thompson",
+      "degrees": ["PhD"],
+      "title": "Professor, Non-Salaried",
+      "email": "wkthompson@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Christine",
+      "last_name": "Thorne",
+      "degrees": ["MD", "MPH"],
+      "title": "Professor, Secondary Appointed",
+      "email": "cthorne@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Dennis",
+      "last_name": "Trinidad",
+      "degrees": ["PhD", "MPH"],
+      "title": "Professor",
+      "email": "dtrinidad@health.ucsd.edu",
+      "research_interests": "Tobacco; Education; Health disparities/equity"
+    },
+    {
+      "first_name": "Xin",
+      "last_name": "Tu",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "x2tu@health.ucsd.edu",
+      "research_interests": "Semiparametric models for within- and between-subject attributes for longitudinal study; Statistical and machine learning models for mental health and psychosocial research; Causal inference for clinical trial and observational study data"
+    },
+    {
+      "first_name": "Florin",
+      "last_name": "Vaida",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "fvaida@health.ucsd.edu",
+      "research_interests": "Longitudinal and clustered data analysis; Randomized clinical trials; NeuroAIDS and infectious diseases"
+    },
+    {
+      "first_name": "Stephen",
+      "last_name": "Waterman",
+      "degrees": ["MD", "MPH"],
+      "title": "Professor",
+      "email": "shwaterman@health.ucsd.edu",
+      "research_interests": "Epidemiology of vector-borne diseases and evaluation of vector control interventions; Vaccine preventable diseases epidemiology and vaccinology; Binational/border surveillance of infectious diseases"
+    },
+    {
+      "first_name": "Anne E. C.",
+      "last_name": "White",
+      "degrees": ["PhD"],
+      "title": "Assistant Professor",
+      "email": "aecwhite@health.ucsd.edu",
+      "research_interests": "Doctor-patient Communication; Medical Sociology; Qualitative Methodologies; Conversation Analysis; Rural Health; Opioid Negotiations"
+    },
+    {
+      "first_name": "Crystal",
+      "last_name": "Wiley Cene",
+      "degrees": ["MD", "MPH"],
+      "title": "Professor, Secondary Appointed; UC San Diego Health CAO, Health Equity, Diversity and Inclusion",
+      "email": "ccene@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Deborah",
+      "last_name": "Wingard",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "dwingard@health.ucsd.edu",
+      "research_interests": "Faculty development; Diversity; Diabetes"
+    },
+    {
+      "first_name": "Ronghui (Lily)",
+      "last_name": "Xu",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "rxu@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Xinlian",
+      "last_name": "Zhang",
+      "degrees": ["PhD"],
+      "title": "Associate Professor",
+      "email": "xizhang@health.ucsd.edu",
+      "research_interests": "Nonparametric function estimation; Single cell sequencing"
+    },
+    {
+      "first_name": "Shu-Hong",
+      "last_name": "Zhu",
+      "degrees": ["PhD"],
+      "title": "Professor",
+      "email": "szhu@health.ucsd.edu",
+      "research_interests": "Tobacco control; Population behavioral pattern; Cannabis research"
+    },
+    {
+      "first_name": "Jingjing",
+      "last_name": "Zou",
+      "degrees": ["PhD"],
+      "title": "Associate Professor",
+      "email": "j2zou@health.ucsd.edu",
+      "research_interests": "Medical image analysis; Functional data; Machine learning"
+    },
+    {
+      "first_name": "Christine",
+      "last_name": "Zoumas-Morse",
+      "degrees": ["MS", "RD"],
+      "title": "Lecturer",
+      "email": "czoumasmorse@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Charles",
+      "last_name": "Berry",
+      "degrees": ["PhD"],
+      "title": "Professor (Emeritus)",
+      "email": "ccberry@health.ucsd.edu",
+      "research_interests": "Biostatistics; Statistical genomics of retroviral infection/transfection; Statistical computation"
+    },
+    {
+      "first_name": "Harvey",
+      "last_name": "Checkoway",
+      "degrees": ["PhD", "MPH"],
+      "title": "Professor (Emeritus)",
+      "email": "hcheckoway@health.ucsd.edu",
+      "research_interests": "Non-infectious disorders related to environmental exposures, e.g., pesticides and parkinsonsis; Occupational risk factors for non-infectious disorders; Biomarkers of clinical outcomes"
+    },
+    {
+      "first_name": "Linda",
+      "last_name": "McEvoy",
+      "degrees": ["PhD"],
+      "title": "Professor (Emeritus)",
+      "email": "lkmcevoy@health.ucsd.edu",
+      "research_interests": "Healthy cognitive aging; Dementia; Brain aging"
+    },
+    {
+      "first_name": "Ana",
+      "last_name": "Navarro",
+      "degrees": ["PhD"],
+      "title": "Professor Emerita",
+      "email": "anavarro@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Angelo",
+      "last_name": "Asheh",
+      "degrees": ["MD"],
+      "title": "Health Sciences Clinical Instructor (Voluntary)",
+      "email": "amasheh@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Sara",
+      "last_name": "Baird",
+      "degrees": ["MD"],
+      "title": "Health Sciences Assistant Clinical Professor (Voluntary)",
+      "email": "s1baird@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Barbara",
+      "last_name": "Brody",
+      "degrees": ["MPH"],
+      "title": "Health Sciences Clinical Professor (Voluntary)",
+      "email": "bbrody@health.ucsd.edu",
+      "research_interests": "Cognitive behavioral skills training; Mobile health/community outreach; Aging policy"
+    },
+    {
+      "first_name": "Joseph",
+      "last_name": "Caperna",
+      "degrees": ["MD", "MPH"],
+      "title": "Health Sciences Clinical Professor (Voluntary)",
+      "email": "jcaperna@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Sabrina",
+      "last_name": "Falquier",
+      "degrees": ["MD"],
+      "title": "Health Sciences Clinical Professor (Voluntary)",
+      "email": "safalquier@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Kathleen",
+      "last_name": "Fischer",
+      "degrees": ["MD", "MPH"],
+      "title": "Health Sciences Assistant Clinical Professor (Voluntary)",
+      "email": "kffischer@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Regina",
+      "last_name": "Fleming",
+      "degrees": ["MD", "MSPH"],
+      "title": "Health Sciences Associate Clinical Professor (Voluntary)",
+      "email": "rfleming@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Carla",
+      "last_name": "Fox",
+      "degrees": ["MD"],
+      "title": "Health Sciences Clinical Professor (Voluntary)",
+      "email": "c4fox@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "John",
+      "last_name": "Fox",
+      "degrees": ["MD"],
+      "title": "Health Sciences Clinical Professor (Voluntary)",
+      "email": "j6fox@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Christopher",
+      "last_name": "Granda",
+      "degrees": ["DO", "MPH"],
+      "title": "Health Sciences Clinical Instructor (Voluntary)",
+      "email": "cgranda@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Rebecca",
+      "last_name": "LaVasseur",
+      "degrees": ["MD"],
+      "title": "Health Sciences Clinical Instructor (Voluntary)",
+      "email": "rlevasseur@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Eric",
+      "last_name": "McDonald",
+      "degrees": ["MD"],
+      "title": "Health Sciences Clinical Professor (Voluntary)",
+      "email": null,
+      "research_interests": null
+    },
+    {
+      "first_name": "Mary",
+      "last_name": "Moya",
+      "degrees": ["MD"],
+      "title": "Health Sciences Assistant Clinical Professor (Voluntary)",
+      "email": "mmoya@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Camila",
+      "last_name": "Romero",
+      "degrees": ["MD"],
+      "title": "Health Sciences Assistant Clinical Professor (Voluntary)",
+      "email": "cxromero@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Jose",
+      "last_name": "Suarez-Torres",
+      "degrees": ["MD", "MPH", "PhD"],
+      "title": "Health Sciences Associate Clinical Professor (Voluntary)",
+      "email": "jsuareztorres@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Sayone",
+      "last_name": "Thihalolipavan",
+      "degrees": ["MD", "MPH"],
+      "title": "Health Sciences Clinical Instructor (Voluntary)",
+      "email": "sthihalolipavan@health.ucsd.edu",
+      "research_interests": null
+    },
+    {
+      "first_name": "Jill",
+      "last_name": "Waalen",
+      "degrees": ["MD", "MS", "MPH"],
+      "title": "Health Sciences Associate Clinical Professor (Voluntary)",
+      "email": "jwaalen@health.ucsd.edu",
+      "research_interests": null
+    }
+  ]
+}

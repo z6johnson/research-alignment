@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: grant-match-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120
+    envVars:
+      - key: LITELLM_API_KEY
+        sync: false
+      - key: LITELLM_API_BASE
+        sync: false
+      - key: LITELLM_MODEL
+        sync: false
