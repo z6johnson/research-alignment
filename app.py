@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import re
 
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
@@ -15,8 +16,8 @@ app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 10 * 1024 * 1024  # 10 MB
 
 CORS(app, origins=[
-    r"https://.*\.vercel\.app",
-    r"https://.*\.onrender\.com",
+    re.compile(r"https://.*\.vercel\.app"),
+    re.compile(r"https://.*\.onrender\.com"),
     "http://localhost:*",
     "http://127.0.0.1:*",
 ])
