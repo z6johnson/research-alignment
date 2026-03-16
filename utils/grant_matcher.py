@@ -6,7 +6,10 @@ from litellm import completion
 
 
 def _get_model():
-    return os.getenv("LITELLM_MODEL", "api-gpt-oss-120b")
+    model = os.getenv("LITELLM_MODEL", "api-gpt-oss-120b")
+    if "/" not in model:
+        model = f"openai/{model}"
+    return model
 
 
 def _call_llm(system_prompt, user_prompt, max_tokens=2000, temperature=0.1):
