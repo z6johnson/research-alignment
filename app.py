@@ -1,11 +1,10 @@
 import json
 import logging
 import os
-import re
 import time
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
 from db import init_db
@@ -20,12 +19,8 @@ load_dotenv()
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 10 * 1024 * 1024  # 10 MB
 
-CORS(app, origins=[
-    re.compile(r"https://.*\.vercel\.app"),
-    re.compile(r"https://.*\.onrender\.com"),
-    "http://localhost:*",
-    "http://127.0.0.1:*",
-])
+# CORS only needed for local development (frontend and API are same-origin in production)
+CORS(app, origins=["http://localhost:*", "http://127.0.0.1:*"])
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -37,6 +32,12 @@ init_db(app)
 
 # Register enrichment API endpoints
 app.register_blueprint(enrichment_bp)
+
+
+@app.route("/")
+def index():
+    """Serve the frontend single-page application."""
+    return send_from_directory(".", "index.html")
 
 
 def allowed_file(filename):
