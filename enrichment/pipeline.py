@@ -1,13 +1,15 @@
 """Enrichment pipeline orchestrator.
 
 Coordinates fetching data from multiple sources, normalizing it with LLM,
-and writing enriched data back to the database.
+and writing enriched data back to the JSON file.
 """
 
 import json
 import logging
+import os
+import tempfile
+from datetime import datetime, timezone
 
-from models import EnrichmentLog, Faculty, db
 from .normalizer import normalize_faculty_data
 from .sources.nih_reporter import NIHReporterSource
 from .sources.orcid import ORCIDSource
@@ -15,6 +17,10 @@ from .sources.pubmed import PubMedSource
 from .sources.ucsd_profile import UCSDProfileSource
 
 logger = logging.getLogger(__name__)
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+FACULTY_PATH = os.path.join(DATA_DIR, "faculty.json")
+LOG_PATH = os.path.join(DATA_DIR, "enrichment_log.json")
 
 # Registry of available sources
 SOURCE_CLASSES = {
@@ -24,42 +30,102 @@ SOURCE_CLASSES = {
     "orcid": ORCIDSource,
 }
 
-# Fields that can be directly written to the Faculty model (non-JSON)
+# Fields that can be directly written to a faculty record (non-JSON)
 DIRECT_FIELDS = {"profile_url", "orcid", "google_scholar_id", "h_index"}
 
 # Fields that are JSON arrays and should be replaced wholesale
 JSON_FIELDS = {"funded_grants", "recent_publications", "expertise_keywords"}
 
-# Fields produced by the LLM normalizer
-NORMALIZED_FIELDS = {
-    "research_interests_enriched",
-    "expertise_keywords",
-}
+
+def _load_faculty():
+    """Load faculty data from JSON file."""
+    with open(FACULTY_PATH) as f:
+        return json.load(f)
 
 
-def enrich_faculty(faculty_id, sources=None, dry_run=False):
+def _save_faculty(data):
+    """Atomically write faculty data back to JSON file."""
+    fd, tmp = tempfile.mkstemp(dir=DATA_DIR, suffix=".json")
+    try:
+        with os.fdopen(fd, "w") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+        os.replace(tmp, FACULTY_PATH)
+    except Exception:
+        os.unlink(tmp)
+        raise
+
+
+def _load_log():
+    """Load enrichment log, creating it if missing."""
+    if not os.path.exists(LOG_PATH):
+        return []
+    with open(LOG_PATH) as f:
+        return json.load(f)
+
+
+def _save_log(log_entries):
+    """Atomically write enrichment log."""
+    fd, tmp = tempfile.mkstemp(dir=DATA_DIR, suffix=".json")
+    try:
+        with os.fdopen(fd, "w") as f:
+            json.dump(log_entries, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+        os.replace(tmp, LOG_PATH)
+    except Exception:
+        os.unlink(tmp)
+        raise
+
+
+def _append_log(entry):
+    """Append a single entry to the enrichment log."""
+    entries = _load_log()
+    entries.append(entry)
+    _save_log(entries)
+
+
+def _make_log_entry(faculty_index, source_name, field, old_value, new_value,
+                    confidence, method, source_url=None, raw_response=None):
+    """Create a log entry dict."""
+    return {
+        "faculty_index": faculty_index,
+        "source_name": source_name,
+        "source_url": source_url,
+        "field_updated": field,
+        "old_value": json.dumps(old_value) if isinstance(old_value, (list, dict)) else str(old_value),
+        "new_value": json.dumps(new_value) if isinstance(new_value, (list, dict)) else str(new_value),
+        "confidence": confidence,
+        "method": method,
+        "raw_response": (json.dumps(raw_response)[:5000]) if raw_response else None,
+        "retrieved_at": datetime.now(timezone.utc).isoformat(),
+    }
+
+
+def enrich_faculty(faculty_index, sources=None, dry_run=False):
     """Enrich a single faculty member from specified sources.
 
     Args:
-        faculty_id: ID of the faculty member.
+        faculty_index: Index of the faculty member in the faculty array.
         sources: List of source names to use, or None for all.
-        dry_run: If True, fetch data but don't write to DB.
+        dry_run: If True, fetch data but don't write.
 
     Returns:
         Dict summarizing what was enriched.
     """
-    faculty = Faculty.query.get(faculty_id)
-    if not faculty:
-        logger.error("Faculty ID %d not found.", faculty_id)
-        return {"error": f"Faculty ID {faculty_id} not found"}
+    data = _load_faculty()
+    faculty_list = data["faculty"]
 
-    faculty_dict = faculty.to_dict()
-    name = f"{faculty.first_name} {faculty.last_name}"
-    logger.info("Enriching: %s (ID: %d)", name, faculty_id)
+    if faculty_index < 0 or faculty_index >= len(faculty_list):
+        logger.error("Faculty index %d out of range (0-%d).", faculty_index, len(faculty_list) - 1)
+        return {"error": f"Faculty index {faculty_index} out of range"}
+
+    faculty_dict = faculty_list[faculty_index]
+    name = f"{faculty_dict.get('first_name', '')} {faculty_dict.get('last_name', '')}"
+    logger.info("Enriching: %s (index: %d)", name, faculty_index)
 
     source_names = sources or list(SOURCE_CLASSES.keys())
     raw_data = {}
-    summary = {"faculty_id": faculty_id, "name": name, "sources": {}}
+    summary = {"faculty_index": faculty_index, "name": name, "sources": {}}
 
     # Phase 1: Fetch from all sources
     for source_name in source_names:
@@ -95,64 +161,65 @@ def enrich_faculty(faculty_id, sources=None, dry_run=False):
         }
         return summary
 
-    # Phase 2: Write direct fields to DB
-    for source_name, data in raw_data.items():
+    # Phase 2: Write direct fields
+    log_entries = []
+    for source_name, sdata in raw_data.items():
         source_cls = SOURCE_CLASSES[source_name]
-        for field, value in data.items():
+        for field, value in sdata.items():
             if field.startswith("_"):
                 continue
 
             if field in DIRECT_FIELDS or field in JSON_FIELDS:
-                old_value = getattr(faculty, field, None)
+                old_value = faculty_dict.get(field)
                 if old_value is not None and field not in JSON_FIELDS:
                     continue  # Don't overwrite existing direct fields
 
-                old_str = json.dumps(old_value) if isinstance(old_value, (list, dict)) else str(old_value)
-                new_str = json.dumps(value) if isinstance(value, (list, dict)) else str(value)
+                faculty_dict[field] = value
 
-                setattr(faculty, field, value)
-
-                log = EnrichmentLog(
-                    faculty_id=faculty_id,
+                log_entries.append(_make_log_entry(
+                    faculty_index=faculty_index,
                     source_name=source_name,
-                    source_url=data.get("_source_url"),
-                    field_updated=field,
-                    old_value=old_str,
-                    new_value=new_str,
-                    confidence=source_cls.confidence if hasattr(source_cls, 'confidence') else 0.5,
+                    field=field,
+                    old_value=old_value,
+                    new_value=value,
+                    confidence=source_cls.confidence if hasattr(source_cls, "confidence") else 0.5,
                     method="api" if source_name != "ucsd_profile" else "scrape",
-                    raw_response=json.dumps(data)[:5000],
-                )
-                db.session.add(log)
+                    source_url=sdata.get("_source_url"),
+                    raw_response=sdata,
+                ))
 
     # Phase 3: LLM normalization
     normalized = normalize_faculty_data(faculty_dict, raw_data)
     if normalized:
-        for field in ("research_interests_enriched", "expertise_keywords"):
+        for field in ("research_interests_enriched", "expertise_keywords",
+                       "methodologies", "disease_areas", "populations"):
             value = normalized.get(field)
             if value:
-                old_value = getattr(faculty, field, None)
-                old_str = json.dumps(old_value) if isinstance(old_value, (list, dict)) else str(old_value)
-                new_str = json.dumps(value) if isinstance(value, (list, dict)) else str(value)
+                old_value = faculty_dict.get(field)
+                faculty_dict[field] = value
 
-                setattr(faculty, field, value)
-
-                log = EnrichmentLog(
-                    faculty_id=faculty_id,
+                log_entries.append(_make_log_entry(
+                    faculty_index=faculty_index,
                     source_name="llm_normalizer",
-                    field_updated=field,
-                    old_value=old_str,
-                    new_value=new_str,
+                    field=field,
+                    old_value=old_value,
+                    new_value=value,
                     confidence=0.85,
                     method="llm_extraction",
-                )
-                db.session.add(log)
+                ))
 
         summary["normalization"] = "success"
     else:
         summary["normalization"] = "skipped_or_failed"
 
-    db.session.commit()
+    # Mark when this faculty was last enriched
+    faculty_dict["last_enriched"] = datetime.now(timezone.utc).isoformat()
+
+    # Save everything
+    _save_faculty(data)
+    for entry in log_entries:
+        _append_log(entry)
+
     logger.info("Enrichment complete for %s", name)
     return summary
 
@@ -162,28 +229,30 @@ def enrich_all(sources=None, faculty_ids=None, dry_run=False, progress_callback=
 
     Args:
         sources: List of source names to use, or None for all.
-        faculty_ids: List of specific faculty IDs, or None for all.
+        faculty_ids: List of specific faculty indices, or None for all.
         dry_run: If True, fetch but don't write.
         progress_callback: Optional callable(completed, total) for progress tracking.
 
     Returns:
         List of per-faculty summary dicts.
     """
-    if faculty_ids:
-        faculty_list = Faculty.query.filter(Faculty.id.in_(faculty_ids)).all()
-    else:
-        faculty_list = Faculty.query.all()
+    data = _load_faculty()
+    faculty_list = data["faculty"]
 
-    logger.info("Starting enrichment for %d faculty members.", len(faculty_list))
+    if faculty_ids:
+        indices = [i for i in faculty_ids if 0 <= i < len(faculty_list)]
+    else:
+        indices = list(range(len(faculty_list)))
+
+    logger.info("Starting enrichment for %d faculty members.", len(indices))
     results = []
 
-    for i, faculty in enumerate(faculty_list):
-        result = enrich_faculty(faculty.id, sources=sources, dry_run=dry_run)
+    for i, idx in enumerate(indices):
+        result = enrich_faculty(idx, sources=sources, dry_run=dry_run)
         results.append(result)
         if progress_callback:
-            progress_callback(i + 1, len(faculty_list))
+            progress_callback(i + 1, len(indices))
 
-    # Summary stats
     enriched_count = sum(
         1 for r in results
         if any(s.get("status") == "data_found" for s in r.get("sources", {}).values())
@@ -198,11 +267,14 @@ def enrich_all(sources=None, faculty_ids=None, dry_run=False, progress_callback=
 
 def get_enrichment_status():
     """Return a summary of enrichment coverage."""
-    total = Faculty.query.count()
-    with_original = Faculty.query.filter(Faculty.research_interests.isnot(None)).count()
-    with_enriched = Faculty.query.filter(Faculty.research_interests_enriched.isnot(None)).count()
-    with_grants = Faculty.query.filter(Faculty.funded_grants.isnot(None)).count()
-    with_pubs = Faculty.query.filter(Faculty.recent_publications.isnot(None)).count()
+    data = _load_faculty()
+    faculty_list = data["faculty"]
+    total = len(faculty_list)
+
+    with_original = sum(1 for f in faculty_list if f.get("research_interests"))
+    with_enriched = sum(1 for f in faculty_list if f.get("research_interests_enriched"))
+    with_grants = sum(1 for f in faculty_list if f.get("funded_grants"))
+    with_pubs = sum(1 for f in faculty_list if f.get("recent_publications"))
 
     return {
         "total_faculty": total,

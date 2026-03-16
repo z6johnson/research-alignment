@@ -1,0 +1,97 @@
+"""Enrichment runner for GitHub Actions.
+
+Called directly: python enrichment/run.py
+
+Configuration via environment variables:
+    ENRICH_SOURCES: Comma-separated source names (default: all)
+    ENRICH_FACULTY_IDS: Comma-separated faculty indices (default: all)
+    ENRICH_DRY_RUN: Set to "true" for dry run
+"""
+
+import logging
+import os
+import sys
+
+# Add project root to path so imports work
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+from enrichment.pipeline import enrich_all, get_enrichment_status
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+)
+logger = logging.getLogger(__name__)
+
+
+def main():
+    # Parse config from environment
+    sources = None
+    raw_sources = os.environ.get("ENRICH_SOURCES", "").strip()
+    if raw_sources:
+        sources = [s.strip() for s in raw_sources.split(",") if s.strip()]
+
+    faculty_ids = None
+    raw_ids = os.environ.get("ENRICH_FACULTY_IDS", "").strip()
+    if raw_ids:
+        faculty_ids = [int(i.strip()) for i in raw_ids.split(",") if i.strip()]
+
+    dry_run = os.environ.get("ENRICH_DRY_RUN", "").lower() == "true"
+
+    # Show pre-enrichment status
+    status = get_enrichment_status()
+    print(f"\n=== Pre-enrichment status ===")
+    print(f"Total faculty: {status['total_faculty']}")
+    print(f"With research interests: {status['with_original_interests']} ({status['coverage_original']}%)")
+    print(f"With enriched interests: {status['with_enriched_interests']} ({status['coverage_enriched']}%)")
+    print(f"With funded grants: {status['with_funded_grants']}")
+    print(f"With publications: {status['with_publications']}")
+
+    # Run enrichment
+    config_desc = []
+    if sources:
+        config_desc.append(f"sources={sources}")
+    if faculty_ids:
+        config_desc.append(f"faculty_ids={faculty_ids}")
+    if dry_run:
+        config_desc.append("DRY RUN")
+    print(f"\n=== Running enrichment ({', '.join(config_desc) or 'all faculty, all sources'}) ===\n")
+
+    def on_progress(completed, total):
+        print(f"Progress: {completed}/{total}")
+
+    results = enrich_all(
+        sources=sources,
+        faculty_ids=faculty_ids,
+        dry_run=dry_run,
+        progress_callback=on_progress,
+    )
+
+    # Summary
+    enriched = sum(
+        1 for r in results
+        if any(s.get("status") == "data_found" for s in r.get("sources", {}).values())
+    )
+    failed = sum(1 for r in results if r.get("error"))
+    print(f"\n=== Results ===")
+    print(f"Processed: {len(results)}")
+    print(f"Data found: {enriched}")
+    print(f"Errors: {failed}")
+
+    # Post-enrichment status
+    if not dry_run:
+        status = get_enrichment_status()
+        print(f"\n=== Post-enrichment status ===")
+        print(f"With enriched interests: {status['with_enriched_interests']} ({status['coverage_enriched']}%)")
+        print(f"With funded grants: {status['with_funded_grants']}")
+        print(f"With publications: {status['with_publications']}")
+
+    return 0 if not failed else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
