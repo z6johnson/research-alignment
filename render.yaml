@@ -13,3 +13,7 @@ services:
         sync: false
       - key: DATABASE_URL
         sync: false
+      - key: ENRICHMENT_API_KEY
+        sync: false
+      - key: NCBI_API_KEY
+        sync: false

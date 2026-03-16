@@ -9,6 +9,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 from db import init_db
+from enrichment.routes import enrichment_bp
 from models import MatchAudit, db
 from utils.document_parser import extract_text
 from utils.faculty_repository import get_faculty_for_matching
@@ -33,6 +34,9 @@ ALLOWED_EXTENSIONS = {"pdf", "txt"}
 
 # Initialize database (creates tables and seeds from JSON on first run)
 init_db(app)
+
+# Register enrichment API endpoints
+app.register_blueprint(enrichment_bp)
 
 
 def allowed_file(filename):
