@@ -15,7 +15,8 @@ app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 10 * 1024 * 1024  # 10 MB
 
 CORS(app, origins=[
-    "https://*.vercel.app",
+    r"https://.*\.vercel\.app",
+    r"https://.*\.onrender\.com",
     "http://localhost:*",
     "http://127.0.0.1:*",
 ])
