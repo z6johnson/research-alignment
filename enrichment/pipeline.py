@@ -10,6 +10,7 @@ import logging
 from models import EnrichmentLog, Faculty, db
 from .normalizer import normalize_faculty_data
 from .sources.nih_reporter import NIHReporterSource
+from .sources.orcid import ORCIDSource
 from .sources.pubmed import PubMedSource
 from .sources.ucsd_profile import UCSDProfileSource
 
@@ -20,6 +21,7 @@ SOURCE_CLASSES = {
     "ucsd_profile": UCSDProfileSource,
     "nih_reporter": NIHReporterSource,
     "pubmed": PubMedSource,
+    "orcid": ORCIDSource,
 }
 
 # Fields that can be directly written to the Faculty model (non-JSON)
@@ -155,13 +157,14 @@ def enrich_faculty(faculty_id, sources=None, dry_run=False):
     return summary
 
 
-def enrich_all(sources=None, faculty_ids=None, dry_run=False):
+def enrich_all(sources=None, faculty_ids=None, dry_run=False, progress_callback=None):
     """Enrich all (or specified) faculty members.
 
     Args:
         sources: List of source names to use, or None for all.
         faculty_ids: List of specific faculty IDs, or None for all.
         dry_run: If True, fetch but don't write.
+        progress_callback: Optional callable(completed, total) for progress tracking.
 
     Returns:
         List of per-faculty summary dicts.
@@ -174,9 +177,11 @@ def enrich_all(sources=None, faculty_ids=None, dry_run=False):
     logger.info("Starting enrichment for %d faculty members.", len(faculty_list))
     results = []
 
-    for faculty in faculty_list:
+    for i, faculty in enumerate(faculty_list):
         result = enrich_faculty(faculty.id, sources=sources, dry_run=dry_run)
         results.append(result)
+        if progress_callback:
+            progress_callback(i + 1, len(faculty_list))
 
     # Summary stats
     enriched_count = sum(
