@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <div class="gold-bar"></div>
+    <div class="top-rule"></div>
     <header>
         <div class="container header-inner">
             <div class="brand">
                 <h1 class="brand-title">Grant Match</h1>
-                <p class="brand-sub">Herbert Wertheim School of Public Health and Human Longevity Science</p>
+                <p class="brand-sub">Faculty Research Alignment</p>
             </div>
             <span class="brand-university">UC San Diego</span>
         </div>
@@ -24,18 +24,18 @@
         <section id="upload-view">
             <div class="card upload-card">
                 <h2>Analyze a Grant Opportunity</h2>
-                <p class="help-text">Upload a grant document and we'll identify UCSD faculty whose research interests align with the investigator requirements.</p>
+                <p class="help-text">Upload a grant document to identify faculty whose research interests align with the opportunity requirements.</p>
 
                 <div id="drop-zone" class="drop-zone">
                     <div class="drop-zone-content">
                         <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        <p class="drop-text">Drag &amp; drop your grant document here</p>
+                        <p class="drop-text">Drop grant document here</p>
                         <p class="drop-subtext">or</p>
                         <label class="file-btn">
                             Browse Files
                             <input type="file" id="file-input" accept=".pdf,.txt" hidden>
                         </label>
-                        <p class="file-types">PDF or TXT, up to 10 MB</p>
+                        <p class="file-types">PDF or TXT &middot; 10 MB max</p>
                     </div>
                 </div>
 
@@ -52,8 +52,8 @@
         <section id="processing-view" hidden>
             <div class="card processing-card">
                 <div class="spinner"></div>
-                <p id="status-text" class="status-text">Extracting document text...</p>
-                <p class="status-subtext">This may take 15-30 seconds</p>
+                <p id="status-text" class="status-text">Extracting document text</p>
+                <p class="status-subtext">15–30 seconds</p>
             </div>
         </section>
 
@@ -66,6 +66,7 @@
                     <div id="grant-title" class="summary-field"></div>
                     <div id="grant-agency" class="summary-field"></div>
                 </div>
+                <div id="grant-brief" class="grant-brief"></div>
                 <div id="research-themes" class="tags"></div>
             </div>
 
@@ -87,6 +88,28 @@
             <div id="matches-list" class="matches-list"></div>
 
             <p id="excluded-note" class="excluded-note"></p>
+
+            <!-- Methodology addendum -->
+            <div class="methodology-link">
+                <a id="methodology-toggle">How rankings are calculated</a>
+            </div>
+            <div id="methodology-panel" class="methodology-panel">
+                <h3>Ranking Methodology</h3>
+                <p>Faculty are ranked by an LLM-based analysis that evaluates alignment between each researcher's profile and the grant opportunity requirements. The system does not assign investigator roles — those decisions belong to the research team.</p>
+
+                <h4>Scoring Dimensions</h4>
+                <ul>
+                    <li><strong>Expertise alignment</strong> — How closely the faculty member's stated research interests, keywords, and funded grant history match the grant's required expertise areas</li>
+                    <li><strong>Methodological fit</strong> — Whether the researcher's methods (as inferred from publications and grants) align with the methodological needs of the opportunity</li>
+                    <li><strong>Track record</strong> — Strength of the researcher's publication and funding history relative to the opportunity's scope and requirements</li>
+                </ul>
+
+                <h4>Data Sources</h4>
+                <p>Faculty profiles are constructed from the university directory, enriched with data from NIH RePORTER (funded grants), PubMed (recent publications), ORCID (research outputs), and institutional profile pages. The composite score (0–100) reflects overall alignment strength, not a prediction of success.</p>
+
+                <h4>Model</h4>
+                <p>Grant requirements are extracted and faculty are matched using a large language model via LiteLLM. The model evaluates textual similarity and semantic relevance — it does not have access to private data, internal evaluations, or proprietary metrics. Results should be treated as a starting point for team assembly, not a definitive ranking.</p>
+            </div>
         </section>
 
         <!-- Error View -->
@@ -94,19 +117,18 @@
             <div class="card error-card">
                 <svg class="error-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
                 <p id="error-message" class="error-message"></p>
-                <button id="retry-btn" class="btn btn-primary">Try Again</button>
+                <button id="retry-btn" class="btn btn-primary" style="width:auto;">Try Again</button>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; UC San Diego &middot; Herbert Wertheim School of Public Health</p>
+            <p>UC San Diego &middot; Faculty Research Alignment Tool</p>
         </div>
     </footer>
 
     <script>
-        // API is same-origin — no base URL needed
         window.GRANT_MATCH_API_URL = "";
     </script>
     <script src="/static/js/app.js"></script>
