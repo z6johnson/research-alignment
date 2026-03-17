@@ -18,9 +18,10 @@ def _get_model():
     return model
 
 
-def _call_llm(system_prompt, user_prompt, max_tokens=2000, temperature=0.1):
+def _call_llm(system_prompt, user_prompt, max_tokens=2000, temperature=0.1,
+               json_mode=False):
     """Make a LiteLLM completion call and return the content string."""
-    response = completion(
+    kwargs = dict(
         model=_get_model(),
         messages=[
             {"role": "system", "content": system_prompt},
@@ -31,6 +32,20 @@ def _call_llm(system_prompt, user_prompt, max_tokens=2000, temperature=0.1):
         api_key=os.getenv("LITELLM_API_KEY"),
         api_base=os.getenv("LITELLM_API_BASE"),
     )
+    if json_mode:
+        kwargs["response_format"] = {"type": "json_object"}
+
+    try:
+        response = completion(**kwargs)
+    except Exception:
+        if json_mode:
+            # Model may not support JSON mode — retry without it
+            logger.info("JSON mode not supported by model, retrying without it")
+            kwargs.pop("response_format", None)
+            response = completion(**kwargs)
+        else:
+            raise
+
     content = response.choices[0].message.content
     if not content:
         raise ValueError("LLM returned an empty response")
@@ -65,6 +80,21 @@ def _parse_json_response(text):
                 return json.loads(text[start : end + 1])
             except json.JSONDecodeError:
                 continue
+
+    # Try to recover a truncated JSON array — find last complete object
+    arr_start = text.find("[")
+    if arr_start != -1:
+        # Find the last complete "}" and close the array
+        substring = text[arr_start:]
+        last_brace = substring.rfind("}")
+        if last_brace > 0:
+            candidate = substring[: last_brace + 1] + "]"
+            try:
+                result = json.loads(candidate)
+                logger.warning("Recovered truncated JSON array (%d items)", len(result))
+                return result
+            except json.JSONDecodeError:
+                pass
 
     raise ValueError("Could not parse JSON from LLM response")
 
@@ -177,12 +207,13 @@ def extract_grant_requirements(grant_text):
         if attempt > 0:
             logger.warning("Retrying extract_grant_requirements after parse failure (attempt %d)", attempt + 1)
             time.sleep(1)
-        raw = _call_llm(EXTRACT_SYSTEM_PROMPT, user_prompt, max_tokens=2000, temperature=0.1)
+        raw = _call_llm(EXTRACT_SYSTEM_PROMPT, user_prompt, max_tokens=2000, temperature=0.1,
+                        json_mode=True)
         try:
             return _parse_json_response(raw)
         except ValueError as exc:
-            logger.warning("Failed to parse extract response (attempt %d): %s", attempt + 1, exc)
-            logger.debug("Raw LLM response: %s", raw[:2000] if raw else raw)
+            logger.warning("Failed to parse extract response (attempt %d): %s\nRaw response (first 500 chars): %s",
+                          attempt + 1, exc, raw[:500] if raw else raw)
             last_error = exc
     raise last_error
 
@@ -235,14 +266,15 @@ def match_faculty(requirements, faculty_with_interests):
         if attempt > 0:
             logger.warning("Retrying match_faculty after parse failure (attempt %d)", attempt + 1)
             time.sleep(1)
-        raw = _call_llm(MATCH_SYSTEM_PROMPT, user_prompt, max_tokens=4000, temperature=0.2)
+        raw = _call_llm(MATCH_SYSTEM_PROMPT, user_prompt, max_tokens=4000, temperature=0.2,
+                        json_mode=True)
         try:
             parsed = _parse_json_response(raw)
             matches = _unwrap_matches_list(parsed)
             break
         except ValueError as exc:
-            logger.warning("Failed to parse match response (attempt %d): %s", attempt + 1, exc)
-            logger.debug("Raw LLM response: %s", raw[:2000] if raw else raw)
+            logger.warning("Failed to parse match response (attempt %d): %s\nRaw response (first 500 chars): %s",
+                          attempt + 1, exc, raw[:500] if raw else raw)
             last_error = exc
     else:
         raise last_error
