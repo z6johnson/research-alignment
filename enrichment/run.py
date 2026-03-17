@@ -76,11 +76,13 @@ def main():
         1 for r in results
         if any(s.get("status") == "data_found" for s in r.get("sources", {}).values())
     )
-    failed = sum(1 for r in results if r.get("error"))
+    errored = [r for r in results if r.get("error")]
     print(f"\n=== Results ===")
     print(f"Processed: {len(results)}")
     print(f"Data found: {enriched}")
-    print(f"Errors: {failed}")
+    print(f"Errors: {len(errored)}")
+    for r in errored:
+        print(f"  - {r.get('name', r.get('faculty_index', '?'))}: {r.get('error')}")
 
     # Post-enrichment status
     if not dry_run:
@@ -90,7 +92,12 @@ def main():
         print(f"With funded grants: {status['with_funded_grants']}")
         print(f"With publications: {status['with_publications']}")
 
-    return 0 if not failed else 1
+    # Only fail if more than half of faculty had errors (indicates systemic issue)
+    # Transient source failures are normal and should not break the workflow
+    if len(errored) > len(results) // 2:
+        print(f"\n!!! Too many errors ({len(errored)}/{len(results)}), failing the run.")
+        return 1
+    return 0
 
 
 if __name__ == "__main__":

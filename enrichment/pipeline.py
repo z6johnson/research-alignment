@@ -248,7 +248,12 @@ def enrich_all(sources=None, faculty_ids=None, dry_run=False, progress_callback=
     results = []
 
     for i, idx in enumerate(indices):
-        result = enrich_faculty(idx, sources=sources, dry_run=dry_run)
+        try:
+            result = enrich_faculty(idx, sources=sources, dry_run=dry_run)
+        except Exception:
+            name = faculty_list[idx].get("last_name", str(idx))
+            logger.exception("Unhandled error enriching faculty %s (index %d)", name, idx)
+            result = {"faculty_index": idx, "name": name, "error": f"Unhandled exception"}
         results.append(result)
         if progress_callback:
             progress_callback(i + 1, len(indices))
