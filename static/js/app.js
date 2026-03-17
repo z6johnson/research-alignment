@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const retryBtn = document.getElementById("retry-btn");
     const copyBtn = document.getElementById("copy-btn");
     const newBtn = document.getElementById("new-btn");
+    const methodologyToggle = document.getElementById("methodology-toggle");
+    const methodologyPanel = document.getElementById("methodology-panel");
 
     let selectedFile = null;
     let lastResults = null;
@@ -73,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     dropZone.addEventListener("click", (e) => {
-        // Avoid double-triggering when clicking the label (which natively opens the file picker)
         if (e.target.closest(".file-btn")) return;
         fileInput.click();
     });
@@ -84,10 +85,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Processing status messages
     const statusMessages = [
-        "Extracting document text...",
-        "Analyzing grant requirements...",
-        "Matching faculty expertise...",
-        "Ranking candidates..."
+        "Extracting document text",
+        "Analyzing grant requirements",
+        "Matching faculty expertise",
+        "Ranking candidates"
     ];
 
     function cycleStatus() {
@@ -145,7 +146,17 @@ document.addEventListener("DOMContentLoaded", () => {
     newBtn.addEventListener("click", () => {
         clearFile();
         lastResults = null;
+        methodologyPanel.classList.remove("visible");
         showView(uploadView);
+    });
+
+    // Methodology toggle
+    methodologyToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        methodologyPanel.classList.toggle("visible");
+        methodologyToggle.textContent = methodologyPanel.classList.contains("visible")
+            ? "Hide ranking methodology"
+            : "How rankings are calculated";
     });
 
     // Render results
@@ -162,6 +173,11 @@ document.addEventListener("DOMContentLoaded", () => {
             ? `<strong>Agency:</strong> ${escapeHtml(summary.funding_agency)}`
             : "";
 
+        // Grant brief summary
+        const briefEl = document.getElementById("grant-brief");
+        briefEl.textContent = summary.grant_summary || "";
+        briefEl.style.display = summary.grant_summary ? "" : "none";
+
         // Research themes
         const themesEl = document.getElementById("research-themes");
         const themes = summary.overall_research_themes || [];
@@ -171,21 +187,37 @@ document.addEventListener("DOMContentLoaded", () => {
         const reqBody = document.getElementById("requirements-body");
         reqBody.innerHTML = "";
 
-        const piReq = summary.pi_requirements;
-        if (piReq) {
-            reqBody.appendChild(buildReqSection("Principal Investigator (PI)", piReq));
+        // New structure: investigator_requirements array
+        const invReqs = summary.investigator_requirements || [];
+        if (invReqs.length > 0) {
+            invReqs.forEach(req => {
+                reqBody.appendChild(buildReqSection(
+                    req.role || "Investigator",
+                    {
+                        expertise_areas: req.expertise_areas,
+                        qualifications: req.qualifications,
+                        constraints: req.constraints
+                    }
+                ));
+            });
+        } else {
+            // Fallback: legacy pi_requirements / co_pi_requirements format
+            const piReq = summary.pi_requirements;
+            if (piReq) {
+                reqBody.appendChild(buildReqSection("Lead Investigator", piReq));
+            }
+            const coReq = summary.co_pi_requirements;
+            if (coReq) {
+                reqBody.appendChild(buildReqSection("Co-Investigator", coReq));
+            }
+            const keyPersonnel = summary.key_personnel || [];
+            keyPersonnel.forEach((kp, i) => {
+                reqBody.appendChild(buildReqSection(
+                    kp.role || `Key Personnel ${i + 1}`,
+                    { expertise_areas: kp.expertise_areas, qualifications: kp.qualifications, constraints: [] }
+                ));
+            });
         }
-        const coReq = summary.co_pi_requirements;
-        if (coReq) {
-            reqBody.appendChild(buildReqSection("Co-Principal Investigator (Co-PI)", coReq));
-        }
-        const keyPersonnel = summary.key_personnel || [];
-        keyPersonnel.forEach((kp, i) => {
-            reqBody.appendChild(buildReqSection(
-                kp.role || `Key Personnel ${i + 1}`,
-                { expertise_areas: kp.expertise_areas, qualifications: kp.qualifications, constraints: [] }
-            ));
-        });
 
         // Match cards
         const matchesList = document.getElementById("matches-list");
@@ -201,6 +233,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const excluded = data.faculty_without_interests_count || 0;
         const considered = data.total_faculty_considered || 0;
         excludedNote.textContent = `${considered} faculty evaluated \u00B7 ${excluded} excluded (no listed research interests)`;
+
+        // Reset methodology panel
+        methodologyPanel.classList.remove("visible");
+        methodologyToggle.textContent = "How rankings are calculated";
     }
 
     function buildReqSection(title, req) {
@@ -216,7 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (items.length > 0) {
             html += '<ul class="req-list">' + items.map(i => `<li>${escapeHtml(i)}</li>`).join("") + "</ul>";
         } else {
-            html += '<p style="font-size:0.85rem;color:#999;">No specific requirements listed</p>';
+            html += '<p style="font-size:0.8125rem;color:#999;">No specific requirements listed</p>';
         }
 
         div.innerHTML = html;
@@ -228,8 +264,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const nameStr = `${match.first_name} ${match.last_name}${degrees ? ", " + degrees : ""}`;
         const score = match.match_score || 0;
         const scoreClass = score >= 80 ? "score-high" : score >= 60 ? "score-med" : "score-low";
-        const roleClass = getRoleClass(match.recommended_role);
-        const roleLabel = match.recommended_role || "Key Personnel";
+
+        // Sub-scores
+        const expertise = match.expertise_alignment || 0;
+        const methods = match.methodological_fit || 0;
+        const track = match.track_record || 0;
 
         const emailHtml = match.email
             ? `<a href="mailto:${escapeHtml(match.email)}">${escapeHtml(match.email)}</a>`
@@ -237,17 +276,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
         return `
         <div class="match-card">
+            <div class="match-rank">${match.rank}</div>
             <div class="match-header">
                 <div>
                     <div class="match-name">${escapeHtml(nameStr)}</div>
                     <div class="match-title">${escapeHtml(match.title || "")}</div>
                 </div>
-                <span class="role-badge ${roleClass}">${escapeHtml(roleLabel)}</span>
+                <div class="score-overall">${score}</div>
             </div>
-            <div class="score-row">
-                <span class="score-label">${score}%</span>
-                <div class="score-bar-bg">
-                    <div class="score-bar-fill ${scoreClass}" style="width:${score}%"></div>
+            <div class="score-bar-bg">
+                <div class="score-bar-fill ${scoreClass}" style="width:${score}%"></div>
+            </div>
+            <div class="score-breakdown">
+                <div class="score-dimension">
+                    <span class="score-dim-label">Expertise</span>
+                    <span class="score-dim-value">${expertise}</span>
+                </div>
+                <div class="score-dimension">
+                    <span class="score-dim-label">Methods</span>
+                    <span class="score-dim-value">${methods}</span>
+                </div>
+                <div class="score-dimension">
+                    <span class="score-dim-label">Track Record</span>
+                    <span class="score-dim-value">${track}</span>
                 </div>
             </div>
             <p class="match-reasoning">${escapeHtml(match.match_reasoning || "")}</p>
@@ -256,31 +307,23 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>`;
     }
 
-    function getRoleClass(role) {
-        if (!role) return "role-key";
-        const r = role.toLowerCase();
-        if (r === "pi") return "role-pi";
-        if (r === "co-pi") return "role-co-pi";
-        if (r === "consultant") return "role-consultant";
-        return "role-key";
-    }
-
     // Copy results
     copyBtn.addEventListener("click", () => {
         if (!lastResults) return;
 
         const summary = lastResults.grant_summary || {};
-        let text = "UCSD Grant Match Results\n";
-        text += "========================\n\n";
+        let text = "Grant Match Results — UC San Diego\n";
+        text += "====================================\n\n";
         if (summary.grant_title) text += `Grant: ${summary.grant_title}\n`;
         if (summary.funding_agency) text += `Agency: ${summary.funding_agency}\n`;
+        if (summary.grant_summary) text += `\n${summary.grant_summary}\n`;
         text += "\n";
 
         const matches = lastResults.matches || [];
         matches.forEach(m => {
             const degrees = (m.degrees || []).join(", ");
             text += `${m.rank}. ${m.first_name} ${m.last_name}, ${degrees}\n`;
-            text += `   Role: ${m.recommended_role} | Score: ${m.match_score}%\n`;
+            text += `   Score: ${m.match_score} (Expertise: ${m.expertise_alignment || "—"}, Methods: ${m.methodological_fit || "—"}, Track Record: ${m.track_record || "—"})\n`;
             text += `   ${m.match_reasoning}\n`;
             if (m.email) text += `   Email: ${m.email}\n`;
             text += "\n";
@@ -288,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         navigator.clipboard.writeText(text).then(() => {
             const original = copyBtn.textContent;
-            copyBtn.textContent = "Copied!";
+            copyBtn.textContent = "Copied";
             setTimeout(() => { copyBtn.textContent = original; }, 2000);
         });
     });
