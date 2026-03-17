@@ -1,8 +1,14 @@
 import json
+import logging
 import os
 import re
+import time
 
 from litellm import completion
+
+logger = logging.getLogger(__name__)
+
+MAX_INTERESTS_LENGTH = 300
 
 
 def _get_model():
@@ -25,11 +31,17 @@ def _call_llm(system_prompt, user_prompt, max_tokens=2000, temperature=0.1):
         api_key=os.getenv("LITELLM_API_KEY"),
         api_base=os.getenv("LITELLM_API_BASE"),
     )
-    return response.choices[0].message.content
+    content = response.choices[0].message.content
+    if not content:
+        raise ValueError("LLM returned an empty response")
+    return content
 
 
 def _parse_json_response(text):
     """Parse JSON from an LLM response, handling markdown fences."""
+    if not text or not isinstance(text, str):
+        raise ValueError("Could not parse JSON from LLM response: empty input")
+
     # Try direct parse
     try:
         return json.loads(text)
@@ -55,6 +67,25 @@ def _parse_json_response(text):
                 continue
 
     raise ValueError("Could not parse JSON from LLM response")
+
+
+def _unwrap_matches_list(parsed):
+    """Ensure the parsed match result is a list of match objects.
+
+    Models sometimes wrap the array in an object like {"matches": [...]}.
+    """
+    if isinstance(parsed, list):
+        return parsed
+    if isinstance(parsed, dict):
+        # Look for the first list value that contains match-like objects
+        for key in ("matches", "results", "faculty_matches", "ranked_matches"):
+            if key in parsed and isinstance(parsed[key], list):
+                return parsed[key]
+        # Fallback: return the first list value found
+        for value in parsed.values():
+            if isinstance(value, list):
+                return value
+    raise ValueError("Expected a JSON array of matches from LLM response")
 
 
 EXTRACT_SYSTEM_PROMPT = """\
@@ -141,8 +172,26 @@ def extract_grant_requirements(grant_text):
         "---\n\n"
         "Extract the requirements and summary as specified."
     )
-    raw = _call_llm(EXTRACT_SYSTEM_PROMPT, user_prompt, max_tokens=2000, temperature=0.1)
-    return _parse_json_response(raw)
+    last_error = None
+    for attempt in range(2):
+        if attempt > 0:
+            logger.warning("Retrying extract_grant_requirements after parse failure (attempt %d)", attempt + 1)
+            time.sleep(1)
+        raw = _call_llm(EXTRACT_SYSTEM_PROMPT, user_prompt, max_tokens=2000, temperature=0.1)
+        try:
+            return _parse_json_response(raw)
+        except ValueError as exc:
+            logger.warning("Failed to parse extract response (attempt %d): %s", attempt + 1, exc)
+            logger.debug("Raw LLM response: %s", raw[:2000] if raw else raw)
+            last_error = exc
+    raise last_error
+
+
+def _truncate(text, max_length):
+    """Truncate text to max_length, appending '...' if shortened."""
+    if not text or len(text) <= max_length:
+        return text
+    return text[:max_length] + "..."
 
 
 def match_faculty(requirements, faculty_with_interests):
@@ -152,16 +201,17 @@ def match_faculty(requirements, faculty_with_interests):
     for idx, f in enumerate(faculty_with_interests):
         degrees = ", ".join(f.get("degrees") or [])
         name = f"{f['first_name']} {f['last_name']}"
-        interests = (
+        interests = _truncate(
             f.get("_effective_interests")
             or f.get("research_interests_enriched")
             or f.get("research_interests")
-            or "N/A"
+            or "N/A",
+            MAX_INTERESTS_LENGTH,
         )
         summary = f"ID:{idx} | {name}, {degrees} | {f['title']} | Interests: {interests}"
         extras = []
         if f.get("expertise_keywords"):
-            extras.append(f"Keywords: {', '.join(f['expertise_keywords'])}")
+            extras.append(f"Keywords: {', '.join(f['expertise_keywords'][:8])}")
         if f.get("funded_grants"):
             extras.append(f"Grants: {len(f['funded_grants'])} funded")
         if f.get("h_index"):
@@ -178,8 +228,24 @@ def match_faculty(requirements, faculty_with_interests):
         f"{faculty_summary}\n\n"
         "Rank the best-matching faculty for this grant."
     )
-    raw = _call_llm(MATCH_SYSTEM_PROMPT, user_prompt, max_tokens=4000, temperature=0.2)
-    matches = _parse_json_response(raw)
+
+    # Retry once on parse failure — models occasionally produce malformed output
+    last_error = None
+    for attempt in range(2):
+        if attempt > 0:
+            logger.warning("Retrying match_faculty after parse failure (attempt %d)", attempt + 1)
+            time.sleep(1)
+        raw = _call_llm(MATCH_SYSTEM_PROMPT, user_prompt, max_tokens=4000, temperature=0.2)
+        try:
+            parsed = _parse_json_response(raw)
+            matches = _unwrap_matches_list(parsed)
+            break
+        except ValueError as exc:
+            logger.warning("Failed to parse match response (attempt %d): %s", attempt + 1, exc)
+            logger.debug("Raw LLM response: %s", raw[:2000] if raw else raw)
+            last_error = exc
+    else:
+        raise last_error
 
     # Enrich matches with full faculty data
     enriched = []
