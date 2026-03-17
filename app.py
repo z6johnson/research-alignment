@@ -65,9 +65,18 @@ def match():
     try:
         faculty = get_faculty_data()["faculty"]
         results = process_grant(text, faculty)
-    except Exception:
+    except Exception as e:
         logger.exception("Grant processing failed")
-        return jsonify({"error": "Failed to analyze the grant document. Please try again."}), 500
+        detail = str(e)
+        if "api_key" in detail.lower() or "auth" in detail.lower():
+            msg = "LLM API credentials are not configured. Check LITELLM_API_KEY and LITELLM_API_BASE."
+        elif "connect" in detail.lower() or "timeout" in detail.lower():
+            msg = "Could not reach the LLM API. Please try again shortly."
+        elif "parse" in detail.lower() or "json" in detail.lower():
+            msg = "The model returned an unparseable response. Please try again."
+        else:
+            msg = f"Failed to analyze the grant document: {detail}"
+        return jsonify({"error": msg}), 500
 
     return jsonify(results)
 
