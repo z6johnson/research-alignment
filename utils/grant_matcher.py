@@ -207,7 +207,7 @@ def extract_grant_requirements(grant_text):
         if attempt > 0:
             logger.warning("Retrying extract_grant_requirements after parse failure (attempt %d)", attempt + 1)
             time.sleep(1)
-        raw = _call_llm(EXTRACT_SYSTEM_PROMPT, user_prompt, max_tokens=2000, temperature=0.1,
+        raw = _call_llm(EXTRACT_SYSTEM_PROMPT, user_prompt, max_tokens=2000, temperature=0,
                         json_mode=True)
         try:
             return _parse_json_response(raw)
@@ -266,7 +266,7 @@ def match_faculty(requirements, faculty_with_interests):
         if attempt > 0:
             logger.warning("Retrying match_faculty after parse failure (attempt %d)", attempt + 1)
             time.sleep(1)
-        raw = _call_llm(MATCH_SYSTEM_PROMPT, user_prompt, max_tokens=4000, temperature=0.2,
+        raw = _call_llm(MATCH_SYSTEM_PROMPT, user_prompt, max_tokens=4000, temperature=0,
                         json_mode=True)
         try:
             parsed = _parse_json_response(raw)
