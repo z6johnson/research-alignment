@@ -1,4 +1,4 @@
-name: Faculty Enrichment
+name: Enrich HWSPH Faculty
 
 on:
   schedule:
@@ -17,15 +17,17 @@ on:
           - sio
         default: hwsph
       sources:
-        description: "Comma-separated sources (leave empty for all)"
+        description: "Comma-separated sources (leave empty for all 4)"
         required: false
         default: ""
+        type: string
       faculty_ids:
         description: "Comma-separated faculty indices (leave empty for all)"
         required: false
         default: ""
+        type: string
       dry_run:
-        description: "Dry run (fetch only, no writes)"
+        description: "Fetch data but don't write"
         required: false
         type: boolean
         default: false
@@ -79,8 +81,8 @@ jobs:
           ENRICH_DRY_RUN: ${{ inputs.dry_run }}
         run: python enrichment/run.py
 
-      - name: Commit updated data
-        if: ${{ inputs.dry_run != 'true' }}
+      - name: Commit enriched data
+        if: inputs.dry_run != true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

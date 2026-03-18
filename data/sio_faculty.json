@@ -6,12 +6,36 @@
   "seed_status": "seeded",
   "seed_notes": "Initial roster built from UCSD catalog and public faculty directories. Run enrichment to populate research interests, grants, and publications.",
   "enrichment_sources": [
-    {"name": "scripps_profile", "description": "Scripps/UCSD profile pages", "confidence": 1.0},
-    {"name": "nsf_awards", "description": "NSF Award Search API (dominant funder for ocean sciences)", "confidence": 0.8},
-    {"name": "nih_reporter", "description": "NIH RePORTER API (some SIO faculty have NIH funding)", "confidence": 0.8},
-    {"name": "pubmed", "description": "PubMed/NCBI E-utilities", "confidence": 0.7},
-    {"name": "orcid", "description": "ORCID public API", "confidence": 0.9},
-    {"name": "semantic_scholar", "description": "Semantic Scholar API (h-index, citations, papers)", "confidence": 0.75}
+    {
+      "name": "scripps_profile",
+      "description": "Scripps/UCSD profile pages",
+      "confidence": 1.0
+    },
+    {
+      "name": "nsf_awards",
+      "description": "NSF Award Search API (dominant funder for ocean sciences)",
+      "confidence": 0.8
+    },
+    {
+      "name": "nih_reporter",
+      "description": "NIH RePORTER API (some SIO faculty have NIH funding)",
+      "confidence": 0.8
+    },
+    {
+      "name": "pubmed",
+      "description": "PubMed/NCBI E-utilities",
+      "confidence": 0.7
+    },
+    {
+      "name": "orcid",
+      "description": "ORCID public API",
+      "confidence": 0.9
+    },
+    {
+      "name": "semantic_scholar",
+      "description": "Semantic Scholar API (h-index, citations, papers)",
+      "confidence": 0.75
+    }
   ],
   "faculty": [
     {
