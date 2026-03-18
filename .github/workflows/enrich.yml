@@ -2,10 +2,20 @@ name: Faculty Enrichment
 
 on:
   schedule:
-    # Every Sunday at midnight UTC
+    # HWSPH: Every Sunday at midnight UTC
     - cron: "0 0 * * 0"
+    # SIO: Every Sunday at 2am UTC (offset to avoid overlap)
+    - cron: "0 2 * * 0"
   workflow_dispatch:
     inputs:
+      department:
+        description: "Department to enrich"
+        required: false
+        type: choice
+        options:
+          - hwsph
+          - sio
+        default: hwsph
       sources:
         description: "Comma-separated sources (leave empty for all)"
         required: false
@@ -28,7 +38,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
 
+    # For scheduled runs, use the cron time to determine department
+    # 00:00 UTC = HWSPH, 02:00 UTC = SIO
+    env:
+      DEPT: ${{ github.event_name == 'workflow_dispatch' && inputs.department || '' }}
+
     steps:
+      - name: Determine department for scheduled runs
+        if: github.event_name == 'schedule'
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" = "02" ]; then
+            echo "DEPT=sio" >> "$GITHUB_ENV"
+          else
+            echo "DEPT=hwsph" >> "$GITHUB_ENV"
+          fi
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -47,6 +72,8 @@ jobs:
           LITELLM_API_BASE: ${{ secrets.LITELLM_API_BASE }}
           LITELLM_MODEL: ${{ secrets.LITELLM_MODEL }}
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
+          ENRICH_DEPARTMENT: ${{ env.DEPT != 'hwsph' && env.DEPT || '' }}
           ENRICH_SOURCES: ${{ inputs.sources }}
           ENRICH_FACULTY_IDS: ${{ inputs.faculty_ids }}
           ENRICH_DRY_RUN: ${{ inputs.dry_run }}
@@ -57,7 +84,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/faculty.json
+          git add data/faculty.json data/sio_faculty.json
           [ -f data/enrichment_log.json ] && git add data/enrichment_log.json
-          git diff --staged --quiet || git commit -m "chore: enrich faculty data ($(date -u +%Y-%m-%d))"
+          git diff --staged --quiet || git commit -m "chore: enrich ${{ env.DEPT || 'hwsph' }} faculty data ($(date -u +%Y-%m-%d))"
           git push
