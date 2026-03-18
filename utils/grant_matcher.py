@@ -377,6 +377,8 @@ def match_faculty(requirements, faculty_with_interests):
                 "degrees": faculty.get("degrees", []),
                 "title": faculty.get("title", ""),
                 "email": faculty.get("email"),
+                "department": faculty.get("department", ""),
+                "department_label": faculty.get("department_label", ""),
                 "research_interests": faculty.get("research_interests", ""),
                 "match_score": m.get("match_score", 0),
                 "expertise_alignment": m.get("expertise_alignment", 0),

@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const expertiseInput = document.getElementById("expertise-input");
     const manualSubmitBtn = document.getElementById("manual-submit-btn");
 
+    // Department selector (shared across all tabs)
+    const deptSelect = document.getElementById("dept-select");
+
     // Directory mode
     const expertSearch = document.getElementById("expert-search");
     const expertSearchBtn = document.getElementById("expert-search-btn");
@@ -181,6 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const formData = new FormData();
         formData.append("file", selectedFile);
+        formData.append("dept", deptSelect.value);
 
         try {
             const response = await fetch(API_BASE + "/api/match", {
@@ -225,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const response = await fetch(API_BASE + "/api/match-text", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ text: text })
+                body: JSON.stringify({ text: text, dept: deptSelect.value })
             });
 
             clearInterval(interval);
@@ -280,7 +284,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const params = new URLSearchParams({
                 q: query,
                 limit: DIRECTORY_PAGE_SIZE,
-                offset: directoryOffset
+                offset: directoryOffset,
+                dept: deptSelect.value
             });
             const response = await fetch(API_BASE + "/api/faculty?" + params);
             if (!response.ok) throw new Error("Search failed");
@@ -346,6 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function buildExpertCard(f) {
         const degrees = (f.degrees || []).join(", ");
         const nameStr = `${f.first_name} ${f.last_name}${degrees ? ", " + degrees : ""}`;
+        const deptBadge = f.department ? `<span class="dept-badge dept-badge-${escapeHtml(f.department)}">${escapeHtml(f.department.toUpperCase())}</span>` : "";
         const keywords = (f.expertise_keywords || []).slice(0, 8);
         const research = f.research_interests_enriched || f.research_interests || "";
         const diseaseAreas = f.disease_areas || [];
@@ -429,7 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="expert-card">
             <div class="expert-card-header">
                 <div>
-                    <div class="expert-name">${escapeHtml(nameStr)}</div>
+                    <div class="expert-name">${escapeHtml(nameStr)} ${deptBadge}</div>
                     <div class="expert-title">${escapeHtml(f.title || "")}</div>
                 </div>
                 ${hIndexHtml}
@@ -464,11 +470,59 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Suggested search chips
+    const SUGGESTED_CHIPS = {
+        all: [
+            { query: "machine learning", label: "machine learning" },
+            { query: "oceanography", label: "oceanography" },
+            { query: "climate change", label: "climate change" },
+            { query: "epidemiology", label: "epidemiology" },
+            { query: "coral reef", label: "coral reef" },
+        ],
+        hwsph: [
+            { query: "machine learning", label: "machine learning" },
+            { query: "cardiovascular", label: "cardiovascular" },
+            { query: "health disparities", label: "health disparities" },
+            { query: "epidemiology", label: "epidemiology" },
+            { query: "clinical trials", label: "clinical trials" },
+        ],
+        sio: [
+            { query: "oceanography", label: "oceanography" },
+            { query: "climate change", label: "climate change" },
+            { query: "coral reef", label: "coral reef" },
+            { query: "seismology", label: "seismology" },
+            { query: "marine ecology", label: "marine ecology" },
+        ],
+    };
+
+    function updateSuggestedChips() {
+        const chips = SUGGESTED_CHIPS[deptSelect.value] || SUGGESTED_CHIPS.all;
+        const container = document.querySelector(".suggested-searches");
+        if (!container) return;
+        // Keep the label, rebuild chips
+        container.innerHTML = '<span class="suggested-label">Try</span>' +
+            chips.map(c => `<button class="suggested-chip" data-query="${escapeHtml(c.query)}">${escapeHtml(c.label)}</button>`).join("");
+        container.querySelectorAll(".suggested-chip").forEach(chip => {
+            chip.addEventListener("click", () => {
+                expertSearch.value = chip.dataset.query;
+                triggerSearch();
+            });
+        });
+    }
+
+    // Initial chip handler setup
     document.querySelectorAll(".suggested-chip").forEach(chip => {
         chip.addEventListener("click", () => {
             expertSearch.value = chip.dataset.query;
             triggerSearch();
         });
+    });
+
+    // Department change: update chips and re-search if there's an active query
+    deptSelect.addEventListener("change", () => {
+        updateSuggestedChips();
+        if (buildSearchQuery()) {
+            searchFaculty(false);
+        }
     });
 
     // Active filters
@@ -624,6 +678,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function buildMatchCard(match) {
         const degrees = (match.degrees || []).join(", ");
         const nameStr = `${match.first_name} ${match.last_name}${degrees ? ", " + degrees : ""}`;
+        const matchDeptBadge = match.department ? `<span class="dept-badge dept-badge-${escapeHtml(match.department)}">${escapeHtml(match.department.toUpperCase())}</span>` : "";
         const score = match.match_score || 0;
         const scoreClass = score >= 80 ? "score-high" : score >= 60 ? "score-med" : "score-low";
 
@@ -640,7 +695,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="match-rank">${match.rank}</div>
             <div class="match-header">
                 <div>
-                    <div class="match-name">${escapeHtml(nameStr)}</div>
+                    <div class="match-name">${escapeHtml(nameStr)} ${matchDeptBadge}</div>
                     <div class="match-title">${escapeHtml(match.title || "")}</div>
                 </div>
                 <div class="score-overall">${score}</div>

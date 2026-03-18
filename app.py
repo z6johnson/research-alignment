@@ -24,22 +24,48 @@ ALLOWED_EXTENSIONS = {"pdf", "txt"}
 
 _faculty_cache = {}
 
+# Map department keys to filenames and display labels
+_DEPT_CONFIG = {
+    "hwsph": {"filename": "faculty.json", "label": "Herbert Wertheim School of Public Health"},
+    "sio":   {"filename": "sio_faculty.json", "label": "Scripps Institution of Oceanography"},
+}
+
 
 def get_faculty_data(department=None):
     """Load faculty data from JSON file (cached after first read).
 
     Args:
-        department: "sio" for Scripps, None for HWSPH (default).
+        department: "sio" for Scripps, "all" for both, None for HWSPH (default).
     """
     cache_key = department or "hwsph"
     if cache_key not in _faculty_cache:
-        if department == "sio":
-            filename = "sio_faculty.json"
+        if department == "all":
+            # Merge all departments, tagging each faculty with their dept
+            merged = []
+            for dept_key, cfg in _DEPT_CONFIG.items():
+                data_path = os.path.join(os.path.dirname(__file__), "data", cfg["filename"])
+                with open(data_path) as f:
+                    dept_data = json.load(f)
+                for fac in dept_data.get("faculty", []):
+                    fac["department"] = dept_key
+                    fac["department_label"] = cfg["label"]
+                    merged.append(fac)
+            _faculty_cache[cache_key] = {"faculty": merged}
         else:
-            filename = "faculty.json"
-        data_path = os.path.join(os.path.dirname(__file__), "data", filename)
-        with open(data_path) as f:
-            _faculty_cache[cache_key] = json.load(f)
+            if department == "sio":
+                filename = "sio_faculty.json"
+                dept_key = "sio"
+            else:
+                filename = "faculty.json"
+                dept_key = "hwsph"
+            data_path = os.path.join(os.path.dirname(__file__), "data", filename)
+            with open(data_path) as f:
+                data = json.load(f)
+            # Tag faculty with department
+            for fac in data.get("faculty", []):
+                fac["department"] = dept_key
+                fac["department_label"] = _DEPT_CONFIG[dept_key]["label"]
+            _faculty_cache[cache_key] = data
     return _faculty_cache[cache_key]
 
 
@@ -50,6 +76,7 @@ def allowed_file(filename):
 # Fields to include in the faculty directory API response
 FACULTY_DIRECTORY_FIELDS = [
     "first_name", "last_name", "degrees", "title", "email",
+    "department", "department_label",
     "research_interests", "research_interests_enriched",
     "expertise_keywords", "disease_areas", "methodologies", "populations",
     "h_index", "profile_url", "orcid",
@@ -71,9 +98,9 @@ def faculty_directory():
     Query params:
         dept: "sio" for Scripps, omit or "hwsph" for Public Health (default).
     """
-    dept = request.args.get("dept", "").strip().lower() or None
-    if dept and dept not in ("sio", "hwsph"):
-        return jsonify({"error": f"Unknown department: {dept}. Use 'sio' or 'hwsph'."}), 400
+    dept = request.args.get("dept", "").strip().lower() or "all"
+    if dept not in ("sio", "hwsph", "all"):
+        return jsonify({"error": f"Unknown department: {dept}. Use 'sio', 'hwsph', or 'all'."}), 400
     if dept == "hwsph":
         dept = None
 
@@ -112,17 +139,17 @@ def faculty_directory():
 def _get_searchable_text(f):
     """Build a single lowercase string of all searchable fields for a faculty member."""
     parts = [
-        f.get("first_name", ""), f.get("last_name", ""),
-        f.get("title", ""),
-        f.get("research_interests", ""),
-        f.get("research_interests_enriched", ""),
-        *f.get("expertise_keywords", []),
-        *f.get("disease_areas", []),
-        *f.get("methodologies", []),
-        *f.get("populations", []),
-        *f.get("committee_service", []),
+        f.get("first_name") or "", f.get("last_name") or "",
+        f.get("title") or "",
+        f.get("research_interests") or "",
+        f.get("research_interests_enriched") or "",
+        *(f.get("expertise_keywords") or []),
+        *(f.get("disease_areas") or []),
+        *(f.get("methodologies") or []),
+        *(f.get("populations") or []),
+        *(f.get("committee_service") or []),
     ]
-    return " ".join(parts).lower()
+    return " ".join(str(p) for p in parts).lower()
 
 
 @app.route("/api/match", methods=["POST"])
@@ -143,7 +170,7 @@ def match():
     except ValueError as e:
         return jsonify({"error": str(e)}), 400
 
-    dept = request.form.get("dept", "").strip().lower() or None
+    dept = request.form.get("dept", "").strip().lower() or "all"
     if dept == "hwsph":
         dept = None
 
@@ -171,7 +198,7 @@ def match_text():
     if len(text) > 60000:
         return jsonify({"error": "Text is too long. Maximum 60,000 characters."}), 400
 
-    dept = data.get("dept", "").strip().lower() or None
+    dept = data.get("dept", "").strip().lower() or "all"
     if dept == "hwsph":
         dept = None
 
