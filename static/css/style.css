@@ -451,7 +451,7 @@ main {
 }
 
 .directory-search-input {
-    flex: 1 1 0%;
+    flex: 1;
     min-width: 0;
     padding: 12px var(--space-2);
     border: var(--border-heavy);
@@ -470,8 +470,7 @@ main {
     color: var(--gray-400);
 }
 
-.directory-search-btn {
-    flex: 0 0 auto;
+.btn.btn-primary.directory-search-btn {
     width: auto;
     margin-top: 0;
     padding: 12px var(--space-4);
@@ -1250,7 +1249,7 @@ footer {
         border-bottom: none;
     }
 
-    .directory-search-btn {
+    .btn.btn-primary.directory-search-btn {
         width: 100%;
     }
 
