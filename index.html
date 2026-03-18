@@ -169,20 +169,53 @@
             </div>
             <div id="methodology-panel" class="methodology-panel">
                 <h3>Ranking Methodology</h3>
-                <p>Faculty are ranked by an LLM-based analysis that evaluates alignment between each researcher's profile and the funding opportunity requirements. The system does not assign investigator roles — those decisions belong to the research team.</p>
+                <p>Faculty are ranked by a two-stage LLM pipeline that evaluates alignment between each researcher's enriched profile and the funding opportunity requirements. The system does not assign investigator roles — those decisions belong to the research team.</p>
 
-                <h4>Scoring Dimensions</h4>
+                <h4>Stage 1: Requirement Extraction</h4>
+                <p>The uploaded document (or manually entered text) is sent to a large language model (via LiteLLM, temperature=0) which extracts structured requirements: grant title, funding agency, a 2–3 sentence summary, investigator requirements (expertise areas, qualifications, constraints per role), and overall research themes. The LLM is instructed to use the document's own terminology for roles and to never invent requirements not stated or clearly implied.</p>
+
+                <h4>Stage 2: Faculty Matching &amp; Scoring</h4>
+                <p>A second LLM call (temperature=0.05) receives the extracted requirements alongside a compact summary of each faculty member's profile. For each candidate, it evaluates three dimensions on a 0–100 scale:</p>
                 <ul>
-                    <li><strong>Expertise alignment</strong> — How closely the faculty member's stated research interests, keywords, and funded history match the opportunity's required expertise areas</li>
-                    <li><strong>Methodological fit</strong> — Whether the researcher's methods (as inferred from publications and funded work) align with the methodological needs of the opportunity</li>
-                    <li><strong>Track record</strong> — Strength of the researcher's publication and funding history relative to the opportunity's scope and requirements</li>
+                    <li><strong>Expertise alignment (highest weight)</strong> — How closely the faculty member's research interests, expertise keywords, and funded project history match the opportunity's required expertise areas and research themes.</li>
+                    <li><strong>Methodological fit</strong> — Whether the researcher's methods (as inferred from publications, MeSH terms, and funded work descriptions) align with the methodological needs described in the opportunity.</li>
+                    <li><strong>Track record</strong> — Strength of the researcher's publication count, h-index, and funding history relative to the opportunity's scope. A well-funded researcher with an active publication record in the relevant area scores higher.</li>
+                </ul>
+                <p>The <strong>overall match score (0–100)</strong> is a weighted synthesis of these three dimensions, with expertise alignment weighted most heavily, followed by methodological fit, then track record. The LLM also generates a 2–3 sentence explanation for each match referencing specific overlaps between the researcher's profile and the opportunity requirements.</p>
+
+                <h4>Filtering &amp; Ranking Rules</h4>
+                <ul>
+                    <li>Only faculty with at least one of: research interests, enriched research interests, or expertise keywords are evaluated.</li>
+                    <li>Only matches with a score ≥ 40 are returned. At most 15 matches are shown.</li>
+                    <li>Matches are sorted by overall match score, descending.</li>
+                    <li>For large faculty sets (60+), a keyword pre-filter narrows candidates before the LLM stage. This pre-filter scores each faculty member's keyword overlap against the extracted requirement themes and expertise areas, then passes the top 60 candidates to the LLM. Faculty sets of 60 or fewer skip this step entirely.</li>
                 </ul>
 
-                <h4>Data Sources</h4>
-                <p>Faculty profiles are constructed from the university directory, enriched with data from NIH RePORTER (funded projects), PubMed (recent publications), ORCID (research outputs), and institutional profile pages. The composite score (0–100) reflects overall alignment strength, not a prediction of success.</p>
+                <h4>What the LLM Sees Per Faculty Member</h4>
+                <p>Each faculty member is represented as a single line: name, degrees, title, research interests (truncated to 300 characters from the enriched profile, falling back to original directory text), up to 8 expertise keywords, number of funded grants, and h-index. The LLM does not see full abstracts, publication lists, or grant amounts during matching — those details inform the enriched profile summaries that the LLM reads.</p>
 
-                <h4>Model</h4>
-                <p>Opportunity requirements are extracted and faculty are matched using a large language model via LiteLLM. The model evaluates textual similarity and semantic relevance — it does not have access to private data, internal evaluations, or proprietary metrics. Results should be treated as a starting point for team assembly, not a definitive ranking.</p>
+                <h4>Faculty Profile Data Sources</h4>
+                <p>Faculty profiles are constructed from the university directory and then enriched weekly (via automated pipeline) from six public academic data sources:</p>
+                <ul>
+                    <li><strong>UCSD Profiles / Scripps Profiles</strong> (confidence: 1.0) — Institutional source. Research descriptions and biography text scraped from profiles.ucsd.edu and scripps.ucsd.edu. Preferred over all other sources when there are conflicts.</li>
+                    <li><strong>ORCID</strong> (confidence: 0.9) — Self-reported researcher data. Provides ORCID ID, publications, and funding records from the public ORCID API. Searched by name + UCSD affiliation, with a fallback name-only search.</li>
+                    <li><strong>NIH RePORTER</strong> (confidence: 0.8) — Verified federal grant records. Queries the NIH RePORTER API for funded projects where the faculty member is a PI at UCSD. Returns grant titles, abstracts (500 char), amounts, dates, and co-PI names.</li>
+                    <li><strong>NSF Awards</strong> (confidence: 0.8, SIO only) — Verified federal grant records. Queries the NSF Award Search API for awards where the faculty member is PI at UCSD. Returns grant titles, program names, abstracts, and amounts.</li>
+                    <li><strong>Semantic Scholar</strong> (confidence: 0.75) — Academic graph data. Provides h-index, total paper/citation counts, and the 20 most recent publications with journal and year. Author disambiguation uses UCSD affiliation matching.</li>
+                    <li><strong>PubMed / NCBI E-utilities</strong> (confidence: 0.7) — Biomedical literature. Searches by author name + UCSD affiliation. Returns the 20 most recent publications with titles, journals, years, MeSH terms, and abstracts (500 char).</li>
+                </ul>
+
+                <h4>Enrichment &amp; Normalization</h4>
+                <p>Raw data from all sources is synthesized by an LLM normalizer into structured profile fields: a 2–4 sentence research narrative, expertise keywords, methodologies, disease areas (or research domains), and populations (or study systems). The normalizer merges and deduplicates across sources, preferring institutional sources when data conflicts. The original university directory text is preserved and never overwritten. Enrichment runs weekly via GitHub Actions, and every field change is recorded in an append-only audit log with source, confidence, old/new values, and timestamp.</p>
+
+                <h4>Score Display</h4>
+                <p>The colored bar represents the overall match score: green (≥ 80) indicates strong alignment, yellow (60–79) indicates moderate alignment, and red (&lt; 60) indicates partial alignment. The three sub-scores (Expertise, Methods, Track Record) are shown individually below the bar. These are the raw LLM-assigned values — no post-processing, normalization, or re-weighting is applied after the model returns them.</p>
+
+                <h4>Model Details</h4>
+                <p>Both LLM calls use the same model configured via LiteLLM (default: openai/api-gpt-oss-120b). The extraction call uses temperature=0 for deterministic output; the matching call uses temperature=0.05 for near-deterministic results with minimal variation. JSON mode is requested when supported; the system falls back gracefully if the model doesn't support it. Each call includes retry logic (2 attempts with 1-second backoff) for parse failures.</p>
+
+                <h4>Limitations</h4>
+                <p>The model evaluates textual similarity and semantic relevance — it does not have access to private data, internal evaluations, or proprietary metrics. Name disambiguation in PubMed and Semantic Scholar can occasionally return publications by a different researcher with the same name. Results should be treated as a starting point for team assembly, not a definitive ranking or prediction of success.</p>
             </div>
         </section>
 

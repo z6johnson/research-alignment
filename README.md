@@ -11,10 +11,168 @@ Three ways to discover aligned faculty:
 3. **Browse the expert directory** — search and filter faculty by expertise, methods, disease areas, and populations
 
 Two sequential LLM calls power the matching analysis via [LiteLLM](https://github.com/BerriAI/litellm):
-- **Call 1:** Extract structured requirements from the opportunity text
-- **Call 2:** Rank faculty by alignment with those requirements
+- **Call 1 (extraction):** Parse the funding opportunity text into structured requirements — grant title, agency, summary, investigator roles with expertise areas/qualifications/constraints, and overall research themes.
+- **Call 2 (matching):** Evaluate each faculty member's enriched profile against the extracted requirements across three scored dimensions (expertise alignment, methodological fit, track record), then return up to 15 ranked matches with reasoning.
 
-For large faculty sets (300+), a keyword pre-filter narrows candidates before the LLM stage to control token costs without sacrificing accuracy.
+For large faculty sets (60+), a keyword pre-filter scores each faculty member's text overlap against extracted requirement keywords and passes the top 60 candidates to the LLM. Sets of 60 or fewer skip this step entirely.
+
+## Ranking Methodology
+
+### Stage 1: Requirement Extraction
+
+The uploaded document (or manually entered text) is sent to the LLM with `temperature=0` and a system prompt that instructs it to extract:
+
+| Field | Description |
+|-------|-------------|
+| `grant_title` | Title of the funding opportunity |
+| `funding_agency` | Sponsoring agency |
+| `grant_summary` | 2–3 sentence summary of purpose, scope, and what the funder seeks |
+| `investigator_requirements[]` | Per-role breakdown: role name, expertise areas, qualifications, constraints |
+| `overall_research_themes[]` | Broad research themes spanning the opportunity |
+
+The LLM uses the document's own terminology for roles (e.g., "Lead Investigator", "Project Director") and never invents requirements not stated or clearly implied. If no roles are explicitly defined, all requirements are grouped under a single "Investigator" entry. The response is parsed as JSON with fallback handling for markdown fences, truncated output, and wrapper objects.
+
+### Stage 2: Faculty Matching & Scoring
+
+A second LLM call (`temperature=0.05`) receives the extracted requirements alongside a compact summary of each eligible faculty member. For each candidate, it evaluates three dimensions on a 0–100 integer scale:
+
+| Dimension | Weight | What it measures |
+|-----------|--------|------------------|
+| **Expertise alignment** | Highest | How closely the faculty member's research interests, expertise keywords, and funded project history match the required expertise areas and research themes |
+| **Methodological fit** | Medium | Whether the researcher's methods (inferred from publications, MeSH terms, funded work descriptions) align with the opportunity's methodological needs |
+| **Track record** | Lower | Strength of publication count, h-index, and funding history relative to the opportunity's scope |
+
+The **overall match score (0–100)** is a weighted synthesis produced by the LLM itself — expertise alignment is weighted most heavily, followed by methodological fit, then track record. No post-processing, normalization, or re-weighting is applied after the model returns scores. The LLM also generates a 2–3 sentence `match_reasoning` for each match explaining the specific alignment.
+
+**Filtering rules applied by the LLM prompt:**
+- Only faculty with `match_score >= 40` are included
+- At most 15 matches are returned
+- Results are ordered by `match_score` descending
+
+### What the LLM Sees Per Faculty Member
+
+Each faculty member is serialized as a single line containing:
+
+```
+ID:{index} | {name}, {degrees} | {title} | Interests: {enriched_interests, truncated to 300 chars}
+  | Keywords: {top 8 expertise keywords} | Funded projects: {count} | h-index: {value}
+```
+
+The LLM does not see full abstracts, complete publication lists, or grant dollar amounts during matching — those details inform the enriched profile narrative that the LLM reads.
+
+### Keyword Pre-Filter (Large Faculty Sets)
+
+When the eligible faculty set exceeds 60 members, a keyword pre-filter runs before the LLM stage to reduce token costs:
+
+1. Extracts keywords from `overall_research_themes` and `investigator_requirements[].expertise_areas` in the extracted requirements
+2. Expands multi-word terms into individual words (keeping only words > 3 characters)
+3. Scores each faculty member by counting how many requirement keywords appear in their searchable text (enriched interests, original interests, expertise keywords, disease areas, methodologies, populations)
+4. Passes the top 60 faculty by keyword score to the LLM
+
+Faculty sets of 60 or fewer bypass this filter entirely — every eligible member goes directly to the LLM.
+
+### Frontend Score Display
+
+Each match card in the results view shows:
+
+| Element | Details |
+|---------|---------|
+| **Rank** | Position (1–15) based on overall score |
+| **Overall score** | 0–100 with color-coded bar: green ≥ 80, yellow 60–79, red < 60 |
+| **Sub-scores** | Expertise, Methods, Track Record displayed individually |
+| **Match reasoning** | LLM-generated 2–3 sentence explanation |
+| **Research interests** | Original directory text for the faculty member |
+| **Contact** | Email link |
+
+The "How rankings are calculated" panel below the results provides the full methodology disclosure to end users.
+
+### Model Configuration
+
+Both LLM calls use the same model via LiteLLM (default: `openai/api-gpt-oss-120b`). The extraction call uses `max_tokens=2000`; the matching call uses `max_tokens=4000`. JSON mode is requested when the model supports it; the system retries without it if unsupported. Each call retries once on parse failure (1-second backoff).
+
+## Enrichment Pipeline
+
+Faculty profiles start with basic directory data (name, title, email, research interests) and are enriched weekly from six public academic data sources. The pipeline runs via GitHub Actions every Sunday and commits updated data back to the repository.
+
+### Data Sources
+
+#### HWSPH (Public Health) Sources
+
+| Source | Confidence | API | Auth Required | Rate Limit | Fields Provided |
+|--------|-----------|-----|---------------|------------|-----------------|
+| **UCSD Profiles** | 1.0 | Web scrape (`profiles.ucsd.edu`) | No | 1 req/2s | `research_interests_enriched`, `profile_url` |
+| **ORCID** | 0.9 | REST (`pub.orcid.org/v3.0`) | No | 1 req/s | `orcid`, `recent_publications`, `funded_grants` |
+| **NIH RePORTER** | 0.8 | REST (`api.reporter.nih.gov/v2`) | No | 1 req/s | `funded_grants` |
+| **Semantic Scholar** | 0.75 | REST (`api.semanticscholar.org/graph/v1`) | Optional (`S2_API_KEY`) | 3 req/s free, 1 req/s with key | `h_index`, `recent_publications` |
+| **PubMed** | 0.7 | REST (NCBI E-utilities) | Optional (`NCBI_API_KEY`) | 3 req/s free, 10 req/s with key | `recent_publications` |
+
+#### SIO (Scripps Oceanography) Sources
+
+Same as HWSPH, plus:
+
+| Source | Confidence | API | Auth Required | Rate Limit | Fields Provided |
+|--------|-----------|-----|---------------|------------|-----------------|
+| **Scripps Profiles** | 1.0 | Web scrape (`profiles.ucsd.edu`, `scripps.ucsd.edu`) | No | 1 req/2s | `research_interests_enriched`, `profile_url` |
+| **NSF Awards** | 0.8 | REST (`api.nsf.gov/services/v1`) | No | 1 req/s | `funded_grants` |
+
+SIO uses Scripps Profiles instead of UCSD Profiles, and adds NSF Awards. NIH RePORTER, PubMed, ORCID, and Semantic Scholar are shared.
+
+### Source Details
+
+**UCSD Profiles / Scripps Profiles** — Scrapes `profiles.ucsd.edu` by searching for the faculty member's name, then parses the profile page for research descriptions, overview sections, and biography text. UCSD Profiles falls back to the HWSPH faculty directory page if the profile search fails. Scripps Profiles additionally tries `scripps.ucsd.edu/profiles/{slug}` with multiple slug patterns.
+
+**NIH RePORTER** — Queries the NIH RePORTER v2 projects search endpoint by PI name + "UNIVERSITY OF CALIFORNIA SAN DIEGO" organization filter. Returns up to 25 projects sorted by start date (descending). Extracts: grant title, abstract (truncated to 500 chars), funding agency/institute, award amount, start/end dates, project number, and co-PI names.
+
+**NSF Awards** — Queries the NSF Award Search API by PI name + "University of California San Diego" awardee filter. Returns up to 25 awards. Extracts: title, program name, abstract (truncated to 500 chars), obligated funds, start/end dates, award ID, and co-PIs.
+
+**PubMed** — Two-step process using NCBI E-utilities. First, `esearch` finds PMIDs matching `{LastName} {FirstInitial}[Author] AND "University of California San Diego"[Affiliation]`, returning the 20 most recent. Then `efetch` retrieves article details in XML. Extracts: title, year, journal, MeSH terms, and abstract (truncated to 500 chars).
+
+**ORCID** — Searches the ORCID public API by `given-names:{first} AND family-name:{last} AND affiliation-org-name:"University of California San Diego"`. Falls back to a name-only search if no affiliation match is found. Fetches the full record and extracts: ORCID ID, up to 20 publications (title, year, journal), up to 15 funding records (title, agency, dates), and total works count.
+
+**Semantic Scholar** — Searches the Academic Graph API for authors matching the faculty name, filtering by UCSD/Scripps/SIO affiliation keywords. Falls back to the top result by name similarity if no affiliation match, provided they have >5 papers. Fetches author metrics (h-index, paper count, citation count) and the 20 most recent papers (title, year, journal).
+
+### Enrichment Strategy
+
+The pipeline runs in three phases per faculty member:
+
+**Phase 1 — Fetch:** Queries all configured sources sequentially, with per-source rate limiting. Each source returns a raw data dict or `None`.
+
+**Phase 2 — Direct field writes:** Writes fields that don't require LLM synthesis:
+- **One-time writes** (`profile_url`, `orcid`, `google_scholar_id`, `h_index`): Written only if the field is currently empty. Never overwritten once set.
+- **Wholesale replacements** (`funded_grants`, `recent_publications`, `expertise_keywords`): Replaced entirely with fresh data from the source on each run.
+
+**Phase 3 — LLM normalization:** All raw source data is sent to the LLM normalizer, which synthesizes five structured fields:
+- `research_interests_enriched` — 2–4 sentence narrative research summary
+- `expertise_keywords` — Domain-specific keyword list
+- `methodologies` — Research methods (e.g., RCT, cohort study, remote sensing, numerical modeling)
+- `disease_areas` — Health conditions or research domains studied
+- `populations` — Target populations or study systems/regions
+
+The normalizer prompt includes the faculty member's original directory description (always preserved, never overwritten), UCSD profile text, NIH/NSF grant titles and abstract excerpts, PubMed publication titles with MeSH terms, Semantic Scholar metrics and publication titles, and ORCID work titles. It is instructed to merge and deduplicate, prefer institutional sources when data conflicts, and never invent expertise unsupported by the data.
+
+### Confidence Levels
+
+| Source | Confidence | Rationale |
+|--------|-----------|-----------|
+| UCSD / Scripps Profiles | 1.0 | Institutional source of record |
+| ORCID | 0.9 | Self-reported by the researcher |
+| LLM Normalizer | 0.85 | Synthesized from multiple verified sources |
+| NIH RePORTER | 0.8 | Verified federal grant records |
+| NSF Awards | 0.8 | Verified federal grant records |
+| Semantic Scholar | 0.75 | Good coverage but author name disambiguation can be imperfect |
+| PubMed | 0.7 | Comprehensive biomedical literature, but name+affiliation disambiguation can be imperfect |
+
+### Audit Log
+
+Every field change from enrichment is recorded in `data/enrichment_log.json` — an append-only log tracked in git. Each entry contains: faculty index, source name, source URL, field updated, old value, new value, confidence score, method (`api`, `scrape`, or `llm_extraction`), raw response excerpt (up to 5000 chars), and ISO timestamp. This provides full provenance for every data point in every faculty profile.
+
+### Schedule
+
+Enrichment runs via GitHub Actions (`.github/workflows/enrich.yml`):
+- **HWSPH:** Every Sunday at midnight UTC
+- **SIO:** Every Sunday at 2:00 AM UTC
+
+Manual runs are available via `workflow_dispatch` with options to specify department, sources, faculty indices, and dry-run mode. Vercel auto-deploys when enriched data is committed.
 
 ## Architecture
 
@@ -130,5 +288,6 @@ Return the faculty directory for browsing and filtering.
 |----------|----------|-------------|
 | `LITELLM_API_KEY` | Yes | LLM API key |
 | `LITELLM_API_BASE` | Yes | LLM API endpoint URL |
-| `LITELLM_MODEL` | No | Model identifier (default: `api-gpt-oss-120b`) |
-| `NCBI_API_KEY` | No | PubMed API key (increases rate limit) |
+| `LITELLM_MODEL` | No | Model identifier (default: `openai/api-gpt-oss-120b`) |
+| `NCBI_API_KEY` | No | PubMed API key (increases rate limit from 3 to 10 req/s) |
+| `S2_API_KEY` | No | Semantic Scholar API key (increases quota) |

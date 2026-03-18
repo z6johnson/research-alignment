@@ -88,7 +88,8 @@ In your repo → **Settings** → **Secrets and variables** → **Actions**, add
 | `LITELLM_API_KEY` | Yes | LLM API key for normalization |
 | `LITELLM_API_BASE` | Yes | LLM API base URL |
 | `LITELLM_MODEL` | No | LLM model override |
-| `NCBI_API_KEY` | No | PubMed higher rate limits. Free at [ncbi.nlm.nih.gov/account](https://www.ncbi.nlm.nih.gov/account/) |
+| `NCBI_API_KEY` | No | PubMed higher rate limits (3 → 10 req/s). Free at [ncbi.nlm.nih.gov/account](https://www.ncbi.nlm.nih.gov/account/) |
+| `S2_API_KEY` | No | Semantic Scholar higher rate limits (3 → 1 req/s with key, but higher quota). See [semanticscholar.org/product/api](https://www.semanticscholar.org/product/api) |
 
 ### Run enrichment manually
 
@@ -104,22 +105,39 @@ By default, enrichment runs **every Sunday at midnight UTC**. Edit `.github/work
 
 ### Enrichment sources
 
-| Source | Confidence | What it provides | Rate limit |
-|--------|-----------|-----------------|------------|
-| UCSD Profiles | 1.0 | Research description, profile URL | 1 req/2s |
-| NIH RePORTER | 0.8 | Funded projects, abstracts | 1 req/s |
-| PubMed | 0.7 | Recent publications, MeSH terms | 3 req/s (10 with NCBI key) |
-| ORCID | 0.9 | ORCID ID, works, fundings | 1 req/s |
+#### HWSPH (Public Health)
+
+| Source | Confidence | What it provides | Rate limit | Auth |
+|--------|-----------|-----------------|------------|------|
+| UCSD Profiles | 1.0 | Research description, profile URL | 1 req/2s | None |
+| ORCID | 0.9 | ORCID ID, publications, fundings | 1 req/s | None |
+| NIH RePORTER | 0.8 | Funded projects, abstracts, co-PIs | 1 req/s | None |
+| Semantic Scholar | 0.75 | h-index, recent publications, citation/paper counts | 3 req/s (1 with key) | Optional (`S2_API_KEY`) |
+| PubMed | 0.7 | Recent publications, MeSH terms, abstracts | 3 req/s (10 with key) | Optional (`NCBI_API_KEY`) |
+
+#### SIO (Scripps Oceanography)
+
+| Source | Confidence | What it provides | Rate limit | Auth |
+|--------|-----------|-----------------|------------|------|
+| Scripps Profiles | 1.0 | Research description, profile URL | 1 req/2s | None |
+| ORCID | 0.9 | ORCID ID, publications, fundings | 1 req/s | None |
+| NIH RePORTER | 0.8 | Funded projects, abstracts, co-PIs | 1 req/s | None |
+| NSF Awards | 0.8 | Funded grants, program names, abstracts | 1 req/s | None |
+| Semantic Scholar | 0.75 | h-index, recent publications, citation/paper counts | 3 req/s (1 with key) | Optional (`S2_API_KEY`) |
+| PubMed | 0.7 | Recent publications, MeSH terms, abstracts | 3 req/s (10 with key) | Optional (`NCBI_API_KEY`) |
 
 ### Expected timings
 
 | Source | Per faculty | All 130 faculty |
 |--------|-----------|-----------------|
-| UCSD Profiles | ~4s | ~9 min |
+| UCSD / Scripps Profiles | ~4s | ~9 min |
 | NIH RePORTER | ~1s | ~2.5 min |
+| NSF Awards (SIO only) | ~1s | ~2.5 min |
 | PubMed | ~1s | ~1.5 min |
 | ORCID | ~2s | ~4.5 min |
-| **All sources** | ~8s | **~18 min** |
+| Semantic Scholar | ~6s | ~13 min |
+| **All sources (HWSPH)** | ~14s | **~30 min** |
+| **All sources (SIO)** | ~15s | **~33 min** |
 
 ---
 
@@ -168,11 +186,13 @@ Append-only log tracking every field change made by enrichment. Each entry recor
 
 | Source | Confidence | Rationale |
 |--------|-----------|-----------|
-| UCSD Profiles | 1.0 | Institutional source |
+| UCSD / Scripps Profiles | 1.0 | Institutional source of record |
 | ORCID | 0.9 | Self-reported by researcher |
-| LLM Normalizer | 0.85 | Synthesized from all sources |
-| NIH RePORTER | 0.8 | Verified federal records |
-| PubMed | 0.7 | Name disambiguation can be imperfect |
+| LLM Normalizer | 0.85 | Synthesized from multiple verified sources |
+| NIH RePORTER | 0.8 | Verified federal grant records |
+| NSF Awards | 0.8 | Verified federal grant records |
+| Semantic Scholar | 0.75 | Good coverage; name disambiguation can be imperfect |
+| PubMed | 0.7 | Comprehensive biomedical literature; name disambiguation can be imperfect |
 
 ---
 
