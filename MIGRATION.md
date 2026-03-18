@@ -1,6 +1,6 @@
-# Grant Match — Deployment & Operations Guide
+# Research Alignment — Deployment & Operations Guide
 
-Complete guide for deploying Grant Match on Vercel with GitHub Actions enrichment.
+Complete guide for deploying Research Alignment on Vercel with GitHub Actions enrichment.
 
 ## Architecture
 
@@ -11,7 +11,7 @@ GitHub Repository
 └── data/faculty.json (Version-controlled data store)
 ```
 
-- **Vercel** serves the frontend and grant-matching API as a single serverless function
+- **Vercel** serves the frontend and matching API as a single serverless function
 - **GitHub Actions** runs enrichment offline (no timeout constraints) and commits updated data back to the repo
 - **No database** — `data/faculty.json` is the single source of truth, version-controlled with full git history
 
@@ -22,7 +22,7 @@ GitHub Repository
 ### Connect the repository
 
 1. Sign up at [vercel.com](https://vercel.com) (GitHub login recommended)
-2. Click **Add New Project** → import the `grant-match` repository
+2. Click **Add New Project** → import the repository
 3. Vercel auto-detects the Python app via `vercel.json`
 4. Deploy — the first build installs dependencies and starts serving
 
@@ -38,7 +38,7 @@ In the Vercel dashboard, go to your project → **Settings** → **Environment V
 
 ### Verify
 
-Visit your Vercel URL — you should see the Grant Match UI. Upload a grant PDF to test matching.
+Visit your Vercel URL — you should see the Research Alignment UI. Upload a funding opportunity PDF to test matching.
 
 ---
 
@@ -47,8 +47,8 @@ Visit your Vercel URL — you should see the Grant Match UI. Upload a grant PDF 
 ### Quick start
 
 ```bash
-git clone https://github.com/your-org/grant-match.git
-cd grant-match
+git clone https://github.com/your-org/grant-matcher.git
+cd grant-matcher
 pip install -r requirements.txt
 
 # Create .env with your LLM credentials
@@ -107,7 +107,7 @@ By default, enrichment runs **every Sunday at midnight UTC**. Edit `.github/work
 | Source | Confidence | What it provides | Rate limit |
 |--------|-----------|-----------------|------------|
 | UCSD Profiles | 1.0 | Research description, profile URL | 1 req/2s |
-| NIH RePORTER | 0.8 | Funded grants, abstracts | 1 req/s |
+| NIH RePORTER | 0.8 | Funded projects, abstracts | 1 req/s |
 | PubMed | 0.7 | Recent publications, MeSH terms | 3 req/s (10 with NCBI key) |
 | ORCID | 0.9 | ORCID ID, works, fundings | 1 req/s |
 
@@ -147,6 +147,8 @@ By default, enrichment runs **every Sunday at midnight UTC**. Edit `.github/work
       "methodologies": ["cohort study", "RCT", "..."],
       "disease_areas": ["cardiovascular disease", "..."],
       "populations": ["adolescents", "refugees", "..."],
+      "committee_service": ["Committee on Research Policy"],
+      "integrity_flags": [],
       "profile_url": "https://profiles.ucsd.edu/...",
       "orcid": "0000-0001-2345-6789",
       "h_index": 42,
@@ -220,12 +222,14 @@ Add a section in `normalize_faculty_data()` to include the source's data in the 
 ### Frontend
 | Method | Path | Description |
 |--------|------|-------------|
-| GET | `/` | Grant Match web application |
+| GET | `/` | Research Alignment web application |
 
-### Grant Matching
+### Matching
 | Method | Path | Description |
 |--------|------|-------------|
-| POST | `/api/match` | Upload grant PDF/TXT, get faculty matches |
+| POST | `/api/match` | Upload funding opportunity PDF/TXT, get faculty matches |
+| POST | `/api/match-text` | Submit expertise text, get faculty matches |
+| GET | `/api/faculty` | Browse faculty directory |
 
 ---
 
@@ -233,7 +237,8 @@ Add a section in `normalize_faculty_data()` to include the source's data in the 
 
 | Phase | Status | What |
 |-------|--------|------|
-| 1 | Done | Faculty directory scraper, JSON data model, grant matcher |
+| 1 | Done | Faculty directory scraper, JSON data model, matching engine |
 | 2 | Done | Enrichment pipeline (UCSD, NIH, PubMed, ORCID), LLM normalizer |
 | 3 | Done | Vercel deployment, GitHub Actions enrichment |
-| Future | Planned | Admin dashboard, multi-school support, UCSD ITS deployment |
+| 4 | Done | Three-mode UI (upload, manual entry, expert directory), keyword pre-filter |
+| Future | Planned | Committee service data, research integrity checks, multi-school support |

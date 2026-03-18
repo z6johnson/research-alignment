@@ -148,7 +148,9 @@
         }
       ],
       "orcid": "0000-0001-8292-0510",
-      "last_enriched": "2026-03-17T15:49:54.053881+00:00"
+      "last_enriched": "2026-03-17T15:49:54.053881+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Tala",
@@ -159,7 +161,9 @@
       ],
       "title": "Assistant Professor",
       "email": "talrousan@health.ucsd.edu",
-      "research_interests": "Refugee health; Chronic disease management; Displacement and health"
+      "research_interests": "Refugee health; Chronic disease management; Displacement and health",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Cheryl",
@@ -432,7 +436,9 @@
         "underserved and health‑disparity populations",
         "individuals with known dietary sodium intake"
       ],
-      "last_enriched": "2026-03-17T15:50:23.669166+00:00"
+      "last_enriched": "2026-03-17T15:50:23.669166+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Happy",
@@ -443,7 +449,9 @@
       ],
       "title": "Professor, Secondary Appointed; School of Medicine, Associate Dean of Diversity and Community Partnerships",
       "email": "haraneta@health.ucsd.edu",
-      "research_interests": null
+      "research_interests": null,
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Gretchen",
@@ -772,7 +780,9 @@
         }
       ],
       "orcid": "0000-0003-2167-8921",
-      "last_enriched": "2026-03-17T15:50:45.106071+00:00"
+      "last_enriched": "2026-03-17T15:50:45.106071+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Matthew",
@@ -940,7 +950,9 @@
         "patients undergoing radiation therapy",
         "patients post‑cystectomy"
       ],
-      "last_enriched": "2026-03-17T15:50:58.508941+00:00"
+      "last_enriched": "2026-03-17T15:50:58.508941+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Angela",
@@ -951,7 +963,9 @@
       ],
       "title": "Professor",
       "email": "abazzi@health.ucsd.edu",
-      "research_interests": "HIV prevention; Substance use; Qualitative and mixed methods research"
+      "research_interests": "HIV prevention; Substance use; Qualitative and mixed methods research",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Ellen",
@@ -1175,7 +1189,9 @@
         "California residents",
         "female"
       ],
-      "last_enriched": "2026-03-17T15:51:27.979060+00:00"
+      "last_enriched": "2026-03-17T15:51:27.979060+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Nancy",
@@ -1305,7 +1321,9 @@
         }
       ],
       "orcid": "0000-0002-9125-5601",
-      "last_enriched": "2026-03-17T15:51:47.040484+00:00"
+      "last_enriched": "2026-03-17T15:51:47.040484+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Cinnamon",
@@ -1511,7 +1529,9 @@
         }
       ],
       "orcid": "0000-0003-1315-8387",
-      "last_enriched": "2026-03-17T15:52:02.749308+00:00"
+      "last_enriched": "2026-03-17T15:52:02.749308+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Kerri",
@@ -2131,7 +2151,9 @@
         }
       ],
       "orcid": "0000-0002-9573-4765",
-      "last_enriched": "2026-03-17T15:52:21.165737+00:00"
+      "last_enriched": "2026-03-17T15:52:21.165737+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Ryan",
@@ -2279,7 +2301,9 @@
         }
       ],
       "orcid": "0000-0002-8073-3671",
-      "last_enriched": "2026-03-17T15:52:36.543788+00:00"
+      "last_enriched": "2026-03-17T15:52:36.543788+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Kimberly",
@@ -2892,7 +2916,9 @@
         "economically and socially marginalized groups",
         "border communities (Mexico‑Guatemala, Mexico‑U.S.)"
       ],
-      "last_enriched": "2026-03-17T15:52:52.864574+00:00"
+      "last_enriched": "2026-03-17T15:52:52.864574+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Michelle",
@@ -2947,7 +2973,9 @@
         }
       ],
       "orcid": "0000-0001-9403-5084",
-      "last_enriched": "2026-03-17T15:53:08.162048+00:00"
+      "last_enriched": "2026-03-17T15:53:08.162048+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Chadwick",
@@ -2958,7 +2986,9 @@
       ],
       "title": "Assistant Professor",
       "email": "ckc003@health.ucsd.edu",
-      "research_interests": "HIV prevention; Sociology of health and illness; Intersectionality; Stigma; Social and structural factors in the HIV epidemic; Qualitative methods"
+      "research_interests": "HIV prevention; Sociology of health and illness; Intersectionality; Stigma; Social and structural factors in the HIV epidemic; Qualitative methods",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "John M.",
@@ -3323,7 +3353,9 @@
         "patients with ulcerative colitis",
         "general adult population"
       ],
-      "last_enriched": "2026-03-17T15:53:48.110473+00:00"
+      "last_enriched": "2026-03-17T15:53:48.110473+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Julie",
@@ -3447,7 +3479,9 @@
         "LGBTQ+ patients",
         "patients with hypertension"
       ],
-      "last_enriched": "2026-03-17T15:54:01.070840+00:00"
+      "last_enriched": "2026-03-17T15:54:01.070840+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Christina",
@@ -3458,7 +3492,9 @@
       ],
       "title": "Distinguished Professor, Secondary Appointed",
       "email": "chchambers@health.ucsd.edu",
-      "research_interests": "Environmental causes of adverse pregnancy outcomes, birth defects, and childhood disabilities, with a special focus on human teratogens"
+      "research_interests": "Environmental causes of adverse pregnancy outcomes, birth defects, and childhood disabilities, with a special focus on human teratogens",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Hyunkeun Ryan",
@@ -3830,7 +3866,9 @@
         }
       ],
       "orcid": "0000-0001-9542-716X",
-      "last_enriched": "2026-03-17T15:54:34.400011+00:00"
+      "last_enriched": "2026-03-17T15:54:34.400011+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Michael",
@@ -4134,7 +4172,9 @@
         }
       ],
       "orcid": "0000-0003-0425-9661",
-      "last_enriched": "2026-03-17T15:54:51.596522+00:00"
+      "last_enriched": "2026-03-17T15:54:51.596522+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Lori",
@@ -4293,7 +4333,9 @@
         "healthy volunteers (reference cohort)",
         "North American CICU directors"
       ],
-      "last_enriched": "2026-03-17T15:55:07.169143+00:00"
+      "last_enriched": "2026-03-17T15:55:07.169143+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Victor",
@@ -4581,7 +4623,9 @@
         "general campus population",
         "men and women"
       ],
-      "last_enriched": "2026-03-17T15:55:25.917675+00:00"
+      "last_enriched": "2026-03-17T15:55:25.917675+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Steven",
@@ -4592,7 +4636,9 @@
       ],
       "title": "Professor",
       "email": "sedland@health.ucsd.edu",
-      "research_interests": "Alzheimer's disease (AD) etiology and risk factors; Genetic epidemiology of AD and related disorders; AD clinical trial design and methods"
+      "research_interests": "Alzheimer's disease (AD) etiology and risk factors; Genetic epidemiology of AD and related disorders; AD clinical trial design and methods",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Elizabeth",
@@ -4735,7 +4781,9 @@
         "Behavioral health system stakeholders",
         "Users of mindfulness meditation apps"
       ],
-      "last_enriched": "2026-03-17T15:55:56.331818+00:00"
+      "last_enriched": "2026-03-17T15:55:56.331818+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Rebecca",
@@ -4746,7 +4794,9 @@
       ],
       "title": "Associate Professor",
       "email": "rfieldingmiller@health.ucsd.edu",
-      "research_interests": "Community-engaged research; Social and structural determinants of infectious disease; Global health"
+      "research_interests": "Community-engaged research; Social and structural determinants of infectious disease; Global health",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Richard",
@@ -5046,7 +5096,9 @@
         }
       ],
       "orcid": "0000-0003-3663-7153",
-      "last_enriched": "2026-03-17T15:56:29.787663+00:00"
+      "last_enriched": "2026-03-17T15:56:29.787663+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Todd",
@@ -5387,7 +5439,9 @@
         }
       ],
       "orcid": "0000-0002-8360-3522",
-      "last_enriched": "2026-03-17T15:56:46.960962+00:00"
+      "last_enriched": "2026-03-17T15:56:46.960962+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Carlos",
@@ -5546,7 +5600,9 @@
         "children",
         "vulnerable communities"
       ],
-      "last_enriched": "2026-03-17T15:57:16.310129+00:00"
+      "last_enriched": "2026-03-17T15:57:16.310129+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Erik",
@@ -5672,7 +5728,9 @@
         }
       ],
       "orcid": "0000-0001-6239-1965",
-      "last_enriched": "2026-03-17T15:57:32.721641+00:00"
+      "last_enriched": "2026-03-17T15:57:32.721641+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Mara",
@@ -5683,7 +5741,9 @@
       ],
       "title": "Professor",
       "email": "mharrell@ucsd.edu",
-      "research_interests": "Public health ethics; Critical thinking; Writing"
+      "research_interests": "Public health ethics; Critical thinking; Writing",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Sheri",
@@ -6129,7 +6189,9 @@
         }
       ],
       "orcid": "0000-0001-9858-1736",
-      "last_enriched": "2026-03-17T15:57:56.815473+00:00"
+      "last_enriched": "2026-03-17T15:57:56.815473+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Alexandra",
@@ -6301,7 +6363,9 @@
         "agricultural workers",
         "general human population"
       ],
-      "last_enriched": "2026-03-17T15:58:11.929985+00:00"
+      "last_enriched": "2026-03-17T15:58:11.929985+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Eric",
@@ -6415,7 +6479,9 @@
         }
       ],
       "orcid": "0000-0002-7434-0775",
-      "last_enriched": "2026-03-17T15:58:28.743048+00:00"
+      "last_enriched": "2026-03-17T15:58:28.743048+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Chito",
@@ -6641,7 +6707,9 @@
           ]
         }
       ],
-      "last_enriched": "2026-03-17T15:58:45.941127+00:00"
+      "last_enriched": "2026-03-17T15:58:45.941127+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Linda",
@@ -7117,7 +7185,9 @@
         "drivers",
         "volunteers"
       ],
-      "last_enriched": "2026-03-17T15:59:02.454549+00:00"
+      "last_enriched": "2026-03-17T15:59:02.454549+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Suzi",
@@ -7265,7 +7335,9 @@
         }
       ],
       "orcid": "0000-0003-0300-5950",
-      "last_enriched": "2026-03-17T15:59:19.449800+00:00"
+      "last_enriched": "2026-03-17T15:59:19.449800+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Samantha",
@@ -7377,7 +7449,9 @@
         }
       ],
       "orcid": "0000-0001-9843-2845",
-      "last_enriched": "2026-03-17T15:59:33.714631+00:00"
+      "last_enriched": "2026-03-17T15:59:33.714631+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Joachim",
@@ -7700,7 +7774,9 @@
         }
       ],
       "orcid": "0000-0002-8084-9869",
-      "last_enriched": "2026-03-17T15:59:49.801149+00:00"
+      "last_enriched": "2026-03-17T15:59:49.801149+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Sonia",
@@ -8204,7 +8280,9 @@
         }
       ],
       "orcid": "0000-0001-8408-1247",
-      "last_enriched": "2026-03-17T16:00:05.969986+00:00"
+      "last_enriched": "2026-03-17T16:00:05.969986+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Michelle",
@@ -8524,7 +8602,9 @@
         "general adult population",
         "mice (preclinical models)"
       ],
-      "last_enriched": "2026-03-17T16:00:22.877962+00:00"
+      "last_enriched": "2026-03-17T16:00:22.877962+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Robert H.",
@@ -8635,7 +8715,9 @@
         }
       ],
       "orcid": "0000-0002-8722-7667",
-      "last_enriched": "2026-03-17T16:00:47.429112+00:00"
+      "last_enriched": "2026-03-17T16:00:47.429112+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Georgia",
@@ -8788,7 +8870,9 @@
         }
       ],
       "orcid": "0000-0002-3273-184X",
-      "last_enriched": "2026-03-17T16:01:03.441765+00:00"
+      "last_enriched": "2026-03-17T16:01:03.441765+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Pooyan",
@@ -8925,7 +9009,9 @@
         "elderly adults",
         "general population"
       ],
-      "last_enriched": "2026-03-17T16:01:16.749207+00:00"
+      "last_enriched": "2026-03-17T16:01:16.749207+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Donna",
@@ -9126,7 +9212,9 @@
         "young Mexican‑identifying adults",
         "general adult population"
       ],
-      "last_enriched": "2026-03-17T16:01:31.263965+00:00"
+      "last_enriched": "2026-03-17T16:01:31.263965+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Richard",
@@ -9195,7 +9283,9 @@
         "physicians",
         "California residents"
       ],
-      "last_enriched": "2026-03-17T16:01:46.123989+00:00"
+      "last_enriched": "2026-03-17T16:01:46.123989+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Andrea",
@@ -9800,7 +9890,9 @@
         "predoctoral and postdoctoral trainees",
         "academic faculty"
       ],
-      "last_enriched": "2026-03-17T16:02:00.365607+00:00"
+      "last_enriched": "2026-03-17T16:02:00.365607+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Ariel",
@@ -9917,7 +10009,9 @@
         }
       ],
       "orcid": "0000-0002-2468-115X",
-      "last_enriched": "2026-03-17T16:02:17.437532+00:00"
+      "last_enriched": "2026-03-17T16:02:17.437532+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Brittany",
@@ -10025,7 +10119,9 @@
         }
       ],
       "orcid": "0000-0002-6088-5176",
-      "last_enriched": "2026-03-17T16:02:32.460339+00:00"
+      "last_enriched": "2026-03-17T16:02:32.460339+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Eric",
@@ -10194,7 +10290,9 @@
         }
       ],
       "orcid": "0000-0001-9221-0336",
-      "last_enriched": "2026-03-17T16:02:48.907861+00:00"
+      "last_enriched": "2026-03-17T16:02:48.907861+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Henry",
@@ -10204,7 +10302,9 @@
       ],
       "title": "Professor, Secondary Appointed",
       "email": "henrylee@health.ucsd.edu",
-      "research_interests": null
+      "research_interests": null,
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Sydney",
@@ -10536,7 +10636,9 @@
         "adults with lung cancer",
         "COVID‑19 patients"
       ],
-      "last_enriched": "2026-03-17T16:03:20.763004+00:00"
+      "last_enriched": "2026-03-17T16:03:20.763004+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Lin",
@@ -10865,7 +10967,9 @@
         "general adult population (clinical trial participants)",
         "colonoscopy surveillance cohort"
       ],
-      "last_enriched": "2026-03-17T16:03:38.074060+00:00"
+      "last_enriched": "2026-03-17T16:03:38.074060+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Kanya",
@@ -10923,7 +11027,9 @@
         "adult breast cancer patients",
         "general adult population"
       ],
-      "last_enriched": "2026-03-17T16:03:55.958557+00:00"
+      "last_enriched": "2026-03-17T16:03:55.958557+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Becky",
@@ -11175,7 +11281,9 @@
         "Mexican‑American mother‑daughter dyads",
         "Middle East and North Africa refugees"
       ],
-      "last_enriched": "2026-03-17T16:04:11.583225+00:00"
+      "last_enriched": "2026-03-17T16:04:11.583225+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Maria Elena",
@@ -11281,7 +11389,9 @@
         }
       ],
       "orcid": "0000-0002-6728-1834",
-      "last_enriched": "2026-03-17T16:04:25.537957+00:00"
+      "last_enriched": "2026-03-17T16:04:25.537957+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Sara",
@@ -11463,7 +11573,9 @@
         "Medicaid beneficiaries",
         "US general population"
       ],
-      "last_enriched": "2026-03-17T16:04:41.086663+00:00"
+      "last_enriched": "2026-03-17T16:04:41.086663+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Audra",
@@ -11585,7 +11697,9 @@
         "children",
         "adolescents"
       ],
-      "last_enriched": "2026-03-17T16:04:55.879742+00:00"
+      "last_enriched": "2026-03-17T16:04:55.879742+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Winta",
@@ -11736,7 +11850,9 @@
         "U.S. cancer patients",
         "international sarcoma cohort"
       ],
-      "last_enriched": "2026-03-17T16:05:11.966151+00:00"
+      "last_enriched": "2026-03-17T16:05:11.966151+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Karen",
@@ -12051,7 +12167,9 @@
         "cancer patients",
         "laboratory mice"
       ],
-      "last_enriched": "2026-03-17T16:05:27.762720+00:00"
+      "last_enriched": "2026-03-17T16:05:27.762720+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Lindsay",
@@ -12141,7 +12259,9 @@
         "CKD patients",
         "heart failure patients"
       ],
-      "last_enriched": "2026-03-17T16:05:45.741986+00:00"
+      "last_enriched": "2026-03-17T16:05:45.741986+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Paul",
@@ -12151,7 +12271,9 @@
       ],
       "title": "Professor, Recall to Active Service (RTAD)",
       "email": "pmills@health.ucsd.edu",
-      "research_interests": null
+      "research_interests": null,
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Ryan",
@@ -12428,7 +12550,9 @@
         "Hispanic long‑term colorectal cancer survivors",
         "aging cohort participants"
       ],
-      "last_enriched": "2026-03-17T16:06:16.666826+00:00"
+      "last_enriched": "2026-03-17T16:06:16.666826+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Loki",
@@ -12778,7 +12902,9 @@
         }
       ],
       "orcid": "0000-0001-5719-828X",
-      "last_enriched": "2026-03-17T16:06:32.550024+00:00"
+      "last_enriched": "2026-03-17T16:06:32.550024+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Camille",
@@ -12972,7 +13098,9 @@
         "community members",
         "patients using digital health interventions"
       ],
-      "last_enriched": "2026-03-17T16:06:47.971426+00:00"
+      "last_enriched": "2026-03-17T16:06:47.971426+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Annie",
@@ -13107,7 +13235,9 @@
         }
       ],
       "orcid": "0009-0007-0262-3147",
-      "last_enriched": "2026-03-17T16:07:03.821780+00:00"
+      "last_enriched": "2026-03-17T16:07:03.821780+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "France",
@@ -13187,7 +13317,9 @@
         "ethnic minority groups",
         "general adult population"
       ],
-      "last_enriched": "2026-03-17T16:07:16.350636+00:00"
+      "last_enriched": "2026-03-17T16:07:16.350636+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Steve",
@@ -13530,7 +13662,9 @@
         }
       ],
       "orcid": "0000-0002-7206-7381",
-      "last_enriched": "2026-03-17T16:07:33.105048+00:00"
+      "last_enriched": "2026-03-17T16:07:33.105048+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Gregory",
@@ -13735,7 +13869,9 @@
         "Medicare beneficiaries",
         "people with type 2 diabetes (including insulin‑treated)"
       ],
-      "last_enriched": "2026-03-17T16:07:48.140385+00:00"
+      "last_enriched": "2026-03-17T16:07:48.140385+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Victoria D.",
@@ -13754,7 +13890,9 @@
         }
       ],
       "orcid": "0000-0001-6455-3905",
-      "last_enriched": "2026-03-17T16:08:11.581258+00:00"
+      "last_enriched": "2026-03-17T16:08:11.581258+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Lawrence",
@@ -13826,7 +13964,9 @@
         }
       ],
       "orcid": "0000-0003-0974-7330",
-      "last_enriched": "2026-03-17T16:08:28.499116+00:00"
+      "last_enriched": "2026-03-17T16:08:28.499116+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Kevin",
@@ -14204,7 +14344,9 @@
         "physical therapists",
         "general adult population"
       ],
-      "last_enriched": "2026-03-17T16:08:45.506384+00:00"
+      "last_enriched": "2026-03-17T16:08:45.506384+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Corinne",
@@ -14319,7 +14461,9 @@
         }
       ],
       "orcid": "0000-0001-9472-2538",
-      "last_enriched": "2026-03-17T16:09:01.970870+00:00"
+      "last_enriched": "2026-03-17T16:09:01.970870+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "John",
@@ -14683,7 +14827,9 @@
         }
       ],
       "orcid": "0000-0002-0075-7471",
-      "last_enriched": "2026-03-17T16:09:20.079769+00:00"
+      "last_enriched": "2026-03-17T16:09:20.079769+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Heather",
@@ -14694,7 +14840,9 @@
       ],
       "title": "Associate Professor, Non-Salaried",
       "email": "hpines@health.ucsd.edu",
-      "research_interests": null
+      "research_interests": null,
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Michael",
@@ -14864,7 +15012,9 @@
         "low‑ and middle‑income countries",
         "high‑income countries"
       ],
-      "last_enriched": "2026-03-17T16:09:52.492323+00:00"
+      "last_enriched": "2026-03-17T16:09:52.492323+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Borsika",
@@ -14876,7 +15026,9 @@
       ],
       "title": "Professor",
       "email": "barabin@health.ucsd.edu",
-      "research_interests": "Dissemination and implementation science; Adapting evidence-based interventions, theories, models, frameworks for dissemination and implementation science; Pragmatic measures; Underserved communities; Cancer prevention and control; COVID-19"
+      "research_interests": "Dissemination and implementation science; Adapting evidence-based interventions, theories, models, frameworks for dissemination and implementation science; Pragmatic measures; Underserved communities; Cancer prevention and control; COVID-19",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Ramya",
@@ -14983,7 +15135,9 @@
         "adult patients",
         "racial/ethnic minority groups"
       ],
-      "last_enriched": "2026-03-17T16:10:20.742214+00:00"
+      "last_enriched": "2026-03-17T16:10:20.742214+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Brinda",
@@ -15072,7 +15226,9 @@
         }
       ],
       "orcid": "0000-0002-9856-6728",
-      "last_enriched": "2026-03-17T16:10:33.688649+00:00"
+      "last_enriched": "2026-03-17T16:10:33.688649+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Divya",
@@ -15180,7 +15336,9 @@
         "parents",
         "physicians"
       ],
-      "last_enriched": "2026-03-17T16:10:48.285164+00:00"
+      "last_enriched": "2026-03-17T16:10:48.285164+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Vivian",
@@ -15737,7 +15895,9 @@
         "community members affected by school shootings",
         "medical residents"
       ],
-      "last_enriched": "2026-03-17T16:11:01.442125+00:00"
+      "last_enriched": "2026-03-17T16:11:01.442125+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Andrew",
@@ -16249,7 +16409,9 @@
         }
       ],
       "orcid": "0000-0003-1429-9181",
-      "last_enriched": "2026-03-17T16:11:18.485499+00:00"
+      "last_enriched": "2026-03-17T16:11:18.485499+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Margaret",
@@ -16260,7 +16422,9 @@
       ],
       "title": "Professor",
       "email": "m1ryan@health.ucsd.edu",
-      "research_interests": "Vaccine-preventable infections; Military medicine; Risk communication"
+      "research_interests": "Vaccine-preventable infections; Military medicine; Risk communication",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Rany",
@@ -16447,7 +16611,9 @@
         }
       ],
       "orcid": "0000-0001-8816-6862",
-      "last_enriched": "2026-03-17T16:11:52.129215+00:00"
+      "last_enriched": "2026-03-17T16:11:52.129215+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "James",
@@ -16905,7 +17071,9 @@
         }
       ],
       "orcid": "0000-0001-9615-8221",
-      "last_enriched": "2026-03-17T16:12:10.773244+00:00"
+      "last_enriched": "2026-03-17T16:12:10.773244+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Deepa",
@@ -17025,7 +17193,9 @@
         "healthcare professionals and trainees",
         "U.S. patient populations"
       ],
-      "last_enriched": "2026-03-17T16:12:24.285644+00:00"
+      "last_enriched": "2026-03-17T16:12:24.285644+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Armin",
@@ -17232,7 +17402,9 @@
         "general population exposed to extreme heat",
         "environmental monitoring subjects"
       ],
-      "last_enriched": "2026-03-17T16:12:39.868208+00:00"
+      "last_enriched": "2026-03-17T16:12:39.868208+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Aladdin H.",
@@ -17581,7 +17753,9 @@
         "diverse ancestry groups (trans‑ancestry GWAS)",
         "general aging population (both sexes in some analyses)"
       ],
-      "last_enriched": "2026-03-17T16:13:05.291552+00:00"
+      "last_enriched": "2026-03-17T16:13:05.291552+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Holly Baker",
@@ -17665,7 +17839,9 @@
         }
       ],
       "orcid": "0000-0002-5320-9575",
-      "last_enriched": "2026-03-17T16:13:18.616262+00:00"
+      "last_enriched": "2026-03-17T16:13:18.616262+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Yuyan",
@@ -17925,7 +18101,9 @@
         "cannabis consumers",
         "low‑education / disadvantaged groups"
       ],
-      "last_enriched": "2026-03-17T16:13:33.238725+00:00"
+      "last_enriched": "2026-03-17T16:13:33.238725+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Murray",
@@ -18362,7 +18540,9 @@
         "general adult population",
         "patients with chronic pain"
       ],
-      "last_enriched": "2026-03-17T16:13:55.539190+00:00"
+      "last_enriched": "2026-03-17T16:13:55.539190+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Matthew",
@@ -18487,7 +18667,9 @@
         "individuals on suppressive antiretroviral therapy",
         "orthopedic injury patients"
       ],
-      "last_enriched": "2026-03-17T16:14:10.929281+00:00"
+      "last_enriched": "2026-03-17T16:14:10.929281+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "David",
@@ -18710,7 +18892,9 @@
         }
       ],
       "orcid": "0000-0002-5383-9032",
-      "last_enriched": "2026-03-17T16:14:27.014428+00:00"
+      "last_enriched": "2026-03-17T16:14:27.014428+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Jose Ricardo",
@@ -18780,7 +18964,9 @@
         }
       ],
       "orcid": "0000-0001-9738-137X",
-      "last_enriched": "2026-03-17T16:14:43.015697+00:00"
+      "last_enriched": "2026-03-17T16:14:43.015697+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Gene",
@@ -18790,7 +18976,9 @@
       ],
       "title": "Lecturer",
       "email": "gstan@health.ucsd.edu",
-      "research_interests": null
+      "research_interests": null,
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Ronald",
@@ -19044,7 +19232,9 @@
         }
       ],
       "orcid": "0000-0003-1686-4965",
-      "last_enriched": "2026-03-17T16:15:18.615628+00:00"
+      "last_enriched": "2026-03-17T16:15:18.615628+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Wesley",
@@ -19304,7 +19494,9 @@
         }
       ],
       "orcid": "0000-0002-1148-1976",
-      "last_enriched": "2026-03-17T16:15:32.599733+00:00"
+      "last_enriched": "2026-03-17T16:15:32.599733+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Christine",
@@ -19359,7 +19551,9 @@
         "California residents",
         "underserved communities"
       ],
-      "last_enriched": "2026-03-17T16:15:45.656862+00:00"
+      "last_enriched": "2026-03-17T16:15:45.656862+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Dennis",
@@ -19559,7 +19753,9 @@
         "U.S. population",
         "underrepresented undergraduate students"
       ],
-      "last_enriched": "2026-03-17T16:16:02.131353+00:00"
+      "last_enriched": "2026-03-17T16:16:02.131353+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Xin",
@@ -19569,7 +19765,9 @@
       ],
       "title": "Professor",
       "email": "x2tu@health.ucsd.edu",
-      "research_interests": "Semiparametric models for within- and between-subject attributes for longitudinal study; Statistical and machine learning models for mental health and psychosocial research; Causal inference for clinical trial and observational study data"
+      "research_interests": "Semiparametric models for within- and between-subject attributes for longitudinal study; Statistical and machine learning models for mental health and psychosocial research; Causal inference for clinical trial and observational study data",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Florin",
@@ -19579,7 +19777,9 @@
       ],
       "title": "Professor",
       "email": "fvaida@health.ucsd.edu",
-      "research_interests": "Longitudinal and clustered data analysis; Randomized clinical trials; NeuroAIDS and infectious diseases"
+      "research_interests": "Longitudinal and clustered data analysis; Randomized clinical trials; NeuroAIDS and infectious diseases",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Stephen",
@@ -19622,7 +19822,9 @@
         "binational populations",
         "general population"
       ],
-      "last_enriched": "2026-03-17T16:16:51.681336+00:00"
+      "last_enriched": "2026-03-17T16:16:51.681336+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Anne E. C.",
@@ -19632,7 +19834,9 @@
       ],
       "title": "Assistant Professor",
       "email": "aecwhite@health.ucsd.edu",
-      "research_interests": "Doctor-patient Communication; Medical Sociology; Qualitative Methodologies; Conversation Analysis; Rural Health; Opioid Negotiations"
+      "research_interests": "Doctor-patient Communication; Medical Sociology; Qualitative Methodologies; Conversation Analysis; Rural Health; Opioid Negotiations",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Crystal",
@@ -19695,7 +19899,9 @@
         "women aged 80+",
         "underserved/diverse populations"
       ],
-      "last_enriched": "2026-03-17T16:17:43.028561+00:00"
+      "last_enriched": "2026-03-17T16:17:43.028561+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Deborah",
@@ -20220,7 +20426,9 @@
         "military personnel",
         "community‑dwelling older adults"
       ],
-      "last_enriched": "2026-03-17T16:17:57.268614+00:00"
+      "last_enriched": "2026-03-17T16:17:57.268614+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Ronghui (Lily)",
@@ -20230,7 +20438,9 @@
       ],
       "title": "Professor",
       "email": "rxu@health.ucsd.edu",
-      "research_interests": null
+      "research_interests": null,
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Xinlian",
@@ -20325,7 +20535,9 @@
         }
       ],
       "orcid": "0000-0002-0913-1205",
-      "last_enriched": "2026-03-17T16:18:28.811529+00:00"
+      "last_enriched": "2026-03-17T16:18:28.811529+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Shu-Hong",
@@ -20666,7 +20878,9 @@
         }
       ],
       "orcid": "0000-0002-4149-3441",
-      "last_enriched": "2026-03-17T16:18:46.243467+00:00"
+      "last_enriched": "2026-03-17T16:18:46.243467+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Jingjing",
@@ -21014,7 +21228,9 @@
         }
       ],
       "orcid": "0009-0002-1537-514X",
-      "last_enriched": "2026-03-17T16:19:02.701790+00:00"
+      "last_enriched": "2026-03-17T16:19:02.701790+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Christine",
@@ -21075,7 +21291,9 @@
         "employees transitioning to dispersed/remote teams",
         "remote workers"
       ],
-      "last_enriched": "2026-03-17T16:19:14.211826+00:00"
+      "last_enriched": "2026-03-17T16:19:14.211826+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Charles",
@@ -21549,7 +21767,9 @@
         }
       ],
       "orcid": "0009-0009-1463-1042",
-      "last_enriched": "2026-03-17T16:19:30.570113+00:00"
+      "last_enriched": "2026-03-17T16:19:30.570113+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Harvey",
@@ -21997,7 +22217,9 @@
         }
       ],
       "orcid": "0000-0001-7119-8542",
-      "last_enriched": "2026-03-17T16:19:47.425839+00:00"
+      "last_enriched": "2026-03-17T16:19:47.425839+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Linda",
@@ -22257,7 +22479,9 @@
         "pregnant women (adverse pregnancy outcomes)",
         "diverse/underrepresented groups"
       ],
-      "last_enriched": "2026-03-17T16:20:07.974682+00:00"
+      "last_enriched": "2026-03-17T16:20:07.974682+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Ana",
@@ -22670,7 +22894,9 @@
         "ethnically diverse groups in California",
         "general population"
       ],
-      "last_enriched": "2026-03-17T16:20:28.901359+00:00"
+      "last_enriched": "2026-03-17T16:20:28.901359+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Angelo",
@@ -22722,7 +22948,9 @@
         "adults",
         "outpatient addiction patients"
       ],
-      "last_enriched": "2026-03-17T16:20:36.376042+00:00"
+      "last_enriched": "2026-03-17T16:20:36.376042+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Sara",
@@ -23027,7 +23255,9 @@
         "prostate cancer patients (cell line models)",
         "general adult population"
       ],
-      "last_enriched": "2026-03-17T16:20:50.221574+00:00"
+      "last_enriched": "2026-03-17T16:20:50.221574+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Barbara",
@@ -23126,7 +23356,9 @@
         "children and preschoolers",
         "Southern California patient communities"
       ],
-      "last_enriched": "2026-03-17T16:21:03.838873+00:00"
+      "last_enriched": "2026-03-17T16:21:03.838873+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Joseph",
@@ -23222,7 +23454,9 @@
         "adults with AIDS",
         "patients undergoing anal cytology"
       ],
-      "last_enriched": "2026-03-17T16:21:14.664122+00:00"
+      "last_enriched": "2026-03-17T16:21:14.664122+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Sabrina",
@@ -23234,7 +23468,9 @@
       "email": "safalquier@health.ucsd.edu",
       "research_interests": null,
       "orcid": "0009-0003-2463-012X",
-      "last_enriched": "2026-03-17T16:21:22.209204+00:00"
+      "last_enriched": "2026-03-17T16:21:22.209204+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Kathleen",
@@ -23546,7 +23782,9 @@
         "patients with chronic lymphocytic leukaemia",
         "mouse models"
       ],
-      "last_enriched": "2026-03-17T16:21:36.907840+00:00"
+      "last_enriched": "2026-03-17T16:21:36.907840+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Regina",
@@ -23641,7 +23879,9 @@
         "youth with intellectual disabilities",
         "children"
       ],
-      "last_enriched": "2026-03-17T16:21:48.713202+00:00"
+      "last_enriched": "2026-03-17T16:21:48.713202+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Carla",
@@ -23651,7 +23891,9 @@
       ],
       "title": "Health Sciences Clinical Professor (Voluntary)",
       "email": "c4fox@health.ucsd.edu",
-      "research_interests": null
+      "research_interests": null,
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "John",
@@ -23896,7 +24138,9 @@
         }
       ],
       "orcid": "0000-0002-2579-4711",
-      "last_enriched": "2026-03-17T16:22:19.887625+00:00"
+      "last_enriched": "2026-03-17T16:22:19.887625+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Christopher",
@@ -23909,7 +24153,9 @@
       "email": "cgranda@health.ucsd.edu",
       "research_interests": null,
       "orcid": "0000-0001-6690-9557",
-      "last_enriched": "2026-03-17T16:22:25.218498+00:00"
+      "last_enriched": "2026-03-17T16:22:25.218498+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Rebecca",
@@ -23919,7 +24165,9 @@
       ],
       "title": "Health Sciences Clinical Instructor (Voluntary)",
       "email": "rlevasseur@health.ucsd.edu",
-      "research_interests": null
+      "research_interests": null,
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Eric",
@@ -23929,7 +24177,9 @@
       ],
       "title": "Health Sciences Clinical Professor (Voluntary)",
       "email": null,
-      "research_interests": null
+      "research_interests": null,
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Mary",
@@ -24068,7 +24318,9 @@
         "patients requiring ECMO",
         "patients with genetic cardiac disorders"
       ],
-      "last_enriched": "2026-03-17T16:22:54.645253+00:00"
+      "last_enriched": "2026-03-17T16:22:54.645253+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Camila",
@@ -24173,7 +24425,9 @@
         "adults",
         "patients with psychiatric conditions"
       ],
-      "last_enriched": "2026-03-17T16:23:08.918545+00:00"
+      "last_enriched": "2026-03-17T16:23:08.918545+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Jose",
@@ -24434,7 +24688,9 @@
         "rural agricultural communities",
         "Ecuadorian populations"
       ],
-      "last_enriched": "2026-03-17T16:23:24.191370+00:00"
+      "last_enriched": "2026-03-17T16:23:24.191370+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Sayone",
@@ -24507,7 +24763,9 @@
         "school staff",
         "adolescents"
       ],
-      "last_enriched": "2026-03-17T16:23:32.229363+00:00"
+      "last_enriched": "2026-03-17T16:23:32.229363+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     },
     {
       "first_name": "Jill",
@@ -24589,7 +24847,9 @@
         }
       ],
       "orcid": "0000-0003-4772-9635",
-      "last_enriched": "2026-03-17T16:23:53.311280+00:00"
+      "last_enriched": "2026-03-17T16:23:53.311280+00:00",
+      "committee_service": [],
+      "integrity_flags": []
     }
   ]
 }

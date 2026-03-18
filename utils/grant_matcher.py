@@ -9,6 +9,7 @@ from litellm import completion
 logger = logging.getLogger(__name__)
 
 MAX_INTERESTS_LENGTH = 300
+PRE_FILTER_CANDIDATES = 60
 
 
 def _get_model():
@@ -84,7 +85,6 @@ def _parse_json_response(text):
     # Try to recover a truncated JSON array — find last complete object
     arr_start = text.find("[")
     if arr_start != -1:
-        # Find the last complete "}" and close the array
         substring = text[arr_start:]
         last_brace = substring.rfind("}")
         if last_brace > 0:
@@ -107,27 +107,110 @@ def _unwrap_matches_list(parsed):
     if isinstance(parsed, list):
         return parsed
     if isinstance(parsed, dict):
-        # Look for the first list value that contains match-like objects
         for key in ("matches", "results", "faculty_matches", "ranked_matches"):
             if key in parsed and isinstance(parsed[key], list):
                 return parsed[key]
-        # Fallback: return the first list value found
         for value in parsed.values():
             if isinstance(value, list):
                 return value
     raise ValueError("Expected a JSON array of matches from LLM response")
 
 
+# ---------------------------------------------------------------------------
+# Keyword Pre-filter — reduces LLM token cost for large faculty sets
+# ---------------------------------------------------------------------------
+
+def _normalize_keyword(kw):
+    """Lowercase and strip a keyword for comparison."""
+    return kw.strip().lower()
+
+
+def _extract_requirement_keywords(requirements):
+    """Pull searchable terms from extracted requirements."""
+    terms = set()
+    for field in ("overall_research_themes",):
+        for item in requirements.get(field, []):
+            terms.add(_normalize_keyword(item))
+
+    for inv_req in requirements.get("investigator_requirements", []):
+        for item in inv_req.get("expertise_areas", []):
+            terms.add(_normalize_keyword(item))
+        for item in inv_req.get("qualifications", []):
+            for word in item.lower().split():
+                if len(word) > 3:
+                    terms.add(word)
+
+    # Also split multi-word terms into individual words for partial matching
+    expanded = set()
+    for term in terms:
+        expanded.add(term)
+        for word in term.split():
+            if len(word) > 3:
+                expanded.add(word)
+    return expanded
+
+
+def _faculty_keyword_score(faculty, requirement_keywords):
+    """Score a faculty member's keyword overlap with requirements."""
+    faculty_text = " ".join([
+        (faculty.get("research_interests_enriched") or ""),
+        (faculty.get("research_interests") or ""),
+        " ".join(faculty.get("expertise_keywords") or []),
+        " ".join(faculty.get("disease_areas") or []),
+        " ".join(faculty.get("methodologies") or []),
+        " ".join(faculty.get("populations") or []),
+    ]).lower()
+
+    if not faculty_text.strip():
+        return 0
+
+    score = 0
+    for kw in requirement_keywords:
+        if kw in faculty_text:
+            score += 1
+    return score
+
+
+def _pre_filter_faculty(faculty_with_interests, requirements, max_candidates=PRE_FILTER_CANDIDATES):
+    """Pre-filter faculty using keyword overlap to reduce LLM input size.
+
+    For small faculty lists (≤ max_candidates), returns all faculty unchanged.
+    For larger lists, returns the top max_candidates by keyword relevance.
+    """
+    if len(faculty_with_interests) <= max_candidates:
+        return faculty_with_interests
+
+    keywords = _extract_requirement_keywords(requirements)
+    if not keywords:
+        return faculty_with_interests
+
+    scored = [
+        (f, _faculty_keyword_score(f, keywords))
+        for f in faculty_with_interests
+    ]
+    scored.sort(key=lambda x: x[1], reverse=True)
+
+    # Always include at least max_candidates, even those with score 0
+    filtered = [f for f, _ in scored[:max_candidates]]
+    logger.info("Pre-filtered %d → %d faculty using %d keywords",
+                len(faculty_with_interests), len(filtered), len(keywords))
+    return filtered
+
+
+# ---------------------------------------------------------------------------
+# LLM Prompts — neutral language (no "grant" terminology)
+# ---------------------------------------------------------------------------
+
 EXTRACT_SYSTEM_PROMPT = """\
-You are an expert research grant analyst. You will be given the text of a \
-grant opportunity document. Extract the requirements and produce a structured \
+You are an expert research funding analyst. You will be given the text of a \
+funding opportunity document. Extract the requirements and produce a structured \
 summary in JSON format. Focus on:
 
-1. A brief summary of the grant opportunity (2-3 sentences capturing the \
+1. A brief summary of the funding opportunity (2-3 sentences capturing the \
 purpose, scope, and what the funder is looking for)
 2. Investigator requirements — what expertise, qualifications, and roles \
-the grant describes (use the grant's own terminology for roles; do not \
-impose labels like "PI" or "Co-PI" unless the grant explicitly uses them)
+the opportunity describes (use the document's own terminology for roles; do not \
+impose labels like "PI" or "Co-PI" unless the document explicitly uses them)
 3. Key personnel or team composition needs
 4. Required expertise areas and disciplines
 5. Preferred qualifications (degrees, experience level, specific skills)
@@ -137,18 +220,18 @@ Return ONLY valid JSON with this structure:
 {
   "grant_title": "string or null",
   "funding_agency": "string or null",
-  "grant_summary": "A 2-3 sentence summary of the grant opportunity, its \
+  "grant_summary": "A 2-3 sentence summary of the funding opportunity, its \
 purpose, and what it seeks to fund.",
   "investigator_requirements": [
     {
-      "role": "role as described in the grant (e.g., Lead Investigator, \
+      "role": "role as described in the document (e.g., Lead Investigator, \
 Project Director, or simply Investigator)",
       "expertise_areas": ["list of required expertise domains"],
       "qualifications": ["list of degree/experience requirements"],
       "constraints": ["any eligibility constraints"]
     }
   ],
-  "overall_research_themes": ["list of broad research themes in the grant"]
+  "overall_research_themes": ["list of broad research themes"]
 }
 
 If investigator roles are not explicitly defined, create a single entry with \
@@ -157,14 +240,14 @@ Do NOT invent requirements that are not stated or clearly implied."""
 
 MATCH_SYSTEM_PROMPT = """\
 You are a research collaboration matchmaker for UC San Diego. You will receive:
-1. Extracted requirements from a grant opportunity
+1. Extracted requirements from a funding opportunity
 2. A list of faculty members with their research interests
 
 Your task: Rank the faculty by how well their research interests align with \
-the grant requirements. For each match, evaluate these dimensions:
+the opportunity requirements. For each match, evaluate these dimensions:
 
 - expertise_alignment (0-100): How closely the faculty member's research \
-interests and expertise match the grant's required research areas
+interests and expertise match the required research areas
 - methodological_fit (0-100): How well the researcher's methods align with \
 the methodological needs of the opportunity
 - track_record (0-100): Strength of relevant publication and funding history \
@@ -188,15 +271,15 @@ alignment (score >= 40). Each match object:
   "methodological_fit": <integer 0-100>,
   "track_record": <integer 0-100>,
   "match_reasoning": "2-3 sentence explanation of why this faculty member \
-is a strong match, referencing specific research interests and grant \
+is a strong match, referencing specific research interests and opportunity \
 requirements."
 }"""
 
 
 def extract_grant_requirements(grant_text):
-    """Call #1: Extract investigator requirements from grant text."""
+    """Call #1: Extract investigator requirements from funding opportunity text."""
     user_prompt = (
-        "Here is the grant opportunity document text:\n\n"
+        "Here is the funding opportunity document text:\n\n"
         "---\n"
         f"{grant_text}\n"
         "---\n\n"
@@ -226,7 +309,7 @@ def _truncate(text, max_length):
 
 
 def match_faculty(requirements, faculty_with_interests):
-    """Call #2: Match faculty against extracted grant requirements."""
+    """Call #2: Match faculty against extracted opportunity requirements."""
     # Build compact faculty summary
     lines = []
     for idx, f in enumerate(faculty_with_interests):
@@ -244,7 +327,7 @@ def match_faculty(requirements, faculty_with_interests):
         if f.get("expertise_keywords"):
             extras.append(f"Keywords: {', '.join(f['expertise_keywords'][:8])}")
         if f.get("funded_grants"):
-            extras.append(f"Grants: {len(f['funded_grants'])} funded")
+            extras.append(f"Funded projects: {len(f['funded_grants'])}")
         if f.get("h_index"):
             extras.append(f"h-index: {f['h_index']}")
         if extras:
@@ -253,14 +336,14 @@ def match_faculty(requirements, faculty_with_interests):
     faculty_summary = "\n".join(lines)
 
     user_prompt = (
-        "## Grant Requirements\n"
+        "## Funding Opportunity Requirements\n"
         f"{json.dumps(requirements, indent=2)}\n\n"
         "## Faculty Directory\n"
         f"{faculty_summary}\n\n"
-        "Rank the best-matching faculty for this grant."
+        "Rank the best-matching faculty for this opportunity."
     )
 
-    # Retry once on parse failure — models occasionally produce malformed output
+    # Retry once on parse failure
     last_error = None
     for attempt in range(2):
         if attempt > 0:
@@ -321,10 +404,10 @@ def _has_research_profile(faculty):
 
 
 def process_grant(grant_text, faculty_data):
-    """Coordinate the full grant matching pipeline.
+    """Coordinate the full matching pipeline for file-uploaded documents.
 
     Args:
-        grant_text: Extracted text from the grant document.
+        grant_text: Extracted text from the funding opportunity document.
         faculty_data: List of faculty dicts from faculty.json.
 
     Returns:
@@ -339,7 +422,46 @@ def process_grant(grant_text, faculty_data):
         f for f in faculty_data if not _has_research_profile(f)
     ]
 
-    matches = match_faculty(requirements, faculty_with_interests)
+    # Pre-filter for large faculty sets to control token costs
+    candidates = _pre_filter_faculty(faculty_with_interests, requirements)
+
+    matches = match_faculty(requirements, candidates)
+
+    return {
+        "grant_summary": requirements,
+        "matches": matches,
+        "faculty_without_interests_count": len(faculty_without),
+        "total_faculty_considered": len(faculty_with_interests),
+    }
+
+
+def process_text(text, faculty_data):
+    """Coordinate the matching pipeline for manually entered expertise text.
+
+    Uses the same two-stage pipeline: extract requirements from the text,
+    then match against faculty.
+
+    Args:
+        text: Free-text description of expertise requirements.
+        faculty_data: List of faculty dicts from faculty.json.
+
+    Returns:
+        Dict with grant_summary, matches, and metadata.
+    """
+    # The extraction prompt works well with free text too — it will
+    # structure whatever requirements are described
+    requirements = extract_grant_requirements(text)
+
+    faculty_with_interests = [
+        f for f in faculty_data if _has_research_profile(f)
+    ]
+    faculty_without = [
+        f for f in faculty_data if not _has_research_profile(f)
+    ]
+
+    candidates = _pre_filter_faculty(faculty_with_interests, requirements)
+
+    matches = match_faculty(requirements, candidates)
 
     return {
         "grant_summary": requirements,

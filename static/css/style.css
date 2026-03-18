@@ -23,6 +23,7 @@
     --accent: #2a7c8a;
     --accent-muted: #d6eaed;
     --error: #c23b22;
+    --warning: #b8860b;
 
     /* Typography */
     --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -117,11 +118,64 @@ header {
     color: var(--gray-400);
 }
 
+/* ——— Tab Navigation ——— */
+
+.tab-nav {
+    display: flex;
+    gap: 0;
+    border-bottom: var(--border-heavy);
+    margin: var(--space-5) 0 0;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: var(--space-2) var(--space-2);
+    background: var(--gray-50);
+    border: var(--border-hairline);
+    border-bottom: none;
+    font-family: var(--font-sans);
+    font-size: var(--text-small);
+    font-weight: 600;
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition);
+    text-align: center;
+}
+
+.tab-btn:not(:first-child) {
+    border-left: none;
+}
+
+.tab-btn:hover {
+    background: var(--gray-100);
+    color: var(--gray-700);
+}
+
+.tab-btn.active {
+    background: var(--white);
+    color: var(--black);
+    border-bottom: 2px solid var(--white);
+    margin-bottom: -2px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ——— Tab Panels ——— */
+
+.tab-panel {
+    display: none;
+    padding-top: var(--space-3);
+}
+
+.tab-panel.active {
+    display: block;
+}
+
 /* ——— Main ——— */
 
 main {
     flex: 1;
-    padding: var(--space-5) 0;
+    padding: 0 0 var(--space-5);
 }
 
 /* ——— Cards ——— */
@@ -242,6 +296,292 @@ main {
     color: var(--error);
 }
 
+/* ——— Text input (manual entry) ——— */
+
+.text-input {
+    width: 100%;
+    padding: var(--space-2);
+    border: var(--border-hairline);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    color: var(--gray-900);
+    line-height: 1.6;
+    resize: vertical;
+    transition: border-color var(--transition);
+}
+
+.text-input:focus {
+    outline: none;
+    border-color: var(--gray-700);
+}
+
+.text-input::placeholder {
+    color: var(--gray-400);
+}
+
+/* ——— Search bar ——— */
+
+.search-bar {
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px var(--space-2);
+    border: var(--border-hairline);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    color: var(--gray-900);
+    transition: border-color var(--transition);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--gray-700);
+}
+
+.search-input::placeholder {
+    color: var(--gray-400);
+}
+
+/* ——— Active filters ——— */
+
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    margin-top: var(--space-2);
+}
+
+.active-filters:empty {
+    display: none;
+}
+
+.filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 10px;
+    border: 1px solid var(--accent);
+    background: var(--accent-muted);
+    font-size: var(--text-label);
+    font-weight: 600;
+    color: var(--accent);
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.filter-chip:hover {
+    background: var(--white);
+}
+
+.filter-chip .chip-remove {
+    font-size: 0.875rem;
+    line-height: 1;
+    opacity: 0.6;
+}
+
+.filter-chip .chip-remove:hover {
+    opacity: 1;
+}
+
+/* ——— Expert count ——— */
+
+.expert-count {
+    font-size: var(--text-label);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--gray-400);
+    margin-bottom: var(--space-2);
+}
+
+/* ——— Expert directory list ——— */
+
+.expert-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.expert-card {
+    background: var(--white);
+    border: var(--border-hairline);
+    padding: var(--space-3);
+    margin-bottom: -1px;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.expert-card:hover {
+    background: var(--gray-50);
+}
+
+.expert-card.expanded {
+    border-left: 2px solid var(--accent);
+    padding-left: calc(var(--space-3) - 1px);
+}
+
+.expert-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-2);
+}
+
+.expert-name {
+    font-size: var(--text-heading);
+    font-weight: 700;
+    color: var(--black);
+}
+
+.expert-title {
+    font-size: var(--text-small);
+    color: var(--gray-500);
+    margin-top: 2px;
+}
+
+.expert-hindex {
+    font-size: var(--text-label);
+    font-weight: 700;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.expert-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: var(--space-1);
+}
+
+.expert-keywords .tag {
+    font-size: var(--text-label);
+    padding: 1px 8px;
+    cursor: pointer;
+}
+
+.expert-keywords .tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Expert expanded details */
+.expert-details {
+    display: none;
+    margin-top: var(--space-3);
+    padding-top: var(--space-2);
+    border-top: var(--border-hairline);
+}
+
+.expert-card.expanded .expert-details {
+    display: block;
+}
+
+.expert-section {
+    margin-bottom: var(--space-2);
+}
+
+.expert-section-title {
+    font-size: var(--text-label);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--gray-500);
+    margin-bottom: var(--space-1);
+}
+
+.expert-research {
+    font-family: var(--font-serif);
+    font-size: var(--text-body);
+    color: var(--gray-700);
+    line-height: 1.55;
+}
+
+.expert-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-1) var(--space-3);
+}
+
+.expert-meta-item {
+    font-size: var(--text-small);
+    color: var(--gray-700);
+}
+
+.expert-meta-item strong {
+    color: var(--gray-500);
+    font-size: var(--text-label);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.expert-email a {
+    font-size: var(--text-small);
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.expert-email a:hover {
+    color: var(--black);
+}
+
+.expert-profile-link a {
+    font-size: var(--text-small);
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.expert-profile-link a:hover {
+    color: var(--black);
+}
+
+.expert-grants-list,
+.expert-pubs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.expert-grants-list li,
+.expert-pubs-list li {
+    font-size: var(--text-small);
+    color: var(--gray-700);
+    padding: 2px 0 2px var(--space-2);
+    position: relative;
+}
+
+.expert-grants-list li::before,
+.expert-pubs-list li::before {
+    content: "\2014";
+    color: var(--gray-300);
+    position: absolute;
+    left: 0;
+}
+
+.expert-grants-list .grant-agency,
+.expert-pubs-list .pub-journal {
+    color: var(--gray-400);
+    font-size: var(--text-label);
+}
+
+/* Committee service badge */
+.expert-committee {
+    margin-top: var(--space-1);
+}
+
+.committee-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border: 1px solid var(--gray-300);
+    font-size: var(--text-label);
+    font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
 /* ——— Buttons ——— */
 
 .btn {
@@ -327,7 +667,7 @@ main {
     margin-top: var(--space-1);
 }
 
-/* ——— Grant Summary ——— */
+/* ——— Opportunity Summary ——— */
 
 .summary-card {
     border-left: 2px solid var(--black);
@@ -347,7 +687,7 @@ main {
     color: var(--gray-900);
 }
 
-.grant-brief {
+.result-brief {
     font-family: var(--font-serif);
     font-size: var(--text-body);
     color: var(--gray-700);
@@ -696,6 +1036,21 @@ footer {
         gap: 4px;
     }
 
+    .tab-nav {
+        flex-direction: column;
+    }
+
+    .tab-btn {
+        border-left: var(--border-hairline) !important;
+        border-bottom: var(--border-hairline);
+    }
+
+    .tab-btn.active {
+        border-bottom: none;
+        margin-bottom: 0;
+        border-left: 2px solid var(--black) !important;
+    }
+
     .card {
         padding: var(--space-3);
     }
@@ -711,5 +1066,9 @@ footer {
 
     .score-breakdown {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .expert-meta-grid {
+        grid-template-columns: 1fr;
     }
 }

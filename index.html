@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grant Match | UC San Diego</title>
+    <title>Research Alignment | UC San Diego</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
@@ -11,8 +11,8 @@
     <header>
         <div class="container header-inner">
             <div class="brand">
-                <h1 class="brand-title">Grant Match</h1>
-                <p class="brand-sub">Faculty Research Alignment</p>
+                <h1 class="brand-title">Research Alignment</h1>
+                <p class="brand-sub">Faculty Expertise Discovery</p>
             </div>
             <span class="brand-university">UC San Diego</span>
         </div>
@@ -20,53 +20,96 @@
 
     <main class="container">
 
-        <!-- Upload View -->
-        <section id="upload-view">
-            <div class="card upload-card">
-                <h2>Analyze a Grant Opportunity</h2>
-                <p class="help-text">Upload a grant document to identify faculty whose research interests align with the opportunity requirements.</p>
+        <!-- Tab Navigation -->
+        <nav class="tab-nav" role="tablist">
+            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="upload">Upload Opportunity</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="manual">Enter Expertise</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="directory">Expert Directory</button>
+        </nav>
 
-                <div id="drop-zone" class="drop-zone">
-                    <div class="drop-zone-content">
-                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        <p class="drop-text">Drop grant document here</p>
-                        <p class="drop-subtext">or</p>
-                        <label class="file-btn">
-                            Browse Files
-                            <input type="file" id="file-input" accept=".pdf,.txt" hidden>
-                        </label>
-                        <p class="file-types">PDF or TXT &middot; 10 MB max</p>
+        <!-- Tab 1: Upload Funding Opportunity -->
+        <section id="tab-upload" class="tab-panel active">
+            <div id="upload-view">
+                <div class="card upload-card">
+                    <h2>Analyze a Funding Opportunity</h2>
+                    <p class="help-text">Upload a funding opportunity document to identify faculty whose expertise aligns with the requirements.</p>
+
+                    <div id="drop-zone" class="drop-zone">
+                        <div class="drop-zone-content">
+                            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                            <p class="drop-text">Drop funding opportunity document here</p>
+                            <p class="drop-subtext">or</p>
+                            <label class="file-btn">
+                                Browse Files
+                                <input type="file" id="file-input" accept=".pdf,.txt" hidden>
+                            </label>
+                            <p class="file-types">PDF or TXT &middot; 10 MB max</p>
+                        </div>
                     </div>
-                </div>
 
-                <div id="file-preview" class="file-preview" hidden>
-                    <span id="file-name" class="file-name"></span>
-                    <button id="remove-file" class="remove-btn" title="Remove file">&times;</button>
-                </div>
+                    <div id="file-preview" class="file-preview" hidden>
+                        <span id="file-name" class="file-name"></span>
+                        <button id="remove-file" class="remove-btn" title="Remove file">&times;</button>
+                    </div>
 
-                <button id="submit-btn" class="btn btn-primary" disabled>Analyze Grant</button>
+                    <button id="submit-btn" class="btn btn-primary" disabled>Evaluate Alignment</button>
+                </div>
             </div>
         </section>
 
-        <!-- Processing View -->
+        <!-- Tab 2: Manual Expertise Entry -->
+        <section id="tab-manual" class="tab-panel">
+            <div id="manual-view">
+                <div class="card">
+                    <h2>Evaluate Expertise Requirements</h2>
+                    <p class="help-text">Paste or describe the expertise, methodologies, or research areas from a funding opportunity to find aligned faculty.</p>
+
+                    <textarea id="expertise-input" class="text-input" rows="8" placeholder="Example: Seeking investigators with expertise in computational epidemiology, machine learning applications in public health, and experience with large-scale health datasets. Preference for researchers with NIH-funded projects in health disparities and social determinants of health."></textarea>
+
+                    <button id="manual-submit-btn" class="btn btn-primary" disabled>Evaluate Alignment</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 3: Expert Directory -->
+        <section id="tab-directory" class="tab-panel">
+            <div class="card directory-header-card">
+                <h2>Expert Directory</h2>
+                <p class="help-text">Search and filter faculty by expertise, research methods, disease areas, or populations studied.</p>
+                <div class="search-bar">
+                    <input type="search" id="expert-search" class="search-input" placeholder="Search by name, expertise, methods, disease area, population...">
+                </div>
+                <div id="active-filters" class="active-filters"></div>
+            </div>
+
+            <div id="directory-loading" class="card processing-card" hidden>
+                <div class="spinner"></div>
+                <p class="status-text">Loading faculty directory</p>
+            </div>
+
+            <div id="expert-count" class="expert-count"></div>
+            <div id="expert-list" class="expert-list"></div>
+        </section>
+
+        <!-- Shared: Processing View -->
         <section id="processing-view" hidden>
             <div class="card processing-card">
                 <div class="spinner"></div>
                 <p id="status-text" class="status-text">Extracting document text</p>
-                <p class="status-subtext">15–30 seconds</p>
+                <p class="status-subtext">This may take a minute</p>
             </div>
         </section>
 
-        <!-- Results View -->
+        <!-- Shared: Results View -->
         <section id="results-view" hidden>
-            <!-- Grant Summary -->
+            <!-- Opportunity Summary -->
             <div class="card summary-card">
-                <h2>Grant Summary</h2>
+                <h2>Opportunity Summary</h2>
                 <div class="summary-meta">
-                    <div id="grant-title" class="summary-field"></div>
-                    <div id="grant-agency" class="summary-field"></div>
+                    <div id="result-title" class="summary-field"></div>
+                    <div id="result-agency" class="summary-field"></div>
                 </div>
-                <div id="grant-brief" class="grant-brief"></div>
+                <div id="result-brief" class="result-brief"></div>
                 <div id="research-themes" class="tags"></div>
             </div>
 
@@ -78,7 +121,7 @@
 
             <!-- Matches -->
             <div class="results-header">
-                <h2>Recommended Faculty</h2>
+                <h2>Aligned Faculty</h2>
                 <div class="results-actions">
                     <button id="copy-btn" class="btn btn-secondary">Copy Results</button>
                     <button id="new-btn" class="btn btn-outline">New Analysis</button>
@@ -95,24 +138,24 @@
             </div>
             <div id="methodology-panel" class="methodology-panel">
                 <h3>Ranking Methodology</h3>
-                <p>Faculty are ranked by an LLM-based analysis that evaluates alignment between each researcher's profile and the grant opportunity requirements. The system does not assign investigator roles — those decisions belong to the research team.</p>
+                <p>Faculty are ranked by an LLM-based analysis that evaluates alignment between each researcher's profile and the funding opportunity requirements. The system does not assign investigator roles — those decisions belong to the research team.</p>
 
                 <h4>Scoring Dimensions</h4>
                 <ul>
-                    <li><strong>Expertise alignment</strong> — How closely the faculty member's stated research interests, keywords, and funded grant history match the grant's required expertise areas</li>
-                    <li><strong>Methodological fit</strong> — Whether the researcher's methods (as inferred from publications and grants) align with the methodological needs of the opportunity</li>
+                    <li><strong>Expertise alignment</strong> — How closely the faculty member's stated research interests, keywords, and funded history match the opportunity's required expertise areas</li>
+                    <li><strong>Methodological fit</strong> — Whether the researcher's methods (as inferred from publications and funded work) align with the methodological needs of the opportunity</li>
                     <li><strong>Track record</strong> — Strength of the researcher's publication and funding history relative to the opportunity's scope and requirements</li>
                 </ul>
 
                 <h4>Data Sources</h4>
-                <p>Faculty profiles are constructed from the university directory, enriched with data from NIH RePORTER (funded grants), PubMed (recent publications), ORCID (research outputs), and institutional profile pages. The composite score (0–100) reflects overall alignment strength, not a prediction of success.</p>
+                <p>Faculty profiles are constructed from the university directory, enriched with data from NIH RePORTER (funded projects), PubMed (recent publications), ORCID (research outputs), and institutional profile pages. The composite score (0–100) reflects overall alignment strength, not a prediction of success.</p>
 
                 <h4>Model</h4>
-                <p>Grant requirements are extracted and faculty are matched using a large language model via LiteLLM. The model evaluates textual similarity and semantic relevance — it does not have access to private data, internal evaluations, or proprietary metrics. Results should be treated as a starting point for team assembly, not a definitive ranking.</p>
+                <p>Opportunity requirements are extracted and faculty are matched using a large language model via LiteLLM. The model evaluates textual similarity and semantic relevance — it does not have access to private data, internal evaluations, or proprietary metrics. Results should be treated as a starting point for team assembly, not a definitive ranking.</p>
             </div>
         </section>
 
-        <!-- Error View -->
+        <!-- Shared: Error View -->
         <section id="error-view" hidden>
             <div class="card error-card">
                 <svg class="error-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
@@ -124,12 +167,12 @@
 
     <footer>
         <div class="container">
-            <p>UC San Diego &middot; Faculty Research Alignment Tool</p>
+            <p>UC San Diego &middot; Research Alignment</p>
         </div>
     </footer>
 
     <script>
-        window.GRANT_MATCH_API_URL = "";
+        window.RESEARCH_ALIGNMENT_API_URL = "";
     </script>
     <script src="/static/js/app.js"></script>
 </body>

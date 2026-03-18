@@ -26,7 +26,7 @@ Rules:
 Return ONLY valid JSON with this structure:
 {
   "research_interests_enriched": "A 2-4 sentence narrative summary of their \
-research focus areas, suitable for matching against grant opportunities.",
+research focus areas, suitable for matching against funding opportunities.",
   "expertise_keywords": ["list", "of", "specific", "expertise", "keywords"],
   "methodologies": ["research methods they use, e.g., RCT, cohort study, ..."],
   "disease_areas": ["specific diseases or health conditions they study"],
