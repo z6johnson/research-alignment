@@ -1,0 +1,17 @@
+{
+  "university": "UC San Diego",
+  "department": "Scripps Institution of Oceanography",
+  "source_url": "https://catalog.ucsd.edu/faculty/SIO.html",
+  "date_retrieved": "2026-03-18",
+  "seed_status": "pending_discovery",
+  "seed_notes": "Run 'python enrichment/seed_sio.py' to populate from catalog.ucsd.edu and profiles.ucsd.edu. The catalog page (https://catalog.ucsd.edu/faculty/SIO.html) lists faculty names and titles but provides no further details. The seed script uses multiple strategies: (1) scrape the catalog page, (2) search profiles.ucsd.edu by department, (3) cross-validate between sources.",
+  "enrichment_sources": [
+    {"name": "scripps_profile", "description": "Scripps/UCSD profile pages", "confidence": 1.0},
+    {"name": "nsf_awards", "description": "NSF Award Search API (dominant funder for ocean sciences)", "confidence": 0.8},
+    {"name": "nih_reporter", "description": "NIH RePORTER API (some SIO faculty have NIH funding)", "confidence": 0.8},
+    {"name": "pubmed", "description": "PubMed/NCBI E-utilities", "confidence": 0.7},
+    {"name": "orcid", "description": "ORCID public API", "confidence": 0.9},
+    {"name": "semantic_scholar", "description": "Semantic Scholar API (h-index, citations, papers)", "confidence": 0.75}
+  ],
+  "faculty": []
+}

@@ -22,17 +22,25 @@ logger = logging.getLogger(__name__)
 
 ALLOWED_EXTENSIONS = {"pdf", "txt"}
 
-_faculty_data = None
+_faculty_cache = {}
 
 
-def get_faculty_data():
-    """Load faculty data from JSON file (cached after first read)."""
-    global _faculty_data
-    if _faculty_data is None:
-        data_path = os.path.join(os.path.dirname(__file__), "data", "faculty.json")
+def get_faculty_data(department=None):
+    """Load faculty data from JSON file (cached after first read).
+
+    Args:
+        department: "sio" for Scripps, None for HWSPH (default).
+    """
+    cache_key = department or "hwsph"
+    if cache_key not in _faculty_cache:
+        if department == "sio":
+            filename = "sio_faculty.json"
+        else:
+            filename = "faculty.json"
+        data_path = os.path.join(os.path.dirname(__file__), "data", filename)
         with open(data_path) as f:
-            _faculty_data = json.load(f)
-    return _faculty_data
+            _faculty_cache[cache_key] = json.load(f)
+    return _faculty_cache[cache_key]
 
 
 def allowed_file(filename):
@@ -60,12 +68,16 @@ def index():
 def faculty_directory():
     """Return faculty data for the expert directory (browsing/filtering).
 
-    Query parameters:
-        q      — search terms (space-separated, AND logic)
-        limit  — max results to return (default 20, max 50)
-        offset — pagination offset (default 0)
+    Query params:
+        dept: "sio" for Scripps, omit or "hwsph" for Public Health (default).
     """
-    data = get_faculty_data()
+    dept = request.args.get("dept", "").strip().lower() or None
+    if dept and dept not in ("sio", "hwsph"):
+        return jsonify({"error": f"Unknown department: {dept}. Use 'sio' or 'hwsph'."}), 400
+    if dept == "hwsph":
+        dept = None
+
+    data = get_faculty_data(dept)
     faculty = data.get("faculty", [])
 
     query = request.args.get("q", "").strip().lower()
@@ -131,8 +143,12 @@ def match():
     except ValueError as e:
         return jsonify({"error": str(e)}), 400
 
+    dept = request.form.get("dept", "").strip().lower() or None
+    if dept == "hwsph":
+        dept = None
+
     try:
-        faculty = get_faculty_data()["faculty"]
+        faculty = get_faculty_data(dept)["faculty"]
         results = process_grant(text, faculty)
     except Exception as e:
         logger.exception("Document processing failed")
@@ -155,8 +171,12 @@ def match_text():
     if len(text) > 60000:
         return jsonify({"error": "Text is too long. Maximum 60,000 characters."}), 400
 
+    dept = data.get("dept", "").strip().lower() or None
+    if dept == "hwsph":
+        dept = None
+
     try:
-        faculty = get_faculty_data()["faculty"]
+        faculty = get_faculty_data(dept)["faculty"]
         results = process_text(text, faculty)
     except Exception as e:
         logger.exception("Text processing failed")

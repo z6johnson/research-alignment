@@ -14,8 +14,8 @@ logger = logging.getLogger(__name__)
 NORMALIZE_SYSTEM_PROMPT = """\
 You are an academic profile analyst. You will receive raw data about a \
 faculty member collected from multiple public sources (university profile, \
-NIH grants, PubMed publications). Your task is to produce a clean, \
-structured summary of their research expertise.
+NIH/NSF grants, PubMed/Semantic Scholar publications). Your task is to \
+produce a clean, structured summary of their research expertise.
 
 Rules:
 1. Merge and deduplicate information from all sources.
@@ -28,9 +28,14 @@ Return ONLY valid JSON with this structure:
   "research_interests_enriched": "A 2-4 sentence narrative summary of their \
 research focus areas, suitable for matching against funding opportunities.",
   "expertise_keywords": ["list", "of", "specific", "expertise", "keywords"],
-  "methodologies": ["research methods they use, e.g., RCT, cohort study, ..."],
-  "disease_areas": ["specific diseases or health conditions they study"],
-  "populations": ["populations they study, e.g., adolescents, refugees, ..."]
+  "methodologies": ["research methods they use, e.g., RCT, cohort study, \
+numerical modeling, field sampling, remote sensing, ..."],
+  "disease_areas": ["specific diseases, health conditions, or (for non-health \
+disciplines) primary research domains they study, e.g., ocean circulation, \
+plate tectonics, coral reef ecology, climate modeling, ..."],
+  "populations": ["populations they study (e.g., adolescents, refugees) or, \
+for non-health disciplines, primary study systems/regions (e.g., Pacific \
+Ocean, deep sea, Antarctic, coastal wetlands, ...)"]
 }
 
 If there is insufficient data for a field, use an empty list or null."""
@@ -92,6 +97,39 @@ def normalize_faculty_data(faculty_dict, raw_enrichment_data):
                 if p.get("mesh_terms"):
                     pubs_text.append(f"  MeSH: {', '.join(p['mesh_terms'][:5])}")
             parts.append("Recent PubMed publications:\n" + "\n".join(pubs_text))
+
+        if source_name == "nsf_awards" and data.get("funded_grants"):
+            grants_text = []
+            for g in data["funded_grants"][:10]:
+                grants_text.append(
+                    f"- {g.get('title', 'Untitled')} "
+                    f"(NSF{', ' + g['nsf_program'] if g.get('nsf_program') else ''})"
+                )
+                if g.get("abstract"):
+                    grants_text.append(f"  Abstract excerpt: {g['abstract'][:200]}")
+            parts.append("NSF-funded grants:\n" + "\n".join(grants_text))
+
+        if source_name == "semantic_scholar":
+            metrics = []
+            if data.get("h_index") is not None:
+                metrics.append(f"h-index: {data['h_index']}")
+            if data.get("paper_count") is not None:
+                metrics.append(f"{data['paper_count']} papers")
+            if data.get("citation_count") is not None:
+                metrics.append(f"{data['citation_count']} citations")
+            if metrics:
+                parts.append(f"Semantic Scholar metrics: {', '.join(metrics)}")
+            if data.get("recent_publications"):
+                pubs_text = []
+                for p in data["recent_publications"][:8]:
+                    line = f"- {p.get('title', 'Untitled')}"
+                    if p.get("journal"):
+                        line += f" ({p['journal']}"
+                        if p.get("year"):
+                            line += f", {p['year']}"
+                        line += ")"
+                    pubs_text.append(line)
+                parts.append("Recent Semantic Scholar publications:\n" + "\n".join(pubs_text))
 
         if source_name == "orcid" and data.get("works_count"):
             parts.append(f"ORCID: {data['works_count']} total works")

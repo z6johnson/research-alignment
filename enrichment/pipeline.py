@@ -12,23 +12,40 @@ from datetime import datetime, timezone
 
 from .normalizer import normalize_faculty_data
 from .sources.nih_reporter import NIHReporterSource
+from .sources.nsf_awards import NSFAwardSource
 from .sources.orcid import ORCIDSource
 from .sources.pubmed import PubMedSource
+from .sources.scripps_profile import ScrippsProfileSource
+from .sources.semantic_scholar import SemanticScholarSource
 from .sources.ucsd_profile import UCSDProfileSource
 
 logger = logging.getLogger(__name__)
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 FACULTY_PATH = os.path.join(DATA_DIR, "faculty.json")
+SIO_FACULTY_PATH = os.path.join(DATA_DIR, "sio_faculty.json")
 LOG_PATH = os.path.join(DATA_DIR, "enrichment_log.json")
 
-# Registry of available sources
+# Registry of available sources — used by HWSPH (public health) faculty
 SOURCE_CLASSES = {
     "ucsd_profile": UCSDProfileSource,
     "nih_reporter": NIHReporterSource,
     "pubmed": PubMedSource,
     "orcid": ORCIDSource,
 }
+
+# Sources for Scripps Institution of Oceanography faculty
+SIO_SOURCE_CLASSES = {
+    "scripps_profile": ScrippsProfileSource,
+    "nsf_awards": NSFAwardSource,
+    "nih_reporter": NIHReporterSource,
+    "pubmed": PubMedSource,
+    "orcid": ORCIDSource,
+    "semantic_scholar": SemanticScholarSource,
+}
+
+# Combined registry of all known sources (for run.py source name validation)
+ALL_SOURCE_CLASSES = {**SOURCE_CLASSES, **SIO_SOURCE_CLASSES}
 
 # Fields that can be directly written to a faculty record (non-JSON)
 DIRECT_FIELDS = {"profile_url", "orcid", "google_scholar_id", "h_index"}
@@ -37,23 +54,39 @@ DIRECT_FIELDS = {"profile_url", "orcid", "google_scholar_id", "h_index"}
 JSON_FIELDS = {"funded_grants", "recent_publications", "expertise_keywords"}
 
 
-def _load_faculty():
+def _faculty_path(department=None):
+    """Return the faculty JSON path for the given department."""
+    if department == "sio":
+        return SIO_FACULTY_PATH
+    return FACULTY_PATH
+
+
+def _load_faculty(department=None):
     """Load faculty data from JSON file."""
-    with open(FACULTY_PATH) as f:
+    path = _faculty_path(department)
+    with open(path) as f:
         return json.load(f)
 
 
-def _save_faculty(data):
+def _save_faculty(data, department=None):
     """Atomically write faculty data back to JSON file."""
+    path = _faculty_path(department)
     fd, tmp = tempfile.mkstemp(dir=DATA_DIR, suffix=".json")
     try:
         with os.fdopen(fd, "w") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
             f.write("\n")
-        os.replace(tmp, FACULTY_PATH)
+        os.replace(tmp, path)
     except Exception:
         os.unlink(tmp)
         raise
+
+
+def _source_classes_for(department=None):
+    """Return the appropriate source class registry for a department."""
+    if department == "sio":
+        return SIO_SOURCE_CLASSES
+    return SOURCE_CLASSES
 
 
 def _load_log():
@@ -101,18 +134,20 @@ def _make_log_entry(faculty_index, source_name, field, old_value, new_value,
     }
 
 
-def enrich_faculty(faculty_index, sources=None, dry_run=False):
+def enrich_faculty(faculty_index, sources=None, dry_run=False, department=None):
     """Enrich a single faculty member from specified sources.
 
     Args:
         faculty_index: Index of the faculty member in the faculty array.
         sources: List of source names to use, or None for all.
         dry_run: If True, fetch data but don't write.
+        department: Department key ("sio" for Scripps, None for HWSPH).
 
     Returns:
         Dict summarizing what was enriched.
     """
-    data = _load_faculty()
+    registry = _source_classes_for(department)
+    data = _load_faculty(department)
     faculty_list = data["faculty"]
 
     if faculty_index < 0 or faculty_index >= len(faculty_list):
@@ -121,19 +156,19 @@ def enrich_faculty(faculty_index, sources=None, dry_run=False):
 
     faculty_dict = faculty_list[faculty_index]
     name = f"{faculty_dict.get('first_name', '')} {faculty_dict.get('last_name', '')}"
-    logger.info("Enriching: %s (index: %d)", name, faculty_index)
+    logger.info("Enriching: %s (index: %d, dept: %s)", name, faculty_index, department or "hwsph")
 
-    source_names = sources or list(SOURCE_CLASSES.keys())
+    source_names = sources or list(registry.keys())
     raw_data = {}
     summary = {"faculty_index": faculty_index, "name": name, "sources": {}}
 
     # Phase 1: Fetch from all sources
     for source_name in source_names:
-        if source_name not in SOURCE_CLASSES:
-            logger.warning("Unknown source: %s", source_name)
+        if source_name not in registry:
+            logger.warning("Unknown source for dept %s: %s", department or "hwsph", source_name)
             continue
 
-        source = SOURCE_CLASSES[source_name]()
+        source = registry[source_name]()
         try:
             result = source.fetch(faculty_dict)
         except Exception:
@@ -164,7 +199,7 @@ def enrich_faculty(faculty_index, sources=None, dry_run=False):
     # Phase 2: Write direct fields
     log_entries = []
     for source_name, sdata in raw_data.items():
-        source_cls = SOURCE_CLASSES[source_name]
+        source_cls = registry[source_name]
         for field, value in sdata.items():
             if field.startswith("_"):
                 continue
@@ -183,7 +218,7 @@ def enrich_faculty(faculty_index, sources=None, dry_run=False):
                     old_value=old_value,
                     new_value=value,
                     confidence=source_cls.confidence if hasattr(source_cls, "confidence") else 0.5,
-                    method="api" if source_name != "ucsd_profile" else "scrape",
+                    method="api" if source_name not in ("ucsd_profile", "scripps_profile") else "scrape",
                     source_url=sdata.get("_source_url"),
                     raw_response=sdata,
                 ))
@@ -216,7 +251,7 @@ def enrich_faculty(faculty_index, sources=None, dry_run=False):
     faculty_dict["last_enriched"] = datetime.now(timezone.utc).isoformat()
 
     # Save everything
-    _save_faculty(data)
+    _save_faculty(data, department)
     for entry in log_entries:
         _append_log(entry)
 
@@ -224,7 +259,7 @@ def enrich_faculty(faculty_index, sources=None, dry_run=False):
     return summary
 
 
-def enrich_all(sources=None, faculty_ids=None, dry_run=False, progress_callback=None):
+def enrich_all(sources=None, faculty_ids=None, dry_run=False, progress_callback=None, department=None):
     """Enrich all (or specified) faculty members.
 
     Args:
@@ -232,11 +267,12 @@ def enrich_all(sources=None, faculty_ids=None, dry_run=False, progress_callback=
         faculty_ids: List of specific faculty indices, or None for all.
         dry_run: If True, fetch but don't write.
         progress_callback: Optional callable(completed, total) for progress tracking.
+        department: Department key ("sio" for Scripps, None for HWSPH).
 
     Returns:
         List of per-faculty summary dicts.
     """
-    data = _load_faculty()
+    data = _load_faculty(department)
     faculty_list = data["faculty"]
 
     if faculty_ids:
@@ -244,12 +280,13 @@ def enrich_all(sources=None, faculty_ids=None, dry_run=False, progress_callback=
     else:
         indices = list(range(len(faculty_list)))
 
-    logger.info("Starting enrichment for %d faculty members.", len(indices))
+    logger.info("Starting enrichment for %d faculty members (dept: %s).",
+                len(indices), department or "hwsph")
     results = []
 
     for i, idx in enumerate(indices):
         try:
-            result = enrich_faculty(idx, sources=sources, dry_run=dry_run)
+            result = enrich_faculty(idx, sources=sources, dry_run=dry_run, department=department)
         except Exception:
             name = faculty_list[idx].get("last_name", str(idx))
             logger.exception("Unhandled error enriching faculty %s (index %d)", name, idx)
@@ -270,9 +307,9 @@ def enrich_all(sources=None, faculty_ids=None, dry_run=False, progress_callback=
     return results
 
 
-def get_enrichment_status():
+def get_enrichment_status(department=None):
     """Return a summary of enrichment coverage."""
-    data = _load_faculty()
+    data = _load_faculty(department)
     faculty_list = data["faculty"]
     total = len(faculty_list)
 
