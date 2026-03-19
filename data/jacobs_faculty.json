@@ -44,31 +44,33 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "aacampora@ucsd.edu",
       "research_interests": "Telecommunication, network systems design, wireless networks, wireless technologies.",
-      "research_interests_enriched": "Professor Emeritus Anthony Acampora’s research centers on the design, analysis, and optimization of telecommunication and network systems, with a particular emphasis on wireless networks and emerging wireless technologies. His work addresses the architectural and protocol challenges of modern communication infrastructures, aiming to improve performance, reliability, and scalability of wireless communication services.",
+      "research_interests_enriched": "Professor Emeritus Anthony Acampora focuses on the design, analysis, and optimization of telecommunication and network systems, with particular emphasis on wireless networks and emerging wireless technologies. His work spans the development of novel network architectures, performance modeling, and the integration of broadband and mobile communication solutions to enhance connectivity and service quality.",
       "expertise_keywords": [
         "telecommunication",
         "network systems design",
         "wireless networks",
-        "wireless technologies"
+        "wireless technologies",
+        "network architecture",
+        "mobile communications",
+        "broadband access",
+        "network optimization",
+        "protocol design",
+        "performance modeling"
       ],
       "methodologies": [
         "mathematical modeling",
         "computer simulation",
-        "protocol development",
-        "experimental testbeds",
-        "field measurements",
-        "performance evaluation",
-        "algorithm design",
-        "system prototyping"
+        "algorithm development",
+        "protocol analysis",
+        "field testing",
+        "experimental evaluation"
       ],
       "disease_areas": [],
       "populations": [
-        "urban communication infrastructure",
-        "broadband network deployments",
-        "wireless sensor networks",
-        "mobile device ecosystems"
+        "communication networks",
+        "wireless infrastructure"
       ],
       "funded_grants": [
         {
@@ -88,7 +90,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T18:48:35.731914+00:00"
+      "last_enriched": "2026-03-19T21:04:30.267034+00:00"
     },
     {
       "first_name": "Claire",
@@ -234,9 +236,9 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "kadebowale@ucsd.edu",
       "research_interests": "Cancer immunology; immune cell therapy; biomaterials; mechanotransduction",
-      "research_interests_enriched": "Professor Kolade Adebowale investigates how mechanical cues regulate immune cell behavior within the tumor microenvironment and leverages biomaterial platforms to enhance immune cell–based therapies. His work integrates cancer immunology, mechanotransduction, and engineered biomaterials to develop novel strategies for improving the efficacy of cell‑based immunotherapies against solid and hematologic malignancies.",
+      "research_interests_enriched": "Professor Kolade Adebowale focuses on the intersection of cancer immunology and biomaterials, developing immune cell‑based therapies that leverage mechanotransduction pathways to enhance anti‑tumor efficacy. His work integrates the design of novel biomaterial scaffolds with mechanobiology to modulate immune cell function within the tumor microenvironment.",
       "expertise_keywords": [
         "cancer immunology",
         "immune cell therapy",
@@ -244,20 +246,20 @@
         "mechanotransduction",
         "tumor microenvironment",
         "immunotherapy",
-        "cell engineering",
+        "cell mechanics",
         "tissue engineering",
-        "mechanobiology"
+        "drug delivery systems"
       ],
       "methodologies": [
         "in vitro cell culture",
-        "biomaterial scaffold fabrication",
-        "mechanical stimulation assays",
         "flow cytometry",
         "immunohistochemistry",
         "animal tumor models",
-        "high‑content imaging",
-        "molecular biology techniques",
-        "RNA sequencing"
+        "biomaterial synthesis and characterization",
+        "mechanical testing (e.g., atomic force microscopy, rheology)",
+        "confocal and electron microscopy",
+        "molecular biology techniques (e.g., CRISPR, RNA‑seq)",
+        "high‑throughput screening"
       ],
       "disease_areas": [
         "cancer",
@@ -265,8 +267,8 @@
         "hematologic malignancies"
       ],
       "populations": [
-        "human cancer patients (translational studies)",
-        "murine tumor models",
+        "human cancer patients",
+        "mouse models of cancer",
         "cancer cell lines"
       ],
       "funded_grants": [
@@ -311,7 +313,7 @@
       "h_index": 9,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T18:48:49.310105+00:00"
+      "last_enriched": "2026-03-19T21:04:47.112153+00:00"
     },
     {
       "first_name": "Brian",
@@ -1131,29 +1133,29 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "nantipa@ucsd.edu",
       "research_interests": "Co-design of optical systems and algorithms; computational optical systems",
-      "research_interests_enriched": "Professor Nicholas Antipa focuses on the integrated co-design of optical hardware and computational algorithms to create advanced imaging and photonic systems. His work bridges optical engineering and computer science, developing computational optical architectures that enable high‑performance, adaptable imaging solutions. He emphasizes algorithm‑driven system design, leveraging numerical optimization and simulation to realize next‑generation optical devices.",
+      "research_interests_enriched": "Professor Nicholas Antipa focuses on the integrated design of optical hardware and computational algorithms, developing computational optical systems that combine photonic components with advanced signal processing. His work spans co‑design of lenses, sensors, and imaging architectures, leveraging numerical modeling, algorithm optimization, and experimental prototyping to create next‑generation imaging and sensing technologies.",
       "expertise_keywords": [
         "co-design",
         "optical systems",
         "computational optics",
-        "algorithm development",
-        "photonic design",
-        "computational imaging",
         "optical engineering",
-        "hardware‑software integration",
-        "numerical optimization",
-        "imaging system prototyping"
+        "photonic hardware",
+        "computational imaging",
+        "algorithm development",
+        "optical sensor design",
+        "signal processing",
+        "numerical modeling"
       ],
       "methodologies": [
+        "optical system design",
         "computational modeling",
-        "algorithm design",
-        "optical system simulation",
+        "algorithm optimization",
         "hardware‑software co‑design",
-        "numerical optimization",
+        "numerical simulation",
         "experimental prototyping",
-        "performance benchmarking"
+        "optical testing and characterization"
       ],
       "disease_areas": [],
       "populations": [],
@@ -1164,7 +1166,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T18:49:35.357102+00:00"
+      "last_enriched": "2026-03-19T21:05:42.357741+00:00"
     },
     {
       "first_name": "Gaurav",
@@ -1560,37 +1562,36 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "pbandaru@ucsd.edu",
       "research_interests": "Nanotechnology, MEMS, electrochemistry, wetting and spreading, carbon science: nanotubes and graphene, data science",
-      "research_interests_enriched": "Professor Prabhakar Bandaru’s research centers on the design, fabrication, and characterization of nanoscale materials and microelectromechanical systems (MEMS) with a strong emphasis on electrochemical and surface wetting phenomena. He investigates carbon-based nanostructures such as carbon nanotubes and graphene, exploring their unique physical and chemical properties for advanced device applications. His work also integrates data science and machine‑learning techniques to analyze experimental data and accelerate materials discovery.",
+      "research_interests_enriched": "Professor Prabhakar Bandaru’s research centers on the design, fabrication, and characterization of nanoscale materials and microelectromechanical systems (MEMS). He investigates electrochemical processes, wetting and spreading phenomena, and the unique properties of carbon nanostructures such as nanotubes and graphene. His work integrates advanced nanofabrication techniques with data‑science approaches, including machine‑learning analytics, to optimize device performance and uncover new material functionalities.",
       "expertise_keywords": [
         "nanotechnology",
-        "microelectromechanical systems",
-        "MEMS",
+        "microelectromechanical systems (MEMS)",
         "electrochemistry",
         "wetting and spreading",
-        "surface science",
         "carbon nanotubes",
         "graphene",
-        "carbon nanomaterials",
         "nanofabrication",
         "microfabrication",
+        "surface science",
+        "nanomaterials",
         "data science",
         "machine learning",
-        "materials characterization"
+        "spectroscopy",
+        "electron microscopy"
       ],
       "methodologies": [
         "nanofabrication",
         "microfabrication",
-        "electrochemical testing",
-        "contact angle measurement",
-        "surface tension analysis",
-        "scanning electron microscopy (SEM)",
-        "transmission electron microscopy (TEM)",
+        "electrochemical characterization",
+        "contact angle measurements",
+        "high‑resolution electron microscopy (TEM, SEM)",
         "Raman spectroscopy",
-        "atomic force microscopy (AFM)",
+        "atomic force microscopy",
         "computational modeling",
-        "machine‑learning data analysis"
+        "machine‑learning data analysis",
+        "statistical modeling"
       ],
       "disease_areas": [
         "electronic nicotine delivery system toxicity",
@@ -1600,9 +1601,10 @@
         "brain cancer"
       ],
       "populations": [
-        "nanomaterials",
-        "microelectromechanical systems",
-        "carbon nanostructures"
+        "nanomaterial systems",
+        "graphene‑based structures",
+        "carbon nanotube assemblies",
+        "MEMS devices"
       ],
       "funded_grants": [
         {
@@ -1743,7 +1745,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T18:50:10.491888+00:00"
+      "last_enriched": "2026-03-19T21:06:15.506578+00:00"
     },
     {
       "first_name": "Seth",
@@ -17240,27 +17242,24 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "rimpagliazzo@ucsd.edu",
       "research_interests": "Computational complexity, cryptography, circuit complexity, computational randomness.",
-      "research_interests_enriched": "Professor Russell Impagliazzo investigates the fundamental limits of computation, focusing on computational and circuit complexity, the role of randomness in algorithms, and the design and security of cryptographic protocols. His work seeks to uncover deep connections between complexity classes, develop new hardness results, and advance the theoretical foundations of secure computation.",
+      "research_interests_enriched": "Professor Russell Impagliazzo's research centers on the foundations of theoretical computer science, with a particular emphasis on computational complexity theory, cryptographic constructions, and the study of circuit complexity. He investigates the role of randomness in computation, developing rigorous mathematical frameworks and algorithms that advance our understanding of efficient computation and secure communication.",
       "expertise_keywords": [
         "computational complexity",
-        "circuit complexity",
         "cryptography",
+        "circuit complexity",
         "computational randomness",
+        "theoretical computer science",
         "complexity theory",
-        "algorithmic randomness",
-        "hardness results",
-        "secure computation",
-        "complexity class separations",
-        "probabilistic method"
+        "algorithm design",
+        "randomness extraction"
       ],
       "methodologies": [
-        "theoretical analysis",
         "mathematical proof techniques",
         "complexity-theoretic reductions",
-        "probabilistic method",
-        "algorithm design",
+        "probabilistic analysis",
+        "algorithmic design",
         "formal modeling"
       ],
       "disease_areas": [],
@@ -17486,7 +17485,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:02:48.979793+00:00"
+      "last_enriched": "2026-03-19T21:18:56.913002+00:00"
     },
     {
       "first_name": "Marcos",
@@ -17494,38 +17493,38 @@
       "title": "Professor Emeritus",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "mintaglietta@ucsd.edu",
       "research_interests": "Development of effective blood substitutes based on a deep understanding of the microcirculation. Applications to transfusion and emergency medicine, cancer, ischemia, and the heart-lung machine.",
-      "research_interests_enriched": "Professor Marcos Intaglietta focuses on creating effective blood substitutes by leveraging a deep mechanistic understanding of microcirculatory physiology. His work bridges basic microvascular research with translational applications in transfusion and emergency medicine, as well as in the treatment of cancer, ischemic disorders, and complications associated with heart‑lung (cardiopulmonary bypass) machines.",
+      "research_interests_enriched": "Professor Marcos Intaglietta focuses on creating effective blood substitutes by leveraging a deep mechanistic understanding of microcirculatory physiology. His work targets critical applications in transfusion and emergency medicine, oncology, ischemic disorders, and the operation of heart‑lung (cardiopulmonary bypass) machines. By integrating hemorheology and microvascular research, he aims to improve oxygen delivery and tissue perfusion in acute and surgical settings.",
       "expertise_keywords": [
-        "blood substitute development",
-        "microcirculation physiology",
+        "blood substitutes",
+        "microcirculation",
+        "hemorheology",
         "transfusion medicine",
         "emergency medicine",
-        "oncology",
+        "cancer therapy",
         "ischemia",
         "cardiopulmonary bypass",
-        "hemorheology",
-        "vascular biology"
+        "oxygen delivery"
       ],
       "methodologies": [
+        "in vivo microvascular imaging",
         "experimental physiology",
-        "in vitro formulation and testing of blood analogs",
         "animal models of hemorrhage and ischemia",
-        "microvascular imaging (e.g., intravital microscopy)",
-        "rheological measurements"
+        "in vitro hemorheology testing"
       ],
       "disease_areas": [
+        "trauma and acute blood loss",
         "cancer",
-        "ischemic disease (e.g., myocardial, cerebral ischemia)",
-        "trauma and hemorrhagic shock",
+        "ischemic heart disease",
+        "ischemic stroke",
         "cardiopulmonary bypass complications"
       ],
       "populations": [
-        "patients requiring blood transfusion",
-        "emergency/trauma patients",
-        "surgical patients undergoing cardiopulmonary bypass",
-        "cancer patients"
+        "trauma patients",
+        "emergency department patients",
+        "cancer patients",
+        "patients undergoing cardiac surgery with heart‑lung machine"
       ],
       "funded_grants": [
         {
@@ -18217,7 +18216,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:02:57.531500+00:00"
+      "last_enriched": "2026-03-19T21:19:08.672273+00:00"
     },
     {
       "first_name": "Zeinab",
@@ -18225,24 +18224,30 @@
       "title": "Professor",
       "subdepartment": "Chemical and Nano Engineering",
       "degrees": [],
-      "email": "",
+      "email": "zjahed@ucsd.edu",
       "research_interests": "Nano-bioelectronics; data analytics; nano/bio interface; miniaturized sensors for single cell detection",
-      "research_interests_enriched": "Professor Zeinab Jahed’s research integrates nano‑bioelectronics and advanced data analytics to engineer nano‑bio interfaces and develop miniaturized sensor platforms for high‑resolution single‑cell detection and analysis. Her work focuses on translating nanofabrication and sensor design innovations into tools that enable precise bioelectronic measurements at the cellular level.",
+      "research_interests_enriched": "Professor Zeinab Jahed focuses on the convergence of nanotechnology and bioelectronics to create ultra‑miniaturized sensors capable of detecting and analyzing single cells. Her work spans the design of nano/bio interfaces, development of nano‑fabricated electronic platforms, and application of advanced data analytics and machine learning to interpret cellular signals for biomedical diagnostics.",
       "expertise_keywords": [
         "nano-bioelectronics",
-        "nano-bio interface",
+        "nano/bio interface",
         "miniaturized sensors",
         "single-cell detection",
         "data analytics",
-        "biosensors",
+        "biosensing",
         "nanofabrication",
-        "bioelectronic measurement"
+        "microfabrication",
+        "lab-on-a-chip",
+        "electrochemical sensing",
+        "machine learning"
       ],
       "methodologies": [
         "nanofabrication",
-        "sensor design and prototyping",
+        "microfabrication",
+        "microfluidics",
+        "electrical/electrochemical characterization",
         "single-cell analysis",
-        "computational data analytics",
+        "data analytics",
+        "machine learning",
         "signal processing"
       ],
       "disease_areas": [
@@ -18253,7 +18258,8 @@
         "cellular mechanotransduction disorders"
       ],
       "populations": [
-        "cellular populations (single cells)"
+        "cellular models",
+        "in vitro cell lines"
       ],
       "funded_grants": [],
       "recent_publications": [
@@ -18359,7 +18365,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:03:03.719118+00:00"
+      "last_enriched": "2026-03-19T21:19:18.868431+00:00"
     },
     {
       "first_name": "Fernanda",
@@ -20079,9 +20085,9 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "rkastner@ucsd.edu",
       "research_interests": "Computer architectures for signal processing, embedded systems, hardware security, and underwater systems.",
-      "research_interests_enriched": "Professor Kastner’s research centers on designing high‑performance computer architectures optimized for signal‑processing workloads, developing secure and low‑power embedded systems, and engineering robust hardware for underwater sensing and communication. His work integrates architectural co‑design, security analysis, and field‑tested underwater platforms to advance both civilian and defense applications.",
+      "research_interests_enriched": "Professor Ryan Kastner focuses on the design of high‑performance, low‑power computer architectures tailored for signal‑processing workloads and embedded applications. His work integrates hardware security principles to protect these systems against emerging threats, and extends to the development of robust underwater platforms for acoustic sensing and communication. By bridging architectural innovation with secure, real‑time processing, his research supports next‑generation cyber‑physical systems operating in challenging marine environments.",
       "expertise_keywords": [
         "computer architecture",
         "signal processing hardware",
@@ -20089,25 +20095,25 @@
         "hardware security",
         "underwater systems",
         "low‑power design",
-        "FPGA prototyping",
-        "ASIC design",
-        "cyber‑physical security",
-        "real‑time processing"
+        "real‑time processing",
+        "secure hardware",
+        "acoustic communication",
+        "cyber‑physical systems"
       ],
       "methodologies": [
-        "hardware architecture design",
-        "VLSI/ASIC development",
-        "FPGA prototyping",
-        "simulation and modeling",
-        "algorithm‑hardware co‑design",
-        "security threat modeling",
-        "bench testing of embedded platforms",
-        "field testing of underwater devices"
+        "ASIC/FPGA hardware design",
+        "hardware simulation and cycle‑accurate modeling",
+        "prototype development and bench testing",
+        "security threat modeling and formal verification",
+        "signal‑processing algorithm implementation",
+        "underwater field experiments",
+        "performance benchmarking",
+        "low‑power optimization techniques"
       ],
       "disease_areas": [],
       "populations": [
-        "underwater environments",
-        "marine sensing platforms"
+        "underwater platforms",
+        "marine environments"
       ],
       "funded_grants": [
         {
@@ -20389,7 +20395,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:04:10.844078+00:00"
+      "last_enriched": "2026-03-19T21:20:25.981672+00:00"
     },
     {
       "first_name": "Harleen",
@@ -21259,25 +21265,29 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "yhk@ucsd.edu",
       "research_interests": "Information theory, signal processing, machine learning.",
-      "research_interests_enriched": "The faculty member’s research centers on the development of fundamental theories and algorithms at the intersection of information theory, signal processing, and machine learning. Their work aims to advance data compression, communication system design, and intelligent signal analysis through rigorous theoretical and computational approaches.",
+      "research_interests_enriched": "Professor Young‑Han Kim’s research develops theoretical foundations and algorithmic techniques at the intersection of information theory, signal processing, and machine learning. He focuses on advancing data‑driven communication and sensing systems, including wireless networks, multimedia signal analysis, and intelligent inference methods.",
       "expertise_keywords": [
         "information theory",
         "signal processing",
-        "machine learning"
+        "machine learning",
+        "statistical inference",
+        "data compression",
+        "wireless communications",
+        "network coding",
+        "deep learning",
+        "optimization",
+        "algorithm design"
       ],
       "methodologies": [
         "theoretical analysis",
-        "coding scheme design",
-        "information‑theoretic modeling",
-        "deep neural networks",
-        "statistical modeling",
-        "cohort study",
-        "randomized controlled trial",
+        "mathematical modeling",
         "algorithm development",
-        "computational simulation",
-        "signal processing techniques"
+        "simulation",
+        "statistical learning",
+        "data‑driven modeling",
+        "performance evaluation"
       ],
       "disease_areas": [
         "neonatal health",
@@ -21290,12 +21300,10 @@
         "cancer genomics"
       ],
       "populations": [
-        "newborn infants",
-        "East Asian adults",
-        "middle‑aged adults",
-        "caregivers",
-        "patients with systemic lupus erythematosus",
-        "cancer patients"
+        "wireless communication systems",
+        "sensor networks",
+        "multimedia signal processing",
+        "large‑scale data analytics"
       ],
       "funded_grants": [
         {
@@ -21361,7 +21369,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:05:02.689711+00:00"
+      "last_enriched": "2026-03-19T21:21:19.402349+00:00"
     },
     {
       "first_name": "Rafael",
@@ -21427,38 +21435,40 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "jkleissl@ucsd.edu",
       "research_interests": "Solar forecasting, solar power, wind power, building energy, computational fluid dynamics, urban microclimate.",
-      "research_interests_enriched": "Jan Kleissl focuses on advancing renewable energy integration through data-driven solar and wind power forecasting, building energy performance analysis, and the study of urban microclimates. His work combines computational fluid dynamics, machine learning, and large‑scale sensor networks to improve the reliability and efficiency of distributed energy systems in cities.",
+      "research_interests_enriched": "Jan Kleissl’s research focuses on advancing renewable energy integration through high‑resolution solar and wind power forecasting, building energy performance, and the analysis of urban microclimates. He employs computational fluid dynamics and data‑driven modeling to understand and optimize the interaction between energy systems and the built environment, supporting smarter grid operation and sustainable city design.",
       "expertise_keywords": [
         "solar forecasting",
+        "photovoltaic systems",
+        "solar power integration",
         "wind power forecasting",
-        "solar energy systems",
-        "wind energy systems",
-        "building energy performance",
+        "wind energy",
+        "building energy modeling",
+        "energy efficiency",
         "computational fluid dynamics",
+        "CFD",
         "urban microclimate",
         "renewable energy integration",
-        "energy systems modeling",
+        "smart grid",
         "machine learning",
-        "time series analysis",
-        "sensor networks"
+        "data analytics"
       ],
       "methodologies": [
-        "computational fluid dynamics (CFD) simulation",
-        "machine learning and statistical forecasting",
-        "time series analysis",
-        "field measurements and sensor network deployment",
-        "energy modeling and simulation",
-        "data analytics",
-        "system identification"
+        "computational fluid dynamics (CFD) simulations",
+        "numerical modeling",
+        "machine learning for time‑series forecasting",
+        "statistical forecasting methods",
+        "building energy simulation (e.g., EnergyPlus)",
+        "field measurements and sensor networks",
+        "data analytics and big‑data processing"
       ],
       "disease_areas": [],
       "populations": [
         "urban environments",
-        "commercial and residential buildings",
-        "solar and wind farms",
-        "city microclimate zones"
+        "built environment",
+        "solar and wind energy sites",
+        "commercial and residential buildings"
       ],
       "funded_grants": [
         {
@@ -21573,7 +21583,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:05:17.328051+00:00"
+      "last_enriched": "2026-03-19T21:21:40.727437+00:00"
     },
     {
       "first_name": "Benjamin",
@@ -21830,42 +21840,37 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "fkoushanfar@ucsd.edu",
       "research_interests": "AI and machine learning, adaptive computing, hardware and systems security, IP protection.",
-      "research_interests_enriched": "Professor Farinaz Koushanfar’s research centers on the intersection of artificial intelligence and adaptive computing with hardware and system security. She develops machine‑learning‑driven methods for secure hardware design, IP protection, and detection of malicious modifications in integrated circuits. Her work also explores adaptive architectures that can reconfigure in response to emerging threats, aiming to create trustworthy and resilient computing platforms.",
+      "research_interests_enriched": "Professor Farinaz Koushanfar’s research focuses on developing AI and machine learning techniques that are tightly coupled with adaptive computing architectures, with a strong emphasis on hardware and systems security and intellectual property protection. She creates secure, energy‑efficient hardware platforms capable of dynamic reconfiguration to support emerging AI workloads while defending against attacks and safeguarding IP.",
       "expertise_keywords": [
-        "artificial intelligence",
-        "machine learning",
-        "adaptive computing",
-        "hardware security",
-        "system security",
-        "intellectual property protection",
-        "secure hardware design",
-        "hardware Trojan detection",
-        "side‑channel analysis",
-        "reconfigurable computing",
-        "trustworthy AI",
-        "secure IC design",
-        "formal verification"
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Adaptive Computing",
+        "Hardware Security",
+        "Systems Security",
+        "Intellectual Property Protection",
+        "Secure Hardware Design",
+        "Reconfigurable Architectures",
+        "Edge AI",
+        "Trusted Execution Environments"
       ],
       "methodologies": [
-        "machine‑learning algorithm development",
-        "hardware prototyping (FPGA/ASIC)",
-        "VLSI design and simulation",
-        "formal verification and model checking",
-        "adversarial analysis",
-        "side‑channel measurement and analysis",
-        "secure enclave architecture",
-        "reconfigurable architecture design",
-        "software‑hardware co‑design"
+        "algorithm development",
+        "machine learning model training",
+        "hardware prototyping",
+        "secure hardware design",
+        "formal verification",
+        "adaptive system design",
+        "simulation and modeling",
+        "FPGA/ASIC implementation"
       ],
       "disease_areas": [],
       "populations": [
-        "integrated circuits",
-        "hardware platforms",
-        "wireless communication systems",
-        "sensor network deployments",
-        "digital media artifacts"
+        "embedded systems",
+        "edge computing platforms",
+        "IoT devices",
+        "reconfigurable hardware"
       ],
       "funded_grants": [
         {
@@ -22073,7 +22078,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:05:44.007976+00:00"
+      "last_enriched": "2026-03-19T21:22:11.220792+00:00"
     },
     {
       "first_name": "Yoav",
@@ -25612,16 +25617,16 @@
       "degrees": [],
       "email": "wal019@ucsd.edu",
       "research_interests": "Computational and Theoretical Chemistry, Electronic Structure, Chemical Bonding, Computational Catalysis, Molecular Dynamics, Interface Reactions, Machine Learning",
-      "research_interests_enriched": "Wanlu Li focuses on developing and applying computational and theoretical chemistry methods to elucidate electronic structure, chemical bonding, and reactivity. Her work emphasizes computational catalysis and interface reactions, leveraging molecular dynamics simulations and machine‑learning techniques to predict catalytic performance and guide the design of novel materials.",
+      "research_interests_enriched": "Wanlu Li’s research integrates computational and theoretical chemistry to elucidate electronic structure and chemical bonding in complex systems. She develops and applies quantum chemical methods, molecular dynamics, and machine learning techniques to model catalytic processes and interfacial reactions, aiming to predict reactivity and design novel catalysts.",
       "expertise_keywords": [
         "computational chemistry",
         "theoretical chemistry",
-        "electronic structure",
-        "chemical bonding",
+        "electronic structure theory",
+        "chemical bonding analysis",
         "computational catalysis",
-        "interface reactions",
-        "molecular dynamics",
-        "machine learning",
+        "molecular dynamics simulations",
+        "interfacial reaction modeling",
+        "machine learning for chemistry",
         "quantum chemistry",
         "density functional theory",
         "ab initio methods"
@@ -25629,11 +25634,12 @@
       "methodologies": [
         "quantum chemical calculations",
         "density functional theory (DFT)",
-        "ab initio electronic structure methods",
-        "classical and ab initio molecular dynamics",
-        "machine‑learning model development",
-        "computational catalysis modeling",
-        "interface reaction simulations"
+        "ab initio molecular dynamics",
+        "classical molecular dynamics",
+        "kinetic Monte Carlo",
+        "machine learning models (e.g., neural networks)",
+        "multiscale modeling",
+        "computational catalysis simulations"
       ],
       "disease_areas": [],
       "populations": [
@@ -25932,7 +25938,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:08:09.206407+00:00"
+      "last_enriched": "2026-03-19T21:24:39.026682+00:00"
     },
     {
       "first_name": "Yanran",
@@ -25940,36 +25946,35 @@
       "title": "Professor",
       "subdepartment": "Chemical and Nano Engineering",
       "degrees": [],
-      "email": "",
+      "email": "yal152@ucsd.edu",
       "research_interests": "Synthetic biology, metabolic engineering, plant metabolism, chemical biology",
-      "research_interests_enriched": "Yanran Li integrates synthetic biology and metabolic engineering to redesign plant metabolic networks for the biosynthesis of high‑value chemicals, bio‑based materials, and enhanced agronomic traits. Her research combines chemical biology, enzyme and pathway engineering, and computational modeling to construct and test novel gene circuits in model and crop plants.",
+      "research_interests_enriched": "Professor Yanran Li focuses on leveraging synthetic biology and metabolic engineering to redesign plant metabolic pathways for the production of valuable chemicals and improved crop traits. Her work integrates chemical biology approaches with advanced genetic engineering and computational modeling to create novel biosynthetic routes in plants.",
       "expertise_keywords": [
         "synthetic biology",
         "metabolic engineering",
         "plant metabolism",
         "chemical biology",
-        "enzyme engineering",
-        "biosynthetic pathway design",
-        "gene circuit construction",
         "plant synthetic biology",
-        "biofuel production",
-        "natural product biosynthesis"
+        "pathway optimization",
+        "enzyme engineering",
+        "metabolic flux analysis",
+        "bioengineering"
       ],
       "methodologies": [
         "CRISPR/Cas genome editing",
-        "Agrobacterium‑mediated plant transformation",
-        "heterologous gene expression",
-        "omics profiling (transcriptomics, metabolomics)",
-        "computational pathway modeling",
+        "Agrobacterium-mediated plant transformation",
+        "synthetic gene circuit design",
+        "omics profiling (metabolomics, transcriptomics, proteomics)",
+        "computational metabolic modeling",
         "high‑throughput screening",
-        "enzyme assay development",
-        "synthetic gene circuit design"
+        "enzyme activity assays",
+        "synthetic gene assembly"
       ],
       "disease_areas": [],
       "populations": [
         "model plants (e.g., Arabidopsis thaliana)",
-        "crop species (e.g., maize, rice, tobacco)",
-        "plant cell cultures"
+        "crop species (e.g., rice, maize, soybean)",
+        "plant metabolic systems"
       ],
       "funded_grants": [
         {
@@ -26110,7 +26115,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:08:17.865280+00:00"
+      "last_enriched": "2026-03-19T21:24:51.835528+00:00"
     },
     {
       "first_name": "Bill",
@@ -26118,23 +26123,24 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "billlin@ucsd.edu",
       "research_interests": "Novel embedded system and VLSI architectures for communications and networking applications.",
-      "research_interests_enriched": "The faculty member develops innovative embedded system and very‑large‑scale integration (VLSI) architectures tailored for communications and networking applications. Their research focuses on the design, modeling, and implementation of hardware platforms that deliver high‑performance, low‑power data transmission and processing for modern networked environments.",
+      "research_interests_enriched": "Professor Bill Lin focuses on the design of novel embedded systems and very‑large‑scale integration (VLSI) architectures tailored for communications and networking applications. His work spans the development of custom hardware platforms, low‑power circuit techniques, and high‑performance networking interfaces to advance next‑generation communication infrastructures.",
       "expertise_keywords": [
         "embedded systems",
-        "VLSI architectures",
-        "communication hardware",
-        "networking applications",
-        "digital circuit design",
-        "hardware acceleration"
-      ],
-      "methodologies": [
+        "VLSI architecture",
+        "digital hardware design",
+        "communication systems",
+        "networking hardware",
         "ASIC design",
         "FPGA prototyping",
-        "hardware simulation",
-        "system‑level modeling",
-        "circuit layout",
+        "low‑power circuits"
+      ],
+      "methodologies": [
+        "hardware architecture design",
+        "ASIC/FPGA implementation",
+        "circuit simulation",
+        "hardware prototyping",
         "performance benchmarking"
       ],
       "disease_areas": [
@@ -26142,8 +26148,8 @@
         "networking systems"
       ],
       "populations": [
-        "embedded devices",
-        "network infrastructure"
+        "communication networks",
+        "networking infrastructure"
       ],
       "funded_grants": [
         {
@@ -26503,7 +26509,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:08:27.098115+00:00"
+      "last_enriched": "2026-03-19T21:25:03.362375+00:00"
     },
     {
       "first_name": "Paul",
@@ -26792,33 +26798,29 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "",
+      "email": "dlipomi@ucsd.edu",
       "research_interests": "Stretchable electronics, organic electronics and photovoltaics, nanomaterials, and sensors for accessibility.",
-      "research_interests_enriched": "Darren Lipomi’s research focuses on the design and fabrication of stretchable and organic electronic devices, including photovoltaics and nanomaterial‑based sensors, with an emphasis on creating accessible, wearable technologies. His work integrates materials synthesis, flexible device engineering, and performance characterization to develop next‑generation wearable systems that can operate under mechanical deformation and serve diverse user populations.",
+      "research_interests_enriched": "Professor Darren Lipomi focuses on the design and fabrication of stretchable and organic electronic devices, including flexible photovoltaics and nanomaterial‑based sensors. His work integrates advanced nanomaterials and printing techniques to create wearable and accessible technologies that can conform to complex surfaces and support inclusive applications. The research spans from fundamental material synthesis to system‑level integration for next‑generation flexible electronics.",
       "expertise_keywords": [
         "stretchable electronics",
         "organic electronics",
-        "organic photovoltaics",
+        "photovoltaics",
         "nanomaterials",
         "flexible sensors",
         "wearable devices",
-        "accessibility technology",
-        "flexible substrates",
-        "organic semiconductors",
-        "device engineering"
+        "accessible technology",
+        "printed electronics",
+        "bio‑integrated electronics",
+        "thin‑film deposition"
       ],
       "methodologies": [
-        "solution processing",
-        "thin‑film deposition",
-        "printing techniques (e.g., inkjet, screen printing)",
-        "photolithography",
-        "material synthesis",
-        "microscopy (SEM, AFM)",
-        "spectroscopy (Raman, UV‑Vis)",
-        "electrical characterization",
-        "mechanical testing (bending, stretching)",
-        "prototyping",
-        "computational modeling of electronic properties"
+        "thin‑film deposition (e.g., sputtering, evaporation)",
+        "solution processing and printing (inkjet, screen, roll‑to‑roll)",
+        "nanomaterial synthesis",
+        "device fabrication on elastomeric substrates",
+        "electrical and mechanical characterization",
+        "finite element modeling of stretchable structures",
+        "prototype testing for wearable/accessible applications"
       ],
       "disease_areas": [],
       "populations": [
@@ -26998,7 +27000,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:08:42.588330+00:00"
+      "last_enriched": "2026-03-19T21:25:25.286682+00:00"
     },
     {
       "first_name": "Bo",
@@ -28066,24 +28068,24 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "",
+      "email": "piliu@ucsd.edu",
       "research_interests": "Electrochemistry, energy storage, batteries, electrocatalysis",
-      "research_interests_enriched": "Professor Ping Liu’s research centers on electrochemical science for energy applications, emphasizing the design, synthesis, and mechanistic study of advanced battery materials and electrocatalytic systems to improve energy storage performance and sustainability.",
+      "research_interests_enriched": "Ping Liu’s research focuses on advancing electrochemical science for energy storage and conversion, with an emphasis on developing high‑performance battery materials and electrocatalytic systems to enhance efficiency, durability, and sustainability.",
       "expertise_keywords": [
         "electrochemistry",
         "energy storage",
         "battery technology",
         "electrocatalysis",
-        "advanced battery materials",
-        "electrochemical interfaces"
+        "electrode materials",
+        "energy conversion"
       ],
       "methodologies": [
-        "electrochemical characterization (e.g., cyclic voltammetry, galvanostatic cycling)",
-        "materials synthesis and fabrication",
-        "spectroscopic analysis (e.g., XRD, Raman, XPS)",
-        "microscopy (SEM, TEM)",
-        "computational modeling and simulation",
-        "prototype cell testing"
+        "electrochemical synthesis",
+        "material characterization",
+        "cyclic voltammetry",
+        "galvanostatic charge‑discharge testing",
+        "electrochemical impedance spectroscopy",
+        "catalyst performance evaluation"
       ],
       "disease_areas": [],
       "populations": [],
@@ -28251,7 +28253,7 @@
       "h_index": 35,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:09:10.706345+00:00"
+      "last_enriched": "2026-03-19T21:25:56.651817+00:00"
     },
     {
       "first_name": "Qiang",
@@ -28623,25 +28625,27 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ylo@ucsd.edu",
       "research_interests": "Photonic devices, biophotonic devices, energy conversion devices.",
-      "research_interests_enriched": "Professor Yu-Hwa Lo’s research centers on the design, fabrication, and characterization of advanced photonic and biophotonic devices, with a particular emphasis on leveraging optical technologies for energy conversion applications. His work integrates nanophotonic engineering and optoelectronic principles to develop innovative solutions for sensing, imaging, and renewable energy harvesting.",
+      "research_interests_enriched": "Professor Yu-Hwa Lo’s research centers on the design, fabrication, and application of advanced photonic and biophotonic devices, with an emphasis on translating optical technologies into practical solutions for sensing, imaging, and energy conversion. His work spans integrated photonic circuits, nanophotonic structures, and bio‑optical platforms that enable high‑performance optical detection and efficient conversion of light into usable energy.",
       "expertise_keywords": [
         "photonic devices",
         "biophotonic devices",
         "energy conversion devices",
-        "nanophotonics",
-        "optical sensors",
-        "optoelectronic devices",
         "integrated photonics",
-        "solar energy harvesting"
+        "nanophotonics",
+        "optical sensing",
+        "optical imaging",
+        "optoelectronics",
+        "device fabrication",
+        "optical characterization"
       ],
       "methodologies": [
-        "device design and modeling",
-        "nanofabrication",
-        "optical characterization",
-        "computational electromagnetics",
-        "material synthesis"
+        "device design and simulation",
+        "nanofabrication (e.g., lithography, etching)",
+        "optical and electrical characterization",
+        "materials synthesis",
+        "computational modeling of photonic structures"
       ],
       "disease_areas": [],
       "populations": [],
@@ -28799,7 +28803,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:09:41.216270+00:00"
+      "last_enriched": "2026-03-19T21:26:29.465578+00:00"
     },
     {
       "first_name": "Kenneth",
@@ -31830,7 +31834,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "lmilstein@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "Laurence Milstein focuses on the optimization and performance analysis of wireless communication networks, with particular emphasis on delay‑constrained network architectures and the design of enhanced receivers for personal communication systems. His work integrates advanced algorithmic development, mathematical modeling, and simulation to improve reliability, efficiency, and capacity of next‑generation wireless infrastructures.",
       "expertise_keywords": [
@@ -31893,7 +31897,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:12:01.924424+00:00"
+      "last_enriched": "2026-03-19T21:28:40.271511+00:00"
     },
     {
       "first_name": "Pradeep",
@@ -31923,25 +31927,13 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "niema@ucsd.edu",
       "research_interests": "Bioinformatics, Computational Biology, Computer Science Education.",
-      "research_interests_enriched": "Professor Niema Moshiri focuses on creating and applying computational methods for the analysis of biological data, spanning bioinformatics and computational biology. His work emphasizes algorithm development, high‑performance computing, and machine‑learning approaches to address challenges in genomics, transcriptomics, and systems biology. In parallel, he advances computer science education through curriculum design, pedagogical research, and the development of instructional technologies for undergraduate and graduate learners.",
+      "research_interests_enriched": "Professor Niema Moshiri focuses on the development and application of computational methods for biological data analysis, integrating bioinformatics and computational biology approaches. Their work also emphasizes advancing computer science education, particularly in training the next generation of researchers to use algorithmic and data-driven tools in life sciences.",
       "expertise_keywords": [
         "bioinformatics",
         "computational biology",
-        "algorithm development",
-        "high‑performance computing",
-        "machine learning",
-        "genomics",
-        "transcriptomics",
-        "proteomics",
-        "phylogenetics",
-        "systems biology",
-        "software engineering",
-        "data visualization",
-        "computer science education",
-        "curriculum design",
-        "learning analytics"
+        "computer science education"
       ],
       "methodologies": [
         "algorithm design",
@@ -32061,7 +32053,7 @@
       "h_index": 18,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:12:16.946619+00:00"
+      "last_enriched": "2026-03-19T21:28:56.625617+00:00"
     },
     {
       "first_name": "Daniel",
@@ -34961,28 +34953,24 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "rpaturi@ucsd.edu",
       "research_interests": "Algorithms, complexity, theory, mathematics",
-      "research_interests_enriched": "Professor Ramamohan Paturi’s research centers on the design and analysis of algorithms, computational complexity, and foundational theory in computer science. He employs rigorous mathematical techniques to investigate algorithmic efficiency, hardness of computational problems, and the development of novel theoretical frameworks.",
+      "research_interests_enriched": "His research focuses on the design, analysis, and complexity of algorithms, advancing foundational theory in computer science through rigorous mathematical approaches. He investigates computational complexity classes, algorithmic efficiency, and the development of novel theoretical frameworks for solving computational problems.",
       "expertise_keywords": [
         "algorithms",
         "computational complexity",
         "theoretical computer science",
+        "algorithm design",
+        "complexity theory",
         "discrete mathematics",
-        "algorithmic theory",
-        "optimization",
-        "graph algorithms",
-        "approximation algorithms",
-        "complexity classes",
         "mathematical proofs"
       ],
       "methodologies": [
+        "theoretical analysis",
         "algorithm design",
         "complexity analysis",
         "mathematical modeling",
-        "theoretical analysis",
-        "formal proof techniques",
-        "computational experiments"
+        "formal proof techniques"
       ],
       "disease_areas": [],
       "populations": [
@@ -35038,7 +35026,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:14:51.289552+00:00"
+      "last_enriched": "2026-03-19T21:31:26.261283+00:00"
     },
     {
       "first_name": "Nanyun",
@@ -36302,31 +36290,33 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "rramamoorthi@ucsd.edu",
       "research_interests": "Computer Graphics, Computer Vision, Signal Processing, Rendering, Visual computing",
-      "research_interests_enriched": "Ravi Ramamoorthi’s research centers on advancing computer graphics and visual computing through the development of novel rendering algorithms, image synthesis techniques, and computational models of visual perception. He integrates computer vision and signal processing methods to improve realism, efficiency, and interactivity in graphics pipelines, with a particular emphasis on illumination, shading, and hardware-accelerated implementations.",
+      "research_interests_enriched": "Ravi Ramamoorthi’s research centers on advancing computer graphics and visual computing through the development of novel rendering algorithms, realistic image synthesis, and efficient GPU implementations. He also investigates computer vision and signal processing techniques to improve image analysis, perception modeling, and computational photography. His work bridges theoretical algorithm design with practical system engineering to enable high-fidelity visual experiences.",
       "expertise_keywords": [
         "computer graphics",
-        "computer vision",
-        "signal processing",
-        "rendering",
         "visual computing",
-        "image synthesis",
-        "illumination modeling",
-        "shading techniques",
-        "geometric modeling",
-        "computational imaging"
+        "rendering",
+        "physically based rendering",
+        "real-time rendering",
+        "ray tracing",
+        "GPU programming",
+        "computer vision",
+        "image processing",
+        "signal processing",
+        "computational photography",
+        "algorithm design"
       ],
       "methodologies": [
         "ray tracing",
         "rasterization",
-        "GPU programming",
-        "real-time rendering",
-        "photorealistic rendering",
-        "image processing algorithms",
-        "machine learning for vision",
+        "GPU acceleration",
         "numerical simulation",
-        "hardware acceleration"
+        "algorithm development",
+        "machine learning for vision",
+        "statistical signal processing",
+        "hardware prototyping",
+        "software engineering for graphics pipelines"
       ],
       "disease_areas": [],
       "populations": [],
@@ -36484,7 +36474,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:15:58.514103+00:00"
+      "last_enriched": "2026-03-19T21:32:42.285655+00:00"
     },
     {
       "first_name": "Padmini",
@@ -36492,29 +36482,26 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "prangamani@ucsd.edu",
       "research_interests": "Biological systems design, transport phenomena in biological membranes, influence of cell shape on biological activation of signaling networks, morphological and topological changes to lipid membranes mediated by proteins and cytoskeletal forces, computational biology and biophysics.",
-      "research_interests_enriched": "Professor Padmini Rangamani investigates the design principles of biological systems with a focus on transport phenomena and signaling within cellular membranes. Her work elucidates how cell shape and mechanical forces from the cytoskeleton drive morphological and topological remodeling of lipid bilayers, integrating computational biology and biophysical modeling to predict membrane behavior under physiological and pathological conditions.",
+      "research_interests_enriched": "Professor Padmini Rangamani investigates the design principles of biological systems with a focus on transport phenomena in lipid membranes and how cell shape modulates signaling network activation. Her work elucidates the morphological and topological remodeling of membranes driven by protein interactions and cytoskeletal forces, employing computational biology and biophysical modeling to bridge molecular mechanisms with cellular function.",
       "expertise_keywords": [
         "membrane biophysics",
-        "mechanotransduction",
-        "cell signaling",
+        "cellular mechanotransduction",
         "lipid membrane remodeling",
-        "cytoskeleton‑membrane interactions",
         "computational modeling",
         "systems biology",
-        "biophysical simulations",
-        "membrane transport",
-        "cell morphology"
+        "cell signaling",
+        "cytoskeletal dynamics",
+        "transport phenomena",
+        "cell morphology",
+        "biophysical simulations"
       ],
       "methodologies": [
-        "computational simulations",
-        "mathematical and continuum modeling",
-        "finite element analysis",
-        "molecular dynamics",
-        "multi‑scale modeling",
-        "image analysis",
-        "theoretical biophysics"
+        "computational modeling",
+        "numerical simulations",
+        "theoretical analysis",
+        "quantitative image analysis"
       ],
       "disease_areas": [],
       "populations": [
@@ -36674,7 +36661,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:16:06.945020+00:00"
+      "last_enriched": "2026-03-19T21:32:52.689331+00:00"
     },
     {
       "first_name": "Bhaskar",
@@ -37965,18 +37952,14 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "rsah@ucsd.edu",
       "research_interests": "Musculoskeletal tissue engineering, cartilage biology, biophysics, tissue biomechanics",
-      "research_interests_enriched": "Professor Robert Sah focuses on the engineering of musculoskeletal tissues with an emphasis on cartilage biology and the biophysical mechanisms governing tissue function. His work integrates tissue biomechanics, scaffold design, and mechanobiology to develop regenerative strategies for joint health and disease.",
+      "research_interests_enriched": "Professor Robert Sah’s research centers on musculoskeletal tissue engineering and the fundamental biology of cartilage. He integrates biophysical principles and tissue biomechanics to advance regenerative strategies for musculoskeletal health.",
       "expertise_keywords": [
         "musculoskeletal tissue engineering",
-        "cartilage regeneration",
+        "cartilage biology",
         "biophysics",
-        "tissue biomechanics",
-        "mechanobiology",
-        "scaffold design",
-        "extracellular matrix",
-        "regenerative medicine"
+        "tissue biomechanics"
       ],
       "methodologies": [
         "scaffold fabrication",
@@ -38122,7 +38105,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:17:32.478031+00:00"
+      "last_enriched": "2026-03-19T21:34:19.725344+00:00"
     },
     {
       "first_name": "Debashis",
@@ -43182,7 +43165,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "dsworder@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "Professor Emeritus David Sworder focuses on the theory and synthesis of controllers for stochastic and nonlinear dynamical systems, especially those subject to large, randomly varying disturbances and non‑Markovian parameter changes. His work develops robust and optimal control strategies for systems with random parameters and abrupt state transitions, bridging advanced systems theory with practical engineering applications.",
       "expertise_keywords": [
@@ -43255,7 +43238,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:20:47.714260+00:00"
+      "last_enriched": "2026-03-19T21:37:39.754375+00:00"
     },
     {
       "first_name": "Frank",
@@ -43452,9 +43435,9 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "",
+      "email": "atao@ucsd.edu",
       "research_interests": "Colloidal nanocrystal synthesis, nanophotonics, plasmonics, liquid crystals, self-assembly",
-      "research_interests_enriched": "Andrea Tao’s research focuses on the design, synthesis, and assembly of colloidal nanocrystals for advanced photonic applications. She investigates nanophotonic and plasmonic phenomena in engineered nanomaterials and explores the integration of liquid‑crystal phases to achieve tunable optical functionalities through controlled self‑assembly.",
+      "research_interests_enriched": "Professor Andrea Tao focuses on the design, synthesis, and assembly of colloidal nanocrystals for advanced photonic applications. Her work integrates nanophotonic and plasmonic concepts with liquid crystal science to create tunable optical materials and devices. She employs bottom‑up self‑assembly and nanofabrication strategies to engineer functional nanostructures with tailored electromagnetic responses.",
       "expertise_keywords": [
         "colloidal nanocrystal synthesis",
         "nanophotonics",
@@ -43462,19 +43445,25 @@
         "liquid crystals",
         "self‑assembly",
         "nanomaterials",
-        "optical materials"
+        "photonic devices",
+        "plasmonic nanostructures",
+        "tunable optical materials"
       ],
       "methodologies": [
-        "colloidal solution synthesis",
-        "solution‑phase nanocrystal growth",
-        "self‑assembly techniques",
+        "colloidal chemical synthesis",
+        "bottom‑up self‑assembly",
+        "nanofabrication",
         "optical spectroscopy",
-        "photoluminescence spectroscopy",
-        "electron microscopy",
-        "optical microscopy"
+        "electron microscopy (TEM, SEM)",
+        "computational electromagnetic modeling",
+        "thin‑film deposition"
       ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "colloidal nanocrystal systems",
+        "liquid crystal media",
+        "nanophotonic and plasmonic structures"
+      ],
       "funded_grants": [
         {
           "title": "Understanding How Ligands Dictate Nanocrystal Shape Using Force Spectroscopy",
@@ -43679,7 +43668,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:21:00.998761+00:00"
+      "last_enriched": "2026-03-19T21:37:58.199351+00:00"
     },
     {
       "first_name": "Daniel",
@@ -46197,28 +46186,29 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "nvasconcelos@ucsd.edu",
       "research_interests": "Statistical models for computer vision, machine learning, image processing, video analysis",
-      "research_interests_enriched": "The faculty member develops statistical and machine‑learning models to advance computer vision, focusing on image processing and video analysis. Their work spans probabilistic modeling, deep learning, and visual recognition to improve automated interpretation of visual data.",
+      "research_interests_enriched": "Develops statistical and machine learning models to advance computer vision, with a focus on image and video analysis, visual recognition, and scene understanding. His work spans deep learning, probabilistic modeling, and generative approaches for interpreting visual data.",
       "expertise_keywords": [
-        "statistical modeling",
         "computer vision",
+        "statistical modeling",
         "machine learning",
         "image processing",
         "video analysis",
-        "visual recognition",
         "deep learning",
-        "probabilistic inference",
-        "pattern recognition",
-        "algorithm development"
+        "visual recognition",
+        "scene understanding",
+        "3D reconstruction",
+        "generative models"
       ],
       "methodologies": [
-        "statistical modeling",
-        "machine learning algorithms",
+        "probabilistic graphical models",
+        "optimization algorithms",
         "deep neural networks",
+        "large‑scale dataset analysis",
+        "algorithm development",
         "computational experiments",
-        "image/video dataset analysis",
-        "algorithm design and evaluation"
+        "benchmark evaluation"
       ],
       "disease_areas": [
         "cervical cancer",
@@ -46387,7 +46377,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:22:55.954678+00:00"
+      "last_enriched": "2026-03-19T21:39:58.477729+00:00"
     },
     {
       "first_name": "Chad",
@@ -46669,24 +46659,25 @@
       "title": "Professor Practice",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "jpwade@ucsd.edu",
       "research_interests": "Convergent engineering principles, practice and education; design and engineering of AI-intensive systems; systems thinking, systems complexity, technology use in engineering education.",
-      "research_interests_enriched": "Professor Jon Wade focuses on convergent engineering principles that integrate multiple disciplinary perspectives into the design of AI‑intensive systems. His work emphasizes systems thinking and complexity analysis to improve both the practice and pedagogy of engineering, exploring how emerging technologies can be effectively incorporated into engineering education and professional practice.",
+      "research_interests_enriched": "Professor Jon Wade focuses on convergent engineering principles that integrate practice and education, emphasizing the design and engineering of AI‑intensive systems. His work explores systems thinking and complexity to improve technology use in engineering curricula and professional practice.",
       "expertise_keywords": [
         "convergent engineering",
         "AI‑intensive system design",
         "systems thinking",
         "systems complexity",
         "engineering education",
-        "technology integration in engineering"
+        "practice‑based learning",
+        "technology integration"
       ],
       "methodologies": [
         "systems analysis",
         "computational modeling",
-        "design prototyping",
-        "complexity theory application",
-        "design‑based educational research",
-        "case study evaluation"
+        "design research",
+        "curriculum development",
+        "case study evaluation",
+        "project‑based learning"
       ],
       "disease_areas": [
         "head and neck squamous cell carcinoma",
@@ -46696,8 +46687,7 @@
       ],
       "populations": [
         "engineering students",
-        "engineering practitioners",
-        "educators in engineering"
+        "engineering practitioners"
       ],
       "funded_grants": [],
       "recent_publications": [
@@ -46791,7 +46781,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:23:32.940044+00:00"
+      "last_enriched": "2026-03-19T21:40:42.189729+00:00"
     },
     {
       "first_name": "Edward",
@@ -46799,25 +46789,27 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ejaywang@ucsd.edu",
       "research_interests": "Mobile Health Sensing, Ubiquitous Computing, Signal Processing, Biosignals, Wearable Computing, Human Computer Interaction, User Centered Design",
-      "research_interests_enriched": "Professor Edward Wang develops mobile and wearable sensor systems for health monitoring, integrating signal processing and ubiquitous computing with human‑computer interaction principles and user‑centered design. His work spans the creation of biosignal acquisition hardware, algorithmic analysis pipelines, and interactive interfaces to enable continuous, context‑aware health assessment.",
+      "research_interests_enriched": "Professor Edward Wang focuses on the design and evaluation of mobile and wearable health sensing systems within the broader context of ubiquitous computing. His work integrates advanced signal processing of biosignals with human‑computer interaction and user‑centered design principles to create intuitive, real‑time health monitoring technologies.",
       "expertise_keywords": [
-        "mobile health sensing",
-        "ubiquitous computing",
-        "signal processing",
-        "biosignals",
-        "wearable computing",
-        "human-computer interaction",
-        "user‑centered design"
+        "Mobile health sensing",
+        "Ubiquitous computing",
+        "Wearable computing",
+        "Biosignal processing",
+        "Signal processing",
+        "Human-computer interaction",
+        "User‑centered design",
+        "Wearable sensors",
+        "Real‑time health monitoring"
       ],
       "methodologies": [
-        "sensor hardware prototyping",
-        "signal processing algorithm development",
-        "user‑centered design processes",
-        "usability testing",
-        "field deployment studies",
-        "data analytics"
+        "Sensor hardware prototyping",
+        "Signal processing algorithm development",
+        "Usability testing",
+        "User‑centered design studies",
+        "Field deployments of wearable devices",
+        "Quantitative performance evaluation"
       ],
       "disease_areas": [
         "cardiac surgery postoperative complications",
@@ -46948,7 +46940,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:23:38.799176+00:00"
+      "last_enriched": "2026-03-19T21:40:52.933385+00:00"
     },
     {
       "first_name": "Joseph",
@@ -46956,9 +46948,9 @@
       "title": "Professor",
       "subdepartment": "Chemical and Nano Engineering",
       "degrees": [],
-      "email": "",
+      "email": "jow014@ucsd.edu",
       "research_interests": "A leader in a wide range of research areas including nanomachines, nanobioelectronics, and sensing technologies for applications including clinical diagnostics, environmental and security monitoring and remote sensing.",
-      "research_interests_enriched": "Professor Joseph Wang leads interdisciplinary research at the intersection of nanotechnology and bioelectronics, creating nanomachines and nanobioelectronic platforms for highly sensitive sensing applications. His work focuses on translating these nanoscale devices into practical tools for clinical diagnostics, environmental and security monitoring, and remote sensing.",
+      "research_interests_enriched": "Professor Joseph Wang leads interdisciplinary research at the intersection of nanotechnology and sensing. His work focuses on designing and engineering nanomachines and nanobioelectronic platforms for high‑performance clinical diagnostics, as well as developing robust sensors for environmental, security, and remote‑sensing applications. By integrating advanced nanofabrication with signal transduction strategies, his group creates next‑generation devices that translate molecular and physical signals into actionable information.",
       "expertise_keywords": [
         "nanomachines",
         "nanobioelectronics",
@@ -46968,18 +46960,21 @@
         "security monitoring",
         "remote sensing",
         "nanotechnology",
-        "sensing platforms",
-        "device engineering"
+        "sensor development",
+        "lab‑on‑a‑chip",
+        "electrochemical sensing",
+        "optical sensing"
       ],
       "methodologies": [
         "nanofabrication",
-        "microfluidic integration",
-        "electrochemical sensing",
-        "optical sensing",
-        "lab‑on‑a‑chip development",
-        "remote sensing techniques",
-        "device prototyping",
-        "signal processing"
+        "microfabrication",
+        "microfluidics",
+        "electrochemical detection",
+        "optical detection",
+        "lab‑on‑a‑chip integration",
+        "device characterization",
+        "signal processing",
+        "remote sensing techniques"
       ],
       "disease_areas": [],
       "populations": [],
@@ -47322,7 +47317,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:23:45.510773+00:00"
+      "last_enriched": "2026-03-19T21:41:03.890648+00:00"
     },
     {
       "first_name": "Jun-Kun",
@@ -47330,7 +47325,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "jkw005@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -47454,7 +47449,7 @@
       "h_index": 11,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T19:23:50.513603+00:00"
+      "last_enriched": "2026-03-19T21:41:12.349869+00:00"
     },
     {
       "first_name": "Kesong",
