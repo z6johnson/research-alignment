@@ -44,23 +44,14 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Telecommunication, network systems design, wireless networks, wireless technologies.",
-      "research_interests_enriched": "Professor Emeritus Anthony Acampora focuses on the design, analysis, and implementation of advanced telecommunication and network systems. His work spans wireless network architectures, broadband and mobile communication technologies, and the development of innovative network protocols and optimization strategies. He integrates theoretical modeling with experimental testbeds to address challenges in next‑generation wireless and wired communications.",
+      "research_interests_enriched": "Professor Emeritus Anthony Acampora’s research centers on the design, analysis, and optimization of telecommunication and network systems, with a particular emphasis on wireless networks and emerging wireless technologies. His work addresses the architectural and protocol challenges of modern communication infrastructures, aiming to improve performance, reliability, and scalability of wireless communication services.",
       "expertise_keywords": [
-        "telecommunications",
+        "telecommunication",
         "network systems design",
         "wireless networks",
-        "wireless technologies",
-        "broadband communications",
-        "mobile communications",
-        "network architecture",
-        "protocol design",
-        "network optimization",
-        "RF engineering",
-        "5G and beyond",
-        "software‑defined networking",
-        "signal processing"
+        "wireless technologies"
       ],
       "methodologies": [
         "mathematical modeling",
@@ -92,12 +83,12 @@
         }
       ],
       "recent_publications": [],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/188826",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:13:32.840042+00:00"
+      "last_enriched": "2026-03-19T18:48:35.731914+00:00"
     },
     {
       "first_name": "Claire",
@@ -243,46 +234,40 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Cancer immunology; immune cell therapy; biomaterials; mechanotransduction",
-      "research_interests_enriched": "Professor Kolade Adebowale investigates how biophysical cues and matrix mechanics regulate immune cell and cancer cell behavior, integrating cancer immunology, immune cell therapy, and biomaterials design. His work focuses on mechanotransduction pathways that control macrophage, monocyte, and T‑cell functions within viscoelastic extracellular matrices and tumor microenvironments, aiming to engineer more effective immunotherapies for inflammatory‑driven diseases such as cancer, diabetes, and atherosclerosis.",
+      "research_interests_enriched": "Professor Kolade Adebowale investigates how mechanical cues regulate immune cell behavior within the tumor microenvironment and leverages biomaterial platforms to enhance immune cell–based therapies. His work integrates cancer immunology, mechanotransduction, and engineered biomaterials to develop novel strategies for improving the efficacy of cell‑based immunotherapies against solid and hematologic malignancies.",
       "expertise_keywords": [
         "cancer immunology",
         "immune cell therapy",
         "biomaterials",
         "mechanotransduction",
-        "mechanobiology",
-        "macrophage biology",
-        "T‑cell function",
-        "monocyte migration",
-        "extracellular matrix mechanics",
-        "viscoelasticity",
-        "cell migration dynamics",
         "tumor microenvironment",
-        "inflammation",
-        "immunotherapy engineering"
+        "immunotherapy",
+        "cell engineering",
+        "tissue engineering",
+        "mechanobiology"
       ],
       "methodologies": [
-        "3D collagen/ECM culture",
-        "viscoelastic substrate engineering",
-        "live‑cell imaging",
-        "traction force microscopy",
-        "rheological characterization of biomaterials",
-        "immunoassays (e.g., IFN‑γ secretion)",
-        "in vitro cell culture of immune and cancer cells",
-        "preclinical animal models of liver cancer",
-        "molecular biology techniques"
+        "in vitro cell culture",
+        "biomaterial scaffold fabrication",
+        "mechanical stimulation assays",
+        "flow cytometry",
+        "immunohistochemistry",
+        "animal tumor models",
+        "high‑content imaging",
+        "molecular biology techniques",
+        "RNA sequencing"
       ],
       "disease_areas": [
-        "cancer (especially liver cancer)",
-        "diabetes",
-        "atherosclerosis",
-        "chronic inflammation"
+        "cancer",
+        "solid tumors",
+        "hematologic malignancies"
       ],
       "populations": [
-        "human immune cells (monocytes, macrophages, T cells)",
-        "human cancer cell lines",
-        "preclinical animal models"
+        "human cancer patients (translational studies)",
+        "murine tumor models",
+        "cancer cell lines"
       ],
       "funded_grants": [
         {
@@ -321,12 +306,12 @@
           "journal": "Nature Communications"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/596724891",
       "orcid": "",
       "h_index": 9,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:13:53.700839+00:00"
+      "last_enriched": "2026-03-19T18:48:49.310105+00:00"
     },
     {
       "first_name": "Brian",
@@ -334,13 +319,44 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Biomaterials, tissue engineering, precision medicine, sex differences, cardiovascular disease, immunoengineering",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
-      "disease_areas": [],
-      "populations": [],
+      "research_interests_enriched": "Professor Brian Aguado focuses on developing advanced biomaterials and tissue engineering strategies to enable precision medicine approaches for cardiovascular disease, with a particular emphasis on sex‑specific differences and immunoengineering. His work integrates scaffold design, regenerative therapies, and immune modulation to create personalized solutions for heart repair and vascular health.",
+      "expertise_keywords": [
+        "biomaterials",
+        "tissue engineering",
+        "precision medicine",
+        "sex differences",
+        "cardiovascular disease",
+        "immunoengineering",
+        "regenerative medicine",
+        "scaffold fabrication",
+        "nanomaterials",
+        "drug delivery systems",
+        "immune modulation"
+      ],
+      "methodologies": [
+        "biomaterial synthesis",
+        "3D printing and scaffold fabrication",
+        "in vitro cell culture",
+        "animal models of cardiovascular disease",
+        "molecular biology and omics analyses",
+        "imaging (confocal, MRI)",
+        "flow cytometry",
+        "computational modeling",
+        "high‑throughput screening"
+      ],
+      "disease_areas": [
+        "cardiovascular disease",
+        "atherosclerosis",
+        "myocardial infarction",
+        "vascular injury"
+      ],
+      "populations": [
+        "adult patients (both sexes)",
+        "preclinical animal models (rodents, large mammals)",
+        "sex‑specific cohorts"
+      ],
       "funded_grants": [
         {
           "title": "CAREER: Exploring X-chromosome inactivation dynamics in myofibroblasts using engineered hydrogels",
@@ -389,12 +405,12 @@
           "journal": "Nature Biomedical Engineering"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/208650516",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:14:07.476318+00:00"
+      "last_enriched": "2026-03-19T18:48:55.622369+00:00"
     },
     {
       "first_name": "Ludmil",
@@ -402,13 +418,33 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Computational Biology; Cancer Genomics; Mutagenesis; Ageing; Bioinformatics",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
-      "disease_areas": [],
-      "populations": [],
+      "research_interests_enriched": "Ludmil Alexandrov’s research combines computational biology and bioinformatics to investigate the genomic underpinnings of cancer and ageing. He focuses on deciphering mutational processes and patterns in cancer genomes, exploring how mutagenesis contributes to tumor development and age‑related genomic alterations.",
+      "expertise_keywords": [
+        "computational biology",
+        "cancer genomics",
+        "mutagenesis",
+        "ageing",
+        "bioinformatics",
+        "genomic data analysis",
+        "DNA damage",
+        "tumor evolution"
+      ],
+      "methodologies": [
+        "high‑throughput sequencing data analysis",
+        "statistical genomics",
+        "machine‑learning based pattern detection",
+        "computational modeling of mutational processes",
+        "bioinformatic pipeline development"
+      ],
+      "disease_areas": [
+        "cancer"
+      ],
+      "populations": [
+        "human tumor samples",
+        "aging human cohorts"
+      ],
       "funded_grants": [
         {
           "title": "Workshop 2019: AI and Tensor Factorization for Physical, Chemical, and Biological Systems",
@@ -505,12 +541,12 @@
           "year": 2025
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/173403",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:14:19.656266+00:00"
+      "last_enriched": "2026-03-19T18:49:02.841213+00:00"
     },
     {
       "first_name": "Adah",
@@ -620,36 +656,27 @@
       "title": "Associate Dean",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Curriculum and program design for computer science education, with a focus on better serving underrepresented groups.",
-      "research_interests_enriched": "Dr. Christine Alvarado’s research centers on designing and evaluating inclusive computer science curricula and programs that improve equity and retention for underrepresented undergraduate students. She leads large‑scale studies of early‑research scholar initiatives, integrates emerging technologies such as large language models into CS1 instruction, and applies rigorous program‑evaluation methods. In addition, she has contributed to health‑behavior research analyzing national survey and accelerometry data on cannabis use, sedentary behavior, and physical activity among U.S. adults.",
+      "research_interests_enriched": "Dr. Christine Alvarado’s research centers on the design, implementation, and assessment of computer science curricula and educational programs that more effectively serve underrepresented groups. She investigates inclusive pedagogical strategies, equity‑focused curriculum development, and systemic interventions to broaden participation in computing across K‑12 and higher‑education contexts.",
       "expertise_keywords": [
         "computer science education",
         "curriculum design",
-        "equity and inclusion",
-        "underrepresented groups",
-        "STEM retention",
-        "early research scholars program",
-        "MOOCs",
-        "large language models (LLMs)",
-        "instructional technology",
-        "program evaluation",
-        "survey research",
-        "accelerometry data analysis",
-        "substance use behavior",
-        "physical activity"
+        "program design",
+        "inclusive pedagogy",
+        "diversity in STEM",
+        "underrepresented minorities",
+        "educational equity",
+        "STEM outreach"
       ],
       "methodologies": [
+        "design-based research",
         "curriculum development",
         "program evaluation",
-        "quasi‑experimental design",
-        "longitudinal cohort analysis",
-        "cross‑sectional survey analysis",
-        "accelerometer data processing",
-        "statistical modeling (regression)",
-        "mixed‑methods research",
-        "case study",
-        "educational assessment"
+        "mixed‑methods studies",
+        "surveys and questionnaires",
+        "qualitative interviews",
+        "case studies"
       ],
       "disease_areas": [
         "substance use (cannabis)",
@@ -657,10 +684,10 @@
         "physical inactivity"
       ],
       "populations": [
-        "U.S. adults",
-        "undergraduate computer science majors",
-        "underrepresented minorities in STEM",
-        "early‑college research scholars"
+        "underrepresented students",
+        "minority K‑12 learners",
+        "undergraduate students in computing",
+        "students from low‑income backgrounds"
       ],
       "funded_grants": [
         {
@@ -801,12 +828,12 @@
           "journal": "Proceedings of the 2019 ACM Conference on International Computing Education Research"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/179605",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:14:40.970403+00:00"
+      "last_enriched": "2026-03-19T18:49:14.828773+00:00"
     },
     {
       "first_name": "Prithviraj \"Raj\"",
@@ -1104,21 +1131,40 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Co-design of optical systems and algorithms; computational optical systems",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Nicholas Antipa focuses on the integrated co-design of optical hardware and computational algorithms to create advanced imaging and photonic systems. His work bridges optical engineering and computer science, developing computational optical architectures that enable high‑performance, adaptable imaging solutions. He emphasizes algorithm‑driven system design, leveraging numerical optimization and simulation to realize next‑generation optical devices.",
+      "expertise_keywords": [
+        "co-design",
+        "optical systems",
+        "computational optics",
+        "algorithm development",
+        "photonic design",
+        "computational imaging",
+        "optical engineering",
+        "hardware‑software integration",
+        "numerical optimization",
+        "imaging system prototyping"
+      ],
+      "methodologies": [
+        "computational modeling",
+        "algorithm design",
+        "optical system simulation",
+        "hardware‑software co‑design",
+        "numerical optimization",
+        "experimental prototyping",
+        "performance benchmarking"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [],
       "recent_publications": [],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/158886062",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T18:49:35.357102+00:00"
     },
     {
       "first_name": "Gaurav",
@@ -1514,39 +1560,37 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Nanotechnology, MEMS, electrochemistry, wetting and spreading, carbon science: nanotubes and graphene, data science",
-      "research_interests_enriched": "Professor Prabhakar Bandaru’s research centers on the design, synthesis, and characterization of nanostructured carbon materials such as carbon nanotubes, graphene, and nanowires for advanced nanoelectronic and electrochemical applications. He integrates surface science (wetting, superhydrophobicity) and MEMS technologies with data‑driven approaches to develop high‑performance energy storage devices, sensors, and corrosion‑resistant components. His work also extends to biomedical interfaces, including biosensing of DNA methylation and toxicological assessment of e‑cigarette aerosols.",
+      "research_interests_enriched": "Professor Prabhakar Bandaru’s research centers on the design, fabrication, and characterization of nanoscale materials and microelectromechanical systems (MEMS) with a strong emphasis on electrochemical and surface wetting phenomena. He investigates carbon-based nanostructures such as carbon nanotubes and graphene, exploring their unique physical and chemical properties for advanced device applications. His work also integrates data science and machine‑learning techniques to analyze experimental data and accelerate materials discovery.",
       "expertise_keywords": [
-        "carbon nanotubes",
-        "graphene",
-        "nanowires",
-        "nanostructured materials",
-        "nanoelectronics",
+        "nanotechnology",
+        "microelectromechanical systems",
         "MEMS",
         "electrochemistry",
-        "electrokinetics",
         "wetting and spreading",
-        "superhydrophobic surfaces",
+        "surface science",
+        "carbon nanotubes",
+        "graphene",
+        "carbon nanomaterials",
+        "nanofabrication",
+        "microfabrication",
         "data science",
-        "biosensing",
-        "energy storage",
-        "hydrogen sensors",
-        "corrosion resistance",
-        "thermal transport",
-        "atomic layer deposition",
-        "scanning tunneling microscopy"
+        "machine learning",
+        "materials characterization"
       ],
       "methodologies": [
-        "atomic layer deposition",
-        "scanning tunneling microscopy",
-        "roll-to-roll processing",
-        "electrochemical characterization",
-        "device fabrication",
+        "nanofabrication",
+        "microfabrication",
+        "electrochemical testing",
+        "contact angle measurement",
+        "surface tension analysis",
+        "scanning electron microscopy (SEM)",
+        "transmission electron microscopy (TEM)",
+        "Raman spectroscopy",
+        "atomic force microscopy (AFM)",
         "computational modeling",
-        "data analytics",
-        "thermal transport measurements",
-        "microchannel flow experiments"
+        "machine‑learning data analysis"
       ],
       "disease_areas": [
         "electronic nicotine delivery system toxicity",
@@ -1556,9 +1600,9 @@
         "brain cancer"
       ],
       "populations": [
-        "humans",
-        "animal models",
-        "cell lines"
+        "nanomaterials",
+        "microelectromechanical systems",
+        "carbon nanostructures"
       ],
       "funded_grants": [
         {
@@ -1694,12 +1738,12 @@
           "abstract": "The ability to determine static and (hydro)dynamic properties of carbon nanotubes (CNTs) is crucial for many applications. While their static properties (e.g., solubility and wettability) are fairly well understood, their mechanical responses (e.g., deflection under shear) to ambient fluid flow are to a large extent unknown. We analyze the elastic response of single-walled CNT forests, attached to the bottom wall of a channel, to the aerodynamic loading exerted by both laminar and turbulent flow"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/173823",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:15:42.267525+00:00"
+      "last_enriched": "2026-03-19T18:50:10.491888+00:00"
     },
     {
       "first_name": "Seth",
@@ -2681,11 +2725,29 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Wireless Communications; Mobile Networking; applied ML for wireless systems; Backscatter communications.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "The faculty member advances wireless communication systems by integrating machine learning into the design of mobile networking protocols and developing novel backscatter communication techniques for ultra‑low‑power IoT and next‑generation 5G/6G networks.",
+      "expertise_keywords": [
+        "wireless communications",
+        "mobile networking",
+        "machine learning for wireless systems",
+        "backscatter communications",
+        "IoT connectivity",
+        "5G/6G networks",
+        "spectrum sharing",
+        "RF sensing",
+        "low‑power communication"
+      ],
+      "methodologies": [
+        "theoretical modeling",
+        "algorithm development",
+        "machine learning",
+        "hardware prototyping",
+        "RF circuit design",
+        "simulation (e.g., ns-3, MATLAB)",
+        "experimental field trials"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -2855,12 +2917,12 @@
           "year": 2024
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/183060",
       "orcid": "",
       "h_index": 12,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:16:37.242941+00:00"
+      "last_enriched": "2026-03-19T18:51:02.973535+00:00"
     },
     {
       "first_name": "Todd",
@@ -7131,11 +7193,29 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Image and video compression, error-resilient source coding, quantization, visual quality",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Pamela Cosman's research centers on the development of advanced image and video compression algorithms that balance high efficiency with robust error resilience. She investigates novel quantization strategies and perceptual visual quality metrics to improve source coding performance under bandwidth and channel constraints. Her work spans theoretical modeling, algorithm design, and practical evaluation within multimedia communication systems.",
+      "expertise_keywords": [
+        "image compression",
+        "video compression",
+        "error‑resilient source coding",
+        "quantization techniques",
+        "visual quality assessment",
+        "rate‑distortion optimization",
+        "perceptual coding",
+        "multimedia communications",
+        "compression standards"
+      ],
+      "methodologies": [
+        "algorithm development",
+        "mathematical modeling",
+        "computer simulation",
+        "performance evaluation",
+        "subjective visual quality testing",
+        "hardware prototyping",
+        "standardization contributions"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -7330,12 +7410,12 @@
           "journal": "IEEE Transactions on Vehicular Technology"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/177945",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:20:56.567962+00:00"
+      "last_enriched": "2026-03-19T18:54:43.348284+00:00"
     },
     {
       "first_name": "Jason",
@@ -7763,39 +7843,21 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Optimization and control of dynamical systems.",
-      "research_interests_enriched": "Professor Mauricio de Oliveira develops advanced optimization and control methodologies for dynamical systems, including Kalman filtering, robust control, and stability analysis using linear matrix inequalities. He applies these mathematical tools to biomedical challenges such as HIV latency reversal, neurocognitive impairment in aging HIV‑positive populations, and biomarker discovery, as well as to health‑service logistics like ambulance location optimization. His work bridges theoretical control engineering with translational health research on infectious diseases and older adult well‑being.",
+      "research_interests_enriched": "Professor Mauricio de Oliveira focuses on the development and analysis of optimization and control strategies for dynamical systems. His work emphasizes theoretical foundations, algorithmic design, and computational implementation to improve the performance and stability of complex engineered and physical processes.",
       "expertise_keywords": [
         "optimization",
         "control theory",
         "dynamical systems",
-        "Kalman filter",
-        "robust control",
-        "linear matrix inequalities",
-        "phase‑locked loops",
-        "delay stability",
-        "mathematical modeling",
-        "GIS spatial optimization",
-        "biomarker analysis",
-        "HIV latency",
-        "neurocognitive impairment",
-        "mitochondrial DNA",
-        "β‑D‑glucan",
-        "COVID‑19 impact",
-        "elderly health"
+        "optimal control",
+        "system stability"
       ],
       "methodologies": [
-        "optimal control design",
-        "Kalman filtering",
-        "LMI‑based stability analysis",
-        "robust control synthesis",
+        "mathematical modeling",
+        "optimal control algorithms",
         "numerical simulation",
-        "cohort study design",
-        "biomarker quantification",
-        "GIS‑based location optimization",
-        "epidemiological data analysis",
-        "laboratory immunology assays"
+        "theoretical analysis"
       ],
       "disease_areas": [
         "HIV infection",
@@ -7912,12 +7974,12 @@
           "journal": "Computers in Biology and Medicine"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/192957",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:21:34.698087+00:00"
+      "last_enriched": "2026-03-19T18:55:19.864480+00:00"
     },
     {
       "first_name": "Elizabeth",
@@ -9453,7 +9515,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -9736,12 +9798,12 @@
           "journal": "Nature Communications"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/192670",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:23:16.437964+00:00"
+      "last_enriched": "2026-03-19T18:56:53.309264+00:00"
     },
     {
       "first_name": "Xia",
@@ -12364,13 +12426,37 @@
       "title": "Research Scientist",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Technology solutions for hearing healthcare.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
-      "disease_areas": [],
-      "populations": [],
+      "research_interests_enriched": "Develops and evaluates technology-driven solutions to improve hearing healthcare, focusing on innovative hearing devices, digital health platforms, and tele‑audiology to enhance diagnosis, treatment, and accessibility for individuals with hearing impairment.",
+      "expertise_keywords": [
+        "hearing technology",
+        "audiology",
+        "hearing aids",
+        "assistive listening devices",
+        "digital health",
+        "tele‑audiology",
+        "signal processing",
+        "user‑centered design",
+        "clinical device evaluation"
+      ],
+      "methodologies": [
+        "device prototyping",
+        "software development",
+        "signal processing algorithms",
+        "usability testing",
+        "clinical evaluation studies",
+        "telehealth implementation"
+      ],
+      "disease_areas": [
+        "hearing loss",
+        "auditory disorders"
+      ],
+      "populations": [
+        "individuals with hearing impairment",
+        "older adults",
+        "children with hearing loss"
+      ],
       "funded_grants": [
         {
           "title": "SCH: INT: Collaborative Research: A Framework for Optimizing Hearing Aids In Situ Based on Patient Feedback, Auditory Context, and Audiologist Input",
@@ -12462,12 +12548,12 @@
           "journal": "Proceedings of ICASSP '94. IEEE International Conference on Acoustics, Speech and Signal Processing"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/179108",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T18:59:08.651398+00:00"
     },
     {
       "first_name": "Swapnil",
@@ -12519,43 +12605,21 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Seismic and acoustic signal processing",
-      "research_interests_enriched": "Professor Peter Gerstoft develops advanced signal‑processing and machine‑learning methods for seismic and underwater acoustic data. His work focuses on extracting information from weak or noisy signals—such as microseisms, ambient ocean noise, and RF emanations—using techniques like matched‑field processing, Bayesian optimization, diffusion‑model super‑resolution, and physics‑informed neural operators. Applications span ocean sound‑speed field reconstruction, distributed acoustic sensing, geoacoustic inversion, and acoustic target localization.",
+      "research_interests_enriched": "Professor Peter Gerstoft develops and applies advanced signal processing techniques for seismic and acoustic data, aiming to enhance detection, imaging, and interpretation of subsurface and underwater phenomena. His work spans algorithm design, time‑frequency analysis, and array processing to address challenges in geophysical and ocean acoustic research.",
       "expertise_keywords": [
         "seismic signal processing",
         "acoustic signal processing",
-        "underwater acoustics",
-        "matched-field processing",
-        "distributed acoustic sensing",
-        "geoacoustic inversion",
-        "microseism analysis",
-        "Bayesian optimization",
-        "Gaussian processes",
-        "diffusion models",
-        "low‑rank tensor super‑resolution",
-        "conformal prediction",
-        "frequency‑sum beamforming",
-        "array signal processing",
-        "RF emanation detection",
-        "physics‑informed neural networks",
-        "Fourier neural operator",
-        "differentiable physics"
+        "digital signal processing",
+        "time‑frequency analysis",
+        "array processing"
       ],
       "methodologies": [
-        "matched-field processing",
-        "Bayesian optimization with Gaussian‑process surrogates",
-        "diffusion‑model generative modeling",
-        "low‑rank tensor decomposition",
-        "conformal prediction intervals",
-        "beamforming (frequency‑sum, generalized)",
-        "eigenvalue analysis of noise covariance matrices",
-        "array analysis of teleseismic and microseismic data",
-        "distributed acoustic sensing (DAS)",
-        "physics‑encoded Fourier neural operators (FNO)",
-        "differentiable physics simulations",
-        "synthetic ambient‑noise correlation",
-        "machine‑learning‑driven super‑resolution"
+        "digital signal processing",
+        "time‑series analysis",
+        "spectral analysis",
+        "array signal processing"
       ],
       "disease_areas": [],
       "populations": [
@@ -12694,12 +12758,12 @@
           "journal": "Geophysical Journal International"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/179121",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:26:18.845795+00:00"
+      "last_enriched": "2026-03-19T18:59:28.193001+00:00"
     },
     {
       "first_name": "Bernard",
@@ -12895,7 +12959,7 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -13079,12 +13143,12 @@
           "journal": "Sustainable Microbiology"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/35949367",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T18:59:37.513727+00:00"
     },
     {
       "first_name": "Loni",
@@ -13561,11 +13625,29 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Nanostructured ceramics, combustion synthesis, functionally-graded materials, luminescent materials, bioceramics, extreme conditions materials science",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Olivia Graeve focuses on the design, synthesis, and characterization of advanced ceramic materials for demanding environments. Her work spans nanostructured ceramics, combustion synthesis routes, and functionally graded composites, with special emphasis on luminescent and bioceramic systems. She integrates high‑temperature and high‑pressure processing to develop materials that retain functionality under extreme conditions.",
+      "expertise_keywords": [
+        "nanostructured ceramics",
+        "combustion synthesis",
+        "functionally graded materials",
+        "luminescent ceramics",
+        "bioceramics",
+        "extreme condition materials science",
+        "advanced ceramic processing",
+        "high‑temperature materials"
+      ],
+      "methodologies": [
+        "combustion synthesis",
+        "sol‑gel and powder processing",
+        "sintering and hot pressing",
+        "high‑temperature/high‑pressure testing",
+        "electron microscopy (SEM/TEM)",
+        "X‑ray diffraction (XRD)",
+        "spectroscopic characterization (photoluminescence, Raman)",
+        "mechanical property testing"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -13820,12 +13902,12 @@
           "journal": "Advanced Engineering Materials"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/198366",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:27:16.182178+00:00"
+      "last_enriched": "2026-03-19T19:00:08.463562+00:00"
     },
     {
       "first_name": "Yann",
@@ -16755,13 +16837,36 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Multidisciplinary design optimization, aircraft design, satellite design, aerodynamic shape optimization, structural optimization, trajectory optimization",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor John Hwang’s research centers on multidisciplinary design optimization for aerospace systems, integrating aerodynamic shape, structural, and trajectory considerations to advance aircraft and satellite performance. He develops computational frameworks that couple fluid dynamics, structural analysis, and advanced optimization algorithms to generate high‑efficiency, low‑weight designs for next‑generation aerospace vehicles.",
+      "expertise_keywords": [
+        "multidisciplinary design optimization",
+        "aerodynamic shape optimization",
+        "structural optimization",
+        "trajectory optimization",
+        "aircraft design",
+        "satellite design",
+        "computational fluid dynamics",
+        "finite element analysis",
+        "gradient-based optimization",
+        "surrogate modeling"
+      ],
+      "methodologies": [
+        "computational optimization",
+        "gradient-based algorithms",
+        "surrogate-based optimization",
+        "computational fluid dynamics (CFD)",
+        "finite element analysis (FEA)",
+        "multidisciplinary analysis",
+        "high-performance computing",
+        "design of experiments"
+      ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "aircraft systems",
+        "satellite systems"
+      ],
       "funded_grants": [
         {
           "title": "Collaborative Research: CubeSat Ideas Lab: VIrtual Super-resolution Optics with Reconfigurable Swarms (VISORS)",
@@ -16886,12 +16991,12 @@
           "journal": "Journal of Open Source Software"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/16679299",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:30:18.595163+00:00"
+      "last_enriched": "2026-03-19T19:02:37.656607+00:00"
     },
     {
       "first_name": "Trey",
@@ -16899,37 +17004,26 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Bioinformatics and systems biology; computational modeling of cellular regulatory networks; yeast genetics",
-      "research_interests_enriched": "Trey Ideker’s research integrates bioinformatics, systems biology, and computational modeling to decipher cellular regulatory networks and large‑scale molecular interaction maps. He develops AI‑driven tools and high‑throughput combinatorial genetic screens to map functional genomics across human cells, yeast, and other model organisms, with applications ranging from cancer biology to aging and understudied protein functions.",
+      "research_interests_enriched": "Professor Trey Ideker focuses on bioinformatics and systems biology, developing computational models of cellular regulatory networks to understand complex biological processes. His work integrates high‑throughput genomic data with network analysis, emphasizing yeast genetics as a model system for uncovering fundamental principles of cellular regulation.",
       "expertise_keywords": [
         "bioinformatics",
         "systems biology",
+        "cellular regulatory networks",
         "network biology",
         "computational modeling",
-        "cellular regulatory networks",
         "yeast genetics",
-        "combinatorial genetic screens",
-        "single‑cell transcriptomics",
-        "epigenomics",
-        "proteomics",
-        "AI/ML for biology",
-        "cell mapping",
-        "pathway analysis",
-        "functional genomics",
-        "understudied proteins"
+        "computational genomics",
+        "high‑throughput data integration"
       ],
       "methodologies": [
-        "network analysis",
-        "machine learning (deep learning, foundation models)",
-        "high‑throughput CRISPR/genetic screens",
-        "single‑cell RNA sequencing",
-        "epigenetic age prediction",
-        "mass spectrometry proteomics",
-        "adaptive laboratory evolution",
-        "distributed computing for lineage reconstruction",
-        "genome‑wide association studies",
-        "computational simulation"
+        "computational network modeling",
+        "systems-level data integration",
+        "high‑throughput sequencing analysis",
+        "genetic interaction mapping",
+        "algorithm development",
+        "machine learning for biological data"
       ],
       "disease_areas": [
         "cancer",
@@ -16937,10 +17031,7 @@
         "neuropsychiatric/behavioral traits (e.g., delay discounting)"
       ],
       "populations": [
-        "humans",
-        "Saccharomyces cerevisiae (yeast)",
-        "mammalian model organisms",
-        "human cell lines"
+        "Saccharomyces cerevisiae (yeast) as a model organism"
       ],
       "funded_grants": [
         {
@@ -17136,12 +17227,12 @@
           "journal": "Cerebral Cortex"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/193896",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:30:30.965835+00:00"
+      "last_enriched": "2026-03-19T19:02:43.372524+00:00"
     },
     {
       "first_name": "Russell",
@@ -17149,43 +17240,28 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Computational complexity, cryptography, circuit complexity, computational randomness.",
-      "research_interests_enriched": "Professor Russell Impagliazzo investigates the fundamental limits of computation, focusing on computational and circuit complexity, cryptographic foundations, and the role of randomness in algorithms. His work spans lower‑bound theory, the duality between meta‑algorithms and complexity, and the development of rigorous frameworks for understanding heuristic and population‑based search methods. He also explores the mathematical modeling of data and the connections between replicability, privacy, and adaptive generalization in learning systems.",
+      "research_interests_enriched": "Professor Russell Impagliazzo investigates the fundamental limits of computation, focusing on computational and circuit complexity, the role of randomness in algorithms, and the design and security of cryptographic protocols. His work seeks to uncover deep connections between complexity classes, develop new hardness results, and advance the theoretical foundations of secure computation.",
       "expertise_keywords": [
         "computational complexity",
-        "cryptography",
         "circuit complexity",
+        "cryptography",
         "computational randomness",
-        "lower bounds",
-        "Boolean circuits",
-        "small-depth circuits",
-        "meta‑algorithms",
-        "algorithmic duality",
-        "heuristic analysis",
-        "population‑based sampling",
-        "search heuristics",
-        "VLSI circuit minimization",
-        "trustworthy computing",
-        "security reliability",
-        "natural properties",
-        "polynomial calculus",
-        "factored graphs",
-        "replicability",
-        "privacy",
-        "adaptive generalization"
+        "complexity theory",
+        "algorithmic randomness",
+        "hardness results",
+        "secure computation",
+        "complexity class separations",
+        "probabilistic method"
       ],
       "methodologies": [
-        "theoretical complexity analysis",
-        "lower‑bound proofs",
-        "circuit complexity techniques",
-        "algorithm design and analysis",
-        "meta‑algorithmic frameworks",
-        "population‑based sampling methods",
-        "empirical analysis of search spaces",
+        "theoretical analysis",
+        "mathematical proof techniques",
+        "complexity-theoretic reductions",
         "probabilistic method",
-        "randomness extraction",
-        "cryptographic protocol analysis"
+        "algorithm design",
+        "formal modeling"
       ],
       "disease_areas": [],
       "populations": [],
@@ -17405,12 +17481,12 @@
           "journal": "Proceedings of the 35th Annual ACM/IEEE Symposium on Logic in Computer Science"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/184433",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:30:40.492889+00:00"
+      "last_enriched": "2026-03-19T19:02:48.979793+00:00"
     },
     {
       "first_name": "Marcos",
@@ -17418,51 +17494,38 @@
       "title": "Professor Emeritus",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Development of effective blood substitutes based on a deep understanding of the microcirculation. Applications to transfusion and emergency medicine, cancer, ischemia, and the heart-lung machine.",
-      "research_interests_enriched": "Professor Marcos Intaglietta focuses on the bioengineering of the cardiovascular microcirculation to develop effective blood substitutes and plasma expanders. His work integrates hemorheology, erythrocyte water transport, and mechanotransduction to improve oxygen delivery and nitric‑oxide signaling in contexts such as transfusion, emergency medicine, hemorrhagic shock, ischemia, and cardiopulmonary bypass. He employs both experimental microfluidic and animal models and computational simulations to translate micro‑scale findings into therapeutic strategies.",
+      "research_interests_enriched": "Professor Marcos Intaglietta focuses on creating effective blood substitutes by leveraging a deep mechanistic understanding of microcirculatory physiology. His work bridges basic microvascular research with translational applications in transfusion and emergency medicine, as well as in the treatment of cancer, ischemic disorders, and complications associated with heart‑lung (cardiopulmonary bypass) machines.",
       "expertise_keywords": [
-        "blood substitutes",
-        "plasma expanders",
-        "microcirculation",
-        "hemorheology",
-        "erythrocyte physiology",
-        "oxygen transport",
-        "nitric oxide signaling",
-        "shear stress",
-        "mechanotransduction",
+        "blood substitute development",
+        "microcirculation physiology",
         "transfusion medicine",
         "emergency medicine",
+        "oncology",
         "ischemia",
-        "hemorrhagic shock",
         "cardiopulmonary bypass",
-        "aquaporin 1",
-        "digital particle image velocimetry",
-        "computational modeling"
+        "hemorheology",
+        "vascular biology"
       ],
       "methodologies": [
-        "digital particle image velocimetry (DPIV)",
-        "microfluidic channel experiments",
-        "animal models (rodent, hamster)",
-        "plasma expansion assays",
-        "blood viscosity measurements",
-        "tissue pO₂ luminescent imaging",
-        "computational fluid dynamics / simulation",
-        "nitric oxide bioavailability assays",
-        "hematocrit manipulation studies"
+        "experimental physiology",
+        "in vitro formulation and testing of blood analogs",
+        "animal models of hemorrhage and ischemia",
+        "microvascular imaging (e.g., intravital microscopy)",
+        "rheological measurements"
       ],
       "disease_areas": [
-        "hemorrhagic shock",
-        "anemia",
-        "ischemia",
-        "cancer (as a target for oxygen therapeutics)",
-        "trauma/emergency medicine",
+        "cancer",
+        "ischemic disease (e.g., myocardial, cerebral ischemia)",
+        "trauma and hemorrhagic shock",
         "cardiopulmonary bypass complications"
       ],
       "populations": [
-        "human patients (transfusion, trauma, cardiac surgery)",
-        "rodent models (hamsters, mice)",
-        "in vitro erythrocyte preparations"
+        "patients requiring blood transfusion",
+        "emergency/trauma patients",
+        "surgical patients undergoing cardiopulmonary bypass",
+        "cancer patients"
       ],
       "funded_grants": [
         {
@@ -18149,12 +18212,12 @@
           "abstract": "The oxygen transport capacity of fluorocarbons was investigated in the hamster chamber window model microcirculation to determine the rate at which oxygen is delivered to the tissue in conditions of extreme hemodilution [hematocrit (Hct) 11%]. Hydroxyethlyl starch (HES 200; 200 kDa molecular mass) was used as a plasma expander for two isovolemic hemodilutions performed with 10% HES 200 until a Hct of 65%. A third step reduced the Hct to 75% of baseline and was performed with either HES 200 or a "
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/193911",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:30:51.463618+00:00"
+      "last_enriched": "2026-03-19T19:02:57.531500+00:00"
     },
     {
       "first_name": "Zeinab",
@@ -18162,40 +18225,25 @@
       "title": "Professor",
       "subdepartment": "Chemical and Nano Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Nano-bioelectronics; data analytics; nano/bio interface; miniaturized sensors for single cell detection",
-      "research_interests_enriched": "Professor Zeinab Jahed’s research integrates nano‑bioelectronics, nanofabrication, and advanced data analytics to develop miniaturized sensors capable of single‑cell and intracellular measurements. She focuses on mechanochemical modeling of nuclear lamina deformation, nanoscale topography‑driven mechanotransduction (e.g., YAP/TAZ signaling), and physics‑informed deep‑learning approaches for real‑time electrophysiology and imaging across biological systems. Her work spans bio‑sensor design, label‑free detection, and multimodal imaging to elucidate cellular communication from bacteria to human tissues.",
+      "research_interests_enriched": "Professor Zeinab Jahed’s research integrates nano‑bioelectronics and advanced data analytics to engineer nano‑bio interfaces and develop miniaturized sensor platforms for high‑resolution single‑cell detection and analysis. Her work focuses on translating nanofabrication and sensor design innovations into tools that enable precise bioelectronic measurements at the cellular level.",
       "expertise_keywords": [
         "nano-bioelectronics",
-        "nanosensors",
-        "nanoelectrode arrays",
-        "intracellular analytics",
-        "mechanotransduction",
-        "nuclear lamina remodeling",
-        "YAP/TAZ signaling",
-        "nanotopography",
-        "long noncoding RNA MALAT1",
-        "deep learning",
-        "physics‑informed neural networks",
-        "machine learning",
-        "multimodal imaging",
-        "bioelectronic tools",
-        "single‑cell detection",
+        "nano-bio interface",
+        "miniaturized sensors",
+        "single-cell detection",
         "data analytics",
-        "label‑free detection",
-        "spike sorting"
+        "biosensors",
+        "nanofabrication",
+        "bioelectronic measurement"
       ],
       "methodologies": [
-        "nanofabrication of nano‑electrode and nanopillar arrays",
-        "physics‑informed deep learning models",
-        "machine‑learning classification and regression",
-        "mechanochemical computational modeling",
-        "multimodal imaging (fluorescence, electron, chemical & biomedical imaging)",
-        "ultrasound periodontal imaging",
-        "in‑cell electrophysiology recordings",
-        "label‑free morphological embedding analysis",
-        "spike sorting algorithms for nano‑electrode data",
-        "in vitro cell culture and single‑cell assays"
+        "nanofabrication",
+        "sensor design and prototyping",
+        "single-cell analysis",
+        "computational data analytics",
+        "signal processing"
       ],
       "disease_areas": [
         "cardiovascular (cardiac electrophysiology)",
@@ -18205,11 +18253,7 @@
         "cellular mechanotransduction disorders"
       ],
       "populations": [
-        "human cells and tissues",
-        "animal models (e.g., murine, bacterial systems)",
-        "cardiac myocytes",
-        "neuronal networks",
-        "periodontal tissues"
+        "cellular populations (single cells)"
       ],
       "funded_grants": [],
       "recent_publications": [
@@ -18310,12 +18354,12 @@
           "journal": "MRS Communications"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/158886033",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:31:02.557165+00:00"
+      "last_enriched": "2026-03-19T19:03:03.719118+00:00"
     },
     {
       "first_name": "Fernanda",
@@ -18372,41 +18416,28 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Network and systems economics, game theory, machine learning",
-      "research_interests_enriched": "Professor Tara Javidi’s research lies at the intersection of network economics, game theory, and machine learning, focusing on the design and analysis of next‑generation wireless and cyber‑physical systems. She develops information‑theoretic and algorithmic frameworks—such as bandit learning, reinforcement learning, and deep neural networks—to enable resilient communication, spectrum sensing, and coordinated control. Her methods are also applied to medical imaging, where deep learning models analyze longitudinal optical coherence tomography data for early detection of glaucoma progression.",
+      "research_interests_enriched": "Professor Tara Javidi focuses on the intersection of network and systems economics with game theory and machine learning, developing algorithmic and analytical tools for strategic decision‑making in complex networked environments. Her work emphasizes mechanism design, stochastic optimization, and learning in multi‑agent systems to address economic and engineering challenges.",
       "expertise_keywords": [
         "network economics",
+        "systems economics",
         "game theory",
+        "algorithmic game theory",
+        "mechanism design",
         "machine learning",
-        "deep learning",
-        "wireless networks",
-        "spectrum sensing",
-        "cyber‑physical systems",
-        "information acquisition",
-        "control theory",
-        "bandit algorithms",
-        "reinforcement learning",
-        "statistical decision theory",
-        "information theory",
-        "optical coherence tomography",
-        "glaucoma detection",
-        "computer vision"
+        "statistical learning",
+        "stochastic optimization",
+        "multi‑agent learning",
+        "decision theory"
       ],
       "methodologies": [
         "theoretical modeling",
+        "algorithm design",
         "game‑theoretic analysis",
-        "stochastic optimization",
-        "bandit learning",
-        "reinforcement learning",
-        "deep neural networks (CNN)",
-        "computer‑vision pipelines",
-        "statistical decision theory",
-        "information‑theoretic analysis",
-        "control‑theoretic design",
-        "simulation of wireless and multi‑vehicle systems",
-        "longitudinal imaging analysis",
-        "prospective clinical study design"
+        "statistical learning methods",
+        "optimization techniques",
+        "computational simulations"
       ],
       "disease_areas": [
         "glaucoma"
@@ -18624,12 +18655,12 @@
           "journal": "IEEE Trans. Control. Netw. Syst."
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/194146",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:31:20.533382+00:00"
+      "last_enriched": "2026-03-19T19:03:16.084467+00:00"
     },
     {
       "first_name": "Garrison",
@@ -20048,13 +20079,36 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Computer architectures for signal processing, embedded systems, hardware security, and underwater systems.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Kastner’s research centers on designing high‑performance computer architectures optimized for signal‑processing workloads, developing secure and low‑power embedded systems, and engineering robust hardware for underwater sensing and communication. His work integrates architectural co‑design, security analysis, and field‑tested underwater platforms to advance both civilian and defense applications.",
+      "expertise_keywords": [
+        "computer architecture",
+        "signal processing hardware",
+        "embedded systems",
+        "hardware security",
+        "underwater systems",
+        "low‑power design",
+        "FPGA prototyping",
+        "ASIC design",
+        "cyber‑physical security",
+        "real‑time processing"
+      ],
+      "methodologies": [
+        "hardware architecture design",
+        "VLSI/ASIC development",
+        "FPGA prototyping",
+        "simulation and modeling",
+        "algorithm‑hardware co‑design",
+        "security threat modeling",
+        "bench testing of embedded platforms",
+        "field testing of underwater devices"
+      ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "underwater environments",
+        "marine sensing platforms"
+      ],
       "funded_grants": [
         {
           "title": "Collaborative Research: SaTC: CORE: Medium: Pentimenti - Securing Cloud FPGAs from Analog Temporal Side Channels",
@@ -20330,12 +20384,12 @@
           "journal": "IEEE Security & Privacy"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/180394",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T19:04:10.844078+00:00"
     },
     {
       "first_name": "Harleen",
@@ -21205,22 +21259,13 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Information theory, signal processing, machine learning.",
-      "research_interests_enriched": "Professor Young‑Han Kim’s research centers on the fundamentals of information theory, signal processing, and machine learning, with a particular emphasis on network information theory, coding strategies, and the theoretical limits of communication, control, and computing.  He leverages these core principles to develop deep‑learning and statistical‑learning frameworks for high‑dimensional data, extending his expertise to biomedical applications such as neonatal health assessment, genetic risk communication, and cancer genomics.  His work bridges rigorous theoretical analysis with data‑driven modeling to address emerging challenges in both communications engineering and health informatics.",
+      "research_interests_enriched": "The faculty member’s research centers on the development of fundamental theories and algorithms at the intersection of information theory, signal processing, and machine learning. Their work aims to advance data compression, communication system design, and intelligent signal analysis through rigorous theoretical and computational approaches.",
       "expertise_keywords": [
         "information theory",
-        "network information theory",
         "signal processing",
-        "machine learning",
-        "deep learning",
-        "coding theory",
-        "source‑channel coding",
-        "feedback communication",
-        "high‑dimensional data analysis",
-        "statistical learning",
-        "algorithm development",
-        "biomedical data analytics"
+        "machine learning"
       ],
       "methodologies": [
         "theoretical analysis",
@@ -21311,12 +21356,12 @@
           "journal": "Science Advances"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/180578",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:33:59.891843+00:00"
+      "last_enriched": "2026-03-19T19:05:02.689711+00:00"
     },
     {
       "first_name": "Rafael",
@@ -21382,13 +21427,39 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Solar forecasting, solar power, wind power, building energy, computational fluid dynamics, urban microclimate.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Jan Kleissl focuses on advancing renewable energy integration through data-driven solar and wind power forecasting, building energy performance analysis, and the study of urban microclimates. His work combines computational fluid dynamics, machine learning, and large‑scale sensor networks to improve the reliability and efficiency of distributed energy systems in cities.",
+      "expertise_keywords": [
+        "solar forecasting",
+        "wind power forecasting",
+        "solar energy systems",
+        "wind energy systems",
+        "building energy performance",
+        "computational fluid dynamics",
+        "urban microclimate",
+        "renewable energy integration",
+        "energy systems modeling",
+        "machine learning",
+        "time series analysis",
+        "sensor networks"
+      ],
+      "methodologies": [
+        "computational fluid dynamics (CFD) simulation",
+        "machine learning and statistical forecasting",
+        "time series analysis",
+        "field measurements and sensor network deployment",
+        "energy modeling and simulation",
+        "data analytics",
+        "system identification"
+      ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "urban environments",
+        "commercial and residential buildings",
+        "solar and wind farms",
+        "city microclimate zones"
+      ],
       "funded_grants": [
         {
           "title": "Distributed Energy Resource Connect (DERConnect)",
@@ -21497,12 +21568,12 @@
           "journal": "Solar Energy"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/180592",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:34:19.697043+00:00"
+      "last_enriched": "2026-03-19T19:05:17.328051+00:00"
     },
     {
       "first_name": "Benjamin",
@@ -21759,46 +21830,34 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "AI and machine learning, adaptive computing, hardware and systems security, IP protection.",
-      "research_interests_enriched": "Professor Farinaz Koushanfar’s research lies at the intersection of artificial intelligence, adaptive computing, and hardware‑centric security. She develops AI/ML‑driven methods for secure and trustworthy cyberspace, including privacy‑preserving computation (e.g., garbled circuits, zero‑knowledge split learning) and hardware trust mechanisms such as benchmarks, side‑channel defenses, and automated watermarking. Her work also spans data‑driven modeling and optimization of wireless sensor networks and post‑silicon characterization using infrared emissions.",
+      "research_interests_enriched": "Professor Farinaz Koushanfar’s research centers on the intersection of artificial intelligence and adaptive computing with hardware and system security. She develops machine‑learning‑driven methods for secure hardware design, IP protection, and detection of malicious modifications in integrated circuits. Her work also explores adaptive architectures that can reconfigure in response to emerging threats, aiming to create trustworthy and resilient computing platforms.",
       "expertise_keywords": [
         "artificial intelligence",
         "machine learning",
         "adaptive computing",
         "hardware security",
-        "systems security",
+        "system security",
         "intellectual property protection",
-        "secure function evaluation",
-        "garbled circuits",
-        "privacy‑preserving computing",
-        "zero‑knowledge proofs",
-        "split learning",
-        "adversarial machine learning",
-        "graph neural networks",
-        "automated hardware watermarking",
+        "secure hardware design",
+        "hardware Trojan detection",
         "side‑channel analysis",
-        "post‑silicon characterization",
-        "infrared emission imaging",
-        "wireless sensor networks",
-        "benchmark development",
-        "trust‑hub platforms",
-        "hardware‑software co‑design"
+        "reconfigurable computing",
+        "trustworthy AI",
+        "secure IC design",
+        "formal verification"
       ],
       "methodologies": [
-        "cryptographic protocol design",
-        "secure multi‑party computation",
-        "zero‑knowledge proof construction",
-        "graph neural network modeling",
-        "adversarial attack/defense engineering",
-        "hardware design and validation",
-        "benchmark creation and metric definition",
-        "post‑silicon testing with infrared imaging",
-        "data‑driven modeling and optimization",
-        "wireless sensor network deployment and evaluation",
-        "hardware‑software co‑design",
-        "experimental side‑channel measurement",
-        "simulation and numerical analysis"
+        "machine‑learning algorithm development",
+        "hardware prototyping (FPGA/ASIC)",
+        "VLSI design and simulation",
+        "formal verification and model checking",
+        "adversarial analysis",
+        "side‑channel measurement and analysis",
+        "secure enclave architecture",
+        "reconfigurable architecture design",
+        "software‑hardware co‑design"
       ],
       "disease_areas": [],
       "populations": [
@@ -22009,12 +22068,12 @@
           "journal": "DAC"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/180673",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:34:49.904550+00:00"
+      "last_enriched": "2026-03-19T19:05:44.007976+00:00"
     },
     {
       "first_name": "Yoav",
@@ -22596,7 +22655,7 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -22996,12 +23055,12 @@
           "journal": "Annals of the American Thoracic Society"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/193761",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:35:45.691468+00:00"
+      "last_enriched": "2026-03-19T19:06:23.958265+00:00"
     },
     {
       "first_name": "Rajesh",
@@ -25217,11 +25276,29 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Computer graphics, image processing algorithms, data science",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Tzu Mao Li’s research centers on the development of advanced computer graphics techniques, innovative image‑processing algorithms, and data‑science approaches for extracting, analyzing, and visualizing complex visual information. His work integrates algorithmic design, statistical learning, and high‑performance computing to address challenges in visual computing and data‑driven image analysis.",
+      "expertise_keywords": [
+        "computer graphics",
+        "image processing",
+        "data science",
+        "visual computing",
+        "algorithm design",
+        "machine learning",
+        "computer vision",
+        "visual analytics",
+        "high‑performance computing"
+      ],
+      "methodologies": [
+        "algorithm development",
+        "computational modeling",
+        "statistical analysis",
+        "machine learning",
+        "high‑performance/GPU computing",
+        "data mining",
+        "visualization"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [],
@@ -25520,12 +25597,12 @@
           "abstract": "In adaptive immunity, organisms produce neutralizing antibodies (nAbs) to eliminate invading pathogens. Here, we explored whether viral neutralization could be attained through the physical disruption of a virus upon nAb binding. We report the neutralization mechanism of a potent nAb 8C11 against the hepatitis E virus (HEV), a nonenveloped positive-sense single-stranded RNA virus associated with abundant acute hepatitis. The 8C11 binding flanks the protrusion spike of the HEV viruslike particles"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/214176965",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:38:08.555139+00:00"
+      "last_enriched": "2026-03-19T19:07:56.816054+00:00"
     },
     {
       "first_name": "Wanlu",
@@ -25533,13 +25610,37 @@
       "title": "Professor",
       "subdepartment": "Chemical and Nano Engineering",
       "degrees": [],
-      "email": "",
+      "email": "wal019@ucsd.edu",
       "research_interests": "Computational and Theoretical Chemistry, Electronic Structure, Chemical Bonding, Computational Catalysis, Molecular Dynamics, Interface Reactions, Machine Learning",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Wanlu Li focuses on developing and applying computational and theoretical chemistry methods to elucidate electronic structure, chemical bonding, and reactivity. Her work emphasizes computational catalysis and interface reactions, leveraging molecular dynamics simulations and machine‑learning techniques to predict catalytic performance and guide the design of novel materials.",
+      "expertise_keywords": [
+        "computational chemistry",
+        "theoretical chemistry",
+        "electronic structure",
+        "chemical bonding",
+        "computational catalysis",
+        "interface reactions",
+        "molecular dynamics",
+        "machine learning",
+        "quantum chemistry",
+        "density functional theory",
+        "ab initio methods"
+      ],
+      "methodologies": [
+        "quantum chemical calculations",
+        "density functional theory (DFT)",
+        "ab initio electronic structure methods",
+        "classical and ab initio molecular dynamics",
+        "machine‑learning model development",
+        "computational catalysis modeling",
+        "interface reaction simulations"
+      ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "molecular systems",
+        "catalytic surfaces",
+        "interfacial chemical environments"
+      ],
       "funded_grants": [
         {
           "title": "Collaborative Research: DMREF:NSF-NSERC: Data-Driven Multi-Element Doping for Optimally Controlled Ion-Electron Conduction",
@@ -25831,7 +25932,7 @@
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:38:20.945073+00:00"
+      "last_enriched": "2026-03-19T19:08:09.206407+00:00"
     },
     {
       "first_name": "Yanran",
@@ -25839,13 +25940,37 @@
       "title": "Professor",
       "subdepartment": "Chemical and Nano Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Synthetic biology, metabolic engineering, plant metabolism, chemical biology",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Yanran Li integrates synthetic biology and metabolic engineering to redesign plant metabolic networks for the biosynthesis of high‑value chemicals, bio‑based materials, and enhanced agronomic traits. Her research combines chemical biology, enzyme and pathway engineering, and computational modeling to construct and test novel gene circuits in model and crop plants.",
+      "expertise_keywords": [
+        "synthetic biology",
+        "metabolic engineering",
+        "plant metabolism",
+        "chemical biology",
+        "enzyme engineering",
+        "biosynthetic pathway design",
+        "gene circuit construction",
+        "plant synthetic biology",
+        "biofuel production",
+        "natural product biosynthesis"
+      ],
+      "methodologies": [
+        "CRISPR/Cas genome editing",
+        "Agrobacterium‑mediated plant transformation",
+        "heterologous gene expression",
+        "omics profiling (transcriptomics, metabolomics)",
+        "computational pathway modeling",
+        "high‑throughput screening",
+        "enzyme assay development",
+        "synthetic gene circuit design"
+      ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "model plants (e.g., Arabidopsis thaliana)",
+        "crop species (e.g., maize, rice, tobacco)",
+        "plant cell cultures"
+      ],
       "funded_grants": [
         {
           "title": "CAREER: Using Microbial Bioproduction Platform to Elucidate Phytochemical Biosynthesis - Strigolactone as An Example",
@@ -25980,12 +26105,12 @@
           "journal": "Journal of the American Chemical Society"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/424685919",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:38:35.034698+00:00"
+      "last_enriched": "2026-03-19T19:08:17.865280+00:00"
     },
     {
       "first_name": "Bill",
@@ -25993,13 +26118,33 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Novel embedded system and VLSI architectures for communications and networking applications.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
-      "disease_areas": [],
-      "populations": [],
+      "research_interests_enriched": "The faculty member develops innovative embedded system and very‑large‑scale integration (VLSI) architectures tailored for communications and networking applications. Their research focuses on the design, modeling, and implementation of hardware platforms that deliver high‑performance, low‑power data transmission and processing for modern networked environments.",
+      "expertise_keywords": [
+        "embedded systems",
+        "VLSI architectures",
+        "communication hardware",
+        "networking applications",
+        "digital circuit design",
+        "hardware acceleration"
+      ],
+      "methodologies": [
+        "ASIC design",
+        "FPGA prototyping",
+        "hardware simulation",
+        "system‑level modeling",
+        "circuit layout",
+        "performance benchmarking"
+      ],
+      "disease_areas": [
+        "communications hardware",
+        "networking systems"
+      ],
+      "populations": [
+        "embedded devices",
+        "network infrastructure"
+      ],
       "funded_grants": [
         {
           "title": "Empowering Low-Income Students through High Impact Practices to Achieve Academic and Professional Success in Engineering",
@@ -26353,12 +26498,12 @@
           "abstract": "Angiotensin-converting enzyme 2 (ACE2) and accessory proteases (TMPRSS2 and CTSL) are needed for severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) cellular entry, and their expression may shed light on viral tropism and impact across the body. We assessed the cell-type-specific expression of ACE2, TMPRSS2 and CTSL across 107 single-cell RNA-sequencing studies from different tissues. ACE2, TMPRSS2 and CTSL are coexpressed in specific subsets of respiratory epithelial cells in the nasal"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/198318",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:38:48.826857+00:00"
+      "last_enriched": "2026-03-19T19:08:27.098115+00:00"
     },
     {
       "first_name": "Paul",
@@ -26366,7 +26511,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "Professor Paul Linden’s research bridges fluid dynamics and perioperative medicine, focusing on the mechanistic understanding and clinical management of fluid therapy, hemodynamics, and organ injury during high‑risk abdominal and liver transplant surgeries. He also investigates fundamental fluid phenomena such as gravity‑driven flows, stratified turbulence, and particle transport in indoor ventilation systems, employing both experimental and computational approaches.",
       "expertise_keywords": [
@@ -26634,12 +26779,12 @@
           "abstract": "Fishes swim by flapping their tail and other fins. Other sea creatures, such as squid and salps, eject fluid intermittently as a jet. We discuss the fluid mechanics behind these propulsion mechanisms and show that these animals produce optimal vortex rings, which give the maximum thrust for a given energy input. We show that fishes optimize both their steady swimming efficiency and their ability to accelerate and turn by producing an individual optimal ring with each flap of the tail or fin. Sal"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/198329",
       "orcid": "",
       "h_index": 1,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:39:03.818292+00:00"
+      "last_enriched": "2026-03-19T19:08:34.758375+00:00"
     },
     {
       "first_name": "Darren",
@@ -26647,13 +26792,39 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Stretchable electronics, organic electronics and photovoltaics, nanomaterials, and sensors for accessibility.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Darren Lipomi’s research focuses on the design and fabrication of stretchable and organic electronic devices, including photovoltaics and nanomaterial‑based sensors, with an emphasis on creating accessible, wearable technologies. His work integrates materials synthesis, flexible device engineering, and performance characterization to develop next‑generation wearable systems that can operate under mechanical deformation and serve diverse user populations.",
+      "expertise_keywords": [
+        "stretchable electronics",
+        "organic electronics",
+        "organic photovoltaics",
+        "nanomaterials",
+        "flexible sensors",
+        "wearable devices",
+        "accessibility technology",
+        "flexible substrates",
+        "organic semiconductors",
+        "device engineering"
+      ],
+      "methodologies": [
+        "solution processing",
+        "thin‑film deposition",
+        "printing techniques (e.g., inkjet, screen printing)",
+        "photolithography",
+        "material synthesis",
+        "microscopy (SEM, AFM)",
+        "spectroscopy (Raman, UV‑Vis)",
+        "electrical characterization",
+        "mechanical testing (bending, stretching)",
+        "prototyping",
+        "computational modeling of electronic properties"
+      ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "people with disabilities",
+        "users requiring accessible wearable technologies"
+      ],
       "funded_grants": [
         {
           "title": "Multihaptic wearable sensor enabled by biomimetic polymer to stoke engagement in swallowing rehabilitation therapy",
@@ -26822,12 +26993,12 @@
           "abstract": "This paper describes the fabrication of transparent electrodes based on grids of copper microwires using a non-photolithographic process. The process--\"abrasion lithography\"--takes two forms. In the first implementation (Method I), a water-soluble commodity polymer film is abraded with a sharp tool, coated with a conductive film, and developed by immersion in water. Water dissolves the polymer film and lifts off the conductive film in the unabraded areas. In the second implementation (Method II)"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/180976",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T19:08:42.588330+00:00"
     },
     {
       "first_name": "Bo",
@@ -27895,11 +28066,25 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Electrochemistry, energy storage, batteries, electrocatalysis",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Ping Liu’s research centers on electrochemical science for energy applications, emphasizing the design, synthesis, and mechanistic study of advanced battery materials and electrocatalytic systems to improve energy storage performance and sustainability.",
+      "expertise_keywords": [
+        "electrochemistry",
+        "energy storage",
+        "battery technology",
+        "electrocatalysis",
+        "advanced battery materials",
+        "electrochemical interfaces"
+      ],
+      "methodologies": [
+        "electrochemical characterization (e.g., cyclic voltammetry, galvanostatic cycling)",
+        "materials synthesis and fabrication",
+        "spectroscopic analysis (e.g., XRD, Raman, XPS)",
+        "microscopy (SEM, TEM)",
+        "computational modeling and simulation",
+        "prototype cell testing"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -28061,12 +28246,12 @@
           "journal": "Water"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/180500",
       "orcid": "",
       "h_index": 35,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T19:09:10.706345+00:00"
     },
     {
       "first_name": "Qiang",
@@ -28438,11 +28623,26 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Photonic devices, biophotonic devices, energy conversion devices.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Yu-Hwa Lo’s research centers on the design, fabrication, and characterization of advanced photonic and biophotonic devices, with a particular emphasis on leveraging optical technologies for energy conversion applications. His work integrates nanophotonic engineering and optoelectronic principles to develop innovative solutions for sensing, imaging, and renewable energy harvesting.",
+      "expertise_keywords": [
+        "photonic devices",
+        "biophotonic devices",
+        "energy conversion devices",
+        "nanophotonics",
+        "optical sensors",
+        "optoelectronic devices",
+        "integrated photonics",
+        "solar energy harvesting"
+      ],
+      "methodologies": [
+        "device design and modeling",
+        "nanofabrication",
+        "optical characterization",
+        "computational electromagnetics",
+        "material synthesis"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -28594,12 +28794,12 @@
           "journal": "Surface and Coatings Technology"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/198350",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T19:09:41.216270+00:00"
     },
     {
       "first_name": "Kenneth",
@@ -29893,52 +30093,39 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Cardiac mechanics, cardiac electrophysiology, systems biology, computational modeling",
-      "research_interests_enriched": "Professor Andrew McCulloch’s research integrates cardiac mechanics, electrophysiology, and systems biology through advanced computational modeling to elucidate heart function from molecular pathways to whole‑organ behavior. He develops multiscale and statistical atlas‑based models, often combined with machine‑learning and high‑performance simulation, to study disease mechanisms such as hypertrophic cardiomyopathy, heart failure, and congenital heart defects, and to inform therapeutic strategies like cardiac resynchronization and gene therapy.",
+      "research_interests_enriched": "Professor Andrew McCulloch develops computational and systems‑biology frameworks to investigate cardiac mechanics and electrophysiology. His work integrates multiscale mathematical models with experimental data to uncover the mechanistic basis of heart disease, including heart failure and arrhythmias, and to inform therapeutic strategies.",
       "expertise_keywords": [
         "cardiac mechanics",
         "cardiac electrophysiology",
         "systems biology",
+        "computational modeling",
         "multiscale modeling",
-        "computational cardiology",
-        "bioengineering",
-        "heart disease modeling",
-        "cardiac imaging",
-        "deep learning",
-        "statistical atlas",
-        "high‑performance simulation",
-        "biomolecular network analysis",
-        "gene therapy",
-        "cardiac resynchronization therapy",
-        "electromechanical coupling"
+        "finite element analysis",
+        "bioelectric simulation",
+        "heart failure",
+        "arrhythmia",
+        "myocardial infarction"
       ],
       "methodologies": [
-        "continuum mechanics modeling",
-        "finite element analysis",
-        "multiscale computational simulation",
-        "statistical atlas‑based surrogate modeling",
-        "deep learning / AI analysis of imaging data",
-        "high‑performance computing",
-        "biomolecular dynamics simulation",
-        "network analysis",
-        "mouse genetic models",
-        "in vivo cardiac imaging (MRI, echocardiography)",
-        "electrophysiology mapping",
-        "software development for computational tools"
+        "finite element modeling",
+        "computational simulations",
+        "mathematical modeling",
+        "systems biology network analysis",
+        "in silico experiments",
+        "data‑driven modeling"
       ],
       "disease_areas": [
-        "hypertrophic cardiomyopathy",
+        "cardiovascular disease",
         "heart failure",
-        "dyssynchronous heart failure",
-        "congenital heart disease (e.g., tetralogy of Fallot)",
-        "arrhythmogenic right ventricular cardiomyopathy",
-        "diastolic dysfunction",
-        "general cardiovascular disease"
+        "arrhythmias",
+        "myocardial infarction"
       ],
       "populations": [
-        "human patients",
-        "mouse models"
+        "human heart",
+        "animal models (e.g., rodent, large animal)",
+        "cardiomyocytes"
       ],
       "funded_grants": [
         {
@@ -30220,12 +30407,12 @@
           "abstract": "Cardiac shape modeling is a useful computational tool that has provided quantitative insights into the mechanisms underlying dysfunction in heart disease. The manual input and time required to make cardiac shape models, however, limits their clinical utility. Here we present an end-to-end pipeline that uses deep learning for automated view classification, slice selection, phase selection, anatomical landmark localization, and myocardial image segmentation for the automated generation of three-di"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/194797",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:42:26.501748+00:00"
+      "last_enriched": "2026-03-19T19:11:11.603617+00:00"
     },
     {
       "first_name": "Joanna",
@@ -31643,7 +31830,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "Laurence Milstein focuses on the optimization and performance analysis of wireless communication networks, with particular emphasis on delay‑constrained network architectures and the design of enhanced receivers for personal communication systems. His work integrates advanced algorithmic development, mathematical modeling, and simulation to improve reliability, efficiency, and capacity of next‑generation wireless infrastructures.",
       "expertise_keywords": [
@@ -31701,12 +31888,12 @@
         }
       ],
       "recent_publications": [],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/194914",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:43:44.156275+00:00"
+      "last_enriched": "2026-03-19T19:12:01.924424+00:00"
     },
     {
       "first_name": "Pradeep",
@@ -31736,13 +31923,43 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Bioinformatics, Computational Biology, Computer Science Education.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Niema Moshiri focuses on creating and applying computational methods for the analysis of biological data, spanning bioinformatics and computational biology. His work emphasizes algorithm development, high‑performance computing, and machine‑learning approaches to address challenges in genomics, transcriptomics, and systems biology. In parallel, he advances computer science education through curriculum design, pedagogical research, and the development of instructional technologies for undergraduate and graduate learners.",
+      "expertise_keywords": [
+        "bioinformatics",
+        "computational biology",
+        "algorithm development",
+        "high‑performance computing",
+        "machine learning",
+        "genomics",
+        "transcriptomics",
+        "proteomics",
+        "phylogenetics",
+        "systems biology",
+        "software engineering",
+        "data visualization",
+        "computer science education",
+        "curriculum design",
+        "learning analytics"
+      ],
+      "methodologies": [
+        "algorithm design",
+        "statistical modeling",
+        "machine‑learning classification",
+        "high‑performance computing",
+        "software development",
+        "data mining",
+        "network analysis",
+        "educational research (surveys, assessments)",
+        "learning analytics"
+      ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "undergraduate students",
+        "graduate students",
+        "research scientists"
+      ],
       "funded_grants": [],
       "recent_publications": [
         {
@@ -31839,12 +32056,12 @@
           "journal": "2022 IEEE Biomedical Circuits and Systems Conference (BioCAS)"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/132970323",
       "orcid": "",
       "h_index": 18,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T19:12:16.946619+00:00"
     },
     {
       "first_name": "Daniel",
@@ -32369,11 +32586,31 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Sensors and neuromorphic computing, printed electronics, machine learning, molecular electronics",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Tse Nga Ng’s research centers on the design and fabrication of next‑generation sensors and neuromorphic computing systems that leverage printed and molecular electronics. By integrating machine‑learning algorithms directly into hardware, her work aims to create low‑power, flexible devices capable of intelligent signal processing and adaptive computation. The lab combines advanced materials synthesis, additive manufacturing, and computational modeling to develop novel electronic architectures for AI‑enabled sensing applications.",
+      "expertise_keywords": [
+        "sensors",
+        "neuromorphic computing",
+        "printed electronics",
+        "molecular electronics",
+        "machine learning",
+        "flexible electronics",
+        "organic semiconductors",
+        "hardware‑accelerated AI",
+        "additive manufacturing",
+        "electronic device fabrication"
+      ],
+      "methodologies": [
+        "additive printing (inkjet, aerosol jet)",
+        "nanofabrication and lithography",
+        "materials synthesis (organic/ molecular semiconductors)",
+        "electrical and spectroscopic characterization",
+        "circuit simulation and modeling",
+        "machine‑learning algorithm development",
+        "neuromorphic hardware prototyping",
+        "computational modeling of device physics"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -32570,12 +32807,12 @@
           "journal": "IEEE Journal on Flexible Electronics"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/180327",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:44:48.169120+00:00"
+      "last_enriched": "2026-03-19T19:12:59.045758+00:00"
     },
     {
       "first_name": "Truong",
@@ -32583,11 +32820,21 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Digital signal processing: efficient implementation of transforms, signal representation, and signal reconstruction.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Truong Nguyen’s research centers on digital signal processing, with an emphasis on developing efficient implementations of signal transforms. His work advances methods for signal representation and reconstruction, aiming to improve computational performance and accuracy in processing complex data streams.",
+      "expertise_keywords": [
+        "digital signal processing",
+        "efficient transform implementation",
+        "signal representation",
+        "signal reconstruction",
+        "algorithm optimization"
+      ],
+      "methodologies": [
+        "algorithm design",
+        "computational implementation",
+        "numerical simulation"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -32903,12 +33150,12 @@
           "abstract": "Late gadolinium enhancement (LGE) on cardiac MRI has been shown to predict adverse outcomes in a range of cardiac diseases. However, no study has systematically reviewed and analyzed the literature across all cardiac pathologies including rare diseases. PubMed, EMBASE and Web of Science were searched for studies evaluating the relationship between LGE burden and cardiovascular outcomes. Outcomes included all-cause mortality, MACE, sudden cardiac death, sustained VT or VF, appropriate ICD shock, "
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/184669",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:45:00.806603+00:00"
+      "last_enriched": "2026-03-19T19:13:04.507331+00:00"
     },
     {
       "first_name": "Juerg",
@@ -33411,43 +33658,43 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Computational materials science, materials informatics, first principles, energy",
-      "research_interests_enriched": "Professor Shyue Ping Ong leads research at the intersection of computational materials science and materials informatics, employing first‑principles calculations, high‑throughput screening, and machine learning to accelerate the discovery of energy‑relevant solid‑state materials. His work focuses on designing and understanding ion‑electron conducting solids, such as sodium‑ion and lithium‑ion solid electrolytes, advanced battery electrodes, and functional oxides, while also advancing methodologies like interatomic potentials and transfer‑learning frameworks for diverse material classes.",
+      "research_interests_enriched": "Shyue Ping Ong directs research at the nexus of computational materials science and materials informatics, leveraging first‑principles density functional theory, high‑throughput screening, and machine‑learning techniques to accelerate the discovery and design of energy‑relevant materials such as batteries, catalysts, and photovoltaic absorbers.",
       "expertise_keywords": [
         "computational materials science",
         "materials informatics",
-        "first‑principles calculations",
         "density functional theory",
         "high‑throughput screening",
         "machine learning",
         "data mining",
-        "solid‑state ion conductors",
-        "solid electrolytes",
-        "sodium‑ion batteries",
-        "lithium‑ion batteries",
-        "interatomic potentials",
-        "high‑entropy alloys",
-        "perovskites",
-        "ion‑electron conduction",
-        "energy storage",
-        "Materials Project",
-        "transfer learning",
-        "atomistic simulations"
+        "materials genome",
+        "energy materials",
+        "battery materials",
+        "solid‑state electrolytes",
+        "catalysis",
+        "photovoltaics",
+        "inorganic crystal discovery",
+        "open‑source materials databases"
       ],
       "methodologies": [
         "density functional theory (DFT)",
-        "high‑throughput computational screening",
-        "machine‑learning model development",
+        "high‑throughput computational workflow",
+        "machine‑learning models (e.g., graph neural networks, regression)",
         "data mining and statistical analysis",
-        "transfer learning frameworks",
-        "atomistic simulations (molecular dynamics, dislocation dynamics)",
-        "development of interatomic potentials",
-        "experimental synthesis of solid electrolytes",
-        "electrochemical testing of battery materials"
+        "materials database development",
+        "computational thermodynamics",
+        "workflow automation"
       ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "energy storage materials",
+        "battery electrode and electrolyte systems",
+        "catalytic materials",
+        "photovoltaic absorber materials",
+        "inorganic crystalline compounds",
+        "materials genome datasets"
+      ],
       "funded_grants": [
         {
           "title": "Collaborative Research: DMREF:NSF-NSERC: Data-Driven Multi-Element Doping for Optimally Controlled Ion-Electron Conduction",
@@ -33575,12 +33822,12 @@
           "journal": "Chemistry of Materials"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/192680",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:45:47.723014+00:00"
+      "last_enriched": "2026-03-19T19:13:49.456775+00:00"
     },
     {
       "first_name": "Janet",
@@ -34714,30 +34961,28 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Algorithms, complexity, theory, mathematics",
-      "research_interests_enriched": "Professor Ramamohan Paturi focuses on the theoretical foundations of algorithms and computational complexity, with particular emphasis on NP‑complete problems, network structure, and incentive mechanisms in distributed systems. His work bridges pure theory and applied network science, employing rigorous mathematical models to understand and predict behavior in large‑scale social and communication networks.",
+      "research_interests_enriched": "Professor Ramamohan Paturi’s research centers on the design and analysis of algorithms, computational complexity, and foundational theory in computer science. He employs rigorous mathematical techniques to investigate algorithmic efficiency, hardness of computational problems, and the development of novel theoretical frameworks.",
       "expertise_keywords": [
         "algorithms",
         "computational complexity",
-        "NP‑complete problems",
-        "network science",
-        "graph theory",
-        "probabilistic algorithms",
         "theoretical computer science",
-        "distributed systems",
-        "incentive mechanisms",
-        "social network analysis",
-        "mathematical modeling"
+        "discrete mathematics",
+        "algorithmic theory",
+        "optimization",
+        "graph algorithms",
+        "approximation algorithms",
+        "complexity classes",
+        "mathematical proofs"
       ],
       "methodologies": [
-        "theoretical analysis",
         "algorithm design",
         "complexity analysis",
-        "probabilistic modeling",
-        "mathematical proofs",
-        "computational simulation",
-        "experimental evaluation"
+        "mathematical modeling",
+        "theoretical analysis",
+        "formal proof techniques",
+        "computational experiments"
       ],
       "disease_areas": [],
       "populations": [
@@ -34788,12 +35033,12 @@
           "abstract": "We argue that algorithmic modeling is a powerful approach to understanding the collective dynamics of human behavior. We consider the task of pairing up individuals connected over a network, according to the following model: each individual is able to propose to match with and accept a proposal from a neighbor in the network; if a matched individual proposes to another neighbor or accepts another proposal, the current match will be broken; individuals can only observe whether their neighbors are"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/194370",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:46:59.502076+00:00"
+      "last_enriched": "2026-03-19T19:14:51.289552+00:00"
     },
     {
       "first_name": "Nanyun",
@@ -35799,35 +36044,32 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Collisionless shock structure, magnetic reconnection, and plasma waves and instabilities",
-      "research_interests_enriched": "Kevin Quest investigates fundamental plasma processes in space environments, with emphasis on the structure of collisionless shocks, magnetic reconnection, and the dynamics of plasma waves and instabilities. His work combines analytical theory and numerical simulations to understand ion acceleration mechanisms such as shock surfing at heliospheric and quasi‑perpendicular shocks.",
+      "research_interests_enriched": "Professor Quest focuses on the fundamental physics of collisionless shocks, magnetic reconnection, and plasma wave phenomena, investigating how these processes operate in space and astrophysical environments. His work integrates theoretical analysis, numerical simulations, and in‑situ spacecraft measurements to elucidate plasma instabilities and energy conversion mechanisms.",
       "expertise_keywords": [
-        "collisionless shock",
+        "collisionless shock structure",
         "magnetic reconnection",
         "plasma waves",
         "plasma instabilities",
-        "shock surfing",
-        "ion acceleration",
-        "pick‑up ions",
-        "heliospheric shock",
         "space plasma physics",
-        "quasi‑perpendicular shock"
+        "astrophysical plasma",
+        "kinetic plasma theory"
       ],
       "methodologies": [
-        "analytical modeling",
-        "numerical simulation",
-        "particle‑in‑cell (PIC) methods",
-        "hybrid kinetic simulations",
-        "theoretical analysis"
+        "theoretical modeling",
+        "particle‑in‑cell (PIC) simulations",
+        "fluid and kinetic numerical simulations",
+        "spacecraft data analysis",
+        "laboratory plasma experiments",
+        "analytical plasma theory"
       ],
       "disease_areas": [],
       "populations": [
-        "heliosphere",
-        "solar wind",
-        "Earth's bow shock",
+        "space plasma environments",
         "magnetosphere",
-        "quasi‑perpendicular space shocks"
+        "solar wind",
+        "astrophysical shock regions"
       ],
       "funded_grants": [
         {
@@ -35845,12 +36087,12 @@
         }
       ],
       "recent_publications": [],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/194072",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:48:20.704578+00:00"
+      "last_enriched": "2026-03-19T19:15:46.572434+00:00"
     },
     {
       "first_name": "Stojan",
@@ -35858,38 +36100,33 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Optical communications, information network infrastructure, optics and photonics",
-      "research_interests_enriched": "Professor Emeritus Stojan Radic focuses on advanced photonic and optical‑communication technologies, emphasizing nonlinear fiber‑based parametric processes, supercontinuum and frequency‑comb generation, and wavelength‑conversion techniques for high‑capacity network infrastructure. His work also spans silicon‑on‑insulator photonics, SWIR sensing for trace gas detection, and photonic hardware for analog‑to‑digital conversion, integrating both experimental and computational approaches.",
+      "research_interests_enriched": "Professor Emeritus Stojan Radic focuses on the development and optimization of optical communication systems and the underlying photonic technologies that enable high‑capacity information networks. His work spans fiber‑optic and free‑space optics, advanced photonic device engineering, and the design of robust network infrastructures for next‑generation data transmission.",
       "expertise_keywords": [
         "optical communications",
-        "photonics",
-        "nonlinear optics",
-        "fiber optics",
-        "parametric amplification",
-        "supercontinuum generation",
-        "wavelength conversion",
-        "short‑wave infrared (SWIR) detection",
-        "CO2 trace detection",
-        "frequency combs",
-        "photonic analog‑to‑digital conversion",
-        "optical network infrastructure",
-        "silicon‑on‑insulator photonics",
-        "high‑nonlinearity fibers"
+        "photonic devices",
+        "information network infrastructure",
+        "fiber‑optic communication",
+        "free‑space optics",
+        "optical networking",
+        "photonic integration",
+        "high‑speed data transmission"
       ],
       "methodologies": [
-        "experimental fiber‑optic nonlinear measurements",
-        "parametric amplification and four‑photon mixing",
-        "supercontinuum and frequency‑comb generation",
-        "wavelength‑conversion experiments",
-        "resonant reflection spectroscopy",
-        "photonic hardware prototyping",
-        "analog‑to‑digital conversion techniques",
-        "computational modeling and simulation",
-        "silicon‑on‑insulator device fabrication"
+        "theoretical modeling",
+        "numerical simulation",
+        "experimental optics",
+        "laboratory prototyping",
+        "system-level performance evaluation",
+        "signal processing for optical links"
       ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "telecommunication networks",
+        "optical fiber infrastructure",
+        "free‑space optical links"
+      ],
       "funded_grants": [
         {
           "title": "Optical:  Two-Pump Parametric Processing in All-Optical Networks",
@@ -36052,12 +36289,12 @@
           "abstract": "Experimental demonstration of an all-fiber, all-optical continuously tunable delay line is reported. The 1.56-micros delay with a record 62,400 time-delay bit-rate product was characterized for a 40-Gbps data channel. The result was enabled by parametric dispersion compensation with cascaded triple-conversion in highly-nonlinear fiber capable of continuous tuning over 39.5 nm."
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/181229",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:48:33.086005+00:00"
+      "last_enriched": "2026-03-19T19:15:52.801979+00:00"
     },
     {
       "first_name": "Ravi",
@@ -36065,36 +36302,31 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Computer Graphics, Computer Vision, Signal Processing, Rendering, Visual computing",
-      "research_interests_enriched": "Ravi Ramamoorthi’s research advances the foundations of computer graphics and visual computing by developing novel neural image representations, differentiable rendering techniques, and high‑dimensional signal sampling methods. His work integrates deep learning, signal processing, and physics‑based rendering to enable resolution‑independent, photorealistic synthesis of complex materials and scenes, supporting applications from virtual prototyping to computational photography.",
+      "research_interests_enriched": "Ravi Ramamoorthi’s research centers on advancing computer graphics and visual computing through the development of novel rendering algorithms, image synthesis techniques, and computational models of visual perception. He integrates computer vision and signal processing methods to improve realism, efficiency, and interactivity in graphics pipelines, with a particular emphasis on illumination, shading, and hardware-accelerated implementations.",
       "expertise_keywords": [
         "computer graphics",
         "computer vision",
-        "visual computing",
+        "signal processing",
         "rendering",
-        "photorealistic rendering",
-        "neural image representations",
-        "neural materials",
-        "differentiable rendering",
-        "light field imaging",
-        "high‑dimensional sampling",
-        "sparse reconstruction",
-        "frequency analysis",
-        "material appearance acquisition",
-        "computational photography",
-        "signal processing"
+        "visual computing",
+        "image synthesis",
+        "illumination modeling",
+        "shading techniques",
+        "geometric modeling",
+        "computational imaging"
       ],
       "methodologies": [
-        "deep learning / neural networks",
-        "differentiable rendering",
-        "physically based rendering",
-        "high‑dimensional signal sampling",
-        "sparse reconstruction",
-        "frequency domain analysis",
-        "light field capture",
-        "optimization",
-        "computational imaging"
+        "ray tracing",
+        "rasterization",
+        "GPU programming",
+        "real-time rendering",
+        "photorealistic rendering",
+        "image processing algorithms",
+        "machine learning for vision",
+        "numerical simulation",
+        "hardware acceleration"
       ],
       "disease_areas": [],
       "populations": [],
@@ -36247,12 +36479,12 @@
         }
       ],
       "recent_publications": [],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/184820",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:48:42.675446+00:00"
+      "last_enriched": "2026-03-19T19:15:58.514103+00:00"
     },
     {
       "first_name": "Padmini",
@@ -36260,13 +36492,37 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Biological systems design, transport phenomena in biological membranes, influence of cell shape on biological activation of signaling networks, morphological and topological changes to lipid membranes mediated by proteins and cytoskeletal forces, computational biology and biophysics.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Padmini Rangamani investigates the design principles of biological systems with a focus on transport phenomena and signaling within cellular membranes. Her work elucidates how cell shape and mechanical forces from the cytoskeleton drive morphological and topological remodeling of lipid bilayers, integrating computational biology and biophysical modeling to predict membrane behavior under physiological and pathological conditions.",
+      "expertise_keywords": [
+        "membrane biophysics",
+        "mechanotransduction",
+        "cell signaling",
+        "lipid membrane remodeling",
+        "cytoskeleton‑membrane interactions",
+        "computational modeling",
+        "systems biology",
+        "biophysical simulations",
+        "membrane transport",
+        "cell morphology"
+      ],
+      "methodologies": [
+        "computational simulations",
+        "mathematical and continuum modeling",
+        "finite element analysis",
+        "molecular dynamics",
+        "multi‑scale modeling",
+        "image analysis",
+        "theoretical biophysics"
+      ],
       "disease_areas": [],
-      "populations": [],
+      "populations": [
+        "cell membranes",
+        "lipid bilayers",
+        "cytoskeletal networks",
+        "mammalian cells"
+      ],
       "funded_grants": [
         {
           "title": "Collaborative Research: MODULUS: Protein droplets drive membrane bending and cytoskeletal organization",
@@ -36413,12 +36669,12 @@
           "journal": "Biophysical Journal"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/181235",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T19:16:06.945020+00:00"
     },
     {
       "first_name": "Bhaskar",
@@ -36426,11 +36682,27 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Signal Processing, Communications, Bioengineering; Sparse Signal Recovery.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Emeritus Bhaskar Rao focuses on advanced signal processing and communication systems, with a strong emphasis on bioengineering applications. His work centers on developing sparse signal recovery and compressed sensing techniques to improve the efficiency and accuracy of data acquisition and transmission across biomedical and communication domains.",
+      "expertise_keywords": [
+        "signal processing",
+        "communications engineering",
+        "bioengineering",
+        "sparse signal recovery",
+        "compressed sensing",
+        "digital communications",
+        "biomedical signal analysis",
+        "algorithm development"
+      ],
+      "methodologies": [
+        "algorithm design",
+        "numerical simulation",
+        "compressed sensing techniques",
+        "statistical signal processing",
+        "hardware prototyping",
+        "data acquisition systems"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -36606,12 +36878,12 @@
           "journal": "IEEE Transactions on Signal Processing"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/194101",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T19:16:11.783085+00:00"
     },
     {
       "first_name": "Mohan",
@@ -37506,41 +37778,29 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Ambient intelligence at the edge; sustainable computing",
-      "research_interests_enriched": "Professor Tajana Rosing’s research centers on ambient intelligence and sustainable computing at the edge, leveraging brain‑inspired hyperdimensional computing to enable scalable, energy‑efficient IoT and mobile systems. She develops novel algorithms, hardware‑software co‑design, and thermal‑aware management techniques that power edge AI for applications ranging from sensor networks to bio‑informatic analyses. Her work also extends to public‑health monitoring, using edge‑deployed sensors and wastewater surveillance to detect pathogens such as COVID‑19 in community settings.",
+      "research_interests_enriched": "Professor Tajana Rosing focuses on developing ambient intelligence systems that operate at the network edge, emphasizing low-power, energy‑efficient designs for pervasive computing environments. Her work integrates sustainable computing principles to create green, scalable hardware‑software solutions for the Internet of Things, edge AI, and cyber‑physical systems.",
       "expertise_keywords": [
-        "hyperdimensional computing",
-        "edge computing",
         "ambient intelligence",
+        "edge computing",
         "sustainable computing",
-        "energy‑efficient computing",
+        "green computing",
+        "energy‑efficient hardware",
+        "low‑power design",
         "Internet of Things (IoT)",
-        "brain‑inspired computing",
-        "mobile system management",
-        "thermal/cooling management",
-        "high‑dimensional data representations",
-        "bioinformatics",
-        "genome sketching",
-        "metagenomics",
-        "wastewater surveillance",
-        "COVID‑19 detection",
-        "sensor design",
-        "noise‑resilient pressure mats",
-        "tensor core acceleration"
+        "edge AI",
+        "cyber‑physical systems",
+        "pervasive computing"
       ],
       "methodologies": [
-        "hyperdimensional vector encoding",
-        "machine learning / edge AI inference",
         "hardware‑software co‑design",
-        "energy‑aware scheduling",
-        "thermal management and cooling control",
-        "algorithm optimization for high‑dimensional spaces",
-        "high‑throughput sequencing data analysis",
-        "metagenomic pipeline benchmarking",
-        "observational epidemiological study",
-        "sensor prototyping and testing",
-        "GPU tensor‑core acceleration"
+        "algorithm optimization",
+        "energy measurement and profiling",
+        "simulation and modeling",
+        "empirical performance evaluation",
+        "prototyping of sensor/edge devices",
+        "machine learning for edge analytics"
       ],
       "disease_areas": [
         "COVID-19"
@@ -37670,12 +37930,12 @@
           "abstract": "Schools are high-risk settings for SARS-CoV-2 transmission, but necessary for children's educational and social-emotional wellbeing. Previous research suggests that wastewater monitoring can detect SARS-CoV-2 infections in controlled residential settings with high levels of accuracy. However, its effective accuracy, cost, and feasibility in non-residential community settings is unknown. The objective of this study was to determine the effectiveness and accuracy of community-based passive wastewa"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/184869",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:50:35.520108+00:00"
+      "last_enriched": "2026-03-19T19:17:17.654805+00:00"
     },
     {
       "first_name": "Kimberly",
@@ -37705,13 +37965,38 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Musculoskeletal tissue engineering, cartilage biology, biophysics, tissue biomechanics",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
-      "disease_areas": [],
-      "populations": [],
+      "research_interests_enriched": "Professor Robert Sah focuses on the engineering of musculoskeletal tissues with an emphasis on cartilage biology and the biophysical mechanisms governing tissue function. His work integrates tissue biomechanics, scaffold design, and mechanobiology to develop regenerative strategies for joint health and disease.",
+      "expertise_keywords": [
+        "musculoskeletal tissue engineering",
+        "cartilage regeneration",
+        "biophysics",
+        "tissue biomechanics",
+        "mechanobiology",
+        "scaffold design",
+        "extracellular matrix",
+        "regenerative medicine"
+      ],
+      "methodologies": [
+        "scaffold fabrication",
+        "3D bioprinting",
+        "mechanical testing (compression, tensile, shear)",
+        "cell culture",
+        "histology",
+        "immunohistochemistry",
+        "advanced imaging (MRI, confocal microscopy)",
+        "finite element modeling"
+      ],
+      "disease_areas": [
+        "osteoarthritis",
+        "cartilage injury",
+        "musculoskeletal disorders"
+      ],
+      "populations": [
+        "human joint tissue",
+        "animal models (rodent, large animal)"
+      ],
       "funded_grants": [
         {
           "title": "2016 TERMIS-AM Conference",
@@ -37832,12 +38117,12 @@
           "journal": "JCI Insight"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/184889",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:50:56.956351+00:00"
+      "last_enriched": "2026-03-19T19:17:32.478031+00:00"
     },
     {
       "first_name": "Debashis",
@@ -37845,11 +38130,29 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Computational Biology, Bioinformatics, Biological Networks, Deep Learning for Biology, Boolean Implications",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Debashis Sahoo focuses on developing computational and algorithmic approaches to understand complex biological systems. His work integrates bioinformatics, network science, and deep learning to model and analyze biological networks, with a particular interest in Boolean implication methods for extracting logical relationships from high‑dimensional biological data.",
+      "expertise_keywords": [
+        "computational biology",
+        "bioinformatics",
+        "biological networks",
+        "deep learning",
+        "machine learning",
+        "Boolean implication analysis",
+        "network inference",
+        "systems biology",
+        "algorithm development"
+      ],
+      "methodologies": [
+        "computational modeling",
+        "network analysis",
+        "deep learning",
+        "machine learning",
+        "Boolean logic mining",
+        "algorithm design",
+        "data integration"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -38312,12 +38615,12 @@
           "abstract": "In the aftermath of Covid-19, some patients develop a fibrotic lung disease, i.e., post-COVID-19 lung disease (PCLD), for which we currently lack insights into pathogenesis, disease models, or treatment options. Using an AI-guided approach, we analyzed > 1000 human lung transcriptomic datasets associated with various lung conditions using two viral pandemic signatures (ViP and sViP) and one covid lung-derived signature. Upon identifying similarities between COVID-19 and idiopathic pulmonary fibr"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/180548",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T19:17:37.745883+00:00"
     },
     {
       "first_name": "Alexis",
@@ -39322,7 +39625,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "Professor Schmid‑Schoenbein’s research integrates bioengineering, physiology, and clinical science to elucidate microcirculatory and lymphatic transport mechanisms in skeletal muscle and their impact on systemic health. He develops hemodynamic and computational models of muscle microvascular flow, investigates multiorgan dysfunction after shock especially in aged populations, and studies how altered digestive enzyme activity contributes to heart failure and type‑2 diabetes. His work also spans immunosuppressive strategies for Crohn’s disease, linking basic vascular biology to therapeutic outcomes.",
       "expertise_keywords": [
@@ -39729,12 +40032,12 @@
           "journal": "Journal of the American College of Nutrition"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/198447",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:52:10.316820+00:00"
+      "last_enriched": "2026-03-19T19:18:23.388866+00:00"
     },
     {
       "first_name": "Julie",
@@ -42109,11 +42412,29 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Nanophotonic biosensors, nanoscale optical waveguides, sub-wavelength characterization of nanomaterials",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Donald Sirbuly focuses on the design and fabrication of nanophotonic devices for biosensing applications, emphasizing nanoscale optical waveguides and sub‑wavelength optical characterization of nanomaterials. His work integrates advanced nanofabrication, optical spectroscopy, and computational modeling to develop highly sensitive, label‑free detection platforms for biological and chemical analytes.",
+      "expertise_keywords": [
+        "nanophotonics",
+        "biosensors",
+        "nanoscale optical waveguides",
+        "sub-wavelength characterization",
+        "nanomaterials",
+        "optical sensing",
+        "photonic device engineering",
+        "nanofabrication",
+        "computational electromagnetics"
+      ],
+      "methodologies": [
+        "nanofabrication (e.g., electron‑beam lithography, nanoimprint)",
+        "optical spectroscopy (e.g., Raman, fluorescence, absorption)",
+        "near‑field scanning optical microscopy",
+        "finite‑difference time‑domain (FDTD) simulations",
+        "computational electromagnetic modeling",
+        "microfluidic integration",
+        "device prototyping and testing"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -42175,12 +42496,12 @@
           "abstract": "We report successful growth of a uniform and scalable nanocomposite film of Fe2O3 nanorods (NRs) and NiOx nanoparticles (NPs), their properties and application for enhanced solar water reduction in neutral pH water on the surface of p-Si photocathodes."
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/181059",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:54:08.860803+00:00"
+      "last_enriched": "2026-03-19T19:19:45.285515+00:00"
     },
     {
       "first_name": "Marek",
@@ -42861,7 +43182,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "Professor Emeritus David Sworder focuses on the theory and synthesis of controllers for stochastic and nonlinear dynamical systems, especially those subject to large, randomly varying disturbances and non‑Markovian parameter changes. His work develops robust and optimal control strategies for systems with random parameters and abrupt state transitions, bridging advanced systems theory with practical engineering applications.",
       "expertise_keywords": [
@@ -42929,12 +43250,12 @@
         }
       ],
       "recent_publications": [],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/181552",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:55:08.867789+00:00"
+      "last_enriched": "2026-03-19T19:20:47.714260+00:00"
     },
     {
       "first_name": "Frank",
@@ -42942,11 +43263,31 @@
       "title": "Professor Emeritus",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Tribology, mechanics, MEMS, nanotechnology and information storage",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Frank Talke’s research centers on the fundamentals of tribology and mechanics as applied to micro‑ and nanoscale systems. He investigates the design, fabrication, and performance of MEMS devices and nanotechnologies, with a particular emphasis on their reliability and information‑storage capabilities. His work integrates experimental surface‑interaction studies with computational modeling to advance the understanding of friction, wear, and lubrication at small scales.",
+      "expertise_keywords": [
+        "tribology",
+        "mechanics",
+        "microelectromechanical systems",
+        "MEMS",
+        "nanotechnology",
+        "information storage",
+        "surface engineering",
+        "wear and friction",
+        "lubrication",
+        "nano‑scale devices"
+      ],
+      "methodologies": [
+        "experimental tribology testing",
+        "microfabrication",
+        "nanofabrication",
+        "surface characterization (AFM, SEM, profilometry)",
+        "finite element analysis",
+        "computational modeling",
+        "materials testing",
+        "reliability and durability assessment"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -43098,12 +43439,12 @@
           "journal": "IEEE Sensors Journal"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/194735",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T19:20:53.873895+00:00"
     },
     {
       "first_name": "Andrea",
@@ -43111,11 +43452,27 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Colloidal nanocrystal synthesis, nanophotonics, plasmonics, liquid crystals, self-assembly",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Andrea Tao’s research focuses on the design, synthesis, and assembly of colloidal nanocrystals for advanced photonic applications. She investigates nanophotonic and plasmonic phenomena in engineered nanomaterials and explores the integration of liquid‑crystal phases to achieve tunable optical functionalities through controlled self‑assembly.",
+      "expertise_keywords": [
+        "colloidal nanocrystal synthesis",
+        "nanophotonics",
+        "plasmonics",
+        "liquid crystals",
+        "self‑assembly",
+        "nanomaterials",
+        "optical materials"
+      ],
+      "methodologies": [
+        "colloidal solution synthesis",
+        "solution‑phase nanocrystal growth",
+        "self‑assembly techniques",
+        "optical spectroscopy",
+        "photoluminescence spectroscopy",
+        "electron microscopy",
+        "optical microscopy"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -43317,12 +43674,12 @@
           "journal": "ACS Nano"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/198663",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:55:34.669917+00:00"
+      "last_enriched": "2026-03-19T19:21:00.998761+00:00"
     },
     {
       "first_name": "Daniel",
@@ -44026,36 +44383,38 @@
       "title": "Distinguished Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Computer vision, intelligent transportation systems, machine learning, driver behavior modeling, advanced driver assistance systems.",
-      "research_interests_enriched": "Professor Trivedi’s research centers on the development of AI‑driven perception and decision‑support technologies for intelligent transportation systems. He integrates computer‑vision and machine‑learning methods with driver‑behavior modeling and human‑centered design to create advanced driver assistance systems and safety‑critical vehicle interfaces. His work emphasizes real‑time attention‑switching analysis using visual and audio cues to improve situational awareness in time‑critical driving contexts.",
+      "research_interests_enriched": "Professor Mohan Trivedi focuses on developing computer‑vision and machine‑learning solutions for intelligent transportation systems, with an emphasis on driver behavior modeling and advanced driver assistance systems. His work integrates sensor‑fusion, deep‑learning perception, and data‑driven analytics to improve vehicle safety, autonomy, and traffic efficiency.",
       "expertise_keywords": [
         "computer vision",
         "intelligent transportation systems",
         "machine learning",
+        "deep learning",
         "driver behavior modeling",
         "advanced driver assistance systems",
-        "human‑centered design",
-        "attention switching",
-        "visual and audio cue integration",
-        "safety‑critical systems",
-        "autonomous vehicle perception"
+        "autonomous vehicles",
+        "traffic safety",
+        "sensor fusion",
+        "vehicle perception",
+        "human factors"
       ],
       "methodologies": [
         "computer vision algorithms",
-        "machine learning (supervised, deep learning)",
-        "behavioral modeling and simulation",
-        "human‑centered experimental design",
-        "real‑time sensor data fusion",
-        "attention‑switching analysis",
-        "field trials with driver participants",
-        "statistical analysis of driver performance"
+        "deep learning models",
+        "statistical and data‑driven modeling",
+        "traffic simulation",
+        "naturalistic driving data collection",
+        "field experiments",
+        "sensor integration and fusion",
+        "human factors experiments"
       ],
       "disease_areas": [],
       "populations": [
-        "vehicle drivers",
+        "drivers",
         "vehicle occupants",
-        "human operators in safety‑critical transportation contexts"
+        "road users",
+        "transportation networks"
       ],
       "funded_grants": [
         {
@@ -44311,12 +44670,12 @@
           "abstract": "There is widespread clinical belief that unrecognized bipolar disorder (BD) is a frequent contributor to apparent treatment resistant depression (TRD). This review attempts to assess the degree to which prevailing empirical data supports that view. All English-language articles published between January 1998 and January 2008 that focused on adults with major depressive disorder (MDD) and BD bearing on the question \"Is unrecognized BD a frequent contributor to apparent TRD in patients initially d"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/198716",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:56:36.908986+00:00"
+      "last_enriched": "2026-03-19T19:21:35.721713+00:00"
     },
     {
       "first_name": "Kevin",
@@ -44706,40 +45065,22 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Computer architecture, hardware security, microarchitectural side channels",
-      "research_interests_enriched": "Dean Tullsen’s research centers on the design of next‑generation computer architectures that are energy‑efficient, secure, and capable of exploiting massive parallelism. He develops novel microarchitectural techniques such as context‑sensitive decoding, heterogeneous and multithreaded execution models, and compiler optimizations to bridge the software/hardware gap in datacenter‑scale systems. Recent work extends these concepts to emerging quantum photonic hardware, focusing on resource‑adaptive compilation and in‑situ qubit calibration for fault‑tolerant quantum error correction.",
+      "research_interests_enriched": "Dean Tullsen focuses on the design and analysis of computer architectures with an emphasis on hardware security. His work investigates microarchitectural side channels and develops secure processor designs to protect against emerging threats.",
       "expertise_keywords": [
         "computer architecture",
         "hardware security",
         "microarchitectural side channels",
-        "heterogeneous computing",
-        "context‑sensitive decoding",
-        "multithreading",
-        "simultaneous multithreading (SMT)",
-        "parallel execution paradigms",
-        "compiler optimizations",
-        "energy‑efficient computing",
-        "datacenter (warehouse‑scale) architectures",
-        "quantum computing compilation",
-        "photonic quantum hardware",
-        "measurement‑based quantum computing",
-        "quantum error correction calibration",
-        "instruction prefetching",
-        "fast interrupt mechanisms",
-        "control‑flow attacks"
+        "secure processor design",
+        "side-channel attacks"
       ],
       "methodologies": [
-        "hardware prototyping",
         "architectural simulation",
-        "performance modeling and analysis",
-        "side‑channel vulnerability assessment",
-        "compiler design and optimization",
-        "hardware‑software co‑design",
-        "benchmark development",
-        "experimental evaluation on multicore and quantum platforms",
-        "measurement‑based quantum computing techniques",
-        "in‑situ qubit calibration"
+        "hardware prototyping",
+        "side-channel measurement and analysis",
+        "formal security verification",
+        "microarchitectural modeling"
       ],
       "disease_areas": [],
       "populations": [
@@ -44971,12 +45312,12 @@
           "journal": "USENIX Security Symposium"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/194861",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:57:08.660171+00:00"
+      "last_enriched": "2026-03-19T19:21:58.121991+00:00"
     },
     {
       "first_name": "Yoav",
@@ -45438,7 +45779,7 @@
       "title": "Professor",
       "subdepartment": "Structural Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -45447,12 +45788,12 @@
       "populations": [],
       "funded_grants": [],
       "recent_publications": [],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/179088",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:57:51.696127+00:00"
+      "last_enriched": "2026-03-19T19:22:43.811393+00:00"
     },
     {
       "first_name": "Shyni",
@@ -45856,43 +46197,28 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Statistical models for computer vision, machine learning, image processing, video analysis",
-      "research_interests_enriched": "Professor Nuno Vasconcelos develops statistical and deep‑learning models for computer vision, image processing, and video analysis, emphasizing scalable, real‑time, and biologically plausible architectures. His work bridges core vision research with applied domains such as medical image analysis (e.g., cervical brachytherapy planning, retinal visual‑field estimation), wearable sensing, robotic perception, and fairness‑aware AI. He also advances methodologies for weakly supervised learning, data augmentation, and multimodal integration to address data scarcity and bias in vision systems.",
+      "research_interests_enriched": "The faculty member develops statistical and machine‑learning models to advance computer vision, focusing on image processing and video analysis. Their work spans probabilistic modeling, deep learning, and visual recognition to improve automated interpretation of visual data.",
       "expertise_keywords": [
+        "statistical modeling",
         "computer vision",
         "machine learning",
-        "deep learning",
-        "statistical modeling",
         "image processing",
         "video analysis",
-        "semantic segmentation",
-        "object detection",
-        "visual saliency",
-        "multimodal learning",
-        "bias mitigation",
-        "robotic perception",
-        "medical image analysis",
-        "wearable ultrasound",
-        "activity monitoring",
-        "data augmentation",
-        "weakly supervised learning",
-        "decision‑theoretic modeling",
-        "hierarchical discriminant saliency networks"
+        "visual recognition",
+        "deep learning",
+        "probabilistic inference",
+        "pattern recognition",
+        "algorithm development"
       ],
       "methodologies": [
-        "convolutional neural networks",
-        "transformer architectures",
-        "decision‑theoretic frameworks",
-        "hierarchical discriminant saliency networks",
-        "real‑time object recognition pipelines",
-        "cascade detector design",
-        "diffusion‑based data augmentation",
-        "multimodal fusion",
-        "wearable sensor integration",
-        "optical coherence tomography analysis",
-        "radiotherapy dose prediction models",
-        "multi‑agent system analysis"
+        "statistical modeling",
+        "machine learning algorithms",
+        "deep neural networks",
+        "computational experiments",
+        "image/video dataset analysis",
+        "algorithm design and evaluation"
       ],
       "disease_areas": [
         "cervical cancer",
@@ -46056,12 +46382,12 @@
           "journal": "Zenodo"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/180791",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:58:14.745094+00:00"
+      "last_enriched": "2026-03-19T19:22:55.954678+00:00"
     },
     {
       "first_name": "Chad",
@@ -46196,7 +46522,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -46205,12 +46531,12 @@
       "populations": [],
       "funded_grants": [],
       "recent_publications": [],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/195186",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:58:33.272830+00:00"
+      "last_enriched": "2026-03-19T19:23:11.670037+00:00"
     },
     {
       "first_name": "Eric",
@@ -46343,31 +46669,24 @@
       "title": "Professor Practice",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Convergent engineering principles, practice and education; design and engineering of AI-intensive systems; systems thinking, systems complexity, technology use in engineering education.",
-      "research_interests_enriched": "Jon Wade focuses on the convergence of engineering principles, systems thinking, and artificial‑intelligence‑intensive system design to advance healthcare technologies. His work spans the development and validation of AI‑driven diagnostic and therapeutic decision‑support tools for oncology (head‑and‑neck squamous cell carcinoma, pancreatic adenocarcinoma) and inflammatory disease (Crohn's disease), coupled with methodological research on clinical trial design, pharmacokinetic modeling, and technology‑enhanced engineering education.",
+      "research_interests_enriched": "Professor Jon Wade focuses on convergent engineering principles that integrate multiple disciplinary perspectives into the design of AI‑intensive systems. His work emphasizes systems thinking and complexity analysis to improve both the practice and pedagogy of engineering, exploring how emerging technologies can be effectively incorporated into engineering education and professional practice.",
       "expertise_keywords": [
         "convergent engineering",
-        "AI‑intensive systems",
+        "AI‑intensive system design",
         "systems thinking",
         "systems complexity",
-        "engineering education technology",
-        "AI in healthcare",
-        "cancer diagnostics",
-        "immunotherapy biomarkers",
-        "pharmacokinetic modeling",
-        "clinical trial design",
-        "body composition analysis"
+        "engineering education",
+        "technology integration in engineering"
       ],
       "methodologies": [
-        "AI system design",
-        "systems engineering",
-        "multicenter validation studies",
-        "randomized phase II clinical trials",
-        "population pharmacokinetic analysis",
-        "statistical modeling",
-        "bioinformatics",
-        "body composition measurement"
+        "systems analysis",
+        "computational modeling",
+        "design prototyping",
+        "complexity theory application",
+        "design‑based educational research",
+        "case study evaluation"
       ],
       "disease_areas": [
         "head and neck squamous cell carcinoma",
@@ -46376,12 +46695,9 @@
         "oncology"
       ],
       "populations": [
-        "adult patients (male and female)",
-        "middle‑aged adults",
-        "adolescents",
-        "elderly (80+)",
-        "patients with recurrent or metastatic disease",
-        "patients undergoing resectable tumor surgery"
+        "engineering students",
+        "engineering practitioners",
+        "educators in engineering"
       ],
       "funded_grants": [],
       "recent_publications": [
@@ -46470,12 +46786,12 @@
           "abstract": "Certolizumab pegol (CZP), an anti-tumor necrosis factor α agent, is an effective therapy for Crohn's disease (CD). A population pharmacokinetic (PK) analysis of subcutaneously administered CZP was performed using data from 2157 CD patients from 9 separate studies. The aim was to determine which covariates influence the disposition of CZP. The final CZP population PK model consisted of a baseline, first-order absorption, and 1-compartment disposition. CZP antibodies were treated as a structural m"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/97389452",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:59:01.644207+00:00"
+      "last_enriched": "2026-03-19T19:23:32.940044+00:00"
     },
     {
       "first_name": "Edward",
@@ -46483,36 +46799,25 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "Mobile Health Sensing, Ubiquitous Computing, Signal Processing, Biosignals, Wearable Computing, Human Computer Interaction, User Centered Design",
-      "research_interests_enriched": "Professor Edward Wang’s research integrates mobile health sensing, ubiquitous and wearable computing, and signal processing with human‑computer interaction and user‑centered design to create low‑cost, at‑home diagnostic tools. His work focuses on developing smartphone‑based biosignal measurements—such as dynamometry, pupillometry, and blood‑pressure monitoring—and leveraging these data for risk prediction in cardiac surgery, early Alzheimer’s disease detection, and postpartum maternal and child health. He combines hardware prototyping, advanced signal analysis, and usability studies to translate wearable technologies into clinically validated health monitoring solutions.",
+      "research_interests_enriched": "Professor Edward Wang develops mobile and wearable sensor systems for health monitoring, integrating signal processing and ubiquitous computing with human‑computer interaction principles and user‑centered design. His work spans the creation of biosignal acquisition hardware, algorithmic analysis pipelines, and interactive interfaces to enable continuous, context‑aware health assessment.",
       "expertise_keywords": [
         "mobile health sensing",
         "ubiquitous computing",
+        "signal processing",
+        "biosignals",
         "wearable computing",
-        "biosignal processing",
-        "human‑computer interaction",
-        "user‑centered design",
-        "smartphone dynamometry",
-        "pupillometry",
-        "low‑cost medical devices",
-        "risk prediction models",
-        "preoperative assessment",
-        "Alzheimer’s disease screening",
-        "cardiac surgery complications",
-        "postpartum health monitoring",
-        "voice‑enabled health assistants"
+        "human-computer interaction",
+        "user‑centered design"
       ],
       "methodologies": [
-        "smartphone‑based sensor acquisition",
-        "wearable device prototyping",
-        "signal processing and feature extraction",
-        "machine learning risk modeling",
-        "clinical validation studies",
-        "user‑centered design and usability testing",
-        "voice interaction design",
-        "randomized controlled trials (where applicable)",
-        "cross‑sectional epidemiologic analysis"
+        "sensor hardware prototyping",
+        "signal processing algorithm development",
+        "user‑centered design processes",
+        "usability testing",
+        "field deployment studies",
+        "data analytics"
       ],
       "disease_areas": [
         "cardiac surgery postoperative complications",
@@ -46638,12 +46943,12 @@
           "journal": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/61317732",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:59:13.694958+00:00"
+      "last_enriched": "2026-03-19T19:23:38.799176+00:00"
     },
     {
       "first_name": "Joseph",
@@ -46651,11 +46956,31 @@
       "title": "Professor",
       "subdepartment": "Chemical and Nano Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "A leader in a wide range of research areas including nanomachines, nanobioelectronics, and sensing technologies for applications including clinical diagnostics, environmental and security monitoring and remote sensing.",
-      "research_interests_enriched": "",
-      "expertise_keywords": [],
-      "methodologies": [],
+      "research_interests_enriched": "Professor Joseph Wang leads interdisciplinary research at the intersection of nanotechnology and bioelectronics, creating nanomachines and nanobioelectronic platforms for highly sensitive sensing applications. His work focuses on translating these nanoscale devices into practical tools for clinical diagnostics, environmental and security monitoring, and remote sensing.",
+      "expertise_keywords": [
+        "nanomachines",
+        "nanobioelectronics",
+        "biosensors",
+        "clinical diagnostics",
+        "environmental monitoring",
+        "security monitoring",
+        "remote sensing",
+        "nanotechnology",
+        "sensing platforms",
+        "device engineering"
+      ],
+      "methodologies": [
+        "nanofabrication",
+        "microfluidic integration",
+        "electrochemical sensing",
+        "optical sensing",
+        "lab‑on‑a‑chip development",
+        "remote sensing techniques",
+        "device prototyping",
+        "signal processing"
+      ],
       "disease_areas": [],
       "populations": [],
       "funded_grants": [
@@ -46992,12 +47317,12 @@
           "abstract": "Ultrashort echo time (UTE) MRI enables direct imaging of cortical bone and quantification of its water compartments via bicomponent T The proposed UTE sequence utilizes interleaved dual-echo acquisitions with flexible TE spacings. This sequence was tested on five healthy subjects' tibial midshafts and compared to conventional separate dual-echo scans with and without image registration. Bicomponent T The interleaved method significantly reduced NRMSE (3.2% ± 2.3% vs. 6.2% ± 3.1%, p = 0.0231) and"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/198793",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:59:25.535603+00:00"
+      "last_enriched": "2026-03-19T19:23:45.510773+00:00"
     },
     {
       "first_name": "Jun-Kun",
@@ -47005,7 +47330,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -47124,12 +47449,12 @@
           "journal": "International Conference on Machine Learning"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/416074553",
       "orcid": "",
       "h_index": 11,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T16:59:40.036467+00:00"
+      "last_enriched": "2026-03-19T19:23:50.513603+00:00"
     },
     {
       "first_name": "Kesong",
@@ -47669,7 +47994,7 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -47779,12 +48104,12 @@
           "journal": "Optics express"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/69258412",
       "orcid": "",
       "h_index": 9,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": "2026-03-19T17:00:11.342812+00:00"
+      "last_enriched": "2026-03-19T19:24:06.882529+00:00"
     },
     {
       "first_name": "Tuo",
@@ -51118,7 +51443,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "",
+      "email": "ctri-support@ucsd.edu",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -51310,12 +51635,12 @@
           "journal": "ACS Earth and Space Chemistry"
         }
       ],
-      "profile_url": "",
+      "profile_url": "https://researcherprofiles.org/profile/184986",
       "orcid": "",
       "h_index": null,
       "committee_service": [],
       "integrity_flags": [],
-      "last_enriched": null
+      "last_enriched": "2026-03-19T19:25:44.526355+00:00"
     },
     {
       "first_name": "Pengyuan",
