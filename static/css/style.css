@@ -214,6 +214,11 @@ header {
     color: #5a3570;
 }
 
+.dept-badge-jacobs {
+    background: #e8f0e0;
+    color: #3a6530;
+}
+
 /* ——— Tab Panels ——— */
 
 .tab-panel {

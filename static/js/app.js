@@ -492,6 +492,13 @@ document.addEventListener("DOMContentLoaded", () => {
             { query: "seismology", label: "seismology" },
             { query: "marine ecology", label: "marine ecology" },
         ],
+        jacobs: [
+            { query: "machine learning", label: "machine learning" },
+            { query: "robotics", label: "robotics" },
+            { query: "semiconductor", label: "semiconductor" },
+            { query: "bioengineering", label: "bioengineering" },
+            { query: "structural engineering", label: "structural engineering" },
+        ],
     };
 
     function updateSuggestedChips() {

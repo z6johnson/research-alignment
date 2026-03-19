@@ -34,6 +34,7 @@
                 <option value="all" selected>All Departments</option>
                 <option value="hwsph">Public Health (HWSPH)</option>
                 <option value="sio">Scripps Oceanography (SIO)</option>
+                <option value="jacobs">Engineering (Jacobs)</option>
             </select>
         </div>
 
@@ -200,7 +201,7 @@
                     <li><strong>UCSD Profiles / Scripps Profiles</strong> (confidence: 1.0) — Institutional source. Research descriptions and biography text scraped from profiles.ucsd.edu and scripps.ucsd.edu. Preferred over all other sources when there are conflicts.</li>
                     <li><strong>ORCID</strong> (confidence: 0.9) — Self-reported researcher data. Provides ORCID ID, publications, and funding records from the public ORCID API. Searched by name + UCSD affiliation, with a fallback name-only search.</li>
                     <li><strong>NIH RePORTER</strong> (confidence: 0.8) — Verified federal grant records. Queries the NIH RePORTER API for funded projects where the faculty member is a PI at UCSD. Returns grant titles, abstracts (500 char), amounts, dates, and co-PI names.</li>
-                    <li><strong>NSF Awards</strong> (confidence: 0.8, SIO only) — Verified federal grant records. Queries the NSF Award Search API for awards where the faculty member is PI at UCSD. Returns grant titles, program names, abstracts, and amounts.</li>
+                    <li><strong>NSF Awards</strong> (confidence: 0.8, SIO &amp; Jacobs) — Verified federal grant records. Queries the NSF Award Search API for awards where the faculty member is PI at UCSD. Returns grant titles, program names, abstracts, and amounts.</li>
                     <li><strong>Semantic Scholar</strong> (confidence: 0.75) — Academic graph data. Provides h-index, total paper/citation counts, and the 20 most recent publications with journal and year. Author disambiguation uses UCSD affiliation matching.</li>
                     <li><strong>PubMed / NCBI E-utilities</strong> (confidence: 0.7) — Biomedical literature. Searches by author name + UCSD affiliation. Returns the 20 most recent publications with titles, journals, years, MeSH terms, and abstracts (500 char).</li>
                 </ul>

@@ -26,8 +26,9 @@ _faculty_cache = {}
 
 # Map department keys to filenames and display labels
 _DEPT_CONFIG = {
-    "hwsph": {"filename": "faculty.json", "label": "Herbert Wertheim School of Public Health"},
-    "sio":   {"filename": "sio_faculty.json", "label": "Scripps Institution of Oceanography"},
+    "hwsph":  {"filename": "faculty.json", "label": "Herbert Wertheim School of Public Health"},
+    "sio":    {"filename": "sio_faculty.json", "label": "Scripps Institution of Oceanography"},
+    "jacobs": {"filename": "jacobs_faculty.json", "label": "Jacobs School of Engineering"},
 }
 
 
@@ -35,7 +36,7 @@ def get_faculty_data(department=None):
     """Load faculty data from JSON file (cached after first read).
 
     Args:
-        department: "sio" for Scripps, "all" for both, None for HWSPH (default).
+        department: "sio", "jacobs", "all" for all schools, None for HWSPH (default).
     """
     cache_key = department or "hwsph"
     if cache_key not in _faculty_cache:
@@ -52,19 +53,14 @@ def get_faculty_data(department=None):
                     merged.append(fac)
             _faculty_cache[cache_key] = {"faculty": merged}
         else:
-            if department == "sio":
-                filename = "sio_faculty.json"
-                dept_key = "sio"
-            else:
-                filename = "faculty.json"
-                dept_key = "hwsph"
-            data_path = os.path.join(os.path.dirname(__file__), "data", filename)
+            dept_key = department or "hwsph"
+            cfg = _DEPT_CONFIG[dept_key]
+            data_path = os.path.join(os.path.dirname(__file__), "data", cfg["filename"])
             with open(data_path) as f:
                 data = json.load(f)
-            # Tag faculty with department
             for fac in data.get("faculty", []):
                 fac["department"] = dept_key
-                fac["department_label"] = _DEPT_CONFIG[dept_key]["label"]
+                fac["department_label"] = cfg["label"]
             _faculty_cache[cache_key] = data
     return _faculty_cache[cache_key]
 
@@ -99,8 +95,9 @@ def faculty_directory():
         dept: "sio" for Scripps, omit or "hwsph" for Public Health (default).
     """
     dept = request.args.get("dept", "").strip().lower() or "all"
-    if dept not in ("sio", "hwsph", "all"):
-        return jsonify({"error": f"Unknown department: {dept}. Use 'sio', 'hwsph', or 'all'."}), 400
+    valid_depts = set(_DEPT_CONFIG.keys()) | {"all"}
+    if dept not in valid_depts:
+        return jsonify({"error": f"Unknown department: {dept}. Use {', '.join(sorted(_DEPT_CONFIG.keys()))}, or 'all'."}), 400
     if dept == "hwsph":
         dept = None
 
