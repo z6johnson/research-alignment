@@ -26,6 +26,7 @@ logger = logging.getLogger(__name__)
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 FACULTY_PATH = os.path.join(DATA_DIR, "faculty.json")
 SIO_FACULTY_PATH = os.path.join(DATA_DIR, "sio_faculty.json")
+JACOBS_FACULTY_PATH = os.path.join(DATA_DIR, "jacobs_faculty.json")
 LOG_PATH = os.path.join(DATA_DIR, "enrichment_log.json")
 
 # Registry of available sources — used by HWSPH (public health) faculty
@@ -47,8 +48,18 @@ SIO_SOURCE_CLASSES = {
     "semantic_scholar": SemanticScholarSource,
 }
 
+# Sources for Jacobs School of Engineering faculty
+JACOBS_SOURCE_CLASSES = {
+    "ucsd_profile": UCSDProfileSource,
+    "nsf_awards": NSFAwardSource,
+    "nih_reporter": NIHReporterSource,
+    "pubmed": PubMedSource,
+    "orcid": ORCIDSource,
+    "semantic_scholar": SemanticScholarSource,
+}
+
 # Combined registry of all known sources (for run.py source name validation)
-ALL_SOURCE_CLASSES = {**SOURCE_CLASSES, **SIO_SOURCE_CLASSES}
+ALL_SOURCE_CLASSES = {**SOURCE_CLASSES, **SIO_SOURCE_CLASSES, **JACOBS_SOURCE_CLASSES}
 
 # Fields that can be directly written to a faculty record (non-JSON)
 DIRECT_FIELDS = {"profile_url", "orcid", "google_scholar_id", "h_index"}
@@ -61,6 +72,8 @@ def _faculty_path(department=None):
     """Return the faculty JSON path for the given department."""
     if department == "sio":
         return SIO_FACULTY_PATH
+    if department == "jacobs":
+        return JACOBS_FACULTY_PATH
     return FACULTY_PATH
 
 
@@ -89,6 +102,8 @@ def _source_classes_for(department=None):
     """Return the appropriate source class registry for a department."""
     if department == "sio":
         return SIO_SOURCE_CLASSES
+    if department == "jacobs":
+        return JACOBS_SOURCE_CLASSES
     return SOURCE_CLASSES
 
 
