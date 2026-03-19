@@ -21,6 +21,15 @@ class UCSDProfileSource(BaseSource):
 
     PROFILES_BASE = "https://profiles.ucsd.edu"
 
+    # Generic/shared emails that should never be assigned to individual faculty
+    BLOCKED_EMAILS = frozenset({
+        "ctri-support@ucsd.edu",
+        "support@ucsd.edu",
+        "info@ucsd.edu",
+        "webmaster@ucsd.edu",
+        "jacobsschool@ucsd.edu",
+    })
+
     def fields_provided(self):
         return ["research_interests_enriched", "profile_url", "email"]
 
@@ -137,21 +146,23 @@ class UCSDProfileSource(BaseSource):
             return data
         return None
 
-    @staticmethod
-    def _extract_email_from_page(soup):
+    @classmethod
+    def _extract_email_from_page(cls, soup):
         """Extract a ucsd.edu email address from a profile page.
 
         Tries multiple strategies:
         1. mailto: links
         2. Structured contact info sections
         3. Regex scan of page text for ucsd.edu addresses
+
+        Filters out known generic/support addresses (BLOCKED_EMAILS).
         """
         # Strategy 1: mailto: links (most reliable)
         for link in soup.find_all("a", href=True):
             href = link["href"]
             if href.startswith("mailto:"):
                 addr = href.replace("mailto:", "").split("?")[0].strip().lower()
-                if addr and "ucsd.edu" in addr:
+                if addr and "ucsd.edu" in addr and addr not in cls.BLOCKED_EMAILS:
                     return addr
 
         # Strategy 2: Look for email in contact/info sections
@@ -162,13 +173,17 @@ class UCSDProfileSource(BaseSource):
             el_text = el.get_text(strip=True)
             match = email_pattern.search(el_text)
             if match:
-                return match.group(0).lower()
+                addr = match.group(0).lower()
+                if addr not in cls.BLOCKED_EMAILS:
+                    return addr
 
         # Strategy 3: Full-page regex (last resort)
         full_text = soup.get_text()
         match = email_pattern.search(full_text)
         if match:
-            return match.group(0).lower()
+            addr = match.group(0).lower()
+            if addr not in cls.BLOCKED_EMAILS:
+                return addr
 
         return None
 

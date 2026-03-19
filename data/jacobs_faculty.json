@@ -44,7 +44,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Telecommunication, network systems design, wireless networks, wireless technologies.",
       "research_interests_enriched": "Professor Emeritus Anthony Acampora’s research centers on the design, analysis, and optimization of telecommunication and network systems, with a particular emphasis on wireless networks and emerging wireless technologies. His work addresses the architectural and protocol challenges of modern communication infrastructures, aiming to improve performance, reliability, and scalability of wireless communication services.",
       "expertise_keywords": [
@@ -234,7 +234,7 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Cancer immunology; immune cell therapy; biomaterials; mechanotransduction",
       "research_interests_enriched": "Professor Kolade Adebowale investigates how mechanical cues regulate immune cell behavior within the tumor microenvironment and leverages biomaterial platforms to enhance immune cell–based therapies. His work integrates cancer immunology, mechanotransduction, and engineered biomaterials to develop novel strategies for improving the efficacy of cell‑based immunotherapies against solid and hematologic malignancies.",
       "expertise_keywords": [
@@ -319,7 +319,7 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Biomaterials, tissue engineering, precision medicine, sex differences, cardiovascular disease, immunoengineering",
       "research_interests_enriched": "Professor Brian Aguado focuses on developing advanced biomaterials and tissue engineering strategies to enable precision medicine approaches for cardiovascular disease, with a particular emphasis on sex‑specific differences and immunoengineering. His work integrates scaffold design, regenerative therapies, and immune modulation to create personalized solutions for heart repair and vascular health.",
       "expertise_keywords": [
@@ -418,7 +418,7 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Computational Biology; Cancer Genomics; Mutagenesis; Ageing; Bioinformatics",
       "research_interests_enriched": "Ludmil Alexandrov’s research combines computational biology and bioinformatics to investigate the genomic underpinnings of cancer and ageing. He focuses on deciphering mutational processes and patterns in cancer genomes, exploring how mutagenesis contributes to tumor development and age‑related genomic alterations.",
       "expertise_keywords": [
@@ -656,7 +656,7 @@
       "title": "Associate Dean",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Curriculum and program design for computer science education, with a focus on better serving underrepresented groups.",
       "research_interests_enriched": "Dr. Christine Alvarado’s research centers on the design, implementation, and assessment of computer science curricula and educational programs that more effectively serve underrepresented groups. She investigates inclusive pedagogical strategies, equity‑focused curriculum development, and systemic interventions to broaden participation in computing across K‑12 and higher‑education contexts.",
       "expertise_keywords": [
@@ -1131,7 +1131,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Co-design of optical systems and algorithms; computational optical systems",
       "research_interests_enriched": "Professor Nicholas Antipa focuses on the integrated co-design of optical hardware and computational algorithms to create advanced imaging and photonic systems. His work bridges optical engineering and computer science, developing computational optical architectures that enable high‑performance, adaptable imaging solutions. He emphasizes algorithm‑driven system design, leveraging numerical optimization and simulation to realize next‑generation optical devices.",
       "expertise_keywords": [
@@ -1560,7 +1560,7 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Nanotechnology, MEMS, electrochemistry, wetting and spreading, carbon science: nanotubes and graphene, data science",
       "research_interests_enriched": "Professor Prabhakar Bandaru’s research centers on the design, fabrication, and characterization of nanoscale materials and microelectromechanical systems (MEMS) with a strong emphasis on electrochemical and surface wetting phenomena. He investigates carbon-based nanostructures such as carbon nanotubes and graphene, exploring their unique physical and chemical properties for advanced device applications. His work also integrates data science and machine‑learning techniques to analyze experimental data and accelerate materials discovery.",
       "expertise_keywords": [
@@ -2725,7 +2725,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Wireless Communications; Mobile Networking; applied ML for wireless systems; Backscatter communications.",
       "research_interests_enriched": "The faculty member advances wireless communication systems by integrating machine learning into the design of mobile networking protocols and developing novel backscatter communication techniques for ultra‑low‑power IoT and next‑generation 5G/6G networks.",
       "expertise_keywords": [
@@ -7193,7 +7193,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Image and video compression, error-resilient source coding, quantization, visual quality",
       "research_interests_enriched": "Professor Pamela Cosman's research centers on the development of advanced image and video compression algorithms that balance high efficiency with robust error resilience. She investigates novel quantization strategies and perceptual visual quality metrics to improve source coding performance under bandwidth and channel constraints. Her work spans theoretical modeling, algorithm design, and practical evaluation within multimedia communication systems.",
       "expertise_keywords": [
@@ -7843,7 +7843,7 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Optimization and control of dynamical systems.",
       "research_interests_enriched": "Professor Mauricio de Oliveira focuses on the development and analysis of optimization and control strategies for dynamical systems. His work emphasizes theoretical foundations, algorithmic design, and computational implementation to improve the performance and stability of complex engineered and physical processes.",
       "expertise_keywords": [
@@ -9515,7 +9515,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -12426,7 +12426,7 @@
       "title": "Research Scientist",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Technology solutions for hearing healthcare.",
       "research_interests_enriched": "Develops and evaluates technology-driven solutions to improve hearing healthcare, focusing on innovative hearing devices, digital health platforms, and tele‑audiology to enhance diagnosis, treatment, and accessibility for individuals with hearing impairment.",
       "expertise_keywords": [
@@ -12605,7 +12605,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Seismic and acoustic signal processing",
       "research_interests_enriched": "Professor Peter Gerstoft develops and applies advanced signal processing techniques for seismic and acoustic data, aiming to enhance detection, imaging, and interpretation of subsurface and underwater phenomena. His work spans algorithm design, time‑frequency analysis, and array processing to address challenges in geophysical and ocean acoustic research.",
       "expertise_keywords": [
@@ -12959,7 +12959,7 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -13625,7 +13625,7 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Nanostructured ceramics, combustion synthesis, functionally-graded materials, luminescent materials, bioceramics, extreme conditions materials science",
       "research_interests_enriched": "Professor Olivia Graeve focuses on the design, synthesis, and characterization of advanced ceramic materials for demanding environments. Her work spans nanostructured ceramics, combustion synthesis routes, and functionally graded composites, with special emphasis on luminescent and bioceramic systems. She integrates high‑temperature and high‑pressure processing to develop materials that retain functionality under extreme conditions.",
       "expertise_keywords": [
@@ -16837,7 +16837,7 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Multidisciplinary design optimization, aircraft design, satellite design, aerodynamic shape optimization, structural optimization, trajectory optimization",
       "research_interests_enriched": "Professor John Hwang’s research centers on multidisciplinary design optimization for aerospace systems, integrating aerodynamic shape, structural, and trajectory considerations to advance aircraft and satellite performance. He develops computational frameworks that couple fluid dynamics, structural analysis, and advanced optimization algorithms to generate high‑efficiency, low‑weight designs for next‑generation aerospace vehicles.",
       "expertise_keywords": [
@@ -17004,7 +17004,7 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Bioinformatics and systems biology; computational modeling of cellular regulatory networks; yeast genetics",
       "research_interests_enriched": "Professor Trey Ideker focuses on bioinformatics and systems biology, developing computational models of cellular regulatory networks to understand complex biological processes. His work integrates high‑throughput genomic data with network analysis, emphasizing yeast genetics as a model system for uncovering fundamental principles of cellular regulation.",
       "expertise_keywords": [
@@ -17240,7 +17240,7 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Computational complexity, cryptography, circuit complexity, computational randomness.",
       "research_interests_enriched": "Professor Russell Impagliazzo investigates the fundamental limits of computation, focusing on computational and circuit complexity, the role of randomness in algorithms, and the design and security of cryptographic protocols. His work seeks to uncover deep connections between complexity classes, develop new hardness results, and advance the theoretical foundations of secure computation.",
       "expertise_keywords": [
@@ -17494,7 +17494,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Development of effective blood substitutes based on a deep understanding of the microcirculation. Applications to transfusion and emergency medicine, cancer, ischemia, and the heart-lung machine.",
       "research_interests_enriched": "Professor Marcos Intaglietta focuses on creating effective blood substitutes by leveraging a deep mechanistic understanding of microcirculatory physiology. His work bridges basic microvascular research with translational applications in transfusion and emergency medicine, as well as in the treatment of cancer, ischemic disorders, and complications associated with heart‑lung (cardiopulmonary bypass) machines.",
       "expertise_keywords": [
@@ -18225,7 +18225,7 @@
       "title": "Professor",
       "subdepartment": "Chemical and Nano Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Nano-bioelectronics; data analytics; nano/bio interface; miniaturized sensors for single cell detection",
       "research_interests_enriched": "Professor Zeinab Jahed’s research integrates nano‑bioelectronics and advanced data analytics to engineer nano‑bio interfaces and develop miniaturized sensor platforms for high‑resolution single‑cell detection and analysis. Her work focuses on translating nanofabrication and sensor design innovations into tools that enable precise bioelectronic measurements at the cellular level.",
       "expertise_keywords": [
@@ -18416,7 +18416,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Network and systems economics, game theory, machine learning",
       "research_interests_enriched": "Professor Tara Javidi focuses on the intersection of network and systems economics with game theory and machine learning, developing algorithmic and analytical tools for strategic decision‑making in complex networked environments. Her work emphasizes mechanism design, stochastic optimization, and learning in multi‑agent systems to address economic and engineering challenges.",
       "expertise_keywords": [
@@ -20079,7 +20079,7 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Computer architectures for signal processing, embedded systems, hardware security, and underwater systems.",
       "research_interests_enriched": "Professor Kastner’s research centers on designing high‑performance computer architectures optimized for signal‑processing workloads, developing secure and low‑power embedded systems, and engineering robust hardware for underwater sensing and communication. His work integrates architectural co‑design, security analysis, and field‑tested underwater platforms to advance both civilian and defense applications.",
       "expertise_keywords": [
@@ -21259,7 +21259,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Information theory, signal processing, machine learning.",
       "research_interests_enriched": "The faculty member’s research centers on the development of fundamental theories and algorithms at the intersection of information theory, signal processing, and machine learning. Their work aims to advance data compression, communication system design, and intelligent signal analysis through rigorous theoretical and computational approaches.",
       "expertise_keywords": [
@@ -21427,7 +21427,7 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Solar forecasting, solar power, wind power, building energy, computational fluid dynamics, urban microclimate.",
       "research_interests_enriched": "Jan Kleissl focuses on advancing renewable energy integration through data-driven solar and wind power forecasting, building energy performance analysis, and the study of urban microclimates. His work combines computational fluid dynamics, machine learning, and large‑scale sensor networks to improve the reliability and efficiency of distributed energy systems in cities.",
       "expertise_keywords": [
@@ -21830,7 +21830,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "AI and machine learning, adaptive computing, hardware and systems security, IP protection.",
       "research_interests_enriched": "Professor Farinaz Koushanfar’s research centers on the intersection of artificial intelligence and adaptive computing with hardware and system security. She develops machine‑learning‑driven methods for secure hardware design, IP protection, and detection of malicious modifications in integrated circuits. Her work also explores adaptive architectures that can reconfigure in response to emerging threats, aiming to create trustworthy and resilient computing platforms.",
       "expertise_keywords": [
@@ -22655,7 +22655,7 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -25276,7 +25276,7 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Computer graphics, image processing algorithms, data science",
       "research_interests_enriched": "Professor Tzu Mao Li’s research centers on the development of advanced computer graphics techniques, innovative image‑processing algorithms, and data‑science approaches for extracting, analyzing, and visualizing complex visual information. His work integrates algorithmic design, statistical learning, and high‑performance computing to address challenges in visual computing and data‑driven image analysis.",
       "expertise_keywords": [
@@ -25940,7 +25940,7 @@
       "title": "Professor",
       "subdepartment": "Chemical and Nano Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Synthetic biology, metabolic engineering, plant metabolism, chemical biology",
       "research_interests_enriched": "Yanran Li integrates synthetic biology and metabolic engineering to redesign plant metabolic networks for the biosynthesis of high‑value chemicals, bio‑based materials, and enhanced agronomic traits. Her research combines chemical biology, enzyme and pathway engineering, and computational modeling to construct and test novel gene circuits in model and crop plants.",
       "expertise_keywords": [
@@ -26118,7 +26118,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Novel embedded system and VLSI architectures for communications and networking applications.",
       "research_interests_enriched": "The faculty member develops innovative embedded system and very‑large‑scale integration (VLSI) architectures tailored for communications and networking applications. Their research focuses on the design, modeling, and implementation of hardware platforms that deliver high‑performance, low‑power data transmission and processing for modern networked environments.",
       "expertise_keywords": [
@@ -26511,7 +26511,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "Professor Paul Linden’s research bridges fluid dynamics and perioperative medicine, focusing on the mechanistic understanding and clinical management of fluid therapy, hemodynamics, and organ injury during high‑risk abdominal and liver transplant surgeries. He also investigates fundamental fluid phenomena such as gravity‑driven flows, stratified turbulence, and particle transport in indoor ventilation systems, employing both experimental and computational approaches.",
       "expertise_keywords": [
@@ -26792,7 +26792,7 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Stretchable electronics, organic electronics and photovoltaics, nanomaterials, and sensors for accessibility.",
       "research_interests_enriched": "Darren Lipomi’s research focuses on the design and fabrication of stretchable and organic electronic devices, including photovoltaics and nanomaterial‑based sensors, with an emphasis on creating accessible, wearable technologies. His work integrates materials synthesis, flexible device engineering, and performance characterization to develop next‑generation wearable systems that can operate under mechanical deformation and serve diverse user populations.",
       "expertise_keywords": [
@@ -28066,7 +28066,7 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Electrochemistry, energy storage, batteries, electrocatalysis",
       "research_interests_enriched": "Professor Ping Liu’s research centers on electrochemical science for energy applications, emphasizing the design, synthesis, and mechanistic study of advanced battery materials and electrocatalytic systems to improve energy storage performance and sustainability.",
       "expertise_keywords": [
@@ -28623,7 +28623,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Photonic devices, biophotonic devices, energy conversion devices.",
       "research_interests_enriched": "Professor Yu-Hwa Lo’s research centers on the design, fabrication, and characterization of advanced photonic and biophotonic devices, with a particular emphasis on leveraging optical technologies for energy conversion applications. His work integrates nanophotonic engineering and optoelectronic principles to develop innovative solutions for sensing, imaging, and renewable energy harvesting.",
       "expertise_keywords": [
@@ -30093,7 +30093,7 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Cardiac mechanics, cardiac electrophysiology, systems biology, computational modeling",
       "research_interests_enriched": "Professor Andrew McCulloch develops computational and systems‑biology frameworks to investigate cardiac mechanics and electrophysiology. His work integrates multiscale mathematical models with experimental data to uncover the mechanistic basis of heart disease, including heart failure and arrhythmias, and to inform therapeutic strategies.",
       "expertise_keywords": [
@@ -31830,7 +31830,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "Laurence Milstein focuses on the optimization and performance analysis of wireless communication networks, with particular emphasis on delay‑constrained network architectures and the design of enhanced receivers for personal communication systems. His work integrates advanced algorithmic development, mathematical modeling, and simulation to improve reliability, efficiency, and capacity of next‑generation wireless infrastructures.",
       "expertise_keywords": [
@@ -31923,7 +31923,7 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Bioinformatics, Computational Biology, Computer Science Education.",
       "research_interests_enriched": "Professor Niema Moshiri focuses on creating and applying computational methods for the analysis of biological data, spanning bioinformatics and computational biology. His work emphasizes algorithm development, high‑performance computing, and machine‑learning approaches to address challenges in genomics, transcriptomics, and systems biology. In parallel, he advances computer science education through curriculum design, pedagogical research, and the development of instructional technologies for undergraduate and graduate learners.",
       "expertise_keywords": [
@@ -32586,7 +32586,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Sensors and neuromorphic computing, printed electronics, machine learning, molecular electronics",
       "research_interests_enriched": "Professor Tse Nga Ng’s research centers on the design and fabrication of next‑generation sensors and neuromorphic computing systems that leverage printed and molecular electronics. By integrating machine‑learning algorithms directly into hardware, her work aims to create low‑power, flexible devices capable of intelligent signal processing and adaptive computation. The lab combines advanced materials synthesis, additive manufacturing, and computational modeling to develop novel electronic architectures for AI‑enabled sensing applications.",
       "expertise_keywords": [
@@ -32820,7 +32820,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Digital signal processing: efficient implementation of transforms, signal representation, and signal reconstruction.",
       "research_interests_enriched": "Professor Truong Nguyen’s research centers on digital signal processing, with an emphasis on developing efficient implementations of signal transforms. His work advances methods for signal representation and reconstruction, aiming to improve computational performance and accuracy in processing complex data streams.",
       "expertise_keywords": [
@@ -33658,7 +33658,7 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Computational materials science, materials informatics, first principles, energy",
       "research_interests_enriched": "Shyue Ping Ong directs research at the nexus of computational materials science and materials informatics, leveraging first‑principles density functional theory, high‑throughput screening, and machine‑learning techniques to accelerate the discovery and design of energy‑relevant materials such as batteries, catalysts, and photovoltaic absorbers.",
       "expertise_keywords": [
@@ -34961,7 +34961,7 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Algorithms, complexity, theory, mathematics",
       "research_interests_enriched": "Professor Ramamohan Paturi’s research centers on the design and analysis of algorithms, computational complexity, and foundational theory in computer science. He employs rigorous mathematical techniques to investigate algorithmic efficiency, hardness of computational problems, and the development of novel theoretical frameworks.",
       "expertise_keywords": [
@@ -36044,7 +36044,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Collisionless shock structure, magnetic reconnection, and plasma waves and instabilities",
       "research_interests_enriched": "Professor Quest focuses on the fundamental physics of collisionless shocks, magnetic reconnection, and plasma wave phenomena, investigating how these processes operate in space and astrophysical environments. His work integrates theoretical analysis, numerical simulations, and in‑situ spacecraft measurements to elucidate plasma instabilities and energy conversion mechanisms.",
       "expertise_keywords": [
@@ -36100,7 +36100,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Optical communications, information network infrastructure, optics and photonics",
       "research_interests_enriched": "Professor Emeritus Stojan Radic focuses on the development and optimization of optical communication systems and the underlying photonic technologies that enable high‑capacity information networks. His work spans fiber‑optic and free‑space optics, advanced photonic device engineering, and the design of robust network infrastructures for next‑generation data transmission.",
       "expertise_keywords": [
@@ -36302,7 +36302,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Computer Graphics, Computer Vision, Signal Processing, Rendering, Visual computing",
       "research_interests_enriched": "Ravi Ramamoorthi’s research centers on advancing computer graphics and visual computing through the development of novel rendering algorithms, image synthesis techniques, and computational models of visual perception. He integrates computer vision and signal processing methods to improve realism, efficiency, and interactivity in graphics pipelines, with a particular emphasis on illumination, shading, and hardware-accelerated implementations.",
       "expertise_keywords": [
@@ -36492,7 +36492,7 @@
       "title": "Professor",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Biological systems design, transport phenomena in biological membranes, influence of cell shape on biological activation of signaling networks, morphological and topological changes to lipid membranes mediated by proteins and cytoskeletal forces, computational biology and biophysics.",
       "research_interests_enriched": "Professor Padmini Rangamani investigates the design principles of biological systems with a focus on transport phenomena and signaling within cellular membranes. Her work elucidates how cell shape and mechanical forces from the cytoskeleton drive morphological and topological remodeling of lipid bilayers, integrating computational biology and biophysical modeling to predict membrane behavior under physiological and pathological conditions.",
       "expertise_keywords": [
@@ -36682,7 +36682,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Signal Processing, Communications, Bioengineering; Sparse Signal Recovery.",
       "research_interests_enriched": "Professor Emeritus Bhaskar Rao focuses on advanced signal processing and communication systems, with a strong emphasis on bioengineering applications. His work centers on developing sparse signal recovery and compressed sensing techniques to improve the efficiency and accuracy of data acquisition and transmission across biomedical and communication domains.",
       "expertise_keywords": [
@@ -37778,7 +37778,7 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Ambient intelligence at the edge; sustainable computing",
       "research_interests_enriched": "Professor Tajana Rosing focuses on developing ambient intelligence systems that operate at the network edge, emphasizing low-power, energy‑efficient designs for pervasive computing environments. Her work integrates sustainable computing principles to create green, scalable hardware‑software solutions for the Internet of Things, edge AI, and cyber‑physical systems.",
       "expertise_keywords": [
@@ -37965,7 +37965,7 @@
       "title": "Professor",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Musculoskeletal tissue engineering, cartilage biology, biophysics, tissue biomechanics",
       "research_interests_enriched": "Professor Robert Sah focuses on the engineering of musculoskeletal tissues with an emphasis on cartilage biology and the biophysical mechanisms governing tissue function. His work integrates tissue biomechanics, scaffold design, and mechanobiology to develop regenerative strategies for joint health and disease.",
       "expertise_keywords": [
@@ -38130,7 +38130,7 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Computational Biology, Bioinformatics, Biological Networks, Deep Learning for Biology, Boolean Implications",
       "research_interests_enriched": "Debashis Sahoo focuses on developing computational and algorithmic approaches to understand complex biological systems. His work integrates bioinformatics, network science, and deep learning to model and analyze biological networks, with a particular interest in Boolean implication methods for extracting logical relationships from high‑dimensional biological data.",
       "expertise_keywords": [
@@ -39625,7 +39625,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Bioengineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "Professor Schmid‑Schoenbein’s research integrates bioengineering, physiology, and clinical science to elucidate microcirculatory and lymphatic transport mechanisms in skeletal muscle and their impact on systemic health. He develops hemodynamic and computational models of muscle microvascular flow, investigates multiorgan dysfunction after shock especially in aged populations, and studies how altered digestive enzyme activity contributes to heart failure and type‑2 diabetes. His work also spans immunosuppressive strategies for Crohn’s disease, linking basic vascular biology to therapeutic outcomes.",
       "expertise_keywords": [
@@ -42412,7 +42412,7 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Nanophotonic biosensors, nanoscale optical waveguides, sub-wavelength characterization of nanomaterials",
       "research_interests_enriched": "Professor Donald Sirbuly focuses on the design and fabrication of nanophotonic devices for biosensing applications, emphasizing nanoscale optical waveguides and sub‑wavelength optical characterization of nanomaterials. His work integrates advanced nanofabrication, optical spectroscopy, and computational modeling to develop highly sensitive, label‑free detection platforms for biological and chemical analytes.",
       "expertise_keywords": [
@@ -43182,7 +43182,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "Professor Emeritus David Sworder focuses on the theory and synthesis of controllers for stochastic and nonlinear dynamical systems, especially those subject to large, randomly varying disturbances and non‑Markovian parameter changes. His work develops robust and optimal control strategies for systems with random parameters and abrupt state transitions, bridging advanced systems theory with practical engineering applications.",
       "expertise_keywords": [
@@ -43263,7 +43263,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Tribology, mechanics, MEMS, nanotechnology and information storage",
       "research_interests_enriched": "Professor Frank Talke’s research centers on the fundamentals of tribology and mechanics as applied to micro‑ and nanoscale systems. He investigates the design, fabrication, and performance of MEMS devices and nanotechnologies, with a particular emphasis on their reliability and information‑storage capabilities. His work integrates experimental surface‑interaction studies with computational modeling to advance the understanding of friction, wear, and lubrication at small scales.",
       "expertise_keywords": [
@@ -43452,7 +43452,7 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Colloidal nanocrystal synthesis, nanophotonics, plasmonics, liquid crystals, self-assembly",
       "research_interests_enriched": "Andrea Tao’s research focuses on the design, synthesis, and assembly of colloidal nanocrystals for advanced photonic applications. She investigates nanophotonic and plasmonic phenomena in engineered nanomaterials and explores the integration of liquid‑crystal phases to achieve tunable optical functionalities through controlled self‑assembly.",
       "expertise_keywords": [
@@ -44383,7 +44383,7 @@
       "title": "Distinguished Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Computer vision, intelligent transportation systems, machine learning, driver behavior modeling, advanced driver assistance systems.",
       "research_interests_enriched": "Professor Mohan Trivedi focuses on developing computer‑vision and machine‑learning solutions for intelligent transportation systems, with an emphasis on driver behavior modeling and advanced driver assistance systems. His work integrates sensor‑fusion, deep‑learning perception, and data‑driven analytics to improve vehicle safety, autonomy, and traffic efficiency.",
       "expertise_keywords": [
@@ -45065,7 +45065,7 @@
       "title": "Professor",
       "subdepartment": "Computer Science & Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Computer architecture, hardware security, microarchitectural side channels",
       "research_interests_enriched": "Dean Tullsen focuses on the design and analysis of computer architectures with an emphasis on hardware security. His work investigates microarchitectural side channels and develops secure processor designs to protect against emerging threats.",
       "expertise_keywords": [
@@ -45779,7 +45779,7 @@
       "title": "Professor",
       "subdepartment": "Structural Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -46197,7 +46197,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Statistical models for computer vision, machine learning, image processing, video analysis",
       "research_interests_enriched": "The faculty member develops statistical and machine‑learning models to advance computer vision, focusing on image processing and video analysis. Their work spans probabilistic modeling, deep learning, and visual recognition to improve automated interpretation of visual data.",
       "expertise_keywords": [
@@ -46522,7 +46522,7 @@
       "title": "Professor Emeritus",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -46669,7 +46669,7 @@
       "title": "Professor Practice",
       "subdepartment": "Mechanical and Aerospace Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Convergent engineering principles, practice and education; design and engineering of AI-intensive systems; systems thinking, systems complexity, technology use in engineering education.",
       "research_interests_enriched": "Professor Jon Wade focuses on convergent engineering principles that integrate multiple disciplinary perspectives into the design of AI‑intensive systems. His work emphasizes systems thinking and complexity analysis to improve both the practice and pedagogy of engineering, exploring how emerging technologies can be effectively incorporated into engineering education and professional practice.",
       "expertise_keywords": [
@@ -46799,7 +46799,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "Mobile Health Sensing, Ubiquitous Computing, Signal Processing, Biosignals, Wearable Computing, Human Computer Interaction, User Centered Design",
       "research_interests_enriched": "Professor Edward Wang develops mobile and wearable sensor systems for health monitoring, integrating signal processing and ubiquitous computing with human‑computer interaction principles and user‑centered design. His work spans the creation of biosignal acquisition hardware, algorithmic analysis pipelines, and interactive interfaces to enable continuous, context‑aware health assessment.",
       "expertise_keywords": [
@@ -46956,7 +46956,7 @@
       "title": "Professor",
       "subdepartment": "Chemical and Nano Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "A leader in a wide range of research areas including nanomachines, nanobioelectronics, and sensing technologies for applications including clinical diagnostics, environmental and security monitoring and remote sensing.",
       "research_interests_enriched": "Professor Joseph Wang leads interdisciplinary research at the intersection of nanotechnology and bioelectronics, creating nanomachines and nanobioelectronic platforms for highly sensitive sensing applications. His work focuses on translating these nanoscale devices into practical tools for clinical diagnostics, environmental and security monitoring, and remote sensing.",
       "expertise_keywords": [
@@ -47330,7 +47330,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -47994,7 +47994,7 @@
       "title": "Professor",
       "subdepartment": "NanoEngineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
@@ -51443,7 +51443,7 @@
       "title": "Professor",
       "subdepartment": "Electrical and Computer Engineering",
       "degrees": [],
-      "email": "ctri-support@ucsd.edu",
+      "email": "",
       "research_interests": "",
       "research_interests_enriched": "",
       "expertise_keywords": [],
