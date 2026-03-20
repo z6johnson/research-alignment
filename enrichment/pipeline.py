@@ -19,6 +19,7 @@ from .sources.orcid import ORCIDSource
 from .sources.pubmed import PubMedSource
 from .sources.scripps_profile import ScrippsProfileSource
 from .sources.semantic_scholar import SemanticScholarSource
+from .sources.email_pattern import EmailPatternSource
 from .sources.ucsd_profile import UCSDProfileSource
 
 logger = logging.getLogger(__name__)
@@ -56,6 +57,7 @@ JACOBS_SOURCE_CLASSES = {
     "pubmed": PubMedSource,
     "orcid": ORCIDSource,
     "semantic_scholar": SemanticScholarSource,
+    "email_pattern": EmailPatternSource,
 }
 
 # Combined registry of all known sources (for run.py source name validation)
@@ -231,8 +233,14 @@ def enrich_faculty(faculty_index, sources=None, dry_run=False, department=None,
         return summary, []
 
     # Phase 2: Write direct fields
+    # Process sources in descending confidence order so higher-confidence
+    # values are written first (and won't be overwritten by lower ones).
     log_entries = []
-    for source_name, sdata in raw_data.items():
+    for source_name, sdata in sorted(
+        raw_data.items(),
+        key=lambda item: getattr(registry.get(item[0], object), "confidence", 0.5),
+        reverse=True,
+    ):
         source_cls = registry[source_name]
         for field, value in sdata.items():
             if field.startswith("_"):

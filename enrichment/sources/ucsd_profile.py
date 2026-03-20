@@ -24,6 +24,17 @@ class UCSDProfileSource(BaseSource):
 
     PROFILES_BASE = "https://profiles.ucsd.edu"
 
+    # Jacobs department websites — each has faculty pages with contact info
+    DEPT_FACULTY_URLS = {
+        "Bioengineering": "https://be.ucsd.edu/faculty",
+        "Chemical and Nano Engineering": "https://ceng.ucsd.edu/faculty",
+        "Computer Science & Engineering": "https://cse.ucsd.edu/people/faculty",
+        "Electrical and Computer Engineering": "https://ece.ucsd.edu/people",
+        "Mechanical & Aerospace Engineering": "https://mae.ucsd.edu/people/faculty",
+        "Structural Engineering": "https://se.ucsd.edu/people/faculty",
+        "NanoEngineering": "https://nanoengineering.ucsd.edu/faculty",
+    }
+
     # Generic/shared emails that should never be assigned to individual faculty
     BLOCKED_EMAILS = frozenset({
         "ctri-support@ucsd.edu",
@@ -103,6 +114,11 @@ class UCSDProfileSource(BaseSource):
             email = self._search_jacobsschool_profile(first, last)
             if email:
                 profile_data["email"] = email
+        if profile_data and not profile_data.get("email"):
+            dept = faculty_dict.get("subdepartment", "")
+            email = self._search_dept_website(first, last, dept)
+            if email:
+                profile_data["email"] = email
 
         # Validate any email we found against the faculty name
         if profile_data and profile_data.get("email"):
@@ -123,6 +139,11 @@ class UCSDProfileSource(BaseSource):
             data["email"] = email
         if not data.get("email"):
             email = self._search_jacobsschool_profile(first, last)
+            if email:
+                data["email"] = email
+        if not data.get("email"):
+            dept = faculty_dict.get("subdepartment", "")
+            email = self._search_dept_website(first, last, dept)
             if email:
                 data["email"] = email
 
@@ -326,6 +347,76 @@ class UCSDProfileSource(BaseSource):
 
         soup = BeautifulSoup(resp.text, "html.parser")
         return self._extract_email_from_page(soup)
+
+    def _search_dept_website(self, first_name, last_name, subdepartment):
+        """Search the faculty member's department website for their email.
+
+        Many Jacobs School departments (CSE, ECE, MAE, etc.) maintain their
+        own faculty pages that include contact info not found on the central
+        profiles.ucsd.edu site.
+        """
+        if not subdepartment:
+            return None
+
+        # Find the department URL — try exact match first, then substring
+        dept_url = self.DEPT_FACULTY_URLS.get(subdepartment)
+        if not dept_url:
+            subdept_lower = subdepartment.lower()
+            for dept_name, url in self.DEPT_FACULTY_URLS.items():
+                if dept_name.lower() in subdept_lower or subdept_lower in dept_name.lower():
+                    dept_url = url
+                    break
+        if not dept_url:
+            return None
+
+        resp = self._get(dept_url)
+        if not resp:
+            return None
+
+        soup = BeautifulSoup(resp.text, "html.parser")
+        full_name = f"{first_name} {last_name}".lower()
+
+        # Strategy: find a container that mentions this person's name,
+        # then look for mailto links or email patterns within it
+        for container in soup.find_all(["tr", "div", "li", "article", "td", "section"]):
+            text = container.get_text(strip=True).lower()
+            if first_name.lower() not in text or last_name.lower() not in text:
+                continue
+
+            # Check for mailto links
+            for link in container.find_all("a", href=True):
+                href = link["href"]
+                if href.startswith("mailto:"):
+                    addr = href.replace("mailto:", "").split("?")[0].strip().lower()
+                    if addr and "ucsd.edu" in addr and addr not in self.BLOCKED_EMAILS:
+                        return addr
+
+            # Check for email pattern in text
+            match = _EMAIL_RE.search(container.get_text())
+            if match:
+                addr = match.group(0).lower()
+                if addr not in self.BLOCKED_EMAILS:
+                    return addr
+
+            # If the container has a link to an individual profile page, follow it
+            for link in container.find_all("a", href=True):
+                href = link["href"]
+                link_text = link.get_text(strip=True).lower()
+                if full_name in link_text or last_name.lower() in link_text:
+                    if not href.startswith("http"):
+                        # Reconstruct absolute URL from dept_url base
+                        from urllib.parse import urljoin
+                        href = urljoin(dept_url, href)
+                    if "ucsd.edu" in href and href != dept_url:
+                        detail_resp = self._get(href)
+                        if detail_resp:
+                            detail_soup = BeautifulSoup(detail_resp.text, "html.parser")
+                            email = self._extract_email_from_page(detail_soup)
+                            if email:
+                                return email
+                        break  # Only follow one link per person
+
+        return None
 
     def _search_hwsph_directory(self, first_name, last_name):
         """Fallback: search the HWSPH faculty directory for a bio link."""

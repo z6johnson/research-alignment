@@ -9,6 +9,7 @@ increases rate limit from 3/sec to 10/sec).
 
 import logging
 import os
+import re
 import xml.etree.ElementTree as ET
 
 from .base import BaseSource
@@ -30,8 +31,10 @@ class PubMedSource(BaseSource):
         if self._api_key:
             self.min_request_interval = 0.1  # 10 req/sec with key
 
+    _EMAIL_RE = re.compile(r"[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]*ucsd\.edu")
+
     def fields_provided(self):
-        return ["recent_publications"]
+        return ["recent_publications", "email"]
 
     def fetch(self, faculty_dict):
         """Search PubMed for recent publications by this faculty member."""
@@ -78,24 +81,36 @@ class PubMedSource(BaseSource):
         if not resp:
             return None
 
-        publications = self._parse_pubmed_xml(resp.text)
+        publications, author_email = self._parse_pubmed_xml(resp.text, last)
         if not publications:
             return None
 
-        return {
+        result = {
             "recent_publications": publications,
             "_source_url": f"{ESEARCH_URL}?term={query}",
         }
+        if author_email:
+            result["email"] = author_email
+        return result
 
-    def _parse_pubmed_xml(self, xml_text):
-        """Parse PubMed XML response into publication dicts."""
+    def _parse_pubmed_xml(self, xml_text, last_name=""):
+        """Parse PubMed XML response into publication dicts.
+
+        Also extracts corresponding author @ucsd.edu email from
+        AffiliationInfo elements, which often embed email addresses.
+
+        Returns:
+            Tuple of (publications_list, author_email_or_None).
+        """
         try:
             root = ET.fromstring(xml_text)
         except ET.ParseError:
             logger.warning("Failed to parse PubMed XML response")
-            return []
+            return [], None
 
         publications = []
+        author_email = None
+
         for article in root.findall(".//PubmedArticle"):
             pub = {}
 
@@ -134,4 +149,26 @@ class PubMedSource(BaseSource):
             if pub.get("title"):
                 publications.append(pub)
 
-        return publications
+            # Extract ucsd.edu email from affiliation or author info
+            if not author_email:
+                for aff in article.findall(".//AffiliationInfo/Affiliation"):
+                    if aff.text:
+                        match = self._EMAIL_RE.search(aff.text)
+                        if match:
+                            author_email = match.group(0).lower()
+                            break
+                # Also check AuthorList for email attributes
+                if not author_email:
+                    for author_el in article.findall(".//Author"):
+                        # Some PubMed records store email in Identifier
+                        for ident in author_el.findall("Identifier"):
+                            src = (ident.get("Source") or "").lower()
+                            if src == "email" and ident.text:
+                                addr = ident.text.strip().lower()
+                                if "ucsd.edu" in addr:
+                                    author_email = addr
+                                    break
+                        if author_email:
+                            break
+
+        return publications, author_email

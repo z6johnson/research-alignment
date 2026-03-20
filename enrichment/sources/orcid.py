@@ -29,7 +29,7 @@ class ORCIDSource(BaseSource):
         })
 
     def fields_provided(self):
-        return ["orcid", "recent_publications", "funded_grants"]
+        return ["orcid", "recent_publications", "funded_grants", "email"]
 
     def fetch(self, faculty_dict):
         """Search ORCID for this faculty member and extract their record."""
@@ -101,6 +101,11 @@ class ORCIDSource(BaseSource):
             "_source_url": f"https://orcid.org/{orcid_id}",
         }
 
+        # Extract email from ORCID person record
+        email = self._extract_email(record, first_name, last_name)
+        if email:
+            result["email"] = email
+
         # Extract works (publications)
         works = self._extract_works(record)
         if works:
@@ -132,6 +137,39 @@ class ORCIDSource(BaseSource):
             result["recent_works"] = recent_works
 
         return result if len(result) > 2 else None  # More than just orcid + _source_url
+
+    @staticmethod
+    def _extract_email(record, first_name, last_name):
+        """Extract a ucsd.edu email from the ORCID person record.
+
+        ORCID profiles may list one or more email addresses under
+        person -> emails -> email.  We prefer @ucsd.edu addresses but
+        accept @eng.ucsd.edu and other sub-domains.
+        """
+        emails_section = (
+            record.get("person", {})
+            .get("emails", {})
+            .get("email", [])
+        )
+        ucsd_emails = []
+        for entry in emails_section:
+            addr = entry.get("email", "").strip().lower()
+            if addr and "ucsd.edu" in addr:
+                ucsd_emails.append(addr)
+
+        if not ucsd_emails:
+            return None
+
+        # If multiple, prefer one that contains part of the person's name
+        first = first_name.lower()
+        last = last_name.lower()
+        for addr in ucsd_emails:
+            local = addr.split("@")[0]
+            if (last and last[:3] in local) or (first and first[:3] in local):
+                return addr
+
+        # Fall back to first ucsd.edu address found
+        return ucsd_emails[0]
 
     def _extract_works(self, record):
         """Extract recent publications from ORCID record."""
