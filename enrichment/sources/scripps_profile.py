@@ -6,6 +6,7 @@ to discover and extract SIO faculty data.
 
 import logging
 import re
+from urllib.parse import unquote
 
 from bs4 import BeautifulSoup
 
@@ -164,7 +165,7 @@ class ScrippsProfileSource(BaseSource):
         for link in soup.find_all("a", href=True):
             href = link["href"]
             if href.startswith("mailto:"):
-                addr = href.replace("mailto:", "").split("?")[0].strip().lower()
+                addr = unquote(href.replace("mailto:", "")).split("?")[0].strip().lower()
                 if addr and "ucsd.edu" in addr:
                     candidates.append(addr)
 
