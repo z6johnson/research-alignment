@@ -116,4 +116,5 @@ jobs:
           git add data/faculty.json data/sio_faculty.json data/jacobs_faculty.json
           [ -f data/enrichment_log.json ] && git add data/enrichment_log.json
           git diff --staged --quiet || git commit -m "chore: enrich ${{ env.SCHOOL || 'hwsph' }} faculty data ($(date -u +%Y-%m-%d))"
+          git pull --rebase origin main
           git push
