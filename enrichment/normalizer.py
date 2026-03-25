@@ -68,7 +68,7 @@ def normalize_faculty_data(faculty_dict, raw_enrichment_data):
         if not data:
             continue
 
-        if source_name == "ucsd_profile" and data.get("research_interests_enriched"):
+        if source_name in ("ucsd_profile", "scripps_profile") and data.get("research_interests_enriched"):
             parts.append(
                 f"UCSD Profile description: {data['research_interests_enriched']}"
             )

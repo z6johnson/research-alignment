@@ -221,7 +221,13 @@ def enrich_faculty(faculty_index, sources=None, dry_run=False, department=None,
             else:
                 summary["sources"][source_name] = {"status": "no_data"}
 
-    if not raw_data:
+    # If no sources returned data AND the faculty has no stored grants/pubs
+    # to feed the normalizer, skip early.  Otherwise fall through so the
+    # normalizer can synthesise from previously-stored data.
+    has_stored_data = (faculty_dict.get("funded_grants") or
+                       faculty_dict.get("recent_publications") or
+                       faculty_dict.get("research_interests"))
+    if not raw_data and not has_stored_data:
         logger.info("No enrichment data found for %s", name)
         return summary, []
 
@@ -331,6 +337,13 @@ def enrich_all(sources=None, faculty_ids=None, dry_run=False,
         indices = [i for i in faculty_ids if 0 <= i < len(faculty_list)]
     else:
         indices = list(range(len(faculty_list)))
+        # Prioritize never-enriched faculty so time-budget cuts hit
+        # already-enriched records instead of perpetually skipping the tail.
+        # Secondary: among enriched, prioritize those still missing interests.
+        indices.sort(key=lambda i: (
+            bool(faculty_list[i].get("last_enriched")),
+            bool(faculty_list[i].get("research_interests_enriched")),
+        ))
 
     logger.info("Starting enrichment for %d faculty members (dept: %s).",
                 len(indices), department or "hwsph")
