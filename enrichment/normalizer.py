@@ -139,6 +139,43 @@ def normalize_faculty_data(faculty_dict, raw_enrichment_data):
                     "\n".join(f"- {w}" for w in data["recent_works"][:5])
                 )
 
+    # Fallback: if raw enrichment data didn't include grants or publications
+    # (e.g. source API was down or returned nothing this run), use data that
+    # was fetched in a previous run and is already stored on the faculty record.
+    has_grants_context = any(
+        "grants" in p.lower() for p in parts[1:]  # skip the name line
+    )
+    has_pubs_context = any(
+        "publication" in p.lower() for p in parts[1:]
+    )
+
+    if not has_grants_context and faculty_dict.get("funded_grants"):
+        grants_text = []
+        for g in faculty_dict["funded_grants"][:10]:
+            grants_text.append(
+                f"- {g.get('title', 'Untitled')} "
+                f"({g.get('agency', 'Unknown')})"
+            )
+            if g.get("abstract"):
+                grants_text.append(f"  Abstract excerpt: {g['abstract'][:200]}")
+        if grants_text:
+            parts.append("Previously fetched grants:\n" + "\n".join(grants_text))
+
+    if not has_pubs_context and faculty_dict.get("recent_publications"):
+        pubs_text = []
+        for p in faculty_dict["recent_publications"][:10]:
+            line = f"- {p.get('title', 'Untitled')}"
+            if p.get("journal"):
+                line += f" ({p['journal']}"
+                if p.get("year"):
+                    line += f", {p['year']}"
+                line += ")"
+            pubs_text.append(line)
+            if p.get("mesh_terms"):
+                pubs_text.append(f"  MeSH: {', '.join(p['mesh_terms'][:5])}")
+        if pubs_text:
+            parts.append("Previously fetched publications:\n" + "\n".join(pubs_text))
+
     if len(parts) <= 1:
         # Only have the name — not enough data to normalize
         return None
