@@ -99,6 +99,7 @@ header {
     font-weight: 700;
     letter-spacing: -0.5px;
     color: var(--black);
+    cursor: pointer;
 }
 
 .brand-sub {

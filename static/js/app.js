@@ -84,6 +84,26 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("click", () => switchTab(btn.dataset.tab));
     });
 
+    // Brand title click resets all tabs to clear state
+    document.getElementById("brand-reset").addEventListener("click", () => {
+        clearFile();
+        lastResults = null;
+        expertiseInput.value = "";
+        manualSubmitBtn.disabled = true;
+        expertSearch.value = "";
+        activeFilters = [];
+        activeFiltersEl.innerHTML = "";
+        directorySearchResults = [];
+        directoryTotal = 0;
+        directoryOffset = 0;
+        expertList.innerHTML = "";
+        expertCount.textContent = "";
+        directoryResults.hidden = true;
+        directoryEmpty.hidden = false;
+        methodologyPanel.classList.remove("visible");
+        switchTab("upload");
+    });
+
     function hideSharedViews() {
         processingView.hidden = true;
         resultsView.hidden = true;
