@@ -7,3 +7,4 @@ venv/
 *.db
 .vercel/
 node_modules/
+data/enrichment_log.json
