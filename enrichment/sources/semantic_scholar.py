@@ -17,6 +17,7 @@ logger = logging.getLogger(__name__)
 AUTHOR_SEARCH_URL = "https://api.semanticscholar.org/graph/v1/author/search"
 AUTHOR_URL = "https://api.semanticscholar.org/graph/v1/author/{author_id}"
 AUTHOR_PAPERS_URL = "https://api.semanticscholar.org/graph/v1/author/{author_id}/papers"
+PAPER_SEARCH_URL = "https://api.semanticscholar.org/graph/v1/paper/search"
 
 
 class SemanticScholarSource(BaseSource):
@@ -37,13 +38,21 @@ class SemanticScholarSource(BaseSource):
     def fetch(self, faculty_dict):
         """Search Semantic Scholar for this faculty member.
 
-        Uses name search with ORCID-based disambiguation when available.
+        Uses name search with ORCID-based disambiguation when available,
+        falling back to paper-based author discovery.
         """
         first = faculty_dict.get("first_name", "")
         last = faculty_dict.get("last_name", "")
         orcid = faculty_dict.get("orcid")
 
+        # Try 1: Author search (1 API call)
         author_id = self._search_author(first, last, orcid=orcid)
+
+        # Try 2: Paper-based discovery — search for a known paper title,
+        # then match the author by ORCID or name from the paper's author list
+        if not author_id:
+            author_id = self._find_author_via_paper(faculty_dict)
+
         if not author_id:
             return None
 
@@ -102,6 +111,59 @@ class SemanticScholarSource(BaseSource):
             if full_name in name or name in full_name:
                 if (top.get("paperCount") or 0) > 5:
                     return top.get("authorId")
+
+        return None
+
+    def _find_author_via_paper(self, faculty_dict):
+        """Find an author's S2 ID by looking up one of their known papers.
+
+        When author name search fails, we can search for a paper the faculty
+        member has published, then find them in the paper's author list.
+        """
+        pubs = faculty_dict.get("recent_publications") or []
+        first = faculty_dict.get("first_name", "").lower()
+        last = faculty_dict.get("last_name", "").lower()
+        orcid = faculty_dict.get("orcid")
+
+        # Try up to 3 recent publications
+        for pub in pubs[:3]:
+            title = pub.get("title")
+            if not title:
+                continue
+
+            resp = self._get(
+                PAPER_SEARCH_URL,
+                params={
+                    "query": title,
+                    "fields": "title,authors,authors.externalIds",
+                    "limit": 3,
+                },
+            )
+            if not resp:
+                continue
+
+            try:
+                data = resp.json().get("data") or []
+            except ValueError:
+                continue
+
+            for paper in data:
+                authors = paper.get("authors") or []
+                for author in authors:
+                    ext_ids = author.get("externalIds") or {}
+                    author_name = (author.get("name") or "").lower()
+
+                    # Match by ORCID (exact, highest confidence)
+                    if orcid and ext_ids.get("ORCID") == orcid:
+                        logger.info("Paper-based ORCID match: %s -> S2 %s",
+                                    orcid, author.get("authorId"))
+                        return author.get("authorId")
+
+                    # Match by full name (both first and last must appear)
+                    if last in author_name and first in author_name:
+                        logger.info("Paper-based name match: %s %s -> S2 %s (%s)",
+                                    first, last, author.get("authorId"), author_name)
+                        return author.get("authorId")
 
         return None
 
