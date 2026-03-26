@@ -79,7 +79,12 @@ class SemanticScholarSource(BaseSource):
 
         authors = data.get("data") or []
         if not authors:
+            logger.info("Author search for %s %s: 0 results", first_name, last_name)
             return None
+
+        logger.info("Author search for %s %s: %d results, names=%s",
+                     first_name, last_name, len(authors),
+                     [a.get("name") for a in authors[:3]])
 
         # Priority 1: Match by ORCID (exact identity confirmation)
         if orcid:
@@ -124,9 +129,10 @@ class SemanticScholarSource(BaseSource):
         first = faculty_dict.get("first_name", "").lower()
         last = faculty_dict.get("last_name", "").lower()
         orcid = faculty_dict.get("orcid")
+        faculty_name = f"{first} {last}"
 
         # Try up to 3 recent publications
-        for pub in pubs[:3]:
+        for pub_idx, pub in enumerate(pubs[:3]):
             title = pub.get("title")
             if not title:
                 continue
@@ -140,6 +146,8 @@ class SemanticScholarSource(BaseSource):
                 },
             )
             if not resp:
+                logger.info("Paper search failed for %s pub %d: no response",
+                            faculty_name, pub_idx)
                 continue
 
             try:
@@ -147,8 +155,20 @@ class SemanticScholarSource(BaseSource):
             except ValueError:
                 continue
 
+            if not data:
+                logger.info("Paper search for %s pub %d returned 0 papers (title: %.60s...)",
+                            faculty_name, pub_idx, title)
+                continue
+
+            # Log what we got for debugging
             for paper in data:
+                paper_title = (paper.get("title") or "")[:60]
                 authors = paper.get("authors") or []
+                author_names = [a.get("name", "?") for a in authors[:5]]
+                has_ext_ids = any((a.get("externalIds") or {}) for a in authors)
+                logger.info("Paper search for %s: found '%s...' with %d authors %s (externalIds: %s)",
+                            faculty_name, paper_title, len(authors), author_names, has_ext_ids)
+
                 for author in authors:
                     ext_ids = author.get("externalIds") or {}
                     author_name = (author.get("name") or "").lower()
@@ -166,6 +186,8 @@ class SemanticScholarSource(BaseSource):
                                     first, last, author.get("authorId"), author_name)
                         return author.get("authorId")
 
+        logger.info("Paper-based discovery found no match for %s (tried %d pubs)",
+                     faculty_name, min(len(pubs), 3))
         return None
 
     def _fetch_author_data(self, author_id, first_name, last_name):
