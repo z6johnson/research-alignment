@@ -37,84 +37,26 @@ class SemanticScholarSource(BaseSource):
     def fetch(self, faculty_dict):
         """Search Semantic Scholar for this faculty member.
 
-        Prefers ORCID-based lookup (exact match) when available,
-        falling back to name-based search with affiliation filtering.
+        Uses name search with ORCID-based disambiguation when available.
         """
         first = faculty_dict.get("first_name", "")
         last = faculty_dict.get("last_name", "")
-
-        # Prefer ORCID-based lookup — high precision, no disambiguation needed
         orcid = faculty_dict.get("orcid")
-        if orcid:
-            result = self._lookup_by_orcid(orcid)
-            if result:
-                return result
 
-        # Fall back to name search
-        author_id = self._search_author(first, last)
+        author_id = self._search_author(first, last, orcid=orcid)
         if not author_id:
             return None
 
         return self._fetch_author_data(author_id, first, last)
 
-    def _lookup_by_orcid(self, orcid):
-        """Look up author by ORCID using Semantic Scholar's external ID support.
-
-        Returns a result dict with h_index, publications, etc., or None.
-        The ORCID endpoint returns the full author profile directly,
-        so we extract data here instead of making a second API call.
-        """
-        resp = self._get(
-            AUTHOR_URL.format(author_id=f"ORCID:{orcid}"),
-            params={
-                "fields": "name,affiliations,paperCount,citationCount,hIndex,homepage,externalIds",
-            },
-        )
-        if not resp:
-            logger.info("ORCID %s: no response from Semantic Scholar (status=%s)",
-                        orcid, getattr(resp, 'status_code', 'N/A'))
-            return None
-
-        try:
-            author = resp.json()
-        except ValueError:
-            return None
-
-        # The ORCID endpoint returns the full profile directly.
-        # Extract authorId for papers lookup and source URL.
-        author_id = author.get("authorId")
-        logger.info("ORCID %s resolved to S2 author %s (%s), hIndex=%s",
-                     orcid, author_id, author.get("name"), author.get("hIndex"))
-
-        result = {}
-        if author_id:
-            result["_source_url"] = f"https://www.semanticscholar.org/author/{author_id}"
-
-        # h-index
-        h_index = author.get("hIndex")
-        if h_index is not None:
-            result["h_index"] = h_index
-
-        # Total paper/citation counts for the normalizer
-        result["paper_count"] = author.get("paperCount")
-        result["citation_count"] = author.get("citationCount")
-
-        # Fetch recent papers (requires authorId)
-        if author_id:
-            papers = self._fetch_papers(author_id)
-            if papers:
-                result["recent_publications"] = papers
-
-        return result if len(result) > 1 else None
-
-    def _search_author(self, first_name, last_name):
-        """Search for an author by name, filtering to UCSD affiliation."""
+    def _search_author(self, first_name, last_name, orcid=None):
+        """Search for an author by name, with ORCID and affiliation disambiguation."""
         query = f"{first_name} {last_name}"
         resp = self._get(
             AUTHOR_SEARCH_URL,
             params={
                 "query": query,
-                "fields": "name,affiliations,paperCount,hIndex",
+                "fields": "name,affiliations,paperCount,hIndex,externalIds",
                 "limit": 10,
             },
         )
@@ -130,7 +72,17 @@ class SemanticScholarSource(BaseSource):
         if not authors:
             return None
 
-        # Try to find the UCSD-affiliated match
+        # Priority 1: Match by ORCID (exact identity confirmation)
+        if orcid:
+            for author in authors:
+                ext_ids = author.get("externalIds") or {}
+                if ext_ids.get("ORCID") == orcid:
+                    logger.info("ORCID %s matched S2 author %s (%s), hIndex=%s",
+                                orcid, author.get("authorId"), author.get("name"),
+                                author.get("hIndex"))
+                    return author.get("authorId")
+
+        # Priority 2: Match by UCSD affiliation
         ucsd_keywords = [
             "ucsd", "uc san diego", "university of california san diego",
             "scripps", "sio",
@@ -141,7 +93,7 @@ class SemanticScholarSource(BaseSource):
             if any(kw in aff_text for kw in ucsd_keywords):
                 return author.get("authorId")
 
-        # If no affiliation match, check if the first result has a
+        # Priority 3: Name similarity fallback — if the first result has a
         # reasonable paper count (>5) and name is close enough
         if authors:
             top = authors[0]
